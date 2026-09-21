@@ -45,8 +45,8 @@ h1 {
   max-width: 620px;
   margin: 32px auto 0;
   color: #4f4e4a;
-  font-size: 19px;
-  line-height: 1.5;
+  font-size: 21px;
+  line-height: 1.55;
 }
 
 .section {
@@ -58,7 +58,7 @@ h1 {
   padding: 18px 0 0;
   color: #66645e;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ h1 {
   margin: 28px 0 0;
   padding-bottom: 24px;
   color: #292825;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 1.5;
 }
 
@@ -85,7 +85,7 @@ h1 {
   gap: 10px;
   color: #363531;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -107,12 +107,13 @@ h1 {
 }
 
 .home-link a {
-  display: inline-block;
-  padding: 11px 22px;
+  display: block;
+  width: 100%;
+  padding: 26px 28px;
   color: #292825;
   border: 1px solid #aaa79f;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -129,7 +130,7 @@ footer {
   gap: 24px;
   color: #66645e;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media (max-width: 620px) {
@@ -147,12 +148,12 @@ footer {
   }
 
   .intro {
-    font-size: 17px;
+    font-size: 19px;
     max-width: 320px;
   }
 
   .current {
-    font-size: 19px;
+    font-size: 21px;
   }
 
   .social-links {
@@ -160,7 +161,7 @@ footer {
   }
 
   .social-links a {
-    font-size: 14px;
+    font-size: 15px;
     gap: 9px;
   }
 
@@ -171,7 +172,8 @@ footer {
   }
 
   .home-link a {
-    padding: 10px 20px;
+    padding: 22px 20px;
+    font-size: 15px;
   }
 
   footer {
