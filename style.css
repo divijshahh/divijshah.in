@@ -10,16 +10,19 @@
 
 html {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f4f3ef;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.58), transparent 34%),
+    #f4f3ef;
 }
 
 main {
-  width: min(900px, calc(100% - 48px));
+  width: min(980px, calc(100% - 48px));
   min-height: 100vh;
   margin: 0 auto;
   padding: 42px 0 34px;
@@ -42,7 +45,7 @@ h1 {
 }
 
 .intro {
-  max-width: 620px;
+  max-width: 700px;
   margin: 32px auto 0;
   color: #4f4e4a;
   font-size: 25px;
@@ -51,22 +54,23 @@ h1 {
 
 .section {
   border-top: 1px solid #cbc9c2;
+  padding-top: 2px;
 }
 
 .label {
   margin: 0;
   padding: 18px 0 0;
-  color: #66645e;
+  color: #77746c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 12px;
   line-height: 1;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .current {
-  margin: 28px 0 0;
-  padding-bottom: 24px;
+  margin: 25px 0 0;
+  padding-bottom: 28px;
   color: #292825;
   font-size: 25px;
   line-height: 1.5;
@@ -75,62 +79,119 @@ h1 {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 34px;
-  margin-top: 52px;
+  gap: 42px;
+  margin-top: 54px;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: #363531;
+  gap: 12px;
+  color: #292825;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 500;
   text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .social-links a:hover {
   color: #11110f;
+  transform: translateY(-2px);
+}
+
+.social-links a::after {
+  content: "";
+  position: absolute;
 }
 
 .social-links svg {
   display: block;
-  width: 17px;
-  height: 17px;
-  flex: 0 0 17px;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
   fill: currentColor;
 }
 
 .home-link {
-  margin-top: 42px;
-  text-align: center;
+  margin-top: 58px;
 }
 
 .home-link a {
-  display: block;
+  position: relative;
+  display: grid;
+  min-height: 190px;
   width: 100%;
-  padding: 26px 28px;
+  padding: 30px 34px;
+  align-content: space-between;
   color: #292825;
+  background: rgba(255, 255, 255, 0.22);
   border: 1px solid #aaa79f;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
   text-decoration: none;
+  overflow: hidden;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.home-link a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.48), transparent 52%);
+  pointer-events: none;
 }
 
 .home-link a:hover {
-  color: #11110f;
-  border-color: #11110f;
+  background: rgba(255, 255, 255, 0.58);
+  border-color: #6f6d67;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(32, 32, 30, 0.08);
+}
+
+.home-kicker {
+  position: relative;
+  z-index: 1;
+  color: #77746c;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  line-height: 1;
+}
+
+.home-title {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.home-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  right: 32px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+
+.home-link a:hover .home-arrow {
+  transform: translate(4px, -4px);
 }
 
 footer {
   margin-top: auto;
-  padding-top: 34px;
+  padding-top: 42px;
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  color: #66645e;
+  color: #77746c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
 }
 
 @media (max-width: 620px) {
@@ -149,7 +210,7 @@ footer {
 
   .intro {
     font-size: 25px;
-    max-width: 320px;
+    max-width: 340px;
   }
 
   .current {
@@ -162,23 +223,52 @@ footer {
 
   .social-links a {
     font-size: 25px;
-    gap: 9px;
+    gap: 10px;
   }
 
   .social-links svg {
-    width: 16px;
-    height: 16px;
-    flex-basis: 16px;
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+  }
+
+  .home-link {
+    margin-top: 46px;
   }
 
   .home-link a {
-    padding: 26px 20px;
-    font-size: 25px;
+    min-height: 165px;
+    padding: 26px 22px;
+  }
+
+  .home-title {
+    font-size: 26px;
+    max-width: 80%;
+  }
+
+  .home-arrow {
+    top: 24px;
+    right: 22px;
+    font-size: 27px;
   }
 
   footer {
+    padding-top: 34px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .social-links a,
+  .home-link a,
+  .home-arrow {
+    transition: none;
   }
 }
