@@ -8,6 +8,14 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.5] - 2026-09-22
+
+### Changed
+
+- Removed the homepage editorial navigation bar to keep the landing page focused on the main identity.
+- Centered the sticky CV download control.
+- Updated the site version to v0.5.5.
+
 ## [0.5.4] - 2026-09-22
 
 ### Changed
@@ -119,7 +127,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.4...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.5...HEAD
+[0.5.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.5
 [0.5.4]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.4
 [0.5.3]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.3
 [0.5.1]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.1
