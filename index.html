@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="favicon-light.svg?v=0.5.2" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=0.5.2" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -77,7 +77,7 @@
             <span class="service-label service-label-immich"><small>Photos</small></span>
           </a>
           <a class="home-item home-item-request" href="https://request.divijshah.in" aria-label="Open Seerr">
-            <img class="service-icon service-icon-seerr" src="seerr-logo.svg" alt="Seerr" aria-hidden="true">
+            <img class="service-icon service-icon-seerr" src="assets/seerr-logo.svg" alt="Seerr" aria-hidden="true">
             <span class="service-label service-label-seerr"><small>Request media</small></span>
           </a>
           <a class="home-item home-item-status" href="https://status.divijshah.in" aria-label="Open Status">
@@ -117,7 +117,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "favicon-dark.svg?v=0.5.2" : "favicon-light.svg?v=0.5.2");
+        favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=0.5.2" : "assets/favicon-light.svg?v=0.5.2");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
