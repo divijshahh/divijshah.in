@@ -17,6 +17,7 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 - Directory for self-hosted services
 - Minimal client-side JavaScript
 - Open Graph and social sharing metadata
+- Canonical URL metadata and a dedicated 1200×630 social preview image
 - No frontend framework or build step
 
 ## Tech stack
@@ -37,6 +38,7 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 ├── style.css        # Layout, typography, responsive styles and themes
 ├── favicon-light.svg # Light-mode favicon
 ├── favicon-dark.svg  # Dark-mode favicon
+├── og-image.png      # Social preview image
 ├── seerr-logo.svg   # Local Seerr logo asset
 ├── CHANGELOG.md     # Release history
 └── README.md        # Project documentation
