@@ -405,7 +405,7 @@ footer {
   margin-top: auto;
   padding-top: 30px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
   color: #76736c;
