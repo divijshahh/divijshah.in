@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../favicon-light.svg?v=0.5.2" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.2" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -74,7 +74,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "../favicon-dark.svg?v=0.5.2" : "../favicon-light.svg?v=0.5.2");
+        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.2" : "../assets/favicon-light.svg?v=0.5.2");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
