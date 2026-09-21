@@ -185,9 +185,6 @@ h1 {
 }
 
 .home-link > a::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   pointer-events: none;
 }
 
@@ -297,7 +294,7 @@ h1 {
 .home-item:hover {
   transform: translateY(-3px);
   border-color: #aaa69d;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow:
     0 12px 25px rgba(32, 32, 30, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
