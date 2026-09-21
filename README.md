@@ -91,7 +91,7 @@ No application server is required for the website itself.
 
 The website uses a simple `v0.x` version number while the design and structure are actively evolving.
 
-The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.2.
+The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.3.
 
 Version changes are intended to be meaningful rather than tied to every individual Git commit.
 
