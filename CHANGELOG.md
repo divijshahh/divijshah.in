@@ -8,6 +8,15 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.3] - 2026-09-22
+
+### Changed
+
+- Replaced the CV link card with an in-page rendering of the current CV PDF.
+- Kept direct open and download actions available below the rendered CV.
+- Reduced the vertical gap between the site navigation and the homepage's `CURRENTLY` section.
+- Updated the site version to v0.5.3.
+
 ## [0.5.2] - 2026-09-22
 
 ### Added
@@ -98,7 +107,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.3...HEAD
+[0.5.3]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.3
 [0.5.1]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.1
 [0.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5
 [0.23]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.23
