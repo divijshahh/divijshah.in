@@ -59,6 +59,15 @@ h1 {
 }
 
 
+.site-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title-link:hover {
+  color: inherit;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
