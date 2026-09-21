@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=0.5.3" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=0.5.5" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,9 +32,6 @@
       <div class="hero">
         <h1>DIVIJ SHAH</h1>
         <p class="intro">Law student based in Bombay</p>
-        <nav class="site-nav" aria-label="Site navigation">
-          <a href="/">HOME</a><span aria-hidden="true">·</span><a href="/about">ABOUT</a><span aria-hidden="true">·</span><a href="/cv">CV</a>
-        </nav>
       </div>
     </header>
 
@@ -92,7 +89,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.5.4</span>
+        <span class="version">v0.5.5</span>
       </span>
     </footer>
   </main>
@@ -117,7 +114,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=0.5.3" : "assets/favicon-light.svg?v=0.5.3");
+        favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=0.5.5" : "assets/favicon-light.svg?v=0.5.5");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
