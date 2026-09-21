@@ -327,18 +327,6 @@ h1 {
   height: 72px;
 }
 
-.service-name {
-  position: absolute;
-  z-index: 4;
-  left: 17px;
-  bottom: 13px;
-  color: #4a4842;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
 .service-label {
   position: absolute;
   z-index: 4;
@@ -578,10 +566,6 @@ footer { animation-delay: 0.32s; }
     gap: 2px;
   }
 
-  .service-label strong {
-    font-size: 14px;
-  }
-
   .service-label small {
     font-size: 10px;
   }
@@ -589,12 +573,6 @@ footer { animation-delay: 0.32s; }
   .service-icon-kuma {
     width: 56px;
     height: 56px;
-  }
-
-  .service-name {
-    left: 13px;
-    bottom: 10px;
-    font-size: 14px;
   }
 
   footer {
@@ -703,8 +681,7 @@ footer { animation-delay: 0.32s; }
 }
 
 :root[data-theme="dark"] .label,
-:root[data-theme="dark"] footer,
-:root[data-theme="dark"] .service-name {
+:root[data-theme="dark"] footer {
   color: #918e86;
 }
 
