@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Curriculum vitae of Divij Shah.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.2" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.3" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/cv">
   <meta name="color-scheme" content="light dark">
   <title>CV — Divij Shah</title>
@@ -40,22 +40,14 @@
 
     <section class="site-content">
       <h2 class="page-heading">CV</h2>
-      <a class="cv-document" href="../cv.pdf" target="_blank" rel="noopener" aria-label="Open CV PDF">
-        <span class="cv-document-type">PDF</span>
-        <span class="cv-document-copy">
-          <span class="cv-document-label">CURRICULUM VITAE</span>
-          <span class="cv-document-title">Divij Shah · CV</span>
-          <span class="cv-document-meta">Open the current PDF</span>
-        </span>
-        <span class="cv-document-arrow" aria-hidden="true">↗</span>
-      </a>
+      <div class="cv-viewer" id="cv-viewer" aria-label="Curriculum vitae">
+        <div class="cv-loading" id="cv-loading">Loading CV…</div>
+      </div>
       <div class="cv-actions">
-        <a class="cv-action" href="../cv.pdf" target="_blank" rel="noopener">View PDF ↗</a>
+        <a class="cv-action" href="../cv.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
         <a class="cv-action" href="../cv.pdf" download>Download PDF ↓</a>
       </div>
-    </section>
-
-    <footer>
+    </section>   <footer>
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
@@ -63,31 +55,78 @@
       </span>
     </footer>
   </main>
-  <script>
-    (() => {
-      const root = document.documentElement;
-      const toggle = document.querySelector(".theme-toggle");
-      const themeMeta = document.querySelector('meta[name="theme-color"]');
-      const favicon = document.getElementById("favicon");
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
-      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-      let saved = null;
-      try { saved = localStorage.getItem("theme"); } catch (e) {}
-      let initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
-      const applyTheme = (theme, persist = true) => {
-        root.dataset.theme = theme;
-        toggle.innerHTML = theme === "dark" ? sun : moon;
-        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.2" : "../assets/favicon-light.svg?v=0.5.2");
-        if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
-      };
-      applyTheme(initial, false);
-      systemTheme.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light", false); });
-      toggle.addEventListener("click", () => { saved = root.dataset.theme === "dark" ? "light" : "dark"; applyTheme(saved); });
-    })();
-  </script>
-</body>
+  <script type="module">
+    import * as pdfjsLib from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs";
+
+    const root = document.documentElement;
+    const toggle = document.querySelector(".theme-toggle");
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const favicon = document.getElementById("favicon");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
+    const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+
+    let saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (e) {}
+    let initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
+
+    const applyTheme = (theme, persist = true) => {
+      root.dataset.theme = theme;
+      toggle.innerHTML = theme === "dark" ? sun : moon;
+      toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.3" : "../assets/favicon-light.svg?v=0.5.3");
+      if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
+    };
+
+    applyTheme(initial, false);
+    systemTheme.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light", false); });
+    toggle.addEventListener("click", () => { saved = root.dataset.theme === "dark" ? "light" : "dark"; applyTheme(saved); });
+
+    const viewer = document.getElementById("cv-viewer");
+    const loading = document.getElementById("cv-loading");
+
+    const renderCv = async () => {
+      try {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+        const pdf = await pdfjsLib.getDocument("../cv.pdf").promise;
+        loading.remove();
+
+        for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+          const page = await pdf.getPage(pageNumber);
+          const baseViewport = page.getViewport({ scale: 1 });
+          const availableWidth = Math.max(viewer.clientWidth - 40, 280);
+          const scale = availableWidth / baseViewport.width;
+          const viewport = page.getViewport({ scale });
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+          const frame = document.createElement("div");
+          frame.className = "cv-page-frame";
+
+          const canvas = document.createElement("canvas");
+          canvas.className = "cv-page-canvas";
+          canvas.width = Math.ceil(viewport.width * dpr);
+          canvas.height = Math.ceil(viewport.height * dpr);
+          canvas.style.width = "100%";
+          canvas.style.height = "auto";
+          frame.appendChild(canvas);
+          viewer.appendChild(frame);
+
+          const context = canvas.getContext("2d", { alpha: false });
+          await page.render({
+            canvasContext: context,
+            viewport,
+            transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+          }).promise;
+        }
+      } catch (error) {
+        console.error("Unable to render CV:", error);
+        loading.textContent = "The CV could not be displayed here. Open the PDF instead.";
+        loading.classList.add("cv-loading-error");
+      }
+    };
+
+    renderCv();
+  </script>/body>
 </html>
