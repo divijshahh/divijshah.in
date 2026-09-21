@@ -25,33 +25,33 @@ body {
 }
 
 main {
-  width: min(1200px, calc(100% - 64px));
+  width: min(900px, calc(100% - 48px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 34px 0 28px;
+  padding: 26px 0 21px;
   display: flex;
   flex-direction: column;
 }
 
 .hero {
-  padding: 13vh 0 12vh;
+  padding: 9.75vh 0 9vh;
   text-align: center;
 }
 
 h1 {
   margin: 0;
   color: #161614;
-  font-size: clamp(72px, 13vw, 140px);
+  font-size: clamp(54px, 9.75vw, 105px);
   line-height: 0.84;
   letter-spacing: -0.075em;
   font-weight: 600;
 }
 
 .intro {
-  max-width: 700px;
-  margin: 34px auto 0;
+  max-width: 525px;
+  margin: 26px auto 0;
   color: #494843;
-  font-size: 25px;
+  font-size: 19px;
   line-height: 1.45;
 }
 
@@ -60,36 +60,36 @@ h1 {
 }
 
 .label {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   color: #716f69;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .current {
-  margin: 24px 0 0;
-  padding-bottom: 30px;
+  margin: 18px 0 0;
+  padding-bottom: 23px;
   color: #272622;
-  font-size: 25px;
+  font-size: 19px;
   line-height: 1.4;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 54px;
-  margin-top: 48px;
+  gap: 41px;
+  margin-top: 36px;
 }
 
 .social-links a {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 4px 0 9px;
+  gap: 9px;
+  padding: 3px 0 7px;
   color: #272622;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
@@ -122,15 +122,15 @@ h1 {
 
 .social-links svg {
   display: block;
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   fill: currentColor;
 }
 
 .social-links b {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1;
   transition: transform 220ms ease;
@@ -141,15 +141,15 @@ h1 {
 }
 
 .home-link {
-  margin-top: 72px;
+  margin-top: 54px;
 }
 
 .home-link a {
   position: relative;
   display: block;
-  min-height: 540px;
+  min-height: 405px;
   width: 100%;
-  padding: 58px 52px 52px;
+  padding: 44px 39px 39px;
   color: #272622;
   background: rgba(255, 255, 255, 0.24);
   border: 1px solid #aaa79f;
@@ -181,7 +181,7 @@ h1 {
   display: block;
   color: #161614;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(58px, 7vw, 86px);
+  font-size: clamp(44px, 5.25vw, 65px);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.045em;
@@ -191,10 +191,10 @@ h1 {
   position: relative;
   z-index: 1;
   display: block;
-  margin-top: 18px;
+  margin-top: 14px;
   color: #65625c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: 12px;
   line-height: 1.35;
   letter-spacing: 0.02em;
 }
@@ -204,9 +204,9 @@ h1 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 15px;
   width: 100%;
-  margin-top: 58px;
+  margin-top: 44px;
 }
 
 .home-item {
@@ -214,13 +214,13 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  min-height: 200px;
-  padding: 28px 20px;
+  gap: 14px;
+  min-height: 150px;
+  padding: 21px 15px;
   color: #3f3d38;
   background: rgba(243, 242, 238, 0.72);
   border: 1px solid #cbc8c0;
-  font-size: 27px;
+  font-size: 20px;
   line-height: 1.2;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
@@ -229,9 +229,9 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
   color: #716f69;
   border: 1px solid #bdbab2;
   font-family: Georgia, "Times New Roman", serif;
@@ -240,19 +240,19 @@ h1 {
 
 .service-icon {
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .service-icon-immich {
-  width: 68px;
-  height: 68px;
+  width: 51px;
+  height: 51px;
 }
 
 .service-icon-nextcloud {
-  width: 70px;
-  height: 64px;
+  width: 53px;
+  height: 48px;
 }
 
 .home-link a:hover .home-item {
@@ -264,10 +264,10 @@ h1 {
 .home-arrow {
   position: absolute;
   z-index: 1;
-  top: 38px;
-  right: 42px;
+  top: 29px;
+  right: 32px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
   transition: transform 220ms ease;
 }
@@ -278,20 +278,20 @@ h1 {
 
 footer {
   margin-top: auto;
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
   color: #76736c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 11px;
   letter-spacing: 0.08em;
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(9px);
   }
 
   to {
@@ -326,22 +326,22 @@ footer {
 
 @media (max-width: 760px) {
   main {
-    width: calc(100% - 36px);
-    padding-top: 24px;
+    width: calc(100% - 27px);
+    padding-top: 18px;
   }
 
   .hero {
-    padding: 10vh 0 10vh;
+    padding: 7.5vh 0 7.5vh;
   }
 
   h1 {
-    font-size: clamp(58px, 19vw, 90px);
+    font-size: clamp(44px, 14.25vw, 68px);
   }
 
   .intro {
-    font-size: 25px;
-    max-width: 340px;
-    margin-top: 28px;
+    font-size: 19px;
+    max-width: 255px;
+    margin-top: 21px;
   }
 
   .current {
@@ -349,94 +349,94 @@ footer {
   }
 
   .social-links {
-    gap: 30px;
-    margin-top: 42px;
+    gap: 23px;
+    margin-top: 32px;
   }
 
   .social-links a {
     font-size: 25px;
-    gap: 9px;
+    gap: 7px;
   }
 
   .social-links svg {
-    width: 23px;
-    height: 23px;
-    flex-basis: 23px;
+    width: 17px;
+    height: 17px;
+    flex-basis: 17px;
   }
 
   .social-links b {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .home-link {
-    margin-top: 50px;
+    margin-top: 38px;
   }
 
   .home-link a {
-    min-height: 560px;
-    padding: 42px 20px 28px;
+    min-height: 420px;
+    padding: 32px 15px 21px;
   }
 
   .home-kicker {
-    font-size: clamp(48px, 15vw, 68px);
+    font-size: clamp(36px, 11.25vw, 51px);
   }
 
   .home-title {
-    margin-top: 14px;
-    font-size: 18px;
+    margin-top: 11px;
+    font-size: 14px;
   }
 
   .home-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 42px;
+    gap: 9px;
+    margin-top: 32px;
   }
 
   .home-item {
-    min-height: 175px;
-    padding: 20px 12px;
-    font-size: 25px;
+    min-height: 131px;
+    padding: 15px 9px;
+    font-size: 19px;
   }
 
   .item-icon {
-    width: 30px;
-    height: 30px;
-    flex-basis: 30px;
-    font-size: 14px;
+    width: 23px;
+    height: 23px;
+    flex-basis: 23px;
+    font-size: 8px;
   }
 
   .service-icon {
-    width: 56px;
-    height: 56px;
+    width: 42px;
+    height: 42px;
   }
 
   .service-icon-immich {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 
   .service-icon-nextcloud {
-    width: 62px;
-    height: 56px;
+    width: 47px;
+    height: 42px;
   }
 
   .service-icon-jellyfin,
   .service-icon-kuma {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 
   .home-arrow {
-    top: 25px;
-    right: 22px;
-    font-size: 32px;
+    top: 19px;
+    right: 17px;
+    font-size: 24px;
   }
 
   footer {
-    padding-top: 32px;
+    padding-top: 24px;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 11px;
   }
 }
