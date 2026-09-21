@@ -12,7 +12,7 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 
 - Personal landing page
 - Responsive layout for desktop and mobile
-- Light and dark themes with persisted preference
+- Light and dark themes with system-theme detection and persisted manual preference
 - Links to personal contact and professional profiles
 - Directory for self-hosted services
 - Minimal client-side JavaScript
@@ -34,7 +34,8 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 .
 ├── index.html       # Page structure, content and theme logic
 ├── style.css        # Layout, typography, responsive styles and themes
-├── favicon.svg      # Site favicon
+├── favicon-light.svg # Light-mode favicon
+├── favicon-dark.svg  # Dark-mode favicon
 ├── seerr-logo.svg   # Local Seerr logo asset
 ├── CHANGELOG.md     # Release history
 └── README.md        # Project documentation
@@ -71,7 +72,7 @@ No application server is required for the website itself.
 
 The website uses a simple `v0.x` version number while the design and structure are actively evolving.
 
-The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md).
+The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.
 
 Version changes are intended to be meaningful rather than tied to every individual Git commit.
 
@@ -81,6 +82,7 @@ Version changes are intended to be meaningful rather than tied to every individu
 - Prefer small, targeted changes over unnecessary rewrites.
 - Keep external assets stable and use local assets where appropriate.
 - Test responsive behaviour when changing layout or typography.
+- Test both system color schemes and manual theme switching.
 - Update the changelog for notable user-facing changes.
 - Keep commit messages short and descriptive.
 
