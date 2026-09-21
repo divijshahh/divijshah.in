@@ -19,15 +19,15 @@ body {
   background-color: #f3f2ee;
   background-image:
     radial-gradient(circle at 50% 4%, rgba(255, 255, 255, 0.9), transparent 32%),
-    linear-gradient(rgba(66, 64, 58, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(66, 64, 58, 0.075) 1px, transparent 1px),
     linear-gradient(90deg, rgba(66, 64, 58, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(66, 64, 58, 0.018) 1px, transparent 1px),
+    linear-gradient(rgba(66, 64, 58, 0.038) 1px, transparent 1px),
     linear-gradient(90deg, rgba(66, 64, 58, 0.018) 1px, transparent 1px);
   background-size:
     auto,
+    48px 48px,
     56px 56px,
-    56px 56px,
-    224px 224px,
+    192px 192px,
     224px 224px;
   background-position:
     center top,
@@ -107,7 +107,7 @@ h1 {
   color: #272622;
   background:
     linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)),
-    linear-gradient(135deg, rgba(76, 73, 66, 0.018) 25%, transparent 25%, transparent 50%, rgba(76, 73, 66, 0.018) 50%, rgba(76, 73, 66, 0.018) 75%, transparent 75%);
+    linear-gradient(135deg, rgba(76, 73, 66, 0.045) 25%, transparent 25%, transparent 50%, rgba(76, 73, 66, 0.018) 50%, rgba(76, 73, 66, 0.018) 75%, transparent 75%);
   background-size: auto, 18px 18px;
   border: 1px solid #c4c1b9;
   border-radius: 13px;
@@ -133,7 +133,7 @@ h1 {
   transform: translateY(-4px);
   background:
     linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-    linear-gradient(135deg, rgba(76, 73, 66, 0.02) 25%, transparent 25%, transparent 50%, rgba(76, 73, 66, 0.02) 50%, rgba(76, 73, 66, 0.02) 75%, transparent 75%);
+    linear-gradient(135deg, rgba(76, 73, 66, 0.052) 25%, transparent 25%, transparent 50%, rgba(76, 73, 66, 0.02) 50%, rgba(76, 73, 66, 0.02) 75%, transparent 75%);
   background-size: auto, 18px 18px;
   border-color: #aaa69d;
   box-shadow: 0 15px 32px rgba(32, 32, 30, 0.095), 0 3px 8px rgba(32, 32, 30, 0.055);
@@ -182,7 +182,7 @@ h1 {
   color: #272622;
   background:
     linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
-    linear-gradient(rgba(74, 72, 65, 0.018) 1px, transparent 1px),
+    linear-gradient(rgba(74, 72, 65, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(74, 72, 65, 0.018) 1px, transparent 1px);
   background-size: auto, 24px 24px, 24px 24px;
   border: 1px solid #aaa79f;
@@ -208,7 +208,7 @@ h1 {
   transform: translateY(-4px);
   background:
     linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54)),
-    linear-gradient(rgba(74, 72, 65, 0.022) 1px, transparent 1px),
+    linear-gradient(rgba(74, 72, 65, 0.052) 1px, transparent 1px),
     linear-gradient(90deg, rgba(74, 72, 65, 0.022) 1px, transparent 1px);
   background-size: auto, 24px 24px, 24px 24px;
   border-color: #8f8b83;
@@ -263,7 +263,7 @@ h1 {
   color: #3f3d38;
   background:
     linear-gradient(rgba(243, 242, 238, 0.66), rgba(243, 242, 238, 0.66)),
-    linear-gradient(45deg, rgba(76, 73, 66, 0.025) 25%, transparent 25%, transparent 75%, rgba(76, 73, 66, 0.025) 75%);
+    linear-gradient(45deg, rgba(76, 73, 66, 0.06) 25%, transparent 25%, transparent 75%, rgba(76, 73, 66, 0.025) 75%);
   background-size: auto, 20px 20px;
   border: 1px solid #c9c6be;
   border-radius: 12px;
@@ -304,7 +304,7 @@ h1 {
   transform: translateY(-3px);
   background:
     linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)),
-    linear-gradient(45deg, rgba(76, 73, 66, 0.028) 25%, transparent 25%, transparent 75%, rgba(76, 73, 66, 0.028) 75%);
+    linear-gradient(45deg, rgba(76, 73, 66, 0.07) 25%, transparent 25%, transparent 75%, rgba(76, 73, 66, 0.028) 75%);
   background-size: auto, 20px 20px;
   border-color: #b1aea5;
   box-shadow: 0 10px 22px rgba(32, 32, 30, 0.075);
@@ -376,6 +376,7 @@ h1 {
 }
 
 footer {
+  position: relative;
   margin-top: auto;
   padding-top: 30px;
   display: flex;
@@ -385,6 +386,15 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.08em;
+}
+
+.version {
+  margin-left: auto;
+  color: #8a877f;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
 }
 
 @keyframes rise {
@@ -564,10 +574,16 @@ footer {
 
   footer {
     padding-top: 24px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     font-size: 8px;
+  }
+
+  .version {
+    margin-left: 0;
+    font-size: 7px;
   }
 }
 
