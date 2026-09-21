@@ -94,8 +94,10 @@ h1 {
 }
 
 .social-links svg {
-  width: 18px;
-  height: 18px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
   fill: currentColor;
 }
 
@@ -154,6 +156,12 @@ footer {
 
   .social-links {
     gap: 24px;
+  }
+
+  .social-links svg {
+    width: 14px;
+    height: 14px;
+    flex-basis: 14px;
   }
 
   footer {
