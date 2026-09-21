@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Curriculum vitae of Divij Shah.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.3" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.4" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/cv">
   <meta name="color-scheme" content="light dark">
   <title>CV — Divij Shah</title>
@@ -40,18 +40,17 @@
 
     <section class="site-content">
       <h2 class="page-heading">CV</h2>
+      <div class="cv-actions">
+        <a class="cv-action" href="../cv.pdf" download>Download PDF ↓</a>
+      </div>
       <div class="cv-viewer" id="cv-viewer" aria-label="Curriculum vitae">
         <div class="cv-loading" id="cv-loading">Loading CV…</div>
-      </div>
-      <div class="cv-actions">
-        <a class="cv-action" href="../cv.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
-        <a class="cv-action" href="../cv.pdf" download>Download PDF ↓</a>
       </div>
     </section>   <footer>
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.5.3</span>
+        <span class="version">v0.5.4</span>
       </span>
     </footer>
   </main>
@@ -76,7 +75,7 @@
       toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
       toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
       themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.3" : "../assets/favicon-light.svg?v=0.5.3");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.4" : "../assets/favicon-light.svg?v=0.5.4");
       if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
     };
 
@@ -128,5 +127,6 @@
     };
 
     renderCv();
-  </script>/body>
+  </script>
+</body>
 </html>
