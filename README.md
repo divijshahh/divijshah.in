@@ -34,6 +34,22 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 
 ```text
 .
+├── index.html
+├── style.css
+├── about/
+│   └── index.html
+├── cv/
+│   └── index.html
+├── cv.pdf
+├── assets/
+│   ├── favicon-light.svg
+│   ├── favicon-dark.svg
+│   └── seerr-logo.svg
+├── og-image.png
+├── CHANGELOG.md
+└── README.md
+```text
+.
 ├── index.html       # Page structure, content and theme logic
 ├── style.css        # Layout, typography, responsive styles and themes
 ├── favicon-light.svg # Light-mode favicon
@@ -75,7 +91,7 @@ No application server is required for the website itself.
 
 The website uses a simple `v0.x` version number while the design and structure are actively evolving.
 
-The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.1.
+The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.2.
 
 Version changes are intended to be meaningful rather than tied to every individual Git commit.
 
