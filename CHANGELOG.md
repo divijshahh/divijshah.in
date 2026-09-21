@@ -23,6 +23,7 @@ No unreleased changes.
 - Added separate light and dark DS favicons that follow the active site theme.
 - Updated the footer to place the copyright and version as a right-aligned stack.
 - Added Open Graph and social sharing metadata for link previews.
+- Added a canonical URL and a dedicated 1200×630 social preview image.
 - Bumped the displayed site version to v0.5.
 
 ## [0.24] - 2026-09-22
