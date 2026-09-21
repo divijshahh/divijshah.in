@@ -470,8 +470,8 @@ footer {
     animation: none;
   }
 
-  .social-links a::before,
-  .social-links b,
+  .social-card,
+  .social-card b,
   .home-link a,
   .home-arrow,
   .home-item {
