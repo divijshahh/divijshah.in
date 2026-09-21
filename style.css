@@ -63,16 +63,6 @@ h1 {
   padding-top: 1px;
 }
 
-.section::before {
-  content: "";
-  display: block;
-  width: 42px;
-  height: 1px;
-  margin: 0 auto 13px;
-  background: #c9c7c0;
-  opacity: 0.72;
-}
-
 .label {
   margin: 14px 0 0;
   color: #716f69;
@@ -737,11 +727,6 @@ footer { animation-delay: 0.32s; }
 
 :root[data-theme="dark"] .intro {
   color: #c4c1b9;
-}
-
-:root[data-theme="dark"] .section::before {
-  background: #3b3a35;
-  opacity: 0.82;
 }
 
 :root[data-theme="dark"] .label,
