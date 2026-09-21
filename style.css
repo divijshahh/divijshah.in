@@ -164,7 +164,7 @@ h1 {
 
 .home-link a {
   position: relative;
-  display: grid;
+  display: block;
   min-height: 390px;
   width: 100%;
   padding: 34px 38px;
@@ -204,7 +204,6 @@ h1 {
 .home-title {
   position: relative;
   z-index: 1;
-  align-self: end;
   margin-bottom: 8px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 46px;
@@ -255,6 +254,12 @@ h1 {
   border: 1px solid #bdbab2;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 13px;
+}
+
+.home-link > a:hover .home-item {
+  background: rgba(255, 255, 255, 0.66);
+  border-color: #b2afa7;
+  transform: translateY(-2px);
 }
 .home-arrow {
   position: absolute;
@@ -368,18 +373,32 @@ footer {
   }
 
   .home-link a {
-    min-height: 205px;
+    min-height: 430px;
     padding: 26px 22px;
+  }
+
+  .home-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .home-item {
+    min-height: 62px;
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .item-icon {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+    font-size: 12px;
   }
 
   .home-title {
     font-size: 32px;
     max-width: 82%;
-  }
-
-  .home-meta {
-    font-size: 13px;
-    max-width: 90%;
   }
 
   .home-arrow {
