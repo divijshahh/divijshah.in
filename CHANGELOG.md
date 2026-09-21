@@ -8,6 +8,22 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5] - 2026-09-22
+
+### Changed
+
+- Made the system color scheme the default when no manual theme preference is saved.
+- Preserved explicit light/dark selections made through the theme toggle.
+- Updated the service labels to make destinations clearer without adding duplicate application names.
+- Replaced the Nextcloud wordmark asset with an icon-only service mark and added a `Files` label.
+- Increased the spacing between the Uptime Kuma icon and its status label.
+- Cleaned up duplicate and unused CSS rules.
+- Added additional narrow-screen mobile safeguards and responsive refinements.
+- Improved reduced-motion handling by removing unused transition and animation selectors.
+- Added separate light and dark DS favicons that follow the active site theme.
+- Updated the footer to place the copyright and version as a right-aligned stack.
+- Bumped the displayed site version to v0.5.
+
 ## [0.24] - 2026-09-22
 
 ### Changed
@@ -59,7 +75,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.23...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5...HEAD
+[0.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5
 [0.23]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.23
 [0.22]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.22
 [0.20]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.20
