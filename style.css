@@ -82,10 +82,10 @@ h1 {
 .social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   color: #363531;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -95,9 +95,9 @@ h1 {
 
 .social-links svg {
   display: block;
-  width: 15px;
-  height: 15px;
-  flex: 0 0 15px;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
   fill: currentColor;
 }
 
@@ -107,12 +107,13 @@ h1 {
 }
 
 .home-link a {
-  color: #4f4e4a;
+  display: inline-block;
+  padding: 11px 22px;
+  color: #292825;
+  border: 1px solid #aaa79f;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   text-decoration: none;
-  border-bottom: 1px solid #aaa79f;
-  padding-bottom: 3px;
 }
 
 .home-link a:hover {
@@ -158,10 +159,19 @@ footer {
     gap: 24px;
   }
 
+  .social-links a {
+    font-size: 14px;
+    gap: 9px;
+  }
+
   .social-links svg {
-    width: 14px;
-    height: 14px;
-    flex-basis: 14px;
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+
+  .home-link a {
+    padding: 10px 20px;
   }
 
   footer {
