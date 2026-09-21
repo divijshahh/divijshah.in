@@ -17,13 +17,13 @@
   <meta name="twitter:description" content="Curriculum vitae of Divij Shah.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../favicon-light.svg?v=0.5.2" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=0.5.2" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/cv">
   <meta name="color-scheme" content="light dark">
   <title>CV — Divij Shah</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="cv-page">
   <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
     <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
   </button>
@@ -40,12 +40,19 @@
 
     <section class="site-content">
       <h2 class="page-heading">CV</h2>
-      <div class="cv-viewer">
-        <object data="../cv.pdf" type="application/pdf" width="100%" height="900">
-          <p>CV PDF not available yet.</p>
-        </object>
+      <a class="cv-document" href="../cv.pdf" target="_blank" rel="noopener" aria-label="Open CV PDF">
+        <span class="cv-document-type">PDF</span>
+        <span class="cv-document-copy">
+          <span class="cv-document-label">CURRICULUM VITAE</span>
+          <span class="cv-document-title">Divij Shah · CV</span>
+          <span class="cv-document-meta">Open the current PDF</span>
+        </span>
+        <span class="cv-document-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="cv-actions">
+        <a class="cv-action" href="../cv.pdf" target="_blank" rel="noopener">View PDF ↗</a>
+        <a class="cv-action" href="../cv.pdf" download>Download PDF ↓</a>
       </div>
-      <a class="cv-download" href="../cv.pdf" download>Download PDF ↗</a>
     </section>
 
     <footer>
@@ -74,7 +81,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "../favicon-dark.svg?v=0.5.2" : "../favicon-light.svg?v=0.5.2");
+        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=0.5.2" : "../assets/favicon-light.svg?v=0.5.2");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
