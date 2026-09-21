@@ -105,7 +105,7 @@ h1 {
   padding: 20px 22px;
   gap: 18px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.14);
   border: 1px solid #c4c1b9;
   border-radius: 13px;
   box-shadow: 0 5px 18px rgba(32, 32, 30, 0.05), 0 1px 3px rgba(32, 32, 30, 0.055);
@@ -128,7 +128,7 @@ h1 {
 
 .social-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.28);
   border-color: #aaa69d;
   box-shadow: 0 15px 32px rgba(32, 32, 30, 0.095), 0 3px 8px rgba(32, 32, 30, 0.055);
 }
@@ -174,9 +174,7 @@ h1 {
   width: 100%;
   padding: 31px;
   color: #272622;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)),
-    radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.42), transparent 28%);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid #aaa79f;
   border-radius: 17px;
   font-family: Arial, Helvetica, sans-serif;
@@ -206,9 +204,7 @@ h1 {
 
 .home-link > a:hover {
   transform: translateY(-4px);
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)),
-    radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.5), transparent 28%);
+  background: rgba(255, 255, 255, 0.24);
   border-color: #8f8b83;
   box-shadow: 0 20px 44px rgba(32, 32, 30, 0.115), 0 4px 10px rgba(32, 32, 30, 0.055);
 }
@@ -259,9 +255,7 @@ h1 {
   min-width: 0;
   padding: 18px;
   color: #3f3d38;
-  background:
-    radial-gradient(circle at 50% 47%, var(--brand-glow), transparent 34%),
-    linear-gradient(rgba(246, 245, 241, 0.74), rgba(246, 245, 241, 0.74));
+  background: rgba(255, 255, 255, 0.10);
   border: 1px solid #c6c3bb;
   border-radius: 12px;
   box-shadow:
@@ -306,9 +300,7 @@ h1 {
 .home-item:hover {
   transform: translateY(-3px);
   border-color: #aaa69d;
-  background:
-    radial-gradient(circle at 50% 47%, var(--brand-glow-hover), transparent 38%),
-    linear-gradient(rgba(250, 249, 246, 0.82), rgba(250, 249, 246, 0.82));
+  background: rgba(255, 255, 255, 0.20);
   box-shadow:
     0 12px 25px rgba(32, 32, 30, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
