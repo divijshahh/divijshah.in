@@ -78,106 +78,122 @@ h1 {
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 41px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 36px;
 }
 
-.social-links a {
+.social-card {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 9px;
-  padding: 3px 0 7px;
+  min-height: 118px;
+  padding: 22px 24px;
+  gap: 20px;
   color: #272622;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid #c7c4bc;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(32, 32, 30, 0.055), 0 1px 3px rgba(32, 32, 30, 0.06);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 500;
   text-decoration: none;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(0.22, 0.8, 0.3, 1), box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
 }
 
-.social-links a::before {
+.social-card::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: #b7b4ac;
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 220ms ease, background 220ms ease;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.32), transparent 55%);
+  pointer-events: none;
 }
 
-.social-links a:hover {
-  color: #11110f;
+.social-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: #aaa69d;
+  box-shadow: 0 14px 30px rgba(32, 32, 30, 0.10), 0 3px 8px rgba(32, 32, 30, 0.06);
 }
 
-.social-links a:hover::before {
-  transform: scaleX(0.35);
-  background: #272622;
-}
-
-.social-links svg {
+.social-icon {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
   fill: currentColor;
 }
 
-.social-links b {
+.social-card span {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.social-card b {
+  position: relative;
+  z-index: 1;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 400;
   line-height: 1;
   transition: transform 220ms ease;
 }
 
-.social-links a:hover b {
-  transform: translate(3px, -3px);
+.social-card:hover b {
+  transform: translate(4px, -4px);
 }
 
 .home-link {
-  margin-top: 54px;
+  margin-top: 48px;
+  width: 100%;
 }
 
 .home-link a {
   position: relative;
   display: block;
-  min-height: 405px;
   width: 100%;
-  padding: 44px 39px 39px;
+  min-height: 405px;
+  padding: 42px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.30);
   border: 1px solid #aaa79f;
+  border-radius: 16px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   overflow: hidden;
-  text-align: center;
-  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  box-shadow: 0 9px 28px rgba(32, 32, 30, 0.075), 0 2px 6px rgba(32, 32, 30, 0.05);
+  transition: transform 240ms cubic-bezier(0.22, 0.8, 0.3, 1), background 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
 }
 
 .home-link a::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.52), transparent 48%, rgba(255, 255, 255, 0.16));
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.56), transparent 48%, rgba(255, 255, 255, 0.14));
   pointer-events: none;
 }
 
 .home-link a:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.56);
-  border-color: #737069;
-  box-shadow: 0 18px 42px rgba(32, 32, 30, 0.09);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.60);
+  border-color: #8f8b83;
+  box-shadow: 0 20px 44px rgba(32, 32, 30, 0.12), 0 4px 10px rgba(32, 32, 30, 0.06);
+}
+
+.home-heading {
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 .home-kicker {
-  position: relative;
-  z-index: 1;
   display: block;
   color: #161614;
   font-family: Georgia, "Times New Roman", serif;
@@ -188,13 +204,11 @@ h1 {
 }
 
 .home-title {
-  position: relative;
-  z-index: 1;
   display: block;
-  margin-top: 14px;
+  margin-top: 12px;
   color: #65625c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.35;
   letter-spacing: 0.02em;
 }
@@ -204,67 +218,64 @@ h1 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 15px;
+  gap: 14px;
   width: 100%;
-  margin-top: 44px;
+  margin-top: 42px;
 }
 
 .home-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 13px;
   min-height: 150px;
-  padding: 21px 15px;
+  padding: 20px 14px;
   color: #3f3d38;
-  background: rgba(243, 242, 238, 0.72);
-  border: 1px solid #cbc8c0;
-  font-size: 20px;
+  background: rgba(243, 242, 238, 0.66);
+  border: 1px solid #c7c4bc;
+  border-radius: 11px;
+  font-size: 16px;
   line-height: 1.2;
-  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+  box-shadow: 0 4px 12px rgba(32, 32, 30, 0.045);
+  transition: transform 200ms cubic-bezier(0.22, 0.8, 0.3, 1), background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
-.item-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  flex: 0 0 26px;
-  color: #716f69;
-  border: 1px solid #bdbab2;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+.home-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.78);
+  border-color: #b2afa7;
+  box-shadow: 0 10px 22px rgba(32, 32, 30, 0.09);
 }
 
 .service-icon {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
 }
 
 .service-icon-immich {
-  width: 51px;
-  height: 51px;
+  width: 78px;
+  height: 78px;
 }
 
 .service-icon-nextcloud {
-  width: 53px;
-  height: 48px;
+  width: 80px;
+  height: 70px;
 }
 
-.home-link a:hover .home-item {
-  background: rgba(255, 255, 255, 0.66);
-  border-color: #b2afa7;
-  transform: translateY(-2px);
+.service-icon-jellyfin,
+.service-icon-kuma {
+  width: 78px;
+  height: 78px;
 }
 
 .home-arrow {
   position: absolute;
-  z-index: 1;
-  top: 29px;
+  z-index: 2;
+  top: 28px;
   right: 32px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 30px;
@@ -351,27 +362,30 @@ footer {
   }
 
   .current {
-    font-size: 25px;
+    font-size: 19px;
   }
 
   .social-links {
-    gap: 23px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     margin-top: 32px;
   }
 
-  .social-links a {
-    font-size: 25px;
-    gap: 7px;
+  .social-card {
+    min-height: 92px;
+    padding: 18px 19px;
+    gap: 15px;
+    font-size: 16px;
   }
 
-  .social-links svg {
-    width: 17px;
-    height: 17px;
-    flex-basis: 17px;
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
   }
 
-  .social-links b {
-    font-size: 15px;
+  .social-card b {
+    font-size: 20px;
   }
 
   .home-link {
@@ -381,6 +395,7 @@ footer {
   .home-link a {
     min-height: 420px;
     padding: 32px 15px 21px;
+    border-radius: 13px;
   }
 
   .home-kicker {
@@ -401,35 +416,30 @@ footer {
   .home-item {
     min-height: 131px;
     padding: 15px 9px;
-    font-size: 19px;
-  }
-
-  .item-icon {
-    width: 23px;
-    height: 23px;
-    flex-basis: 23px;
-    font-size: 8px;
+    gap: 11px;
+    border-radius: 9px;
+    font-size: 15px;
   }
 
   .service-icon {
-    width: 42px;
-    height: 42px;
+    width: 58px;
+    height: 58px;
   }
 
   .service-icon-immich {
-    width: 45px;
-    height: 45px;
+    width: 64px;
+    height: 64px;
   }
 
   .service-icon-nextcloud {
-    width: 47px;
-    height: 42px;
+    width: 66px;
+    height: 58px;
   }
 
   .service-icon-jellyfin,
   .service-icon-kuma {
-    width: 45px;
-    height: 45px;
+    width: 64px;
+    height: 64px;
   }
 
   .home-arrow {
@@ -443,7 +453,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    font-size: 11px;
+    font-size: 8px;
   }
 }
 
