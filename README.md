@@ -16,6 +16,7 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 - Links to personal contact and professional profiles
 - Directory for self-hosted services
 - Minimal client-side JavaScript
+- Open Graph and social sharing metadata
 - No frontend framework or build step
 
 ## Tech stack
