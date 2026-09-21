@@ -8,6 +8,14 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.23] - 2026-09-22
+
+### Changed
+
+- Recreated the favicon as a transparent `DS` lettermark using the site's Georgia-based typography.
+- Removed the opaque square background from the favicon.
+- Added favicon cache-busting to ensure the updated mark is used by the website.
+
 ## [0.22] - 2026-09-22
 
 ### Changed
@@ -40,5 +48,7 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.20...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.23...HEAD
+[0.23]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.23
+[0.22]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.22
 [0.20]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.20
