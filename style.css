@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  width: min(960px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 64px));
   min-height: 100vh;
   margin: 0 auto;
   padding: 34px 0 28px;
@@ -165,9 +165,9 @@ h1 {
 .home-link a {
   position: relative;
   display: grid;
-  min-height: 224px;
+  min-height: 390px;
   width: 100%;
-  padding: 30px 34px;
+  padding: 34px 38px;
   color: #272622;
   background: rgba(255, 255, 255, 0.24);
   border: 1px solid #aaa79f;
@@ -207,7 +207,7 @@ h1 {
   align-self: end;
   margin-bottom: 8px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 40px;
+  font-size: 46px;
   line-height: 1.08;
   letter-spacing: -0.025em;
 }
@@ -216,11 +216,46 @@ h1 {
   position: relative;
   z-index: 1;
   color: #65625c;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   letter-spacing: 0.03em;
 }
 
+.home-items {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 54px;
+  max-width: 920px;
+}
+
+.home-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 72px;
+  padding: 14px 16px;
+  color: #45433e;
+  background: rgba(243, 242, 238, 0.72);
+  border: 1px solid #cbc8c0;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  color: #716f69;
+  border: 1px solid #bdbab2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+}
 .home-arrow {
   position: absolute;
   z-index: 1;
@@ -244,7 +279,7 @@ footer {
   gap: 24px;
   color: #76736c;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.08em;
 }
 
