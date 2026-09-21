@@ -259,10 +259,14 @@ h1 {
   min-width: 0;
   padding: 18px;
   color: #3f3d38;
-  background: rgba(243, 242, 238, 0.62);
+  background:
+    radial-gradient(circle at 50% 47%, var(--brand-glow), transparent 34%),
+    linear-gradient(rgba(246, 245, 241, 0.74), rgba(246, 245, 241, 0.74));
   border: 1px solid #c6c3bb;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(32, 32, 30, 0.035), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 4px 12px rgba(32, 32, 30, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
   overflow: hidden;
   transition: transform 200ms cubic-bezier(0.22, 0.8, 0.3, 1), background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
@@ -272,98 +276,48 @@ h1 {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.2;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.26), transparent 55%);
 }
 
 .home-item-nextcloud {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background:
-    linear-gradient(rgba(250, 249, 245, 0.68), rgba(250, 249, 245, 0.68)),
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(83, 80, 73, 0.08) 31px 32px);
-}
-
-.home-item-nextcloud::after {
-  background:
-    linear-gradient(90deg, transparent 0 14%, rgba(83, 80, 73, 0.045) 14% 14.2%, transparent 14.2% 100%);
-  opacity: 0.7;
+  --brand-glow: rgba(0, 130, 201, 0.13);
 }
 
 .home-item-media {
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  background:
-    linear-gradient(rgba(239, 239, 235, 0.58), rgba(239, 239, 235, 0.58)),
-    repeating-linear-gradient(90deg, transparent 0 53px, rgba(76, 73, 66, 0.075) 53px 54px),
-    repeating-linear-gradient(0deg, transparent 0 37px, rgba(76, 73, 66, 0.05) 37px 38px);
-}
-
-.home-item-media::after {
-  background: linear-gradient(90deg, rgba(76, 73, 66, 0.055), transparent 22%, transparent 78%, rgba(76, 73, 66, 0.055));
+  --brand-glow: rgba(170, 92, 211, 0.13);
 }
 
 .home-item-photos {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background:
-    linear-gradient(rgba(245, 244, 240, 0.62), rgba(245, 244, 240, 0.62)),
-    radial-gradient(circle at 12px 12px, rgba(76, 73, 66, 0.08) 0 1px, transparent 1.5px);
-  background-size: auto, 18px 18px;
-}
-
-.home-item-photos::after {
-  background:
-    linear-gradient(90deg, transparent 0 24%, rgba(76, 73, 66, 0.05) 24% 24.5%, transparent 24.5% 49%, rgba(76, 73, 66, 0.05) 49% 49.5%, transparent 49.5% 74%, rgba(76, 73, 66, 0.05) 74% 74.5%, transparent 74.5%),
-    linear-gradient(0deg, transparent 0 49%, rgba(76, 73, 66, 0.05) 49% 49.5%, transparent 49.5%);
-  opacity: 0.65;
+  --brand-glow: rgba(255, 119, 76, 0.13);
 }
 
 .home-item-status {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-  background:
-    linear-gradient(rgba(239, 240, 237, 0.64), rgba(239, 240, 237, 0.64)),
-    radial-gradient(circle, rgba(67, 75, 68, 0.15) 0 1px, transparent 1.3px);
-  background-size: auto, 13px 13px;
-}
-
-.home-item-status::after {
-  background:
-    linear-gradient(90deg, transparent 0 19%, rgba(71, 78, 72, 0.08) 19% 19.5%, transparent 19.5% 39%, rgba(71, 78, 72, 0.08) 39% 39.5%, transparent 39.5% 59%, rgba(71, 78, 72, 0.08) 59% 59.5%, transparent 59.5% 79%, rgba(71, 78, 72, 0.08) 79% 79.5%, transparent 79.5%);
+  --brand-glow: rgba(94, 196, 111, 0.12);
 }
 
 .home-item:hover {
   transform: translateY(-3px);
   border-color: #aaa69d;
-  box-shadow: 0 12px 25px rgba(32, 32, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  background:
+    radial-gradient(circle at 50% 47%, var(--brand-glow-hover), transparent 38%),
+    linear-gradient(rgba(250, 249, 246, 0.82), rgba(250, 249, 246, 0.82));
+  box-shadow:
+    0 12px 25px rgba(32, 32, 30, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.home-item-nextcloud:hover {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(83, 80, 73, 0.095) 31px 32px);
-}
-
-.home-item-media:hover {
-  background:
-    linear-gradient(rgba(248, 248, 245, 0.7), rgba(248, 248, 245, 0.7)),
-    repeating-linear-gradient(90deg, transparent 0 53px, rgba(76, 73, 66, 0.085) 53px 54px),
-    repeating-linear-gradient(0deg, transparent 0 37px, rgba(76, 73, 66, 0.06) 37px 38px);
-}
-
-.home-item-photos:hover {
-  background:
-    linear-gradient(rgba(250, 249, 246, 0.72), rgba(250, 249, 246, 0.72)),
-    radial-gradient(circle at 12px 12px, rgba(76, 73, 66, 0.095) 0 1px, transparent 1.5px);
-  background-size: auto, 18px 18px;
-}
-
-.home-item-status:hover {
-  background:
-    linear-gradient(rgba(246, 247, 244, 0.72), rgba(246, 247, 244, 0.72)),
-    radial-gradient(circle, rgba(67, 75, 68, 0.18) 0 1px, transparent 1.3px);
-  background-size: auto, 13px 13px;
-}
+.home-item-nextcloud { --brand-glow-hover: rgba(0, 130, 201, 0.18); }
+.home-item-media { --brand-glow-hover: rgba(170, 92, 211, 0.18); }
+.home-item-photos { --brand-glow-hover: rgba(255, 119, 76, 0.18); }
+.home-item-status { --brand-glow-hover: rgba(94, 196, 111, 0.17); }
 
 .service-icon {
   position: relative;
@@ -376,23 +330,23 @@ h1 {
 }
 
 .service-icon-nextcloud {
-  width: 86px;
-  height: 76px;
+  width: 104px;
+  height: 92px;
 }
 
 .service-icon-jellyfin {
-  width: 88px;
-  height: 88px;
+  width: 104px;
+  height: 104px;
 }
 
 .service-icon-immich {
-  width: 61px;
-  height: 61px;
+  width: 78px;
+  height: 78px;
 }
 
 .service-icon-kuma {
-  width: 55px;
-  height: 55px;
+  width: 72px;
+  height: 72px;
 }
 
 .service-name {
@@ -421,61 +375,6 @@ h1 {
   position: absolute;
   z-index: 1;
   pointer-events: none;
-}
-
-.graphic-docs {
-  inset: 24px 22px auto auto;
-  width: 56%;
-  height: 72%;
-  opacity: 0.65;
-}
-
-.graphic-docs i {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(76, 73, 66, 0.09);
-}
-
-.graphic-docs i:nth-child(1) { top: 17%; }
-.graphic-docs i:nth-child(2) { top: 37%; }
-.graphic-docs i:nth-child(3) { top: 57%; }
-.graphic-docs i:nth-child(4) { top: 77%; }
-
-.graphic-media {
-  inset: 22px 26px auto auto;
-  width: 58%;
-  height: 68%;
-  opacity: 0.65;
-}
-
-.graphic-media i {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 25%;
-  border: 1px solid rgba(76, 73, 66, 0.08);
-  border-radius: 4px;
-}
-
-.graphic-media i:nth-child(1) { left: 0; }
-.graphic-media i:nth-child(2) { left: 34%; }
-.graphic-media i:nth-child(3) { left: 68%; }
-
-.graphic-photos {
-  inset: 18px 16px auto auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  width: 52%;
-  height: 66%;
-  opacity: 0.7;
-}
-
-.graphic-photos i {
-  border: 1px solid rgba(76, 73, 66, 0.08);
-  border-radius: 3px;
 }
 
 .graphic-status {
@@ -662,23 +561,23 @@ footer { animation-delay: 0.32s; }
   }
 
   .service-icon-nextcloud {
-    width: 66px;
-    height: 58px;
+    width: 78px;
+    height: 69px;
   }
 
   .service-icon-jellyfin {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
   .service-icon-immich {
-    width: 48px;
-    height: 48px;
+    width: 61px;
+    height: 61px;
   }
 
   .service-icon-kuma {
-    width: 45px;
-    height: 45px;
+    width: 56px;
+    height: 56px;
   }
 
   .home-item-nextcloud .service-name,
@@ -690,25 +589,6 @@ footer { animation-delay: 0.32s; }
     left: 13px;
     bottom: 10px;
     font-size: 12px;
-  }
-
-  .graphic-docs {
-    inset: 17px 16px auto auto;
-    width: 56%;
-    height: 72%;
-  }
-
-  .graphic-media {
-    inset: 18px 18px auto auto;
-    width: 56%;
-    height: 70%;
-  }
-
-  .graphic-photos {
-    inset: 14px 12px auto auto;
-    width: 48%;
-    height: 62%;
-    gap: 4px;
   }
 
   .graphic-status {
