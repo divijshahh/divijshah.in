@@ -314,9 +314,8 @@ h1 {
 }
 
 .service-icon-seerr {
-  width: 105px;
-  height: 48px;
-  filter: invert(1) drop-shadow(0 2px 3px rgba(32, 32, 30, 0.08));
+  width: 54px;
+  height: 54px;
 }
 
 .service-icon-kuma {
@@ -333,6 +332,34 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.service-label {
+  position: absolute;
+  z-index: 4;
+  left: 17px;
+  bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-label strong {
+  color: #4a4842;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.service-label small {
+  color: #77736b;
+  font-size: 11px;
+  line-height: 1.1;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
@@ -538,8 +565,22 @@ footer { animation-delay: 0.32s; }
   }
 
   .service-icon-seerr {
-    width: 90px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .service-label {
+    left: 13px;
+    bottom: 10px;
+    gap: 2px;
+  }
+
+  .service-label strong {
+    font-size: 14px;
+  }
+
+  .service-label small {
+    font-size: 10px;
   }
 
   .service-icon-kuma {
@@ -664,6 +705,14 @@ footer { animation-delay: 0.32s; }
   color: #918e86;
 }
 
+:root[data-theme="dark"] .service-label strong {
+  color: #e7e5df;
+}
+
+:root[data-theme="dark"] .service-label small {
+  color: #918e86;
+}
+
 :root[data-theme="dark"] .current {
   color: #e7e5df;
 }
@@ -711,13 +760,7 @@ footer { animation-delay: 0.32s; }
   border-color: #55534c;
 }
 
-.service-icon-seerr {
-  filter: grayscale(1) brightness(0) drop-shadow(0 2px 3px rgba(32, 32, 30, 0.08));
-}
 
-:root[data-theme="dark"] .service-icon-seerr {
-  filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
-}
 
 @media (max-width: 760px) {
   .theme-toggle {
