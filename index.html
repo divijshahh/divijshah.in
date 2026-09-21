@@ -6,7 +6,6 @@
   <meta name="description" content="Divij Shah — law student based in Bombay.">
   <meta name="theme-color" content="#f3f2ee">
   <meta name="color-scheme" content="light dark">
-  <link rel="canonical" href="https://divijshah.in/">
   <link id="favicon" rel="icon" href="favicon-light.svg?v=0.5" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="style.css">
@@ -113,7 +112,8 @@
       });
 
       toggle.addEventListener("click", () => {
-        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+        saved = root.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(saved);
       });
     })();
   </script>
