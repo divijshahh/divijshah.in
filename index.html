@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+  <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+</button>
   <main>
     <header>
       <div class="hero">
@@ -69,7 +71,7 @@
     <footer>
       <span>Bombay, India</span>
       <span>© 2026 Divij Shah</span>
-      <span class="version">v0.11</span>
+      <span class="version">v0.12</span>
     </footer>
   </main>
 
@@ -77,24 +79,30 @@
     (() => {
       const root = document.documentElement;
       const toggle = document.querySelector(".theme-toggle");
-      const saved = localStorage.getItem("theme");
-      const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      root.dataset.theme = saved || preferred;
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
+      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
 
-      const updateToggle = () => {
-        const dark = root.dataset.theme === "dark";
-        toggle.textContent = dark ? "☼" : "◐";
-        toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+      let saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      const initial = saved === "dark" || saved === "light" ? saved : preferred;
+
+      const applyTheme = (theme, persist = true) => {
+        root.dataset.theme = theme;
+        toggle.innerHTML = theme === "dark" ? sun : moon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
+        if (persist) {
+          try { localStorage.setItem("theme", theme); } catch (e) {}
+        }
       };
 
-      updateToggle();
+      applyTheme(initial, false);
 
       toggle.addEventListener("click", () => {
-        const next = root.dataset.theme === "dark" ? "light" : "dark";
-        root.dataset.theme = next;
-        localStorage.setItem("theme", next);
-        updateToggle();
+        applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
       });
     })();
   </script>
