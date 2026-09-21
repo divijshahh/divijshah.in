@@ -66,7 +66,7 @@ main {
 }
 
 .hero {
-  padding: 15vh 0 12vh;
+  padding: 15vh 0 13vh;
   text-align: center;
 }
 
@@ -79,7 +79,8 @@ h1 {
 }
 
 .intro {
-  margin: 30px 0 0;
+  max-width: 600px;
+  margin: 30px auto 0;
   color: #686865;
   font-size: 18px;
   line-height: 1.5;
@@ -93,37 +94,12 @@ h1 {
   padding: 18px 0 0;
 }
 
-.links {
-  margin-top: 30px;
-  border-top: 1px solid #d9d9d5;
-}
-
-.links a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 72px;
-  padding: 0 2px;
-  border-bottom: 1px solid #d9d9d5;
-  color: inherit;
-  text-decoration: none;
-  transition: padding 160ms ease, color 160ms ease;
-}
-
-.links a:hover {
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #666;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.arrow {
-  font-size: 19px;
-  color: #858581;
+.current {
+  margin: 28px 0 0;
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
 }
 
 footer {
@@ -157,12 +133,10 @@ footer {
 
   .intro {
     font-size: 16px;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 320px;
   }
 
-  .links a {
-    min-height: 64px;
+  .current {
+    font-size: 18px;
   }
 }
