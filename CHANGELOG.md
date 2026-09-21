@@ -8,6 +8,17 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.24] - 2026-09-22
+
+### Changed
+
+- Restored light mode as the default theme for first-time visitors.
+- Replaced the full-width section rule with a shorter separator that works better with the grid background.
+- Increased separation between the Status icon and label.
+- Reduced the homepage card's upper-left glass highlight by 15%.
+- Added additional mobile spacing and sizing adjustments for the theme toggle and homepage layout.
+- Added more breathing room between the `D` and `S` in the favicon.
+
 ## [0.23] - 2026-09-22
 
 ### Changed
