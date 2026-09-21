@@ -23,18 +23,8 @@ body {
     linear-gradient(90deg, rgba(66, 64, 58, 0.035) 1px, transparent 1px),
     linear-gradient(rgba(66, 64, 58, 0.038) 1px, transparent 1px),
     linear-gradient(90deg, rgba(66, 64, 58, 0.018) 1px, transparent 1px);
-  background-size:
-    auto,
-    48px 48px,
-    56px 56px,
-    192px 192px,
-    224px 224px;
-  background-position:
-    center top,
-    center top,
-    center top,
-    center top,
-    center top;
+  background-size: auto, 48px 48px, 56px 56px, 192px 192px, 224px 224px;
+  background-position: center top, center top, center top, center top, center top;
 }
 
 main {
@@ -105,10 +95,12 @@ h1 {
   padding: 20px 22px;
   gap: 18px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid #c4c1b9;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #c6c3bb;
   border-radius: 13px;
-  box-shadow: 0 5px 18px rgba(32, 32, 30, 0.05), 0 1px 3px rgba(32, 32, 30, 0.055);
+  box-shadow:
+    0 4px 12px rgba(32, 32, 30, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 1.2;
@@ -118,19 +110,23 @@ h1 {
   transition: transform 220ms cubic-bezier(0.22, 0.8, 0.3, 1), box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
 }
 
-.social-card::after {
+.social-card::after,
+.home-link > a::after,
+.home-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.42), transparent 55%);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.26), transparent 55%);
   pointer-events: none;
 }
 
 .social-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
   border-color: #aaa69d;
-  box-shadow: 0 15px 32px rgba(32, 32, 30, 0.095), 0 3px 8px rgba(32, 32, 30, 0.055);
+  box-shadow:
+    0 12px 25px rgba(32, 32, 30, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .social-icon {
@@ -174,13 +170,15 @@ h1 {
   width: 100%;
   padding: 31px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid #aaa79f;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #c6c3bb;
   border-radius: 17px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   overflow: hidden;
-  box-shadow: 0 10px 28px rgba(32, 32, 30, 0.075), 0 2px 6px rgba(32, 32, 30, 0.045);
+  box-shadow:
+    0 4px 12px rgba(32, 32, 30, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
   transition: transform 240ms cubic-bezier(0.22, 0.8, 0.3, 1), background 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
 }
 
@@ -188,19 +186,13 @@ h1 {
   pointer-events: none;
 }
 
-.home-link > a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.34), transparent 50%, rgba(255, 255, 255, 0.1));
-  pointer-events: none;
-}
-
 .home-link > a:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.24);
-  border-color: #8f8b83;
-  box-shadow: 0 20px 44px rgba(32, 32, 30, 0.115), 0 4px 10px rgba(32, 32, 30, 0.055);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #aaa69d;
+  box-shadow:
+    0 12px 25px rgba(32, 32, 30, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .home-heading {
@@ -257,14 +249,6 @@ h1 {
     inset 0 1px 0 rgba(255, 255, 255, 0.55);
   overflow: hidden;
   transition: transform 200ms cubic-bezier(0.22, 0.8, 0.3, 1), background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
-}
-
-.home-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.26), transparent 55%);
 }
 
 .home-item-nextcloud {
@@ -355,32 +339,6 @@ h1 {
 
 .home-item:hover .service-icon {
   transform: scale(1.045);
-}
-
-.service-graphic {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.graphic-status {
-  inset: 19px 16px auto auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 7px;
-  width: 48%;
-  height: 58%;
-  opacity: 0.72;
-}
-
-.graphic-status i {
-  width: 3px;
-  height: 3px;
-  align-self: center;
-  justify-self: center;
-  border-radius: 50%;
-  background: rgba(69, 78, 70, 0.24);
-  box-shadow: 0 0 0 2px rgba(69, 78, 70, 0.035);
 }
 
 .home-arrow {
@@ -575,13 +533,6 @@ footer { animation-delay: 0.32s; }
     left: 13px;
     bottom: 10px;
     font-size: 12px;
-  }
-
-  .graphic-status {
-    inset: 14px 12px auto auto;
-    width: 45%;
-    height: 58%;
-    gap: 5px;
   }
 
   .home-arrow {
