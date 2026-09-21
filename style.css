@@ -204,7 +204,7 @@ h1 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
   width: 100%;
   margin-top: 58px;
 }
@@ -214,9 +214,9 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 13px;
-  min-height: 118px;
-  padding: 18px 16px;
+  gap: 18px;
+  min-height: 200px;
+  padding: 28px 20px;
   color: #3f3d38;
   background: rgba(243, 242, 238, 0.72);
   border: 1px solid #cbc8c0;
@@ -240,19 +240,19 @@ h1 {
 
 .service-icon {
   display: block;
-  width: 38px;
-  height: 38px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
 }
 
 .service-icon-immich {
-  width: 40px;
-  height: 40px;
+  width: 68px;
+  height: 68px;
 }
 
 .service-icon-nextcloud {
-  width: 42px;
-  height: 38px;
+  width: 70px;
+  height: 64px;
 }
 
 .home-link a:hover .home-item {
@@ -393,8 +393,8 @@ footer {
   }
 
   .home-item {
-    min-height: 100px;
-    padding: 14px 10px;
+    min-height: 175px;
+    padding: 20px 12px;
     font-size: 25px;
   }
 
@@ -406,18 +406,24 @@ footer {
   }
 
   .service-icon {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
   }
 
   .service-icon-immich {
-    width: 34px;
-    height: 34px;
+    width: 60px;
+    height: 60px;
   }
 
   .service-icon-nextcloud {
-    width: 36px;
-    height: 32px;
+    width: 62px;
+    height: 56px;
+  }
+
+  .service-icon-jellyfin,
+  .service-icon-kuma {
+    width: 60px;
+    height: 60px;
   }
 
   .home-arrow {
@@ -455,4 +461,9 @@ footer {
   .home-item {
     transition: none;
   }
+}
+.service-icon-jellyfin,
+.service-icon-kuma {
+  width: 68px;
+  height: 68px;
 }
