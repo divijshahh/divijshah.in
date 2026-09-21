@@ -591,31 +591,43 @@ footer { animation-delay: 0.32s; }
   }
 }
 
+
 .theme-toggle {
   position: fixed;
-  z-index: 20;
+  z-index: 100;
   top: 24px;
   right: 24px;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
   padding: 0;
   border: 1px solid #c6c3bb;
-  border-radius: 50%;
+  border-radius: 11px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.72);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(32, 32, 30, 0.06);
-  backdrop-filter: blur(8px);
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
+  box-shadow: 0 5px 16px rgba(32, 32, 30, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
 .theme-toggle:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.9);
   border-color: #aaa69d;
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 :root[data-theme="dark"] {
@@ -689,35 +701,29 @@ footer { animation-delay: 0.32s; }
 
 :root[data-theme="dark"] .theme-toggle {
   color: #e7e5df;
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(28, 28, 26, 0.82);
   border-color: #3b3a35;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.28);
 }
 
 :root[data-theme="dark"] .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.075);
+  background: rgba(42, 42, 39, 0.95);
   border-color: #55534c;
 }
 
-:root[data-theme="dark"] .service-icon-seerr {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
-}
-
 .service-icon-seerr {
-  filter: brightness(0) drop-shadow(0 2px 3px rgba(32, 32, 30, 0.08));
+  filter: grayscale(1) brightness(0) drop-shadow(0 2px 3px rgba(32, 32, 30, 0.08));
 }
 
-footer {
-  display: flex;
-  align-items: flex-end;
+:root[data-theme="dark"] .service-icon-seerr {
+  filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
 }
 
 @media (max-width: 760px) {
   .theme-toggle {
     top: 15px;
     right: 15px;
-    width: 34px;
-    height: 34px;
-    font-size: 16px;
+    width: 42px;
+    height: 42px;
   }
 }
