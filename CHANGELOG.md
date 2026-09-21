@@ -8,6 +8,14 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.1] - 2026-09-22
+
+### Changed
+
+- Removed the decorative separator beneath the hero section.
+- Refined the footer layout so the location stays left-aligned while the copyright and version form a right-aligned stack.
+- Bumped the displayed site version to v0.5.1.
+
 ## [0.5] - 2026-09-22
 
 ### Changed
@@ -24,7 +32,6 @@ No unreleased changes.
 - Updated the footer to place the copyright and version as a right-aligned stack.
 - Added Open Graph and social sharing metadata for link previews.
 - Added a canonical URL and a dedicated 1200×630 social preview image.
-- Bumped the displayed site version to v0.5.
 
 ## [0.24] - 2026-09-22
 
@@ -77,7 +84,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.1
 [0.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5
 [0.23]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.23
 [0.22]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.22
