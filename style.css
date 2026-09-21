@@ -18,7 +18,8 @@ body {
   min-height: 100vh;
   background-color: #f3f2ee;
   background-image:
-    radial-gradient(circle at 50% 4%, rgba(255, 255, 255, 0.9), transparent 32%),
+    radial-gradient(circle at 50% 4%, rgba(255, 255, 255, 0.95), transparent 32%),
+    radial-gradient(circle at 15% 75%, rgba(210, 205, 195, 0.18), transparent 30%),
     linear-gradient(rgba(66, 64, 58, 0.075) 1px, transparent 1px),
     linear-gradient(90deg, rgba(66, 64, 58, 0.035) 1px, transparent 1px),
     linear-gradient(rgba(66, 64, 58, 0.038) 1px, transparent 1px),
@@ -95,7 +96,9 @@ h1 {
   padding: 20px 22px;
   gap: 18px;
   color: #272622;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid #c6c3bb;
   border-radius: 13px;
   box-shadow:
@@ -122,7 +125,7 @@ h1 {
 
 .social-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.5);
   border-color: #aaa69d;
   box-shadow:
     0 12px 25px rgba(32, 32, 30, 0.08),
