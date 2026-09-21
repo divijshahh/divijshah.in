@@ -324,6 +324,12 @@ footer {
   animation-delay: 0.32s;
 }
 
+.service-icon-jellyfin,
+.service-icon-kuma {
+  width: 51px;
+  height: 51px;
+}
+
 @media (max-width: 760px) {
   main {
     width: calc(100% - 27px);
@@ -461,9 +467,4 @@ footer {
   .home-item {
     transition: none;
   }
-}
-.service-icon-jellyfin,
-.service-icon-kuma {
-  width: 68px;
-  height: 68px;
 }
