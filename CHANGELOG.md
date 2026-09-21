@@ -8,6 +8,13 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.21] - 2026-09-22
+
+### Changed
+
+- Reduced the Immich icon size and adjusted its label position to prevent overlap.
+- Switched service labels to a more refined serif typeface for a less default appearance.
+
 ## [0.20] - 2026-09-21
 
 ### Changed
