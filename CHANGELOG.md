@@ -8,6 +8,18 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.4] - 2026-09-22
+
+### Changed
+
+- Fixed the CV page's malformed closing body tag.
+- Removed the repeated About/CV navigation from the CV page so the CV begins directly after the identity header.
+- Made the CV download control sticky so it remains available while reading the document.
+- Removed the redundant Open PDF control.
+- Replaced the About page content with a temporary placeholder.
+- Reworked the homepage navigation into a subtle editorial navigation bar with Home, About and CV links.
+- Updated the site version to v0.5.4.
+
 ## [0.5.3] - 2026-09-22
 
 ### Changed
@@ -107,7 +119,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.3...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.4...HEAD
+[0.5.4]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.4
 [0.5.3]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.3
 [0.5.1]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.1
 [0.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5
