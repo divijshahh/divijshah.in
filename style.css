@@ -316,9 +316,9 @@ h1 {
 .service-icon-seerr {
   position: absolute;
   left: 50%;
-  top: 39%;
-  width: 44px;
-  height: 44px;
+  top: 50%;
+  width: 58px;
+  height: 58px;
   transform: translate(-50%, -50%);
 }
 
@@ -343,11 +343,22 @@ h1 {
 }
 
 .service-label small {
-  color: #77736b;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.01em;
+}
+
+.service-label-jellyfin small {
+  color: #00a4dc;
+}
+
+.service-label-seerr small {
+  color: #7b68ee;
+}
+
+.service-label-status small {
+  color: #5cdd8b;
 }
 
 .home-item:hover .service-icon {
@@ -556,8 +567,8 @@ footer { animation-delay: 0.32s; }
   }
 
   .service-icon-seerr {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
   }
 
   .service-label {
@@ -567,7 +578,7 @@ footer { animation-delay: 0.32s; }
   }
 
   .service-label small {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .service-icon-kuma {
@@ -685,8 +696,16 @@ footer { animation-delay: 0.32s; }
   color: #918e86;
 }
 
-:root[data-theme="dark"] .service-label small {
-  color: #918e86;
+:root[data-theme="dark"] .service-label-jellyfin small {
+  color: #00a4dc;
+}
+
+:root[data-theme="dark"] .service-label-seerr small {
+  color: #8b78ff;
+}
+
+:root[data-theme="dark"] .service-label-status small {
+  color: #6ee99b;
 }
 
 :root[data-theme="dark"] .current {
