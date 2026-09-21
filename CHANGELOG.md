@@ -22,6 +22,7 @@ No unreleased changes.
 - Improved reduced-motion handling by removing unused transition and animation selectors.
 - Added separate light and dark DS favicons that follow the active site theme.
 - Updated the footer to place the copyright and version as a right-aligned stack.
+- Added Open Graph and social sharing metadata for link previews.
 - Bumped the displayed site version to v0.5.
 
 ## [0.24] - 2026-09-22
