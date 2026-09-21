@@ -37,7 +37,7 @@ main {
 }
 
 .hero {
-  padding: 9.75vh 0 9vh;
+  padding: 9.75vh 0 5vh;
   text-align: center;
 }
 
@@ -148,35 +148,48 @@ h1 {
 }
 
 .cv-viewer {
-  margin-top: 28px;
+  width: min(760px, 100%);
+  margin: 28px auto 0;
+  padding: 20px;
   border: 1px solid #c6c3bb;
   border-radius: 12px;
-  overflow: hidden;
-  background: #fff;
-  min-height: 900px;
+  background: #d9d7d1;
+  box-shadow: 0 5px 18px rgba(32, 32, 30, 0.05);
 }
 
-.cv-viewer embed,
-.cv-viewer iframe {
+.cv-page-frame {
+  width: 100%;
+  margin: 0 auto 20px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(32, 32, 30, 0.08);
+}
+
+.cv-page-frame:last-child {
+  margin-bottom: 0;
+}
+
+.cv-page-canvas {
   display: block;
   width: 100%;
-  height: 900px;
-  border: 0;
+  height: auto;
 }
 
-.cv-download {
-  display: inline-block;
-  margin-top: 16px;
-  color: #3f3d38;
+.cv-loading {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: #77746d;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-.cv-download:hover {
-  color: #161614;
+.cv-loading-error {
+  color: #8b4d46;
+  text-align: center;
+  line-height: 1.6;
+  padding: 24px;
 }
 
 .section {
@@ -976,12 +989,16 @@ footer { animation-delay: 0.32s; }
 }
 
 :root[data-theme="dark"] .cv-viewer {
-  background: #fff;
+  background: #292824;
   border-color: #3b3a35;
 }
 
-:root[data-theme="dark"] .cv-download {
-  color: #e7e5df;
+:root[data-theme="dark"] .cv-loading {
+  color: #aaa79f;
+}
+
+:root[data-theme="dark"] .cv-loading-error {
+  color: #d28b82;
 }
 
 @media (max-width: 760px) {
@@ -1004,17 +1021,17 @@ footer { animation-delay: 0.32s; }
   }
 
   .cv-viewer {
-    min-height: 650px;
+    padding: 10px;
+    border-radius: 10px;
   }
 
-  .cv-viewer embed,
-  .cv-viewer iframe {
-    height: 650px;
+  .cv-page-frame {
+    margin-bottom: 10px;
   }
 }
 
 /* Page-specific refinements */
-.cv-page .hero { padding-bottom: 5vh; }
+.cv-page .hero { padding-bottom: 3vh; }
 .cv-page h1 { font-size: clamp(48px, 7vw, 76px); }
 .cv-page .page-heading { text-align: center; }
 
