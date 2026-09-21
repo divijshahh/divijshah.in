@@ -314,8 +314,12 @@ h1 {
 }
 
 .service-icon-seerr {
-  width: 54px;
-  height: 54px;
+  position: absolute;
+  left: 50%;
+  top: 39%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
 }
 
 .service-icon-kuma {
@@ -368,6 +372,10 @@ h1 {
 
 .home-item:hover .service-icon {
   transform: scale(1.045);
+}
+
+.home-item:hover .service-icon-seerr {
+  transform: translate(-50%, -50%) scale(1.045);
 }
 
 .home-arrow {
@@ -568,8 +576,8 @@ footer { animation-delay: 0.32s; }
   }
 
   .service-icon-seerr {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
   }
 
   .service-label {
