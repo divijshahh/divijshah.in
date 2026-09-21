@@ -8,6 +8,20 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.2] - 2026-09-22
+
+### Added
+
+- Added `/about` and `/cv` pages with shared site navigation.
+- Added a dedicated CV document presentation with direct viewing and download actions.
+
+### Changed
+
+- Made the About and CV navigation larger and easier to recognize and click.
+- Reduced the hero size on the CV page to make room for the document section.
+- Organized local interface assets under `assets/`.
+- Updated the repository structure documentation.
+
 ## [0.5.1] - 2026-09-22
 
 ### Changed
