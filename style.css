@@ -220,7 +220,7 @@ h1 {
   color: #3f3d38;
   background: rgba(243, 242, 238, 0.72);
   border: 1px solid #cbc8c0;
-  font-size: 17px;
+  font-size: 27px;
   line-height: 1.2;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
@@ -236,6 +236,23 @@ h1 {
   border: 1px solid #bdbab2;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
+}
+
+.service-icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.service-icon-immich {
+  width: 40px;
+  height: 40px;
+}
+
+.service-icon-nextcloud {
+  width: 42px;
+  height: 38px;
 }
 
 .home-link a:hover .home-item {
@@ -378,7 +395,7 @@ footer {
   .home-item {
     min-height: 100px;
     padding: 14px 10px;
-    font-size: 15px;
+    font-size: 25px;
   }
 
   .item-icon {
@@ -386,6 +403,21 @@ footer {
     height: 30px;
     flex-basis: 30px;
     font-size: 14px;
+  }
+
+  .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-icon-immich {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-icon-nextcloud {
+    width: 36px;
+    height: 32px;
   }
 
   .home-arrow {
