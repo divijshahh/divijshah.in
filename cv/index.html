@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV of Divij Shah — law student based in Bombay.">
+  <meta property="og:title" content="CV — Divij Shah">
+  <meta property="og:description" content="Curriculum vitae of Divij Shah.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://divijshah.in/cv">
+  <meta property="og:site_name" content="Divij Shah">
+  <meta property="og:image" content="https://divijshah.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CV — Divij Shah">
+  <meta name="twitter:description" content="Curriculum vitae of Divij Shah.">
+  <meta name="twitter:image" content="https://divijshah.in/og-image.png">
+  <meta name="theme-color" content="#f3f2ee">
+  <link id="favicon" rel="icon" href="../favicon-light.svg?v=0.5.2" type="image/svg+xml">
+  <link rel="canonical" href="https://divijshah.in/cv">
+  <meta name="color-scheme" content="light dark">
+  <title>CV — Divij Shah</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+  <main>
+    <header>
+      <div class="hero">
+        <h1><a class="site-title-link" href="/">DIVIJ SHAH</a></h1>
+        <p class="intro">Law student based in Bombay</p>
+        <nav class="site-nav" aria-label="Site navigation">
+          <a href="/about">ABOUT</a><span aria-hidden="true">·</span><a href="/cv">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="site-content">
+      <h2 class="page-heading">CV</h2>
+      <div class="cv-viewer">
+        <object data="../cv.pdf" type="application/pdf" width="100%" height="900">
+          <p>CV PDF not available yet.</p>
+        </object>
+      </div>
+      <a class="cv-download" href="../cv.pdf" download>Download PDF ↗</a>
+    </section>
+
+    <footer>
+      <span>Bombay, India</span>
+      <span class="footer-meta">
+        <span>© 2026 Divij Shah</span>
+        <span class="version">v0.5.2</span>
+      </span>
+    </footer>
+  </main>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector(".theme-toggle");
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      const favicon = document.getElementById("favicon");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
+      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+      let saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      let initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
+      const applyTheme = (theme, persist = true) => {
+        root.dataset.theme = theme;
+        toggle.innerHTML = theme === "dark" ? sun : moon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
+        favicon.setAttribute("href", theme === "dark" ? "../favicon-dark.svg?v=0.5.2" : "../favicon-light.svg?v=0.5.2");
+        if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
+      };
+      applyTheme(initial, false);
+      systemTheme.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light", false); });
+      toggle.addEventListener("click", () => { saved = root.dataset.theme === "dark" ? "light" : "dark"; applyTheme(saved); });
+    })();
+  </script>
+</body>
+</html>
