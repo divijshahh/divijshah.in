@@ -8,6 +8,13 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.22] - 2026-09-22
+
+### Changed
+
+- Set dark mode as the default theme for first-time visitors.
+- Preserve a user's explicit light/dark theme choice across visits.
+
 ## [0.21] - 2026-09-22
 
 ### Changed
