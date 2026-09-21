@@ -59,15 +59,8 @@ h1 {
   border-top: 1px solid #c9c7c0;
 }
 
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-top: 18px;
-}
-
 .label {
-  margin: 0;
+  margin: 18px 0 0;
   color: #716f69;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -76,23 +69,12 @@ h1 {
   text-transform: uppercase;
 }
 
-.section-rule {
-  height: 1px;
-  flex: 1;
-  background: #dddcd6;
-}
-
 .current {
   margin: 24px 0 0;
   padding-bottom: 30px;
   color: #272622;
   font-size: 25px;
   line-height: 1.4;
-}
-
-.current span {
-  color: #9b9890;
-  padding: 0 5px;
 }
 
 .social-links {
@@ -159,21 +141,22 @@ h1 {
 }
 
 .home-link {
-  margin-top: 62px;
+  margin-top: 72px;
 }
 
 .home-link a {
   position: relative;
   display: block;
-  min-height: 390px;
+  min-height: 540px;
   width: 100%;
-  padding: 34px 38px;
+  padding: 58px 52px 52px;
   color: #272622;
   background: rgba(255, 255, 255, 0.24);
   border: 1px solid #aaa79f;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   overflow: hidden;
+  text-align: center;
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
@@ -195,29 +178,25 @@ h1 {
 .home-kicker {
   position: relative;
   z-index: 1;
-  color: #716f69;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  line-height: 1;
+  display: block;
+  color: #161614;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 7vw, 86px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
 }
 
 .home-title {
   position: relative;
   z-index: 1;
-  margin-bottom: 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 46px;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-}
-
-.home-meta {
-  position: relative;
-  z-index: 1;
+  display: block;
+  margin-top: 18px;
   color: #65625c;
-  font-size: 15px;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
 }
 
 .home-items {
@@ -225,49 +204,53 @@ h1 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 54px;
-  max-width: 920px;
+  gap: 16px;
+  width: 100%;
+  margin-top: 58px;
 }
 
 .home-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  min-height: 72px;
-  padding: 14px 16px;
-  color: #45433e;
+  justify-content: center;
+  gap: 13px;
+  min-height: 118px;
+  padding: 18px 16px;
+  color: #3f3d38;
   background: rgba(243, 242, 238, 0.72);
   border: 1px solid #cbc8c0;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.2;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .item-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
-  flex: 0 0 25px;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
   color: #716f69;
   border: 1px solid #bdbab2;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
+  font-size: 16px;
 }
 
-.home-link > a:hover .home-item {
+.home-link a:hover .home-item {
   background: rgba(255, 255, 255, 0.66);
   border-color: #b2afa7;
   transform: translateY(-2px);
 }
+
 .home-arrow {
   position: absolute;
   z-index: 1;
-  top: 28px;
-  right: 32px;
+  top: 38px;
+  right: 42px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 1;
   transition: transform 220ms ease;
 }
@@ -324,14 +307,14 @@ footer {
   animation-delay: 0.32s;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 760px) {
   main {
-    width: calc(100% - 32px);
+    width: calc(100% - 36px);
     padding-top: 24px;
   }
 
   .hero {
-    padding: 12vh 0 11vh;
+    padding: 10vh 0 10vh;
   }
 
   h1 {
@@ -373,38 +356,42 @@ footer {
   }
 
   .home-link a {
-    min-height: 430px;
-    padding: 26px 22px;
+    min-height: 560px;
+    padding: 42px 20px 28px;
+  }
+
+  .home-kicker {
+    font-size: clamp(48px, 15vw, 68px);
+  }
+
+  .home-title {
+    margin-top: 14px;
+    font-size: 18px;
   }
 
   .home-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin-top: 40px;
+    gap: 12px;
+    margin-top: 42px;
   }
 
   .home-item {
-    min-height: 62px;
-    padding: 11px 12px;
-    font-size: 14px;
+    min-height: 100px;
+    padding: 14px 10px;
+    font-size: 15px;
   }
 
   .item-icon {
-    width: 22px;
-    height: 22px;
-    flex-basis: 22px;
-    font-size: 12px;
-  }
-
-  .home-title {
-    font-size: 32px;
-    max-width: 82%;
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 14px;
   }
 
   .home-arrow {
-    top: 24px;
+    top: 25px;
     right: 22px;
-    font-size: 31px;
+    font-size: 32px;
   }
 
   footer {
@@ -432,7 +419,8 @@ footer {
   .social-links a::before,
   .social-links b,
   .home-link a,
-  .home-arrow {
+  .home-arrow,
+  .home-item {
     transition: none;
   }
 }
