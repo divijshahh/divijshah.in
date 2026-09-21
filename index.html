@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="favicon-light.svg?v=0.5" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="favicon-light.svg?v=0.5.1" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -87,8 +87,10 @@
 
     <footer>
       <span>Bombay, India</span>
-      <span>© 2026 Divij Shah</span>
-      <span class="version">v0.5</span>
+      <span class="footer-meta">
+        <span>© 2026 Divij Shah</span>
+        <span class="version">v0.5.1</span>
+      </span>
     </footer>
   </main>
 
@@ -112,7 +114,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "favicon-dark.svg?v=0.5" : "favicon-light.svg?v=0.5");
+        favicon.setAttribute("href", theme === "dark" ? "favicon-dark.svg?v=0.5.1" : "favicon-light.svg?v=0.5");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
