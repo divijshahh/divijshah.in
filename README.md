@@ -10,6 +10,8 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 
 ## Features
 
+- Persistent bottom navigation dock across all pages
+
 - Personal landing page
 - Responsive layout for desktop and mobile
 - Light and dark themes with system-theme detection and persisted manual preference
@@ -91,7 +93,7 @@ No application server is required for the website itself.
 
 The website uses a simple `v0.x` version number while the design and structure are actively evolving.
 
-The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.5.
+The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.6.
 
 Version changes are intended to be meaningful rather than tied to every individual Git commit.
 
