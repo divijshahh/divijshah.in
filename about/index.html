@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About Divij Shah — law student based in Bombay.">
+  <meta name="author" content="Divij Shah">
+  <meta name="robots" content="index, follow">
   <meta property="og:title" content="About — Divij Shah">
   <meta property="og:description" content="About Divij Shah, a law student based in Bombay.">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:url" content="https://divijshah.in/about">
   <meta property="og:site_name" content="Divij Shah">
   <meta property="og:image" content="https://divijshah.in/og-image.png">
@@ -17,10 +20,24 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v0.5.6.2" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v0.5.6.3" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About — Divij Shah",
+    "url": "https://divijshah.in/about",
+    "description": "About Divij Shah, a law student based in Bombay.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Divij Shah",
+      "url": "https://divijshah.in/"
+    }
+  }
+  </script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -42,7 +59,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.5.6.2</span>
+        <span class="version">v0.5.6.3</span>
       </span>
     </footer>
 
@@ -92,7 +109,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v0.5.6.2" : "../assets/favicon-light.svg?v=v0.5.6.2");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v0.5.6.3" : "../assets/favicon-light.svg?v=v0.5.6.3");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
