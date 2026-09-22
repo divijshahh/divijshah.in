@@ -12,7 +12,7 @@ No unreleased changes.
 
 ### Added
 
-- Enabled Cloudflare Markdown for Agents for the public site.
+- Prepared the public site for Cloudflare Markdown for Agents content negotiation.
 
 ### Changed
 
