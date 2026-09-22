@@ -8,6 +8,17 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.6.2] - 2026-09-22
+
+### Changed
+
+- Moved the persistent navigation dock from the bottom edge to the centre-right side of the viewport.
+- Replaced the redundant CV-specific SVG with a simple document icon while retaining the CV label.
+- Refined the dock for narrow screens and right-edge safe-area spacing.
+- Corrected navigation path matching for active-page highlighting.
+- Audited and tightened mobile navigation sizing, spacing, and viewport-safe positioning.
+- Updated the site version to v0.5.6.2.
+
 ## [0.5.6] - 2026-09-22
 
 ### Added
@@ -141,7 +152,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.6...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.6.2...HEAD
+[0.5.6.2]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6.2
 [0.5.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6
 [0.5.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.5
 [0.5.4]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.4
