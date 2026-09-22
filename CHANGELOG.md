@@ -8,6 +8,16 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.6] - 2026-09-22
+
+### Added
+
+- Enabled Cloudflare Markdown for Agents for the public site.
+
+### Changed
+
+- Bumped the displayed site version to v0.6.
+
 ## [0.5.6.3] - 2026-09-22
 
 ### Added
@@ -160,7 +170,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.6.2...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.6...HEAD
+[0.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.6
 [0.5.6.2]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6.2
 [0.5.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6
 [0.5.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.5
