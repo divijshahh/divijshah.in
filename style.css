@@ -1120,13 +1120,17 @@ footer { animation-delay: 0.32s; }
   flex: 0 0 auto;
 }
 
-.dock-about-icon,
-.dock-cv-icon {
+.dock-about-icon {
   fill: none;
   stroke: currentColor;
   stroke-width: 1.45;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.dock-cv-icon {
+  object-fit: contain;
+  display: block;
 }
 
 .dock-home-icon {
@@ -1179,4 +1183,8 @@ footer { animation-delay: 0.32s; }
 :root[data-theme="dark"] .dock-item[aria-current="page"] {
   color: #f5f4ef;
   background: rgba(255, 255, 255, 0.07);
+}
+
+:root[data-theme="dark"] .dock-cv-icon {
+  filter: invert(1);
 }
