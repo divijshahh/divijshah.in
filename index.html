@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=0.5.5" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v0.5.6" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -89,9 +89,24 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.5.5</span>
+        <span class="version">v0.5.6</span>
       </span>
     </footer>
+
+    <nav class="bottom-dock" aria-label="Site navigation">
+      <a class="dock-item" href="" aria-label="Home">
+        <img class="dock-icon dock-home-icon" src="assets/favicon-light.svg" data-light-src="assets/favicon-light.svg" data-dark-src="assets/favicon-dark.svg" alt="" aria-hidden="true">
+        <span class="dock-label">HOME</span>
+      </a>
+      <a class="dock-item" href="about" aria-label="About">
+        <svg class="dock-icon dock-about-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 20c.6-3.7 2.9-5.75 6.5-5.75s5.9 2.05 6.5 5.75"/></svg>
+        <span class="dock-label">ABOUT</span>
+      </a>
+      <a class="dock-item" href="cv" aria-label="CV">
+        <svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.75" width="14" height="18.5" rx="1.5"/><path d="M8.25 7.25h7.5M8.25 10.5h7.5M8.25 13.75h4.5M8.25 17h7.5"/><path d="M14.75 2.75v3.5H19"/></svg>
+        <span class="dock-label">CV</span>
+      </a>
+    </nav>
   </main>
 
   <script>
@@ -114,7 +129,7 @@
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=0.5.5" : "assets/favicon-light.svg?v=0.5.5");
+        favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v0.5.6" : "assets/favicon-light.svg?v=v0.5.6");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
