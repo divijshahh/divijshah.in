@@ -8,6 +8,20 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.6] - 2026-09-22
+
+### Added
+
+- Added a persistent bottom navigation dock to every page.
+- Added document-style SVG navigation icons for Home, About and CV.
+- Reused the site's DS favicon as the Home navigation mark.
+
+### Changed
+
+- Removed the previous page-level About/CV navigation.
+- Added light/dark-aware navigation assets so the dock follows the active theme.
+- Updated the site version to v0.5.6.
+
 ## [0.5.5] - 2026-09-22
 
 ### Changed
@@ -127,7 +141,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.5...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.5.6...HEAD
+[0.5.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6
 [0.5.5]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.5
 [0.5.4]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.4
 [0.5.3]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.3
