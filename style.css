@@ -1068,3 +1068,115 @@ footer { animation-delay: 0.32s; }
     width: calc(100% - 20px);
   }
 }
+
+
+/* Persistent document-style site navigation dock. */
+.bottom-dock {
+  position: fixed;
+  left: 50%;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  transform: translateX(-50%);
+  padding: 6px;
+  border: 1px solid #c6c3bb;
+  border-radius: 12px;
+  background: rgba(243, 242, 238, 0.82);
+  box-shadow: 0 8px 24px rgba(32, 32, 30, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dock-item {
+  min-width: 58px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 5px 9px;
+  color: #4f4c46;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.dock-item:hover {
+  color: #161614;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.dock-item[aria-current="page"] {
+  color: #161614;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.dock-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.dock-about-icon,
+.dock-cv-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dock-home-icon {
+  object-fit: contain;
+  display: block;
+}
+
+.dock-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 760px) {
+  .bottom-dock {
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  .dock-item {
+    min-width: 56px;
+    min-height: 48px;
+    padding: 5px 8px;
+  }
+
+  .dock-icon {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock-item {
+    transition: none;
+  }
+}
+
+:root[data-theme="dark"] .bottom-dock {
+  color: #e7e5df;
+  background: rgba(21, 21, 19, 0.84);
+  border-color: #3b3a35;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .dock-item {
+  color: #c4c1b9;
+}
+
+:root[data-theme="dark"] .dock-item:hover,
+:root[data-theme="dark"] .dock-item[aria-current="page"] {
+  color: #f5f4ef;
+  background: rgba(255, 255, 255, 0.07);
+}
