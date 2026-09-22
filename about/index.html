@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v0.5.6" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v0.5.6.2" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -42,7 +42,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.5.6</span>
+        <span class="version">v0.5.6.2</span>
       </span>
     </footer>
 
@@ -56,17 +56,17 @@
         <span class="dock-label">ABOUT</span>
       </a>
       <a class="dock-item" href="/cv" aria-label="CV">
-        <img class="dock-icon dock-cv-icon" src="https://www.svgrepo.com/show/533447/square-cv.svg" alt="" aria-hidden="true">
+        <svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8.5L18.75 6.75v14.5H6.25z"/><path d="M14.75 2.75v4h4M9 11h7M9 14h7M9 17h5"/></svg>
         <span class="dock-label">CV</span>
       </a>
     </nav>
   </main>
     <script>
     (() => {
-      const path = window.location.pathname.replace(/\\/+$/, "") || "/";
+      const path = window.location.pathname.replace(/\/+$/, "") || "/";
       const links = document.querySelectorAll(".bottom-dock .dock-item");
       links.forEach((link) => {
-        const target = new URL(link.href, window.location.origin).pathname.replace(/\\/+$/, "") || "/";
+        const target = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
         if (target === path) link.setAttribute("aria-current", "page");
       });
     })();
@@ -92,7 +92,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v0.5.6" : "../assets/favicon-light.svg?v=v0.5.6");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v0.5.6.2" : "../assets/favicon-light.svg?v=v0.5.6.2");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
