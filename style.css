@@ -1070,16 +1070,18 @@ footer { animation-delay: 0.32s; }
 }
 
 
+
 /* Persistent document-style site navigation dock. */
 .bottom-dock {
   position: fixed;
-  left: 50%;
-  bottom: max(16px, env(safe-area-inset-bottom));
+  top: 50%;
+  right: 18px;
   z-index: 90;
   display: flex;
+  flex-direction: column;
   align-items: stretch;
-  gap: 4px;
-  transform: translateX(-50%);
+  gap: 3px;
+  transform: translateY(-50%);
   padding: 6px;
   border: 1px solid #c6c3bb;
   border-radius: 12px;
@@ -1090,47 +1092,39 @@ footer { animation-delay: 0.32s; }
 }
 
 .dock-item {
-  min-width: 58px;
-  min-height: 50px;
+  width: 54px;
+  min-height: 52px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3px;
-  padding: 5px 9px;
+  padding: 5px 4px;
   color: #4f4c46;
   border-radius: 8px;
   text-decoration: none;
   transition: color 160ms ease, background 160ms ease;
 }
 
-.dock-item:hover {
+.dock-item:hover,
+.dock-item[aria-current="page"] {
   color: #161614;
   background: rgba(255, 255, 255, 0.62);
 }
 
-.dock-item[aria-current="page"] {
-  color: #161614;
-  background: rgba(255, 255, 255, 0.52);
-}
-
 .dock-icon {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   flex: 0 0 auto;
 }
 
-.dock-about-icon {
+.dock-about-icon,
+.dock-cv-icon {
   fill: none;
   stroke: currentColor;
   stroke-width: 1.45;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.dock-cv-icon {
-  object-fit: contain;
-  display: block;
 }
 
 .dock-home-icon {
@@ -1143,29 +1137,6 @@ footer { animation-delay: 0.32s; }
   font-size: 7px;
   line-height: 1;
   letter-spacing: 0.12em;
-}
-
-@media (max-width: 760px) {
-  .bottom-dock {
-    bottom: max(10px, env(safe-area-inset-bottom));
-  }
-
-  .dock-item {
-    min-width: 56px;
-    min-height: 48px;
-    padding: 5px 8px;
-  }
-
-  .dock-icon {
-    width: 19px;
-    height: 19px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dock-item {
-    transition: none;
-  }
 }
 
 :root[data-theme="dark"] .bottom-dock {
@@ -1185,6 +1156,31 @@ footer { animation-delay: 0.32s; }
   background: rgba(255, 255, 255, 0.07);
 }
 
-:root[data-theme="dark"] .dock-cv-icon {
-  filter: invert(1);
+@media (max-width: 760px) {
+  .bottom-dock {
+    right: max(8px, env(safe-area-inset-right));
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .dock-item {
+    width: 48px;
+    min-height: 48px;
+    padding: 4px 2px;
+  }
+
+  .dock-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dock-label {
+    font-size: 6.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock-item {
+    transition: none;
+  }
 }
