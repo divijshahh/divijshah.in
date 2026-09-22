@@ -8,6 +8,14 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [0.5.6.3] - 2026-09-22
+
+### Added
+
+- Added SEO-focused metadata and Schema.org structured data to the homepage, About page, and CV page.
+- Added `robots.txt` with a sitemap reference.
+- Added an XML sitemap for the public site pages.
+
 ## [0.5.6.2] - 2026-09-22
 
 ### Changed
