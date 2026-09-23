@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v0.6" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -59,7 +59,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v0.6</span>
+        <span class="version">v1.0</span>
       </span>
     </footer>
 
@@ -109,7 +109,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v0.6" : "../assets/favicon-light.svg?v=v0.6");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0" : "../assets/favicon-light.svg?v=v1.0");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
