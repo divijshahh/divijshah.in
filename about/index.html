@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.3.0" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.4.0" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -44,7 +44,6 @@
   <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
     <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
   </button>
-
   <main>
     <header>
       <div class="hero">
@@ -55,81 +54,51 @@
 
     <section class="site-content about-page">
       <div class="about-intro">
-        <p class="about-overline">A LITTLE ABOUT ME</p>
-        <h2 class="page-heading">ABOUT</h2>
+        <h2 class="page-heading">ABOUT ME</h2>
         <p class="page-lead">I’m a law student at Government Law College, Churchgate. I’m interested in law, technology, and the systems I end up building around the things I use.</p>
       </div>
-
       <div class="about-grid">
         <article class="about-card about-card-current">
-          <span class="about-card-number">01</span>
-          <div class="about-graphic about-graphic-current" aria-hidden="true"><span></span><span></span><span></span></div>
-          <p class="about-card-label">CURRENTLY</p>
-          <h3>Law</h3>
-          <p>Government Law College, Churchgate</p>
+          <div class="about-card-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 12.5h18v13H7z"/><path d="M11 12.5V9h10v3.5M11 18h10M11 22h6"/></svg></div>
+          <div><p class="about-card-label">CURRENTLY</p><h3>Law</h3><p>Government Law College, Churchgate</p></div>
         </article>
-
-        <article class="about-card about-card-personal">
-          <span class="about-card-number">02</span>
-          <div class="about-graphic about-graphic-personal" aria-hidden="true"><span></span><span></span><span></span></div>
-          <p class="about-card-label">A BIT MORE PERSONAL</p>
-          <h3>Curious by default.</h3>
-          <p>I tend to follow whatever catches my attention, whether that means reading about something new or figuring out how a piece of technology works.</p>
+        <article class="about-card about-card-interests">
+          <div class="about-card-heading"><p class="about-card-label">INTERESTED IN</p><span class="about-card-note">A few things</span></div>
+          <div class="interest-list" aria-label="Areas of interest">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16H7zM9.5 8h5M9.5 12h5M9.5 16h3"/></svg>Law</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16M7 7l10 10M17 7 7 17"/></svg>Technology</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14v11H5zM8 8V5h8v3M9 12h6"/></svg>Hardware</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="11" cy="17" r="1.5"/></svg>Networking</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM7 9h10M7 12h7M7 15h4"/></svg>Web</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6zM9 6v12M15 6v12M6 12h12"/></svg>Self-hosting</span>
+          </div>
         </article>
-
         <article class="about-card about-card-homelab">
-          <div class="about-card-heading">
-            <div>
-              <p class="about-card-label">A PROJECT I KEEP AROUND</p>
-              <h3>The homelab</h3>
-            </div>
-            <span class="about-card-number">03</span>
-          </div>
+          <div class="about-card-heading"><div><p class="about-card-label">A PROJECT I KEEP AROUND</p><h3>The homelab</h3></div><span class="about-card-index">01</span></div>
           <p>What started with a Raspberry Pi gradually became a TrueNAS server and a collection of services I use every day. It has storage, media, photos, files and monitoring, with a small cloud layer connecting it to the outside world.</p>
-
           <div class="about-flow" aria-label="Homelab progression">
-            <div class="about-flow-line" aria-hidden="true"></div>
-            <div class="about-flow-step">
-              <span class="about-flow-mark">01</span>
-              <strong>Raspberry Pi</strong>
-              <small>Where it started</small>
-            </div>
-            <div class="about-flow-step">
-              <span class="about-flow-mark">02</span>
-              <strong>TrueNAS</strong>
-              <small>Where it lives</small>
-            </div>
-            <div class="about-flow-step">
-              <span class="about-flow-mark">03</span>
-              <strong>Services I use</strong>
-              <small>What came from it</small>
-            </div>
+            <div class="about-flow-step"><span class="about-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h12v9H6zM9 9V6h6v3M9 14h6"/></svg></span><strong>Raspberry Pi</strong></div>
+            <i aria-hidden="true">→</i>
+            <div class="about-flow-step"><span class="about-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM8 8h8v3H8zM8 14h8v2H8z"/></svg></span><strong>TrueNAS</strong></div>
+            <i aria-hidden="true">→</i>
+            <div class="about-flow-step"><span class="about-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14v10H5zM8 10h8M8 13h5"/></svg></span><strong>Services I use</strong></div>
           </div>
         </article>
-
+        <article class="about-card about-card-personal">
+          <div class="about-card-icon about-card-icon-small" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M7 27c1.3-5.5 4.3-8 9-8s7.7 2.5 9 8"/></svg></div>
+          <div><p class="about-card-label">A BIT MORE PERSONAL</p><h3>Curious by default.</h3><p>I tend to follow whatever catches my attention, whether that means reading about something new or figuring out how a piece of technology works.</p></div>
+        </article>
         <article class="about-card about-card-site">
-          <span class="about-card-number">04</span>
-          <div class="about-site-graphic" aria-hidden="true">
-            <span class="about-site-line"></span>
-            <span class="about-site-line"></span>
-            <span class="about-site-dot"></span>
-          </div>
-          <p class="about-card-label">WHY THIS SITE</p>
-          <h3>A simple place to keep things.</h3>
-          <p>My CV, a little context, and links to the services and projects that are part of my day-to-day.</p>
+          <div class="about-card-icon about-card-icon-small" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 8h18v16H7z"/><path d="M11 13h10M11 18h6"/></svg></div>
+          <div><p class="about-card-label">WHY THIS SITE</p><h3>A simple place to keep things.</h3><p>My CV, a little context, and links to the services and projects that are part of my day-to-day.</p></div>
         </article>
       </div>
-
-      <div class="about-cta">
-        <a class="about-cv-link" href="/cv">VIEW CV <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <footer>
+      <div class="about-cta"><a class="about-cv-link" href="/cv">VIEW CV <span aria-hidden="true">↗</span></a></div>
+    </section>   <footer>
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.3.0</span>
+        <span class="version">v1.4.0</span>
       </span>
     </footer>
 
@@ -148,11 +117,11 @@
       </a>
     </nav>
   </main>
-
-  <script>
+    <script>
     (() => {
       const path = window.location.pathname.replace(/\/+$/, "") || "/";
-      document.querySelectorAll(".bottom-dock .dock-item").forEach((link) => {
+      const links = document.querySelectorAll(".bottom-dock .dock-item");
+      links.forEach((link) => {
         const target = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
         if (target === path) link.setAttribute("aria-current", "page");
       });
@@ -169,8 +138,7 @@
       const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
       let saved = null;
       try { saved = localStorage.getItem("theme"); } catch (e) {}
-      const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
-
+      let initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
       const applyTheme = (theme, persist = true) => {
         root.dataset.theme = theme;
         toggle.innerHTML = theme === "dark" ? sun : moon;
@@ -178,18 +146,14 @@
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
-          icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
-        });
-        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.3.0" : "../assets/favicon-light.svg?v=v1.3.0");
+        icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
+      });
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.4.0" : "../assets/favicon-light.svg?v=v1.4.0");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
-
       applyTheme(initial, false);
       systemTheme.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light", false); });
-      toggle.addEventListener("click", () => {
-        saved = root.dataset.theme === "dark" ? "light" : "dark";
-        applyTheme(saved);
-      });
+      toggle.addEventListener("click", () => { saved = root.dataset.theme === "dark" ? "light" : "dark"; applyTheme(saved); });
     })();
   </script>
 </body>
