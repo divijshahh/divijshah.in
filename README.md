@@ -28,7 +28,7 @@ Shared theme and navigation behavior lives in `assets/site.js`, while the site's
 
 ## Icon attribution
 
-The Seerr dark-mode icon is sourced from [selfh.st/icons](https://github.com/selfhst/icons), licensed under CC BY 4.0.
+The Seerr icon is sourced from [selfh.st/icons](https://github.com/selfhst/icons), licensed under CC BY 4.0.
 
 ## Development
 
@@ -38,7 +38,7 @@ The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
 ## Version
 
-Current release: **1.2.0**
+Current release: **1.2.2**
 
 ## Maintainer
 
