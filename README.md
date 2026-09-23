@@ -11,7 +11,7 @@ A small static website built with plain HTML, CSS and JavaScript. It contains th
 - Responsive static homepage
 - Light and dark themes
 - CV page with an in-page PDF renderer and direct download
-- QR landing page
+- Separate QR landing page for the future business-card landing experience
 - Local service icons
 - SEO and social-sharing metadata
 - JSON-LD structured data
@@ -24,7 +24,9 @@ HTML · CSS · JavaScript · GitHub · Cloudflare
 
 There is no frontend framework or build system.
 
-Shared theme and navigation behavior lives in `assets/site.js`, while the site's layouts are kept in the single shared `style.css`.
+The main site uses `style.css` and `assets/site.js` for its shared layout, theme and navigation behavior. The QR landing page is intentionally isolated under `qr-site/` and has its own `style.css` and `assets/theme.js`. It does not use the main site's navigation or theme state.
+
+The QR landing page is versioned independently from the main site. The current main site release is 1.2.2, while the QR landing page is currently 1.0.1.
 
 ## Icon attribution
 
@@ -38,7 +40,9 @@ The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
 ## Version
 
-Current release: **1.2.2**
+Current main-site release: **1.2.2**
+
+QR landing page: **1.0.1**
 
 ## Maintainer
 
