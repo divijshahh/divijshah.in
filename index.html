@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.1.8" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.1.9" type="image/svg+xml">
   <title>Divij Shah</title>
   <script type="application/ld+json">
   {
@@ -86,23 +86,23 @@
 
         <div class="home-items" aria-label="Homepage services">
           <a class="home-item home-item-nextcloud" href="https://docs.divijshah.in" aria-label="Open Nextcloud">
-            <img class="service-icon service-icon-nextcloud" src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nextcloud-dark.svg" data-light-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nextcloud-dark.svg" data-dark-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nextcloud-light.svg" alt="" aria-hidden="true">
+            <img class="service-icon service-icon-nextcloud" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-nextcloud"><small>Files</small></span>
           </a>
           <a class="home-item home-item-media" href="https://media.divijshah.in" aria-label="Open Jellyfin">
-            <img class="service-icon service-icon-jellyfin" src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jellyfin-dark.svg" data-light-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jellyfin-dark.svg" data-dark-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jellyfin-light.svg" alt="Jellyfin" aria-hidden="true">
+            <img class="service-icon service-icon-jellyfin" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" alt="Jellyfin" aria-hidden="true">
             <span class="service-label service-label-jellyfin"><small>Watch media</small></span>
           </a>
           <a class="home-item home-item-photos" href="https://photos.divijshah.in" aria-label="Open Immich">
-            <img class="service-icon service-icon-immich" src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/immich-dark.svg" data-light-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/immich-dark.svg" data-dark-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/immich-light.svg" alt="Immich" aria-hidden="true">
+            <img class="service-icon service-icon-immich" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/immich.svg" alt="Immich" aria-hidden="true">
             <span class="service-label service-label-immich"><small>Photos</small></span>
           </a>
           <a class="home-item home-item-request" href="https://request.divijshah.in" aria-label="Open Seerr">
-            <img class="service-icon service-icon-seerr" src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/seerr-dark.svg" data-light-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/seerr-dark.svg" data-dark-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/seerr-light.svg" alt="Seerr" aria-hidden="true">
+            <img class="service-icon service-icon-seerr" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seerr.svg" alt="Seerr" aria-hidden="true">
             <span class="service-label service-label-seerr"><small>Request media</small></span>
           </a>
           <a class="home-item home-item-status" href="https://status.divijshah.in" aria-label="Open Status">
-            <img class="service-icon service-icon-kuma" src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/uptime-kuma-dark.svg" data-light-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/uptime-kuma-dark.svg" data-dark-src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/uptime-kuma-light.svg alt="" aria-hidden="true">
+            <img class="service-icon service-icon-kuma" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptime-kuma.svg"" aria-hidden="true">
             <span class="service-label service-label-status"><small>System status</small></span>
           </a>
         </div>
@@ -113,13 +113,13 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.1.8</span>
+        <span class="version">v1.1.9</span>
       </span>
     </footer>
 
     <nav class="bottom-dock" aria-label="Site navigation">
       <a class="dock-item" href="/" aria-label="Home">
-        <img class="dock-icon dock-home-icon" src="assets/favicon-light.svg" data-light-src="assets/favicon-light.svg" data-dark-src="assets/favicon-dark.svg" alt="" aria-hidden="true">
+        <img class="dock-icon dock-home-icon" src="assets/favicon-light.svg" alt="" aria-hidden="true">
         <span class="dock-label"><strong>HOME</strong></span>
       </a>
       <a class="dock-item" href="/cv" aria-label="CV">
@@ -158,13 +158,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
           icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
         });
-        document.querySelectorAll(".service-icon").forEach((icon) => {
-          const lightSrc = icon.dataset.lightSrc;
-          const darkSrc = icon.dataset.darkSrc;
-          if (lightSrc && darkSrc) icon.setAttribute("src", theme === "dark" ? darkSrc : lightSrc);
-        });
-
-      favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.1.8" : "assets/favicon-light.svg?v=v1.1.8");
+              favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.1.9" : "assets/favicon-light.svg?v=v1.1.9");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
