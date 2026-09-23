@@ -124,21 +124,11 @@ h1 {
   text-transform: uppercase;
 }
 
-.qr-card h2 {
-  margin: 16px 0 0;
-  color: #161614;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 5vw, 48px);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-  font-weight: 500;
-}
-
-.qr-card p:not(.label) {
+.qr-card-message {
   max-width: 500px;
-  margin: 17px auto 0;
+  margin: 13px auto 0;
   color: #494843;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
@@ -263,13 +253,12 @@ footer {
     linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
 }
 
-:root[data-theme="dark"] h1,
-:root[data-theme="dark"] .qr-card h2 {
+:root[data-theme="dark"] h1 {
   color: #f5f4ef;
 }
 
 :root[data-theme="dark"] .intro,
-:root[data-theme="dark"] .qr-card p:not(.label) {
+:root[data-theme="dark"] .qr-card-message {
   color: #e7e5df;
 }
 
@@ -354,12 +343,9 @@ button:focus:not(:focus-visible) {
     border-radius: 14px;
   }
 
-  .qr-card h2 {
-    font-size: clamp(27px, 8vw, 40px);
-  }
-
-  .qr-card p:not(.label) {
-    font-size: 16px;
+  .qr-card-message {
+    margin-top: 11px;
+    font-size: 14px;
   }
 
   footer {
@@ -397,9 +383,7 @@ button:focus:not(:focus-visible) {
     padding: 22px 18px;
   }
 
-  .qr-card h2 {
-    font-size: 26px;
-  }
+
 }
 
 @media (max-height: 700px) {
