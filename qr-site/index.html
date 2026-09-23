@@ -4,49 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f2ee">
   <title>Under Construction</title>
-  <style>
-    :root {
-      color-scheme: light;
-      background: #f3f2ee;
-      color: #151513;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { width: 100%; min-height: 100%; margin: 0; }
-    body {
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      padding: 32px;
-      background: #f3f2ee;
-    }
-    main {
-      display: grid;
-      justify-items: center;
-      gap: 28px;
-      text-align: center;
-    }
-    img {
-      width: min(180px, 42vw);
-      height: auto;
-      display: block;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <img src="construction.svg" alt="">
-    <h1>UNDER CONSTRUCTION</h1>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  </button>
+
+  <main class="qr-page">
+    <div class="qr-content">
+      <img src="construction.svg" alt="">
+      <h1>UNDER CONSTRUCTION</h1>
+    </div>
   </main>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector(".theme-toggle");
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
+      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+
+      let saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
+
+      const applyTheme = (theme, persist = true) => {
+        root.dataset.theme = theme;
+        toggle.innerHTML = theme === "dark" ? sun : moon;
+        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
+        if (persist) {
+          try { localStorage.setItem("theme", theme); } catch (e) {}
+        }
+      };
+
+      applyTheme(initial, false);
+
+      systemTheme.addEventListener("change", (event) => {
+        if (!saved) applyTheme(event.matches ? "dark" : "light", false);
+      });
+
+      toggle.addEventListener("click", () => {
+        saved = root.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(saved);
+      });
+    })();
+  </script>
 </body>
 </html>
