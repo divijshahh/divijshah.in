@@ -663,8 +663,9 @@ footer {
   }
 
   .service-icon-jellyfin {
-    width: 205px;
-    height: 74px;
+    width: 120px;
+    height: 54px;
+    max-width: 100%;
     transform: translateY(-8px);
   }
 
