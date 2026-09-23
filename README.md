@@ -56,7 +56,7 @@ The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
 ## Version
 
-Current release: **1.0.4**
+Current release: **1.0.5**
 
 ## About
 
