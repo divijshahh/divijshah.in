@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.2.0" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.2.0" data-light-src="assets/favicon-light.svg?v=v1.2.0" data-dark-src="assets/favicon-dark.svg?v=v1.2.0" type="image/svg+xml">
   <title>Divij Shah</title>
   <script type="application/ld+json">
   {
@@ -38,6 +38,14 @@
     "sameAs": [
       "https://www.linkedin.com/in/divijshahh/"
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Divij Shah",
+    "url": "https://divijshah.in/"
   }
   </script>
   <link rel="stylesheet" href="style.css">
@@ -84,28 +92,28 @@
           <span class="home-title">Things I keep online</span>
         </div>
 
-        <div class="home-items" aria-label="Homepage services">
+        <nav class="home-items" aria-label="Self-hosted services">
           <a class="home-item home-item-nextcloud" href="https://docs.divijshah.in" aria-label="Open Nextcloud">
-            <img class="service-icon service-icon-nextcloud" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg" alt="" aria-hidden="true">
+            <img class="service-icon service-icon-nextcloud" src="assets/services/nextcloud.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-nextcloud"><small>Files</small></span>
           </a>
           <a class="home-item home-item-media" href="https://media.divijshah.in" aria-label="Open Jellyfin">
-            <img class="service-icon service-icon-jellyfin" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" alt="Jellyfin" aria-hidden="true">
+            <img class="service-icon service-icon-jellyfin" src="assets/services/jellyfin.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-jellyfin"><small>Watch media</small></span>
           </a>
           <a class="home-item home-item-photos" href="https://photos.divijshah.in" aria-label="Open Immich">
-            <img class="service-icon service-icon-immich" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/immich.svg" alt="Immich" aria-hidden="true">
+            <img class="service-icon service-icon-immich" src="assets/services/immich.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-immich"><small>Photos</small></span>
           </a>
           <a class="home-item home-item-request" href="https://request.divijshah.in" aria-label="Open Seerr">
-            <img class="service-icon service-icon-seerr" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seerr.svg" alt="Seerr" aria-hidden="true">
+            <img class="service-icon service-icon-seerr" src="assets/services/seerr-light.svg" data-light-src="assets/services/seerr-light.svg" data-dark-src="assets/services/seerr-dark.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-seerr"><small>Request media</small></span>
           </a>
           <a class="home-item home-item-status" href="https://status.divijshah.in" aria-label="Open Status">
-            <img class="service-icon service-icon-kuma" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptime-kuma.svg" alt="" aria-hidden="true">
+            <img class="service-icon service-icon-kuma" src="assets/services/uptime-kuma-light.svg" data-light-src="assets/services/uptime-kuma-light.svg" data-dark-src="assets/services/uptime-kuma-dark.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-status"><small>System status</small></span>
           </a>
-        </div>
+        </nav>
       </div>
     </div>
 
@@ -129,58 +137,6 @@
     </nav>
   </main>
 
-    <script>
-    (() => {
-      const path = window.location.pathname.replace(/\/+$/, "") || "/";
-      const links = document.querySelectorAll(".bottom-dock .dock-item");
-      links.forEach((link) => {
-        const target = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
-        if (target === path) link.setAttribute("aria-current", "page");
-      });
-    })();
-  </script>
-  <script>
-    (() => {
-      const root = document.documentElement;
-      const toggle = document.querySelector(".lamp-switch");
-      const themeMeta = document.querySelector('meta[name="theme-color"]');
-      const favicon = document.getElementById("favicon");
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-            let saved = null;
-      try { saved = localStorage.getItem("theme"); } catch (e) {}
-      const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
-
-      const applyTheme = (theme, persist = true) => {
-        root.dataset.theme = theme;
-        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        document.querySelectorAll(".dock-home-icon").forEach((icon) => {
-          icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
-        });
-              favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.2.0" : "assets/favicon-light.svg?v=v1.2.0");
-        if (persist) {
-          try { localStorage.setItem("theme", theme); } catch (e) {}
-        }
-      };
-
-      applyTheme(initial, false);
-
-      systemTheme.addEventListener("change", (event) => {
-        if (!saved) applyTheme(event.matches ? "dark" : "light", false);
-      });
-
-      toggle.addEventListener("click", () => {
-        toggle.classList.remove("activating");
-        void toggle.offsetWidth;
-        toggle.classList.add("activating");
-        window.setTimeout(() => {
-          saved = root.dataset.theme === "dark" ? "light" : "dark";
-          applyTheme(saved);
-          toggle.classList.remove("activating");
-        }, 170);
-      });
-    })();
-  </script>
+    <script src="assets/site.js"></script>
 </body>
 </html>
