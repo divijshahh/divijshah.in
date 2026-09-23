@@ -4,23 +4,19 @@ Personal website for Divij Shah.
 
 [Visit divijshah.in](https://divijshah.in)
 
-A small static website built with plain HTML, CSS and JavaScript. It started as a simple personal homepage and grew into the place I use for my CV, contact links and the services I keep online.
+A small static website built with plain HTML, CSS and JavaScript. It contains the homepage, CV, contact links and links to the self-hosted services I keep online.
 
-## What is here
+## Features
 
-- Home page
-- About page
-- CV with an in-page PDF viewer
+- Responsive static homepage
 - Light and dark themes
-- Links to my personal and professional profiles
-- Links to my self-hosted services
-- Responsive layout
-- SEO and social sharing metadata
+- CV page with an in-page PDF renderer and direct download
+- QR landing page
+- Local service icons
+- SEO and social-sharing metadata
+- JSON-LD structured data
 - Sitemap and robots.txt
-
-## Homelab
-
-The site is also connected to a much older project of mine: my homelab. I started with a Raspberry Pi and gradually kept adding things, learning what I needed along the way. Over time it grew into a TrueNAS SCALE server running the services I actually use, with storage, media, photos, files, monitoring and other self-hosted applications. I eventually put a public layer in front of it using Cloudflare, an Oracle Cloud VM and Caddy, with Tailscale connecting the public server back to my home network. What started as experimenting with a Raspberry Pi has turned into a fairly complete setup that I run and maintain myself.
+- Cloudflare Pages deployment
 
 ## Built with
 
@@ -28,37 +24,23 @@ HTML · CSS · JavaScript · GitHub · Cloudflare
 
 There is no frontend framework or build system.
 
-## Repository
+Shared theme and navigation behavior lives in `assets/site.js`, while the site's layouts are kept in the single shared `style.css`.
 
-```text
-.
-├── index.html
-├── style.css
-├── about/
-│   └── index.html
-├── cv/
-│   └── index.html
-├── cv.pdf
-├── assets/
-├── og-image.png
-├── robots.txt
-├── sitemap.xml
-├── _headers
-├── CHANGELOG.md
-└── README.md
-```
+## Icon attribution
+
+The Seerr dark-mode icon is sourced from [selfh.st/icons](https://github.com/selfhst/icons), licensed under CC BY 4.0.
 
 ## Development
 
-The site is intentionally simple. Changes are made directly to the static files and deployed from the `main` branch.
+Changes are made directly to the static files and deployed from the `main` branch.
 
 The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
 ## Version
 
-Current release: **1.0.8**
+Current release: **1.2.0**
 
-## About
+## Maintainer
 
 Built and maintained by [Divij Shah](https://github.com/divijshahh).
 
