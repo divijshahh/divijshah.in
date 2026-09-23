@@ -4,6 +4,15 @@ All notable changes to this project are documented in this file.
 
 The format follows the principles of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with changes grouped by release and categorized where useful.
 
+## [1.2.0] - 2026-09-23
+
+### Changed
+
+- Reworked the About page around a balanced card-based profile rather than a text-heavy layout.
+- Unified typography and spacing across the About page, with a centered introduction and more consistent heading hierarchy.
+- Added small inline SVG graphics and interactive interest cards to make the page more visual without introducing unnecessary animation.
+- Reframed the personal sections to avoid duplicating the CV or sounding overly self-promotional.
+
 ## [Unreleased]
 
 No unreleased changes.
@@ -201,7 +210,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.2.0
 [1.1.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.1.0
 [1.0.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.0.0
 [0.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.6
