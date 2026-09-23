@@ -1530,3 +1530,10 @@ footer { animation-delay: 0.32s; }
     transition: none;
   }
 }
+
+/* About page v1.0.8 */
+.about-homelab-link{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;min-height:220px;margin-top:22px;padding:28px 30px;color:#272622;border:1px solid #c6c3bb;border-radius:13px;background:rgba(255,255,255,.34);text-decoration:none;transition:transform 200ms ease,border-color 200ms ease,background 200ms ease,box-shadow 200ms ease}
+.about-homelab-copy{max-width:650px}.about-homelab-copy h3{margin:0;color:#20201e;font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,4vw,42px);line-height:1.05;font-weight:500;letter-spacing:-.035em}.about-homelab-copy p{margin:20px 0 0;color:#3f3d38;font-size:17px;line-height:1.58}.about-homelab-arrow{flex:0 0 auto;font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1;transition:transform 200ms ease}.about-homelab-link:hover{transform:translateY(-3px);border-color:#aaa69d;background:rgba(255,255,255,.5);box-shadow:0 10px 24px rgba(32,32,30,.06)}.about-homelab-link:hover .about-homelab-arrow{transform:translate(4px,-4px)}
+:root[data-theme="dark"] .about-homelab-link{color:#e7e5df;background:rgba(255,255,255,.035);border-color:#3b3a35}:root[data-theme="dark"] .about-homelab-copy h3{color:#f5f4ef}:root[data-theme="dark"] .about-homelab-copy p{color:#d3d0c8}:root[data-theme="dark"] .about-homelab-link:hover{background:rgba(255,255,255,.07);border-color:#55534c}
+@media(max-width:760px){.about-homelab-link{min-height:200px;padding:23px 21px}.about-homelab-copy h3{font-size:30px}.about-homelab-copy p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.about-homelab-link,.about-homelab-arrow{transition:none}}
