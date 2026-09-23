@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.2.0" data-light-src="../assets/favicon-light.svg?v=v1.2.0" data-dark-src="../assets/favicon-dark.svg?v=v1.2.0" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.2.1" data-light-src="../assets/favicon-light.svg?v=v1.2.1" data-dark-src="../assets/favicon-dark.svg?v=v1.2.1" type="image/svg+xml">
   <title>Divij Shah</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -21,15 +21,23 @@
   </button>
 
   <main>
-    <header class="hero">
-      <h1>DIVIJ SHAH</h1>
-      <p class="intro">Law student based in Bombay</p>
+    <header>
+      <div class="hero">
+        <h1><a class="site-title-link" href="/">DIVIJ SHAH</a></h1>
+        <p class="intro">Law student based in Bombay</p>
+      </div>
     </header>
 
-    <section class="qr-card" aria-label="Page status">
-      <div class="qr-content">
-        <img src="construction.svg" alt="">
-        <h2>UNDER CONSTRUCTION</h2>
+    <section class="qr-content" aria-labelledby="qr-title">
+      <div class="qr-card">
+        <div class="qr-mark" aria-hidden="true">
+          <img src="construction.svg" alt="">
+        </div>
+        <div class="qr-copy">
+          <p class="label">STATUS</p>
+          <h2 id="qr-title">UNDER CONSTRUCTION</h2>
+          <p>This page is currently being built.</p>
+        </div>
       </div>
     </section>
 
@@ -37,9 +45,20 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.2.0</span>
+        <span class="version">v1.2.1</span>
       </span>
     </footer>
+
+    <nav class="bottom-dock" aria-label="Site navigation">
+      <a class="dock-item" href="/" aria-label="Home">
+        <img class="dock-icon dock-home-icon" src="../assets/favicon-light.svg" data-light-src="../assets/favicon-light.svg" data-dark-src="../assets/favicon-dark.svg" alt="" aria-hidden="true">
+        <span class="dock-label"><strong>HOME</strong></span>
+      </a>
+      <a class="dock-item" href="/cv" aria-label="CV">
+        <svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8.5L18.75 6.75v14.5H6.25z"/><path d="M14.75 2.75v4h4M9 11h7M9 14h7M9 17h5"/></svg>
+        <span class="dock-label"><strong>CV</strong></span>
+      </a>
+    </nav>
   </main>
 
   <script src="../assets/site.js"></script>
