@@ -6,10 +6,11 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f3f2ee">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.2.0" data-light-src="../assets/favicon-light.svg?v=v1.2.0" data-dark-src="../assets/favicon-dark.svg?v=v1.2.0" type="image/svg+xml">
   <title>Divij Shah</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="qr-page">
   <button class="lamp-switch" type="button" aria-label="Switch to dark mode" aria-pressed="false">
     <span class="lamp" aria-hidden="true">
       <span class="lamp-mount"></span>
@@ -36,48 +37,11 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.1</span>
+        <span class="version">v1.2.0</span>
       </span>
     </footer>
   </main>
 
-  <script>
-    (() => {
-      const root = document.documentElement;
-      const toggle = document.querySelector(".lamp-switch");
-      const themeMeta = document.querySelector('meta[name="theme-color"]');
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      let saved = null;
-      try { saved = localStorage.getItem("theme"); } catch (e) {}
-      const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
-
-      const applyTheme = (theme, persist = true) => {
-        root.dataset.theme = theme;
-        toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        if (persist) {
-          saved = theme;
-          try { localStorage.setItem("theme", theme); } catch (e) {}
-        }
-      };
-
-      applyTheme(initial, false);
-
-      systemTheme.addEventListener("change", (event) => {
-        if (!saved) applyTheme(event.matches ? "dark" : "light", false);
-      });
-
-      toggle.addEventListener("click", () => {
-        toggle.classList.remove("activating");
-        void toggle.offsetWidth;
-        toggle.classList.add("activating");
-        window.setTimeout(() => {
-          applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
-          toggle.classList.remove("activating");
-        }, 170);
-      });
-    })();
-  </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>
