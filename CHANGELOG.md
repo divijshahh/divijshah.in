@@ -8,6 +8,26 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 No unreleased changes.
 
+## [1.0.0] - 2026-09-23
+
+### Added
+
+- Added the first stable release of the personal website.
+- Added a cleaned up project README focused on the site and its history.
+- Documented the history of the homelab that grew alongside the website.
+
+### Changed
+
+- Updated the displayed website version to v1.0.
+- Kept the homepage focused on being a personal homepage rather than a portfolio.
+- Consolidated the site's public pages, CV and self-hosted service links into the current 1.0 structure.
+
+### Notes
+
+- The site is built with plain HTML, CSS and JavaScript.
+- The website is deployed from the main branch through Cloudflare.
+- This release marks the end of the initial build phase and the first stable version of the site.
+
 ## [0.6] - 2026-09-22
 
 ### Added
@@ -170,7 +190,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v0.6...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.0.0
 [0.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.6
 [0.5.6.2]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6.2
 [0.5.6]: https://github.com/divijshahh/divijshah.in/releases/tag/v0.5.6
