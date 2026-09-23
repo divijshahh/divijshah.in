@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2] - 2026-09-24
+
+### QR landing page
+
+- Added a compact yellow identity mark between the hero and landing card.
+- Bumped the independently versioned QR site to v1.0.2.
+
 ## [1.2.5] - 2026-09-24
 
 ### Release
