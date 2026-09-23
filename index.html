@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.1.5" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.1.6" type="image/svg+xml">
   <title>Divij Shah</title>
   <script type="application/ld+json">
   {
@@ -86,23 +86,23 @@
 
         <div class="home-items" aria-label="Homepage services">
           <a class="home-item home-item-nextcloud" href="https://docs.divijshah.in" aria-label="Open Nextcloud">
-            <img class="service-icon service-icon-nextcloud" src="https://cdn.simpleicons.org/nextcloud" alt="" aria-hidden="true">
+            <img class="service-icon service-icon-nextcloud" src="assets/service-nextcloud-light.svg" data-light-src="assets/service-nextcloud-light.svg" data-dark-src="assets/service-nextcloud-dark.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-nextcloud"><small>Files</small></span>
           </a>
           <a class="home-item home-item-media" href="https://media.divijshah.in" aria-label="Open Jellyfin">
-            <img class="service-icon service-icon-jellyfin" src="https://cdn.simpleicons.org/jellyfin" alt="Jellyfin" aria-hidden="true">
+            <img class="service-icon service-icon-jellyfin" src="assets/service-jellyfin-light.svg" data-light-src="assets/service-jellyfin-light.svg" data-dark-src="assets/service-jellyfin-dark.svg" alt="Jellyfin" aria-hidden="true">
             <span class="service-label service-label-jellyfin"><small>Watch media</small></span>
           </a>
           <a class="home-item home-item-photos" href="https://photos.divijshah.in" aria-label="Open Immich">
-            <img class="service-icon service-icon-immich" src="https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg" alt="Immich" aria-hidden="true">
+            <img class="service-icon service-icon-immich" src="assets/service-immich-light.svg" data-light-src="assets/service-immich-light.svg" data-dark-src="assets/service-immich-dark.svg" alt="Immich" aria-hidden="true">
             <span class="service-label service-label-immich"><small>Photos</small></span>
           </a>
           <a class="home-item home-item-request" href="https://request.divijshah.in" aria-label="Open Seerr">
-            <img class="service-icon service-icon-seerr" src="assets/seerr-logo.svg" alt="Seerr" aria-hidden="true">
+            <img class="service-icon service-icon-seerr" src="assets/service-seerr-light.svg" data-light-src="assets/service-seerr-light.svg" data-dark-src="assets/service-seerr-dark.svg" alt="Seerr" aria-hidden="true">
             <span class="service-label service-label-seerr"><small>Request media</small></span>
           </a>
           <a class="home-item home-item-status" href="https://status.divijshah.in" aria-label="Open Status">
-            <img class="service-icon service-icon-kuma" src="https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg" alt="" aria-hidden="true">
+            <img class="service-icon service-icon-kuma" src="assets/service-kuma-light.svg" data-light-src="assets/service-kuma-light.svg" data-dark-src="assets/service-kuma-dark.svg" alt="" aria-hidden="true">
             <span class="service-label service-label-status"><small>System status</small></span>
           </a>
         </div>
@@ -113,7 +113,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.1.5</span>
+        <span class="version">v1.1.6</span>
       </span>
     </footer>
 
@@ -156,9 +156,15 @@
         toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
-        icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
-      });
-      favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.1.5" : "assets/favicon-light.svg?v=v1.1.5");
+          icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
+        });
+        document.querySelectorAll(".service-icon").forEach((icon) => {
+          const lightSrc = icon.dataset.lightSrc;
+          const darkSrc = icon.dataset.darkSrc;
+          if (lightSrc && darkSrc) icon.setAttribute("src", theme === "dark" ? darkSrc : lightSrc);
+        });
+
+      favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.1.6" : "assets/favicon-light.svg?v=v1.1.6");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
