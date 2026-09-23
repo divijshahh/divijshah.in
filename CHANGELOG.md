@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.2] - 2026-09-24
+
+### Changed
+
+- Changed the dark inner portion of the Seerr service icon to white while preserving the surrounding gradient and shape.
+- Bumped the main site and CV to v1.2.2.
+
+
 All notable changes to this project are documented here.
 
 The format follows the principles of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
