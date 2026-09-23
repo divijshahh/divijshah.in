@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#f3f2ee">
   <link rel="canonical" href="https://divijshah.in/">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.0.11" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=v1.0.12" type="image/svg+xml">
   <title>Divij Shah</title>
   <script type="application/ld+json">
   {
@@ -43,8 +43,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-  <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+  <button class="lamp-switch" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+  <span class="lamp" aria-hidden="true">
+    <span class="lamp-mount"></span>
+    <span class="lamp-wire"></span>
+    <span class="lamp-shade"></span>
+    <span class="lamp-bulb"></span>
+  </span>
 </button>
   <main>
     <header>
@@ -108,7 +113,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.11</span>
+        <span class="version">v1.0.12</span>
       </span>
     </footer>
 
@@ -137,27 +142,23 @@
   <script>
     (() => {
       const root = document.documentElement;
-      const toggle = document.querySelector(".theme-toggle");
+      const toggle = document.querySelector(".lamp-switch");
       const themeMeta = document.querySelector('meta[name="theme-color"]');
       const favicon = document.getElementById("favicon");
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
-      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-
-      let saved = null;
+            let saved = null;
       try { saved = localStorage.getItem("theme"); } catch (e) {}
       const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
 
       const applyTheme = (theme, persist = true) => {
         root.dataset.theme = theme;
-        toggle.innerHTML = theme === "dark" ? sun : moon;
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.0.11" : "assets/favicon-light.svg?v=v1.0.11");
+      favicon.setAttribute("href", theme === "dark" ? "assets/favicon-dark.svg?v=v1.0.12" : "assets/favicon-light.svg?v=v1.0.12");
         if (persist) {
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
@@ -170,8 +171,14 @@
       });
 
       toggle.addEventListener("click", () => {
-        saved = root.dataset.theme === "dark" ? "light" : "dark";
-        applyTheme(saved);
+        toggle.classList.remove("activating");
+        void toggle.offsetWidth;
+        toggle.classList.add("activating");
+        window.setTimeout(() => {
+          saved = root.dataset.theme === "dark" ? "light" : "dark";
+          applyTheme(saved);
+          toggle.classList.remove("activating");
+        }, 170);
       });
     })();
   </script>
