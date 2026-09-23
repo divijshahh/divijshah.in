@@ -695,6 +695,7 @@ footer {
     gap: 10px;
     font-size: 8px;
   }
+}
 
 @media (max-width: 380px) {
   main {
@@ -1200,15 +1201,4 @@ footer {
 
 :root[data-theme="dark"] a {
   color: inherit;
-}
-
-@media (max-width: 760px) {
-  .bottom-dock {
-    top: 50%;
-    right: max(8px, env(safe-area-inset-right));
-    bottom: auto;
-    width: max-content;
-    height: auto;
-    transform: translateY(-50%);
-  }
 }
