@@ -4,9 +4,23 @@
 
 ### Changed
 
-- Changed the dark inner portion of the Seerr service icon to white while preserving the surrounding gradient and shape.
-- Bumped the main site and CV to v1.2.2.
+- Changed the Seerr light-theme icon so its inner portion is white while preserving the original surrounding gradient and shape.
+- Restored the original Seerr icon with its black inner portion for dark mode.
+- Reduced the light-theme Uptime Kuma icon stroke opacity from 0.35 to 0.20.
+- Kept the main site and CV at v1.2.2.
 
+### Documentation
+
+- Corrected the 1.2.0 changelog to reflect the final repository architecture.
+- Documented the QR landing page as a separate, independently styled site rather than part of the main site's stylesheet.
+
+### Cleanup
+
+- Removed obsolete QR-specific CSS that had remained in the main stylesheet after the QR page was isolated again.
+
+### Historical 1.2.0 notes
+
+The 1.2.0 release originally consolidated the QR page stylesheet into the main stylesheet. That was an intermediate implementation and was later identified as an architectural mistake. The QR page was subsequently isolated again under `qr-site/` with its own `style.css` and `assets/theme.js`. The obsolete QR-specific rules left behind in the main `style.css` have now been removed.
 
 All notable changes to this project are documented here.
 
@@ -27,8 +41,6 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 ### Changed
 
 - Reworked the mobile service grid so Media and Requests share a row and Photos and Status occupy an equal row.
-- Merged the QR page stylesheet into the main stylesheet.
-- Resized the QR page so the complete page fits within a single viewport without scrolling.
 - Changed the visible service labels to Files, Media, Photos, Requests and Status.
 - Cleaned and consolidated the main stylesheet, removing unused page and component rules.
 - Consolidated site versioning at `1.2.0`.
@@ -37,7 +49,6 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 ### Removed
 
-- Removed the redundant QR stylesheet.
 - Removed the unused Seerr logo copy.
 - Removed obsolete references and configuration for the deleted About page outside this changelog.
 
@@ -63,7 +74,7 @@ The following entries are retained only as historical record of the deleted Abou
 ### Changed
 
 - Refined service icon sizing and spacing.
-- Bumped the homepage and CV to v1.1.11.
+- Bumped homepage and CV to v1.1.11.
 
 ## [1.1.10] - 2026-09-23
 
@@ -71,4 +82,3 @@ The following entries are retained only as historical record of the deleted Abou
 
 - Refined the homepage service-card presentation.
 - Bumped the homepage and CV to v1.1.10.
-
