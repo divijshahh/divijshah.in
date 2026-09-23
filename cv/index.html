@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Curriculum vitae of Divij Shah.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.7" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.10" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/cv">
   <meta name="color-scheme" content="light dark">
   <title>CV — Divij Shah</title>
@@ -64,7 +64,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.7</span>
+        <span class="version">v1.0.10</span>
       </span>
     </footer>
 
@@ -72,10 +72,6 @@
       <a class="dock-item" href="/" aria-label="Home">
         <img class="dock-icon dock-home-icon" src="../assets/favicon-light.svg" data-light-src="../assets/favicon-light.svg" data-dark-src="../assets/favicon-dark.svg" alt="" aria-hidden="true">
         <span class="dock-label">HOME</span>
-      </a>
-      <a class="dock-item" href="/about" aria-label="About">
-        <svg class="dock-icon dock-about-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 20c.6-3.7 2.9-5.75 6.5-5.75s5.9 2.05 6.5 5.75"/></svg>
-        <span class="dock-label">ABOUT</span>
       </a>
       <a class="dock-item" href="/cv" aria-label="CV">
         <svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8.5L18.75 6.75v14.5H6.25z"/><path d="M14.75 2.75v4h4M9 11h7M9 14h7M9 17h5"/></svg>
@@ -117,7 +113,7 @@
       document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0.7" : "../assets/favicon-light.svg?v=v1.0.7");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0.10" : "../assets/favicon-light.svg?v=v1.0.10");
       if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
     };
 
