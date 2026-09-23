@@ -26,7 +26,7 @@ There is no frontend framework or build system.
 
 The main site uses `style.css` and `assets/site.js` for its shared layout, theme and navigation behavior. The QR landing page is intentionally isolated under `qr-site/` and has its own `style.css` and `assets/theme.js`. It does not use the main site's navigation or theme state.
 
-The QR landing page is versioned independently from the main site. The current main site release is 1.2.2, while the QR landing page is currently 1.0.1.
+The QR landing page is versioned independently from the main site. The current main site release is 1.2.5, while the QR landing page is currently 1.0.1.
 
 ## Icon attribution
 
@@ -40,7 +40,7 @@ The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
 ## Version
 
-Current main-site release: **1.2.2**
+Current main-site release: **1.2.5**
 
 QR landing page: **1.0.1**
 
