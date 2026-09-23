@@ -11,7 +11,10 @@
 </head>
 <body>
   <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+    <span class="pull-cord" aria-hidden="true">
+      <span class="cord"></span>
+      <span class="cord-knob"></span>
+    </span>
   </button>
 
   <main>
@@ -31,7 +34,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.12</span>
+        <span class="version">v1.0.13</span>
       </span>
     </footer>
   </main>
@@ -42,20 +45,17 @@
       const toggle = document.querySelector(".theme-toggle");
       const themeMeta = document.querySelector('meta[name="theme-color"]');
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
-      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-
       let saved = null;
       try { saved = localStorage.getItem("theme"); } catch (e) {}
       const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
 
       const applyTheme = (theme, persist = true) => {
         root.dataset.theme = theme;
-        toggle.innerHTML = theme === "dark" ? sun : moon;
         toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
         if (persist) {
+          saved = theme;
           try { localStorage.setItem("theme", theme); } catch (e) {}
         }
       };
@@ -67,8 +67,11 @@
       });
 
       toggle.addEventListener("click", () => {
-        saved = root.dataset.theme === "dark" ? "light" : "dark";
-        applyTheme(saved);
+        toggle.classList.add("pulling");
+        window.setTimeout(() => {
+          applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+          toggle.classList.remove("pulling");
+        }, 170);
       });
     })();
   </script>
