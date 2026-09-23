@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.5] - 2026-09-24
+
+### Release
+
+- Finalized the 1.2.x site changes and cleanup.
+- Bumped the main website, CV and 404 page to v1.2.5.
+- QR landing page remains independently versioned at v1.0.1.
+
 ## [1.2.2] - 2026-09-24
 
 ### Changed
