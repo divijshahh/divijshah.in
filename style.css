@@ -1226,9 +1226,10 @@ footer { animation-delay: 0.32s; }
   border-top: 1px solid #c6c3bb;
 }
 
+/* Improve contrast for About section labels and match homelab service card height to interest cards. */
 .about-section-label {
   margin: 0;
-  color: #716f69;
+  color: #55524b;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
   line-height: 1;
@@ -1322,11 +1323,11 @@ footer { animation-delay: 0.32s; }
 
 .about-services a {
   min-width: 0;
-  min-height: 82px;
+  min-height: 58px;
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 14px 12px;
+  padding: 8px 10px;
   color: #3f3d38;
   text-decoration: none;
   border: 1px solid #c6c3bb;
@@ -1391,7 +1392,7 @@ footer { animation-delay: 0.32s; }
 }
 
 :root[data-theme="dark"] .about-section-label {
-  color: #918e86;
+  color: #c4c1b9;
 }
 
 :root[data-theme="dark"] .about-current-link,
@@ -1467,7 +1468,7 @@ footer { animation-delay: 0.32s; }
 }
 
 
-/* About page v1.0.6 */
+/* About page v1.0.7 */
 .about-page > .about-intro + .about-section {
   margin-top: 54px;
 }
