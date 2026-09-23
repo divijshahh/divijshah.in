@@ -1,38 +1,34 @@
 # divijshah.in
 
-Personal website and self-hosted service directory for [divijshah.in](https://divijshah.in).
+Personal website for Divij Shah.
 
-The site is intentionally small and static. It is built with plain HTML and CSS, with a small amount of JavaScript for theme switching, and is deployed through Cloudflare Pages from this repository.
+[Visit divijshah.in](https://divijshah.in)
 
-## Live site
+A small static website built with plain HTML, CSS and JavaScript. It started as a simple personal homepage and grew into the place I use for my CV, contact links and the services I keep online.
 
-**Website:** https://divijshah.in
+## What is here
 
-## Features
+- Home page
+- About page
+- CV with an in-page PDF viewer
+- Light and dark themes
+- Links to my personal and professional profiles
+- Links to my self-hosted services
+- Responsive layout
+- SEO and social sharing metadata
+- Sitemap and robots.txt
 
-- Persistent bottom navigation dock across all pages
+## Homelab
 
-- Personal landing page
-- Responsive layout for desktop and mobile
-- Light and dark themes with system-theme detection and persisted manual preference
-- Links to personal contact and professional profiles
-- Directory for self-hosted services
-- Minimal client-side JavaScript
-- Open Graph and social sharing metadata
-- Canonical URL metadata and a dedicated 1200×630 social preview image
-- No frontend framework or build step
+The site is also connected to a much older project of mine: my homelab. I started with a Raspberry Pi and gradually kept adding things, learning what I needed along the way. Over time it grew into a TrueNAS SCALE server running the services I actually use, with storage, media, photos, files, monitoring and other self-hosted applications. I eventually put a public layer in front of it using Cloudflare, an Oracle Cloud VM and Caddy, with Tailscale connecting the public server back to my home network. What started as experimenting with a Raspberry Pi has turned into a fairly complete setup that I run and maintain myself.
 
-## Tech stack
+## Built with
 
-| Layer | Technology |
-| --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3 |
-| Behaviour | Vanilla JavaScript |
-| Hosting | Cloudflare Pages |
-| Source control | GitHub |
+HTML · CSS · JavaScript · GitHub · Cloudflare
 
-## Repository structure
+There is no frontend framework or build system.
+
+## Repository
 
 ```text
 .
@@ -44,75 +40,26 @@ The site is intentionally small and static. It is built with plain HTML and CSS,
 │   └── index.html
 ├── cv.pdf
 ├── assets/
-│   ├── favicon-light.svg
-│   ├── favicon-dark.svg
-│   └── seerr-logo.svg
 ├── og-image.png
+├── robots.txt
+├── sitemap.xml
+├── _headers
 ├── CHANGELOG.md
 └── README.md
-```text
-.
-├── index.html       # Page structure, content and theme logic
-├── style.css        # Layout, typography, responsive styles and themes
-├── favicon-light.svg # Light-mode favicon
-├── favicon-dark.svg  # Dark-mode favicon
-├── og-image.png      # Social preview image
-├── seerr-logo.svg   # Local Seerr logo asset
-├── CHANGELOG.md     # Release history
-└── README.md        # Project documentation
 ```
 
 ## Development
 
-There is no build process or package manager.
+The site is intentionally simple. Changes are made directly to the static files and deployed from the `main` branch.
 
-Clone the repository and open `index.html` directly in a browser, or serve the directory with any static HTTP server.
+The detailed development history is kept in [CHANGELOG.md](CHANGELOG.md).
 
-For example:
+## Version
 
-```bash
-git clone https://github.com/divijshahh/divijshah.in.git
-cd divijshah.in
-```
+Current release: **1.0.0**
 
-A local static server is useful when testing browser behaviour:
+## About
 
-```bash
-python3 -m http.server
-```
+Built and maintained by [Divij Shah](https://github.com/divijshahh).
 
-Then open `http://localhost:8000`.
-
-## Deployment
-
-The `main` branch is connected to Cloudflare Pages. Changes merged or pushed to `main` are deployed through the configured Pages deployment pipeline.
-
-No application server is required for the website itself.
-
-## Versioning
-
-The website uses a simple `v0.x` version number while the design and structure are actively evolving.
-
-The displayed version is maintained in `index.html` and release notes are recorded in [CHANGELOG.md](CHANGELOG.md). The site currently uses v0.5.6.2.
-
-Version changes are intended to be meaningful rather than tied to every individual Git commit.
-
-## Project conventions
-
-- Keep the site dependency-free unless a dependency provides a clear benefit.
-- Prefer small, targeted changes over unnecessary rewrites.
-- Keep external assets stable and use local assets where appropriate.
-- Test responsive behaviour when changing layout or typography.
-- Test both system color schemes and manual theme switching.
-- Update the changelog for notable user-facing changes.
-- Keep commit messages short and descriptive.
-
-## Maintainer
-
-Maintained by [Divij Shah](https://github.com/divijshahh).
-
-For the public site, visit [divijshah.in](https://divijshah.in).
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for the release history.
+Website: [divijshah.in](https://divijshah.in)
