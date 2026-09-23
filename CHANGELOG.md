@@ -14,6 +14,7 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 - Added shared site JavaScript for theme switching, favicon/icon switching and active navigation state.
 - Added a `WebSite` JSON-LD entity to the homepage.
 - Added visible keyboard focus states and a complete reduced-motion accessibility rule.
+- Added a custom 404 page matching the site's design.
 
 ### Changed
 
