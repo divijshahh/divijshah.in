@@ -629,17 +629,17 @@ footer {
   }
 
   .home-item-media {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .home-item-request {
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
 
   .home-item-photos {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  .home-item-request {
-    grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
 
@@ -649,7 +649,7 @@ footer {
   }
 
   .home-items {
-    grid-template-rows: 136px 136px 104px 92px;
+    grid-template-rows: 136px 118px 104px 92px;
   }
 
   .home-item {
@@ -675,13 +675,14 @@ footer {
   }
 
   .service-icon-seerr {
-    width: 74px;
-    height: 74px;
+    width: 58px;
+    height: 58px;
+    top: 41%;
   }
 
   .service-label {
     left: 50%;
-    bottom: 10px;
+    bottom: 9px;
     gap: 2px;
   }
 
