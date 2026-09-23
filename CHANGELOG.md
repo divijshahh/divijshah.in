@@ -1,3 +1,13 @@
+## [1.0.5] - 2026-09-23
+
+### Changed
+
+- Reworked the About page around content sections instead of non-interactive information cards.
+- Removed the Raspberry Pi → TrueNAS → Services progression graphic.
+- Kept the SVG interest icons while presenting them as a simple interest list.
+- Added direct links to the public homelab services.
+- Bumped the site version to v1.0.5.
+
 ## [1.0.4] - 2026-09-23
 
 ### Changed
