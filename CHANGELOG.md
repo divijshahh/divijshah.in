@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.0] - 2026-09-23
+
+### Changed
+
+- Reworked the About page card composition and centered the page introduction.
+- Removed the separate Interested in card to reduce visual clutter and repetition.
+- Replaced the large inline About-page SVG graphics with lightweight CSS-based geometric details that follow the active theme.
+- Simplified the homelab progression into a compact three-stage visual timeline.
+- Updated the displayed website version to v1.3.0.
+
 All notable changes to this project are documented in this file.
 
 The format follows the principles of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with changes grouped by release and categorized where useful.
@@ -210,7 +220,8 @@ No unreleased changes.
 
 - Improved consistency between service cards, typography and light/dark presentation.
 
-[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/divijshahh/divijshah.in/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.3.0
 [1.2.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.2.0
 [1.1.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.1.0
 [1.0.0]: https://github.com/divijshahh/divijshah.in/releases/tag/v1.0.0
