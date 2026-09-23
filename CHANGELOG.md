@@ -1,3 +1,12 @@
+## [1.0.8] - 2026-09-23
+
+### Changed
+
+- Reworked the About page homelab section into a dedicated history section.
+- Removed direct links to individual homelab services from the About page.
+- Added a single link to the homelab at `home.divijshah.in`.
+- Bumped the site version to v1.0.8.
+
 ## [1.0.7] - 2026-09-23
 
 ### Changed
