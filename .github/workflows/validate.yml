@@ -1,0 +1,95 @@
+name: Validate site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate JavaScript syntax
+        run: node --check assets/site.js
+
+      - name: Validate HTML and referenced assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const htmlFiles = [];
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory()) {
+                if (!['.git', '.github', 'node_modules'].includes(entry.name)) walk(full);
+              } else if (entry.name.endsWith('.html')) {
+                htmlFiles.push(full);
+              }
+            }
+          }
+          walk('.');
+
+          const missing = [];
+          const root = process.cwd();
+
+          for (const file of htmlFiles) {
+            const html = fs.readFileSync(file, 'utf8');
+            const dir = path.dirname(file);
+
+            for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/gi)) {
+              const ref = match[1].split(/[?#]/)[0];
+              if (!ref || /^(?:https?:|mailto:|tel:|#|data:|javascript:)/i.test(ref)) continue;
+
+              const target = path.resolve(dir, ref);
+              if (target.startsWith(root + path.sep) || target === root) {
+                if (!fs.existsSync(target)) missing.push(`${file}: ${ref}`);
+              }
+            }
+          }
+
+          if (missing.length) {
+            console.error('Missing referenced assets/files:');
+            console.error(missing.join('\n'));
+            process.exit(1);
+          }
+
+          console.log(`Validated ${htmlFiles.length} HTML files and their local references.`);
+          NODE
+
+      - name: Check version consistency
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="v1.2.1"
+          if grep -RIn --exclude-dir=.git --exclude-dir=.github --exclude='CHANGELOG.md' --exclude='README.md' -E 'v1\.([0-9]+)\.([0-9]+)' . | grep -v "$expected"; then
+            echo "Found a version reference that does not match $expected."
+            exit 1
+          fi
+
+          for file in index.html cv/index.html qr-site/index.html 404.html; do
+            grep -q "$expected" "$file" || {
+              echo "$file does not contain $expected"
+              exit 1
+            }
+          done
+
+      - name: Check required site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in index.html cv/index.html qr-site/index.html 404.html style.css assets/site.js robots.txt sitemap.xml _headers; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
