@@ -493,6 +493,14 @@ h1 {
   transform: scale(1.045);
 }
 
+.home-item:hover .service-icon-immich {
+  transform: translateY(-6px) scale(1.045);
+}
+
+.home-item:hover .service-icon-kuma {
+  transform: translateY(-7px) scale(1.045);
+}
+
 .home-item:hover .service-icon-seerr {
   transform: translate(-50%, -50%) scale(1.045);
 }
@@ -683,6 +691,14 @@ footer {
 
   .home-item-media:hover .service-icon-jellyfin {
     transform: translateY(-8px) scale(1.045);
+  }
+
+  .home-item:hover .service-icon-immich {
+    transform: translateY(-5px) scale(1.045);
+  }
+
+  .home-item:hover .service-icon-kuma {
+    transform: translateY(-6px) scale(1.045);
   }
 
   .service-icon-kuma {
