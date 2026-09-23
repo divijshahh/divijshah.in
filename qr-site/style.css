@@ -64,7 +64,7 @@ h1 {
 
 .qr-mark {
   flex: 0 0 auto;
-  height: clamp(48px, 7vh, 68px);
+  height: clamp(60px, 9vh, 88px);
   display: grid;
   place-items: center;
   margin: 0 auto;
@@ -331,7 +331,7 @@ button:focus:not(:focus-visible) {
   }
 
   .qr-mark {
-    height: 48px;
+    height: 60px;
   }
 
   .qr-mark img {
@@ -398,7 +398,7 @@ button:focus:not(:focus-visible) {
   }
 
   .qr-mark {
-    height: 42px;
+    height: 52px;
   }
 
   .intro {
