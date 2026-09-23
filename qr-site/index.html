@@ -10,12 +10,56 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-    <span class="pull-cord" aria-hidden="true">
-      <span class="cord"></span>
-      <span class="cord-knob"></span>
-    </span>
-  </button>
+  <div class="theme-lab" aria-label="Theme control concepts">
+    <button class="theme-option pull-switch" type="button" data-control="1" aria-label="Concept 1: wall mounted pull switch">
+      <span class="option-number">1</span>
+      <span class="wall-plate" aria-hidden="true">
+        <span class="plate-screw plate-screw-top"></span>
+        <span class="plate-screw plate-screw-bottom"></span>
+      </span>
+      <span class="pull-cord" aria-hidden="true">
+        <span class="cord"></span>
+        <span class="cord-knob"></span>
+      </span>
+      <span class="option-label">PULL</span>
+    </button>
+
+    <button class="theme-option lamp-switch" type="button" data-control="2" aria-label="Concept 2: tiny ceiling lamp">
+      <span class="option-number">2</span>
+      <span class="lamp" aria-hidden="true">
+        <span class="lamp-mount"></span>
+        <span class="lamp-wire"></span>
+        <span class="lamp-shade"></span>
+        <span class="lamp-bulb"></span>
+      </span>
+      <span class="option-label">LAMP</span>
+    </button>
+
+    <button class="theme-option rocker-switch" type="button" data-control="3" aria-label="Concept 3: wall rocker switch">
+      <span class="option-number">3</span>
+      <span class="rocker-plate" aria-hidden="true">
+        <span class="rocker"></span>
+      </span>
+      <span class="option-label">ROCKER</span>
+    </button>
+
+    <button class="theme-option dial-switch" type="button" data-control="4" aria-label="Concept 4: rotary dimmer">
+      <span class="option-number">4</span>
+      <span class="dial-plate" aria-hidden="true">
+        <span class="dial"></span>
+        <span class="dial-mark"></span>
+      </span>
+      <span class="option-label">DIAL</span>
+    </button>
+
+    <button class="theme-option slider-switch" type="button" data-control="5" aria-label="Concept 5: sliding switch">
+      <span class="option-number">5</span>
+      <span class="slider-track" aria-hidden="true">
+        <span class="slider-thumb"></span>
+      </span>
+      <span class="option-label">SLIDER</span>
+    </button>
+  </div>
 
   <main>
     <header class="hero">
@@ -34,7 +78,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.13</span>
+        <span class="version">v1.0.14</span>
       </span>
     </footer>
   </main>
@@ -42,7 +86,7 @@
   <script>
     (() => {
       const root = document.documentElement;
-      const toggle = document.querySelector(".theme-toggle");
+      const controls = [...document.querySelectorAll(".theme-option")];
       const themeMeta = document.querySelector('meta[name="theme-color"]');
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
       let saved = null;
@@ -51,8 +95,9 @@
 
       const applyTheme = (theme, persist = true) => {
         root.dataset.theme = theme;
-        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        controls.forEach((control) => {
+          control.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+        });
         themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
         if (persist) {
           saved = theme;
@@ -66,12 +111,16 @@
         if (!saved) applyTheme(event.matches ? "dark" : "light", false);
       });
 
-      toggle.addEventListener("click", () => {
-        toggle.classList.add("pulling");
-        window.setTimeout(() => {
-          applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
-          toggle.classList.remove("pulling");
-        }, 170);
+      controls.forEach((control) => {
+        control.addEventListener("click", () => {
+          control.classList.remove("activating");
+          void control.offsetWidth;
+          control.classList.add("activating");
+          window.setTimeout(() => {
+            applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+            control.classList.remove("activating");
+          }, 170);
+        });
       });
     })();
   </script>
