@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.7" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.8" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -83,14 +83,13 @@
 
       <div class="about-section about-homelab">
         <p class="about-section-label">THE HOMELAB</p>
-        <p class="about-body">What started with a Raspberry Pi gradually became a TrueNAS server and a collection of services I use every day. Today it handles storage, media, photos, files and monitoring, with a small cloud layer connecting it to the outside world.</p>
-        <div class="about-services" aria-label="Homelab services">
-          <a href="https://photos.divijshah.in"><img src="https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg" alt="" aria-hidden="true"><span>Immich</span><b aria-hidden="true">↗</b></a>
-          <a href="https://media.divijshah.in"><img src="https://cdn.simpleicons.org/jellyfin" alt="" aria-hidden="true"><span>Jellyfin</span><b aria-hidden="true">↗</b></a>
-          <a href="https://request.divijshah.in"><img src="../assets/seerr-logo.svg" alt="" aria-hidden="true"><span>Seerr</span><b aria-hidden="true">↗</b></a>
-          <a href="https://docs.divijshah.in"><img src="https://cdn.simpleicons.org/nextcloud" alt="" aria-hidden="true"><span>Nextcloud</span><b aria-hidden="true">↗</b></a>
-          <a href="https://status.divijshah.in"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg" alt="" aria-hidden="true"><span>Status</span><b aria-hidden="true">↗</b></a>
-        </div>
+        <a class="about-homelab-link" href="https://home.divijshah.in">
+          <div class="about-homelab-copy">
+            <h3>From a Raspberry Pi to a home server</h3>
+            <p>What started with a Raspberry Pi gradually became a TrueNAS server and a collection of services I use every day. Over time it grew into the system I use for storage, media, photos, files and monitoring, with a small cloud layer connecting it to the outside world.</p>
+          </div>
+          <span class="about-homelab-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
 
       <div class="about-section about-links">
@@ -107,7 +106,7 @@
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.7</span>
+        <span class="version">v1.0.8</span>
       </span>
     </footer>
 
@@ -158,7 +157,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
           icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
         });
-        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0.7" : "../assets/favicon-light.svg?v=v1.0.7");
+        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0.8" : "../assets/favicon-light.svg?v=v1.0.8");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
