@@ -1,3 +1,11 @@
+## [1.0.7] - 2026-09-23
+
+### Changed
+
+- Increased contrast for the About page section labels.
+- Matched the homelab service cards to the height of the interest cards.
+- Bumped the site version to v1.0.7.
+
 ## [1.0.6] - 2026-09-23
 
 ### Changed
