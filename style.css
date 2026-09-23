@@ -406,22 +406,23 @@ h1 {
 }
 
 .service-icon-jellyfin {
-  width: 182px;
-  height: 68px;
-  transform: translateY(-6px);
+  width: 220px;
+  height: 78px;
+  transform: translateY(-9px);
 }
 
 .service-icon-immich {
   width: 66px;
   height: 54px;
+  transform: translateY(-6px);
 }
 
 .service-icon-seerr {
   position: absolute;
   left: 50%;
-  top: 47%;
-  width: 68px;
-  height: 68px;
+  top: 44%;
+  width: 86px;
+  height: 86px;
   transform: translate(-50%, -50%);
 }
 
@@ -497,7 +498,7 @@ h1 {
 }
 
 .home-item-media:hover .service-icon-jellyfin {
-  transform: translateY(-6px) scale(1.045);
+  transform: translateY(-9px) scale(1.045);
 }
 
 footer {
@@ -654,19 +655,20 @@ footer {
   }
 
   .service-icon-jellyfin {
-    width: 178px;
-    height: 68px;
-    transform: translateY(-5px);
+    width: 205px;
+    height: 74px;
+    transform: translateY(-8px);
   }
 
   .service-icon-immich {
     width: 56px;
     height: 48px;
+    transform: translateY(-5px);
   }
 
   .service-icon-seerr {
-    width: 62px;
-    height: 62px;
+    width: 74px;
+    height: 74px;
   }
 
   .service-label {
@@ -680,7 +682,7 @@ footer {
   }
 
   .home-item-media:hover .service-icon-jellyfin {
-    transform: translateY(-5px) scale(1.045);
+    transform: translateY(-8px) scale(1.045);
   }
 
   .service-icon-kuma {
