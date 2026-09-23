@@ -1,3 +1,12 @@
+## [1.0.6] - 2026-09-23
+
+### Changed
+
+- Removed the redundant homepage-style tagline from the About page.
+- Removed the generic "A Bit More Personal" and "Why This Site" sections.
+- Replaced them with a simple "Elsewhere" section linking to the CV, LinkedIn and GitHub.
+- Bumped the site version to v1.0.6.
+
 ## [1.0.5] - 2026-09-23
 
 ### Changed
