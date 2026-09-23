@@ -20,150 +20,55 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.8" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0.9" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "About — Divij Shah",
-    "url": "https://divijshah.in/about",
-    "description": "About Divij Shah, a law student, builder and self-hosting enthusiast based in Bombay.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Divij Shah",
-      "url": "https://divijshah.in/"
-    }
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About — Divij Shah","url":"https://divijshah.in/about","description":"About Divij Shah, a law student based in Bombay.","isPartOf":{"@type":"WebSite","name":"Divij Shah","url":"https://divijshah.in/"}}</script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-  </button>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></button>
   <main>
-    <header>
-      <div class="hero">
-        <h1><a class="site-title-link" href="/">DIVIJ SHAH</a></h1>
-        <p class="intro"></p>
-      </div>
-    </header>
-
+    <header><div class="hero"><h1><a class="site-title-link" href="/">DIVIJ SHAH</a></h1><p class="intro"></p></div></header>
     <section class="site-content about-page">
       <div class="about-intro">
         <h2 class="page-heading">ABOUT ME</h2>
-        <p class="page-lead">I’m a law student at Government Law College, Churchgate. I’m interested in law, technology, and the systems I end up building around the things I use.</p>
+        <p class="page-lead">I’m a law student at Government Law College, Churchgate, based in Bombay.</p>
       </div>
-
       <div class="about-section about-current">
         <p class="about-section-label">CURRENTLY</p>
-        <a class="about-current-link" href="/cv">
-          <span>
-            <strong>Law</strong>
-            <span>Government Law College, Churchgate</span>
-          </span>
-          <span class="about-section-arrow" aria-hidden="true">↗</span>
-        </a>
+        <a class="about-current-link" href="/cv"><span><strong>Law</strong><span>Government Law College, Churchgate</span></span><span class="about-section-arrow" aria-hidden="true">↗</span></a>
       </div>
-
-      <div class="about-section about-interests">
-        <p class="about-section-label">INTERESTED IN</p>
-        <div class="interest-list" aria-label="Areas of interest">
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16H7zM9.5 8h5M9.5 12h5M9.5 16h3"/></svg>Law</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16M7 7l10 10M17 7 7 17"/></svg>Technology</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14v11H5zM8 8V5h8v3M9 12h6"/></svg>Hardware</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="11" cy="17" r="1.5"/></svg>Networking</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM7 9h10M7 12h7M7 15h4"/></svg>Web</span>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h12v12H6zM9 6v12M15 6v12M6 12h12"/></svg>Self-hosting</span>
-        </div>
-      </div>
-
       <div class="about-section about-homelab">
         <p class="about-section-label">THE HOMELAB</p>
-        <a class="about-homelab-link" href="https://home.divijshah.in">
-          <div class="about-homelab-copy">
-            <h3>From a Raspberry Pi to a home server</h3>
-            <p>What started with a Raspberry Pi gradually became a TrueNAS server and a collection of services I use every day. Over time it grew into the system I use for storage, media, photos, files and monitoring, with a small cloud layer connecting it to the outside world.</p>
-          </div>
-          <span class="about-homelab-arrow" aria-hidden="true">↗</span>
-        </a>
+        <div class="homelab-timeline">
+          <article class="homelab-entry"><div class="homelab-year">2019</div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual"><img src="../assets/about-raspberry-pi.svg" alt=""></div><div class="homelab-copy"><h3>Raspberry Pi</h3><p>First home server.</p></div></article>
+          <article class="homelab-entry"><div class="homelab-year">2020</div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual"><img src="../assets/about-home-pc.svg" alt=""></div><div class="homelab-copy"><h3>Old home PC</h3><p>Repurposed as a server.</p></div></article>
+          <article class="homelab-entry"><div class="homelab-year">2021</div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual"><img src="../assets/about-dell-laptop.svg" alt=""></div><div class="homelab-copy"><h3>Old Dell laptop</h3><p>Another machine used for self-hosting.</p></div></article>
+          <article class="homelab-entry"><div class="homelab-year">2024</div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual"><img src="../assets/about-server.svg" alt=""></div><div class="homelab-copy"><h3>Dedicated server</h3><p>Ryzen 5 5500 · GTX 1070 · TrueNAS</p></div></article>
+          <article class="homelab-entry"><div class="homelab-year">2026</div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual"><img src="../assets/about-cloud.svg" alt=""></div><div class="homelab-copy"><h3>Self-hosted website</h3><p>divijshah.in · Oracle Cloud · Cloudflare · Caddy · Tailscale</p></div></article>
+          <article class="homelab-entry homelab-final"><div class="homelab-year"></div><div class="homelab-marker" aria-hidden="true"></div><div class="homelab-visual homelab-services-visual" aria-hidden="true"><span>+</span></div><div class="homelab-copy"><h3>Several services</h3><p>Storage · media · photos · files · monitoring · requests</p></div></article>
+        </div>
+        <a class="about-homelab-link" href="https://home.divijshah.in">OPEN HOMELAB <span aria-hidden="true">↗</span></a>
       </div>
-
       <div class="about-section about-links">
         <p class="about-section-label">ELSEWHERE</p>
-        <div class="about-links-list" aria-label="Other links">
-          <a href="/cv"><span>CV</span><b aria-hidden="true">↗</b></a>
-          <a href="https://www.linkedin.com/in/divijshahh/"><span>LinkedIn</span><b aria-hidden="true">↗</b></a>
-          <a href="https://github.com/divijshahh"><span>GitHub</span><b aria-hidden="true">↗</b></a>
-        </div>
+        <div class="about-links-list" aria-label="Other links"><a href="/cv"><span>CV</span><b aria-hidden="true">↗</b></a><a href="https://www.linkedin.com/in/divijshahh/"><span>LinkedIn</span><b aria-hidden="true">↗</b></a><a href="https://github.com/divijshahh"><span>GitHub</span><b aria-hidden="true">↗</b></a></div>
       </div>
     </section>
-
-    <footer>
-      <span>Bombay, India</span>
-      <span class="footer-meta">
-        <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0.8</span>
-      </span>
-    </footer>
-
+    <footer><span>Bombay, India</span><span class="footer-meta"><span>© 2026 Divij Shah</span><span class="version">v1.0.9</span></span></footer>
     <nav class="bottom-dock" aria-label="Site navigation">
-      <a class="dock-item" href="/" aria-label="Home">
-        <img class="dock-icon dock-home-icon" src="../assets/favicon-light.svg" data-light-src="../assets/favicon-light.svg" data-dark-src="../assets/favicon-dark.svg" alt="" aria-hidden="true">
-        <span class="dock-label">HOME</span>
-      </a>
-      <a class="dock-item" href="/about" aria-label="About">
-        <svg class="dock-icon dock-about-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 20c.6-3.7 2.9-5.75 6.5-5.75s5.9 2.05 6.5 5.75"/></svg>
-        <span class="dock-label">ABOUT</span>
-      </a>
-      <a class="dock-item" href="/cv" aria-label="CV">
-        <svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8.5L18.75 6.75v14.5H6.25z"/><path d="M14.75 2.75v4h4M9 11h7M9 14h7M9 17h5"/></svg>
-        <span class="dock-label">CV</span>
-      </a>
+      <a class="dock-item" href="/" aria-label="Home"><img class="dock-icon dock-home-icon" src="../assets/favicon-light.svg" data-light-src="../assets/favicon-light.svg" data-dark-src="../assets/favicon-dark.svg" alt="" aria-hidden="true"><span class="dock-label">HOME</span></a>
+      <a class="dock-item" href="/about" aria-label="About"><svg class="dock-icon dock-about-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 20c.6-3.7 2.9-5.75 6.5-5.75s5.9 2.05 6.5 5.75"/></svg><span class="dock-label">ABOUT</span></a>
+      <a class="dock-item" href="/cv" aria-label="CV"><svg class="dock-icon dock-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8.5L18.75 6.75v14.5H6.25z"/><path d="M14.75 2.75v4h4M9 11h7M9 14h7M9 17h5"/></svg><span class="dock-label">CV</span></a>
     </nav>
   </main>
-
   <script>
-    (() => {
-      const path = window.location.pathname.replace(/\/+$/, "") || "/";
-      const links = document.querySelectorAll(".bottom-dock .dock-item");
-      links.forEach((link) => {
-        const target = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
-        if (target === path) link.setAttribute("aria-current", "page");
-      });
-    })();
+    (()=>{const path=window.location.pathname.replace(/\/+$/,"")||"/";document.querySelectorAll(".bottom-dock .dock-item").forEach(link=>{const target=new URL(link.href,window.location.origin).pathname.replace(/\/+$/,"")||"/";if(target===path)link.setAttribute("aria-current","page")})})();
   </script>
   <script>
-    (() => {
-      const root = document.documentElement;
-      const toggle = document.querySelector(".theme-toggle");
-      const themeMeta = document.querySelector('meta[name="theme-color"]');
-      const favicon = document.getElementById("favicon");
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      const moon = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>';
-      const sun = '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-      let saved = null;
-      try { saved = localStorage.getItem("theme"); } catch (e) {}
-      const initial = saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light");
-      const applyTheme = (theme, persist = true) => {
-        root.dataset.theme = theme;
-        toggle.innerHTML = theme === "dark" ? sun : moon;
-        toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        themeMeta.setAttribute("content", theme === "dark" ? "#151513" : "#f3f2ee");
-        document.querySelectorAll(".dock-home-icon").forEach((icon) => {
-          icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
-        });
-        favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0.8" : "../assets/favicon-light.svg?v=v1.0.8");
-        if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
-      };
-      applyTheme(initial, false);
-      systemTheme.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light", false); });
-      toggle.addEventListener("click", () => { saved = root.dataset.theme === "dark" ? "light" : "dark"; applyTheme(saved); });
-    })();
+    (()=>{const root=document.documentElement,toggle=document.querySelector(".theme-toggle"),themeMeta=document.querySelector('meta[name="theme-color"]'),favicon=document.getElementById("favicon"),systemTheme=window.matchMedia("(prefers-color-scheme: dark)");const moon='<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>',sun='<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';let saved=null;try{saved=localStorage.getItem("theme")}catch(e){}const initial=saved==="dark"||saved==="light"?saved:(systemTheme.matches?"dark":"light");const applyTheme=(theme,persist=true)=>{root.dataset.theme=theme;toggle.innerHTML=theme==="dark"?sun:moon;toggle.setAttribute("aria-label",theme==="dark"?"Switch to light mode":"Switch to dark mode");toggle.setAttribute("title",theme==="dark"?"Switch to light mode":"Switch to dark mode");themeMeta.setAttribute("content",theme==="dark"?"#151513":"#f3f2ee");document.querySelectorAll(".dock-home-icon").forEach(icon=>icon.setAttribute("src",theme==="dark"?icon.dataset.darkSrc:icon.dataset.lightSrc));favicon.setAttribute("href",theme==="dark"?"../assets/favicon-dark.svg?v=v1.0.9":"../assets/favicon-light.svg?v=v1.0.9");if(persist)try{localStorage.setItem("theme",theme)}catch(e){}};applyTheme(initial,false);systemTheme.addEventListener("change",event=>{if(!saved)applyTheme(event.matches?"dark":"light",false)});toggle.addEventListener("click",()=>{saved=root.dataset.theme==="dark"?"light":"dark";applyTheme(saved)})})();
   </script>
 </body>
 </html>
