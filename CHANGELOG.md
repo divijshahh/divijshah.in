@@ -1,3 +1,12 @@
+## [1.0.4] - 2026-09-23
+
+### Changed
+
+- Restored the About page design with the original SVG icon treatment for Law, Technology, Hardware, Networking, Web and Self-hosting.
+- Restored the corresponding card layout, homelab flow graphics and responsive styling.
+- Changed the About heading to "ABOUT ME".
+- Bumped the site version to v1.0.4.
+
 # Changelog
 
 All notable changes to this project are documented in this file.
