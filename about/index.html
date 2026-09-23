@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Divij Shah — law student based in Bombay.">
+  <meta name="description" content="About Divij Shah — law student, builder and self-hosting enthusiast based in Bombay.">
   <meta name="author" content="Divij Shah">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="About — Divij Shah">
-  <meta property="og:description" content="About Divij Shah, a law student based in Bombay.">
+  <meta property="og:description" content="About Divij Shah, a law student, builder and self-hosting enthusiast based in Bombay.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
   <meta property="og:url" content="https://divijshah.in/about">
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="About Divij Shah, a law student based in Bombay.">
   <meta name="twitter:image" content="https://divijshah.in/og-image.png">
   <meta name="theme-color" content="#f3f2ee">
-  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.0" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="../assets/favicon-light.svg?v=v1.1.0" type="image/svg+xml">
   <link rel="canonical" href="https://divijshah.in/about">
   <meta name="color-scheme" content="light dark">
   <title>About — Divij Shah</title>
@@ -30,7 +30,7 @@
     "@type": "WebPage",
     "name": "About — Divij Shah",
     "url": "https://divijshah.in/about",
-    "description": "About Divij Shah, a law student based in Bombay.",
+    "description": "About Divij Shah, a law student, builder and self-hosting enthusiast based in Bombay.",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Divij Shah",
@@ -52,14 +52,70 @@
       </div>
     </header>
 
-    <section class="site-content">
-      <h2 class="page-heading">ABOUT</h2>
-      <p class="page-lead">test abc xyz</p>
+    <section class="site-content about-page">
+      <div class="about-intro">
+        <p class="about-kicker">A LITTLE ABOUT ME</p>
+        <h2 class="page-heading">ABOUT</h2>
+        <p class="page-lead">I’m a law student at Government Law College, Churchgate. Outside law, I like building things, understanding how systems work, and keeping a few of those systems running myself.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card about-card-current">
+          <p class="about-card-label">CURRENTLY</p>
+          <h3>Law</h3>
+          <p>Government Law College, Churchgate</p>
+          <span class="about-card-meta">Bombay, India</span>
+        </article>
+
+        <article class="about-card about-card-interests">
+          <p class="about-card-label">INTERESTED IN</p>
+          <div class="interest-list" aria-label="Areas of interest">
+            <span>Law</span>
+            <span>Technology</span>
+            <span>Self-hosting</span>
+            <span>Networking</span>
+            <span>Hardware</span>
+            <span>Web</span>
+          </div>
+        </article>
+
+        <article class="about-card about-card-homelab">
+          <div class="about-card-heading">
+            <p class="about-card-label">BUILDING &amp; RUNNING</p>
+            <span class="about-card-index">01</span>
+          </div>
+          <h3>My homelab started with a Raspberry Pi.</h3>
+          <p>It grew into a TrueNAS server and a collection of services I actually use. Today it is a mix of storage, media, photos, files and monitoring, connected back to the public internet through a small cloud layer I run myself.</p>
+          <div class="about-flow" aria-label="Homelab progression">
+            <span>Raspberry Pi</span>
+            <i aria-hidden="true">→</i>
+            <span>TrueNAS</span>
+            <i aria-hidden="true">→</i>
+            <span>Self-hosted services</span>
+          </div>
+        </article>
+
+        <article class="about-card about-card-building">
+          <p class="about-card-label">OUTSIDE LAW</p>
+          <h3>I like figuring things out.</h3>
+          <p>That usually means taking something apart, learning enough to understand it, and then building a version that works for me.</p>
+        </article>
+
+        <article class="about-card about-card-site">
+          <p class="about-card-label">THIS WEBSITE</p>
+          <h3>One place for the useful stuff.</h3>
+          <p>This site is deliberately simple: my name, my CV, a little context about me, and links to the things I keep online.</p>
+        </article>
+      </div>
+
+      <div class="about-cta">
+        <a class="about-cv-link" href="/cv">VIEW CV <span aria-hidden="true">↗</span></a>
+      </div>
     </section>   <footer>
       <span>Bombay, India</span>
       <span class="footer-meta">
         <span>© 2026 Divij Shah</span>
-        <span class="version">v1.0</span>
+        <span class="version">v1.1.0</span>
       </span>
     </footer>
 
@@ -109,7 +165,7 @@
         document.querySelectorAll(".dock-home-icon").forEach((icon) => {
         icon.setAttribute("src", theme === "dark" ? icon.dataset.darkSrc : icon.dataset.lightSrc);
       });
-      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.0" : "../assets/favicon-light.svg?v=v1.0");
+      favicon.setAttribute("href", theme === "dark" ? "../assets/favicon-dark.svg?v=v1.1.0" : "../assets/favicon-light.svg?v=v1.1.0");
         if (persist) try { localStorage.setItem("theme", theme); } catch (e) {}
       };
       applyTheme(initial, false);
