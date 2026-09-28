@@ -55,7 +55,7 @@ h1 {
   font-size: clamp(54px, 16vw, 68px);
   font-weight: 600;
   line-height: .94;
-  letter-spacing: -0.045em;
+  letter-spacing: 0;
 }
 
 h1 span {
