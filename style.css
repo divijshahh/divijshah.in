@@ -46,7 +46,7 @@ h1 {
   color: #161614;
   font-size: clamp(54px, 9.75vw, 105px);
   line-height: 0.84;
-  letter-spacing: -0.045em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
