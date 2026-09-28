@@ -468,3 +468,45 @@ Removed the previously listed work for `read.divijshah.in`, domain-email setup/a
 - Custom `home.divijshah.in` frontend.
 - Optional browser QA after future visual changes.
 
+
+
+## 2026-09-28 — Thorough final QA pass
+
+### User request
+Perform the final browser/repository QA exactly as outlined, without skipping steps, and choose the thorough path.
+
+### Inspected
+- Current repository files and project context.
+- Main homepage, stylesheet and site JS.
+- CV page and PDF.
+- 404 page.
+- QR page, QR stylesheet and QR theme JS.
+- Local service/favicons/QR SVG assets.
+- robots.txt, sitemap.xml and _headers.
+- Recent Git history around service cards/status dots.
+- Repository searches for deleted routes, stale features, analytics and credential-like terms.
+- cdnjs listing for PDF.js 4.10.38.
+
+### Findings
+- Established service status dots were missing from the current service-card implementation despite being a documented project requirement.
+- README and the 1.2.5 changelog note contained stale QR v1.0.1 documentation.
+- Static source checks passed for duplicate IDs, image alt presence, button labels, local asset existence and basic PDF structure.
+- Live public-domain/browser checks could not be completed because the available environment could not reach the domains. No live result was invented.
+
+### Changed
+- Restored consistent green status dots to all service cards.
+- Corrected stale QR version documentation from 1.0.1 to 1.0.2.
+- Bumped the main site visible version from v1.2.5 to v1.2.6.
+- Updated MASTER_CONTEXT.md to reflect the narrowed roadmap and QA findings.
+
+### Not changed
+- No infrastructure/Caddy/Cloudflare architecture changes.
+- No QR-site version bump.
+- No redesign based on subjective preference.
+- No claim of live browser/deployment PASS.
+
+### Follow-up
+Live browser/HTTP QA remains the only unperformed part of the outlined checklist and must be performed when an environment with access to the deployed sites is available.
+
+### Commit
+To be recorded after the QA corrections are committed.
