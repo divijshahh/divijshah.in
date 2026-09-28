@@ -56,7 +56,7 @@ For server/configuration work:
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | IMPLEMENTED | v1.0.2 |
 | QR placeholder | IMPLEMENTED | local under-construction SVG |
-| Final QR business-card experience | PLANNED | not implemented |
+| Final QR business-card experience | PLANNED | design specified; implementation pending explicit `approved` |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
@@ -127,7 +127,7 @@ Footer:
 
 - Bombay, India
 - © 2026 Divij Shah
-- v1.2.6
+- v1.2.7
 
 Important personal-state constraint: the user is **not a lawyer yet**. Do not write "lawyer" into the site/bio/signature unless the user explicitly changes this.
 
@@ -409,15 +409,21 @@ Do not put QR behind Cloudflare Access.
 
 ### QR future work
 
-The placeholder will eventually be replaced by the real business-card landing experience.
+The placeholder will be replaced by the specified contact-first business-card landing experience after explicit implementation approval.
 
-Still undecided:
+Locked implementation requirements:
+- name: DIVIJ SHAH;
+- descriptor: CIVIL LITIGATION · BOMBAY;
+- CURRENTLY: Tushar Goradia Advocates;
+- primary action: Save contact via downloadable vCard;
+- contact rows: WhatsApp, Call, Email, LinkedIn, CV in that exact order;
+- no `law student`/`student` wording, bio, interests list, or invented contact data;
+- no main-site changes;
+- mobile-first, with deliberate iPhone and iPad responsive treatment;
+- lamp remains visible and is optimized for phone touch/positioning;
+- desktop is a wider presentation of the mobile composition.
 
-- exact final content;
-- exact QR destination behavior;
-- whether it is a landing page or controlled redirect/other experience.
-
-Do not implement the final version without user direction.
+Do not implement the final version until the user gives the explicit `approved` confirmation.
 
 ## 11. Infrastructure context
 
@@ -602,7 +608,7 @@ When exact historical reasoning matters, inspect Git history rather than guessin
 
 ## 19. Current open work as of 2026-09-28
 
-1. Final QR/business-card landing experience.
+1. Final QR/business-card landing experience (awaiting explicit `approved` confirmation; mobile/iPhone/iPad requirements locked).
 2. Custom home.divijshah.in frontend.
 3. Optional browser QA after future visual changes.
 
