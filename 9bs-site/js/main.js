@@ -16,7 +16,7 @@
     { t: "An espresso machine", d: "Choose a machine that suits your budget, available service support and intended drinks. Compare current pricing, warranty terms and specifications before buying." },
     { t: "An espresso-capable grinder", d: "The make-or-break purchase. Manual K6 / Timemore C3 ESP, or electric HiBrew G5 / Rift 64." },
     { t: "Fresh, medium-roast beans", d: "Rest 7–10 days off roast date. Medium roasts are the easiest start; lighter roasts shine once you learn the high-temp flush trick." },
-    { t: "A non-pressurised basket (51mm)", d: "The real upgrade from the stock pressurised setup. Get a precision (IMS) basket if budget allows, or a bottomless portafilter that comes with one (THW / Neouza / Brewalsa). Real legends just chop their stock portafilter into a bottomless one. " },
+    { t: "A non-pressurised basket (51mm)", d: "The real upgrade from the stock pressurised setup. Get a precision (IMS) basket if budget allows, or a bottomless portafilter that comes with one (THW / Neouza / Brewalsa). A purpose-built bottomless portafilter is simpler than modifying the stock portafilter. " },
     { t: "A WDT tool (~₹200)", d: "A few thin needles to stir & de-clump grounds. Cheap, essential." },
     { t: "An RDT spray bottle (~₹120)", d: "One spritz on beans kills static & mess." },
     { t: "A scale with a timer", d: "Weigh dose in & shot out. Stop trusting the buttons. Hoffen ~₹1k." },
@@ -173,7 +173,7 @@
   ];
 
   const FAQ = [
-    { q: "the machine or the machine — which espresso machine?", a: "For a starter setup, prioritise temperature consistency, adequate steam performance, compatible accessories, service support and warranty coverage. Compare those factors alongside price." },
+    { q: "Which type of espresso machine should I buy?", a: "For a starter setup, prioritise temperature consistency, adequate steam performance, compatible accessories, service support and warranty coverage. Compare those factors alongside price." },
     { q: "Do I really need to ditch the stock portafilter?", a: "A bottomless portafilter and non-pressurised basket are useful for learning because they make channeling visible. Keep a pressurised basket if you regularly use pre-ground coffee or want a more forgiving workflow." },
     { q: "How much should I spend on a grinder vs the machine?", a: "The grinder deserves a substantial share of the budget because grind consistency has a major effect on extraction. A capable machine cannot compensate for an inconsistent grinder." },
     { q: "Is a manual grinder fine, or do I need electric?", a: "A manual grinder can produce excellent espresso, but it takes longer per dose. Electric grinders are more convenient for frequent use. Choose based on budget, workflow and how often you make espresso." },
