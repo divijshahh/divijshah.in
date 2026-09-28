@@ -47,11 +47,11 @@ For server/configuration work:
 
 | Area | Status | Current state |
 |---|---|---|
-| Main homepage | IMPLEMENTED/STABLE | v1.2.5 |
+| Main homepage | IMPLEMENTED/STABLE | v1.2.6 |
 | Main theme/lamp | IMPLEMENTED/STABLE | light/dark |
 | Main service grid | IMPLEMENTED/STABLE | Files, Media, Photos, Requests, Status |
 | Main navigation | IMPLEMENTED/STABLE | Home + CV |
-| CV page | IMPLEMENTED/STABLE | v1.2.5 |
+| CV page | IMPLEMENTED/STABLE | v1.2.6 |
 | Custom 404 | IMPLEMENTED/STABLE | main visual system |
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | IMPLEMENTED | v1.0.2 |
@@ -242,9 +242,7 @@ Do not recreate it or add an About button.
 
 #### Read
 
-`/read` is **not** a main-site page.
-
-The future reading frontend is `read.divijshah.in`.
+No main-site `/read` page exists. The previously discussed `read.divijshah.in` work was removed from the active roadmap on 2026-09-28 and should not be treated as current work.
 
 ## 6. Service grid
 
@@ -563,7 +561,7 @@ User prefers semver-ish increments and patch-style increments for smaller change
 
 When a substantive site change is made, update the affected site's visible version. Do not bump both sites for a change affecting only one.
 
-Known documentation drift: README/CHANGELOG still contain some QR v1.0.1 wording. The actual QR implementation and Git history establish v1.0.2. Do not treat stale README/changelog wording as the current implementation.
+README/CHANGELOG QR version wording was corrected during the 2026-09-28 QA pass; the implementation is v1.0.2.
 
 ## 17. File map
 
