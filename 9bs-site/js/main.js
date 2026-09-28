@@ -1,5 +1,5 @@
 /* ===================== 9 Bar Social — main.js ===================== */
-(function  {
+(function () {
   "use strict";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -106,7 +106,7 @@
       desc: "Ships from China (10–25 days, ~₹600 shipping). Comes with dose rings + cleaning tools. Card payments can be fussy — One Card / Forex / Scapia tend to work.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
     { name: "Brewalsa 51mm (Made for espresso machine)", price: "~₹2.1k + ship", tags: [], badge: ["neutral", "Purpose-built"],
-      desc: "Wooden-handle SS portafilter explicitly made for espresso machine compatible 51mm machines. Use.",
+      desc: "Wooden-handle SS portafilter explicitly made for espresso machine compatible 51mm machines. ",
       link: "https://brewalsa.com/", linkLabel: "brewalsa.com" },
     { name: "DIY: 'circumcise' your stock PF", price: "~₹50–100", tags: [], badge: ["neutral", "Jugaad route"],
       desc: "Take the stock portafilter to a welder/fabricator and chop the spout off the bottom. Cheap & works — just don't cut all the way to the top (it can snap when you knock). Smooth the edge after.",
@@ -166,6 +166,7 @@
     { q: " The basket gets stuck in the group head (need a knife to remove)", a: "Super common with the stock portafilter. Fixes: use a bit less coffee (keep it below the basket 'ears'); if it's stuck, run a shot and the pressure pops it off; use a puck screen; pull the portafilter slightly <b>upward</b> as you remove it; or just switch to a bottomless portafilter and the problem disappears." },
     { q: " Descaling light came on — what do I do?", a: "It's based on shot count + your water-hardness setting, roughly monthly / ~100 shots. Use espresso machine descaler (~₹750) or aftermarket (~₹600 for six), or food-safe citric acid. The espresso machine has <b>no 3-way valve and no blind basket</b>, so you can't back-flush — just run the descale cycle. Don't touch the liquid bare-handed." },
     { q: " Set water hardness?", a: "Long-press the steam button ~10s to enter settings (levels 1–3, higher = harder water). If you run RO/soft water, a low setting is fine. A TDS meter does <i>not</i> measure hardness — use a test strip if you have one (most boxes don't include it; buy on Amazon)." },
+    { q: " What should I check before buying a machine?", a: "<b>It's the group's most debated question.</b>  saves ~₹8k (≈₹12k vs ~₹20k new on Amazon — sometimes 10k+), and most units arrive basically new with only minor cosmetic marks. But it's a genuine gamble: one member's tank arrived broken and the replacement was <i>also</i> damaged; one machine's pump failed after a couple of months and is back with Latteholic for repair — whether the warranty gets honoured cleanly is still to be seen. So <b>film one continuous unboxing video</b>, go in eyes-open, and decide if the saving is worth the risk. Want zero chance of a flaw? Buy sealed/new." },
     { q: " The water tank cracked / I need a spare part", a: "Tanks are fragile and crack in transit. A replacement tank runs ~₹1–1.5k (don't believe inflated ₹5k Amazon listings; ask the seller). Spare parts for EC680/685 are at pgservice.cc. Do NOT patch a tank with super-glue — it's not food-safe." },
     { q: " Steam wand has milk buildup / weak steam", a: "Purge & wipe the wand immediately after every steam. For buildup, soak the tip and clear the holes with a pin. The the machine's tiny wand is weak by design — some people upgrade to a Rancilio-style wand (a mod), but technique fixes most of it." },
     { q: " My THW portafilter chipped/broke", a: "Usually from grinding super fine + over-pressure, sometimes when reseating the rubber gasket. The current stock is reportedly more robust; most users report theirs is solid. Don't force a too-fine grind into a naked basket." },
@@ -206,15 +207,15 @@
       link: "https://latteholic.com/", linkLabel: "latteholic.com" },
     { name: "espresso machine India (official)", type: "Machines", desc: "Official site for the espresso machine Duo the machine. Ships via Latteholic. Compare its price with sales before buying.",
       link: "https://espresso machine.co.in/", linkLabel: "espresso machine.co.in" },
-    { name: "Coffee Plus", type: "Grinders & gear", desc: "Reliable for grinders — Espressa Orbit 64, Kingrinder K6 (pre-order), Timemore. Good support and payment options.",
+    { name: "Coffee Plus", type: "Grinders & gear", desc: "Reliable for grinders — Espressa Orbit 64, Kingrinder K6 (pre-order), Timemore. Good support, ~5% payment cashback.",
       link: "https://coffeeplus.in/", linkLabel: "coffeeplus.in" },
-    { name: "Fix Coffee", type: "Grinders & accessories", desc: "HiBrew G5/H10A, DF54, tampers, dosing rings..",
+    { name: "Fix Coffee", type: "Grinders & accessories", desc: "HiBrew G5/H10A, DF54, tampers, dosing rings.",
       link: "https://fixcoffee.shop/", linkLabel: "fixcoffee.shop" },
     { name: "Cipher Brewing", type: "Grinders", desc: "Makers of the Rift 64 — excellent grinder, strong warranty support (they've replaced units). Support replies can be slow.",
       link: "https://cipherbrewing.com/", linkLabel: "cipherbrewing.com" },
     { name: "Neouza", type: "Portafilters & baskets", desc: "Good bottomless portafilters with dose rings + tools. Ships from China (10–25 days). There's a espresso machineted 9 Bar Social buy group.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
-    { name: "Brewalsa", type: "Portafilters & baskets", desc: "Purpose-built 51mm bottomless portafilters & baskets for espresso machine..",
+    { name: "Brewalsa", type: "Portafilters & baskets", desc: "Purpose-built 51mm bottomless portafilters & baskets for espresso machine.",
       link: "https://brewalsa.com/", linkLabel: "brewalsa.com" },
     { name: "Amazon India", type: "Everything", desc: "WDT/RDT tools, scales, puck screens, descaler. Use the gift-card + cashback-card trick to save. Watch big sales.",
       link: "https://www.amazon.in/", linkLabel: "amazon.in" },
@@ -275,17 +276,17 @@
     "Look at you. A whole setup.",
     "Certified espresso machine menace. ",
   ];
-  function renderChecklist {
+  function renderChecklist() {
     checklistEl.innerHTML = "";
     STARTER_KIT.forEach((item, i) => {
       const done = !!kitState[i];
       const node = el("div", "check-item" + (done ? " done" : ""));
       node.innerHTML = `<div class="check-box">${done ? "" : ""}</div>
         <div><div class="ci-title">${item.t}</div><div class="ci-desc">${item.d}</div></div>`;
-      node.addEventListener("click",  => {
+      node.addEventListener("click", () => {
         kitState[i] = !kitState[i];
         localStorage.setItem(KIT_KEY, JSON.stringify(kitState));
-        renderChecklist;
+        renderChecklist();
         updateKit(true);
       });
       checklistEl.appendChild(node);
@@ -299,12 +300,12 @@
     $("#kitPct").textContent = pct + "%";
     $("#kitMsg").textContent = kitMsgs[Math.min(kitMsgs.length - 1, Math.floor((done / total) * (kitMsgs.length - 1)))];
     setRabbit(pct);
-    if (celebrate && pct === 100) beanBurst;
+    if (celebrate && pct === 100) beanBurst();
   }
-  $("#resetKit").addEventListener("click",  => {
-    kitState = {}; localStorage.removeItem(KIT_KEY); renderChecklist;
+  $("#resetKit").addEventListener("click", () => {
+    kitState = {}; localStorage.removeItem(KIT_KEY); renderChecklist();
   });
-  renderChecklist;
+  renderChecklist();
 
   // Generic card builders
   function badgeHTML(b) { return b && b.length ? `<span class="tag ${b[0]}">${b[1]}</span>` : ""; }
@@ -339,7 +340,7 @@
       grid.appendChild(card);
     });
   }
-  function renderPF {
+  function renderPF() {
     const grid = $("#pfGrid"); grid.innerHTML = "";
     PORTAFILTERS.forEach(p => {
       const card = el("div", "card");
@@ -349,11 +350,11 @@
       grid.appendChild(card);
     });
   }
-  function renderBaskets {
+  function renderBaskets() {
     const ul = $("#basketList"); ul.innerHTML = "";
     BASKETS.forEach(b => ul.appendChild(el("li", null, b)));
   }
-  function renderAcc {
+  function renderAcc() {
     const grid = $("#accGrid"); grid.innerHTML = "";
     ACCESSORIES.forEach(a => {
       const card = el("div", "card");
@@ -362,7 +363,7 @@
       grid.appendChild(card);
     });
   }
-  function renderYT {
+  function renderYT() {
     const grid = $("#ytGrid"); grid.innerHTML = "";
     YOUTUBERS.forEach(y => {
       const card = el("div", "card");
@@ -371,7 +372,7 @@
       grid.appendChild(card);
     });
   }
-  function renderSellers {
+  function renderSellers() {
     const grid = $("#sellerGrid"); grid.innerHTML = "";
     SELLERS.forEach(s => {
       const card = el("div", "card");
@@ -380,7 +381,7 @@
       grid.appendChild(card);
     });
   }
-  function renderMods {
+  function renderMods() {
     const grid = $("#modGrid"); grid.innerHTML = "";
     MODS.forEach(m => {
       const card = el("div", "card");
@@ -397,7 +398,7 @@
       it.innerHTML = `<button class="acc-q">${item.q}<span class="pm">+</span></button>
         <div class="acc-a"><div class="acc-a-inner">${item.a}</div></div>`;
       const btn = it.querySelector(".acc-q"), ans = it.querySelector(".acc-a");
-      btn.addEventListener("click",  => {
+      btn.addEventListener("click", () => {
         const open = it.classList.toggle("open");
         ans.style.maxHeight = open ? ans.scrollHeight + "px" : 0;
       });
@@ -406,11 +407,11 @@
   }
 
   // Diagnoser
-  function renderDiagnoser {
+  function renderDiagnoser() {
     const chips = $("#symptomChips"), out = $("#diagnosis");
     SYMPTOMS.forEach((s, i) => {
       const b = el("button", "symptom", s.label);
-      b.addEventListener("click",  => {
+      b.addEventListener("click", () => {
         $$(".symptom", chips).forEach(x => x.classList.remove("active"));
         b.classList.add("active");
         out.innerHTML = `<div class="diag-title">${s.label}</div>
@@ -422,15 +423,15 @@
     });
   }
 
-  renderGrinders("all"); renderBeans("all"); renderPF; renderBaskets; renderAcc;
-  renderYT; renderSellers; renderMods;
+  renderGrinders("all"); renderBeans("all"); renderPF(); renderBaskets(); renderAcc();
+  renderYT(); renderSellers(); renderMods();
   renderAccordion("#troubleAccordion", TROUBLE); renderAccordion("#faqAccordion", FAQ);
-  renderDiagnoser;
+  renderDiagnoser();
 
   // Filter chips
   function wireFilters(wrap, renderFn) {
     $$(".chip", $(wrap)).forEach(chip => {
-      chip.addEventListener("click",  => {
+      chip.addEventListener("click", () => {
         $$(".chip", $(wrap)).forEach(c => c.classList.remove("active"));
         chip.classList.add("active");
         renderFn(chip.dataset.filter);
@@ -444,12 +445,12 @@
 
   // Mobile nav
   const toggle = $("#navToggle"), navLinks = $("#navLinks");
-  toggle.addEventListener("click",  => {
+  toggle.addEventListener("click", () => {
     const open = navLinks.classList.toggle("open");
     toggle.classList.toggle("open", open);
     toggle.setAttribute("aria-expanded", open);
   });
-  $$("#navLinks a").forEach(a => a.addEventListener("click",  => {
+  $$("#navLinks a").forEach(a => a.addEventListener("click", () => {
     navLinks.classList.remove("open"); toggle.classList.remove("open");
     toggle.setAttribute("aria-expanded", false);
   }));
@@ -457,7 +458,7 @@
   // Scroll progress + rabbit meter on scroll
   const prog = $("#scrollProgress");
   const runner = $("#rabbitRunner"), runnerPct = $("#rabbitRunnerPct");
-  function onScroll {
+  function onScroll() {
     const h = document.documentElement;
     const scrolled = Math.min(1, Math.max(0, h.scrollTop / (h.scrollHeight - h.clientHeight || 1)));
     const pct = Math.round(scrolled * 100);
@@ -470,7 +471,7 @@
     setRabbit(Math.round(scrolled * 92));
   }
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll;
+  onScroll();
 
   // Count-up stats
   $$(".hero-stats b[data-count]").forEach(b => {
@@ -478,20 +479,20 @@
     if (isNaN(num)) return;
     let cur = 0; const suffix = target.replace(/[0-9]/g, "");
     const step = Math.max(1, Math.round(num / 28));
-    const iv = setInterval( => {
+    const iv = setInterval(() => {
       cur += step; if (cur >= num) { cur = num; clearInterval(iv); }
       b.textContent = cur + suffix;
     }, 28);
   });
 
   // To-top
-  $("#toTop").addEventListener("click",  => window.scrollTo({ top: 0, behavior: "smooth" }));
+  $("#toTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
   // Toast
   let toastTimer;
   function toast(msg) {
     const t = $("#toast"); t.textContent = msg; t.classList.add("show");
-    clearTimeout(toastTimer); toastTimer = setTimeout( => t.classList.remove("show"), 1900);
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 1900);
   }
 
   // Floating beans
@@ -500,36 +501,36 @@
     const emojis = ["", "", ""];
     for (let i = 0; i < 14; i++) {
       const b = el("span", "bean", emojis[i % emojis.length]);
-      b.style.left = Math.random * 100 + "vw";
-      b.style.animationDuration = (16 + Math.random * 20) + "s";
-      b.style.animationDelay = (-Math.random * 30) + "s";
-      b.style.fontSize = (16 + Math.random * 22) + "px";
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.animationDuration = (16 + Math.random() * 20) + "s";
+      b.style.animationDelay = (-Math.random() * 30) + "s";
+      b.style.fontSize = (16 + Math.random() * 22) + "px";
       beansBg.appendChild(b);
     }
   }
 
   // Bean burst on 100% kit
-  function beanBurst {
+  function beanBurst() {
     toast(" Full kit unlocked. You menace.");
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     for (let i = 0; i < 26; i++) {
-      const b = el("div", null, Math.random > .5 ? "" : "");
-      b.style.cssText = `position:fixed;left:50%;top:40%;font-size:${18 + Math.random * 18}px;z-index:300;pointer-events:none;transition:transform 1.1s ease-out,opacity 1.1s`;
+      const b = el("div", null, Math.random() > .5 ? "" : "");
+      b.style.cssText = `position:fixed;left:50%;top:40%;font-size:${18 + Math.random() * 18}px;z-index:300;pointer-events:none;transition:transform 1.1s ease-out,opacity 1.1s`;
       document.body.appendChild(b);
-      requestAnimationFrame( => {
-        const a = Math.random * Math.PI * 2, d = 120 + Math.random * 260;
-        b.style.transform = `translate(${Math.cos(a) * d}px,${Math.sin(a) * d}px) rotate(${Math.random * 720}deg)`;
+      requestAnimationFrame(() => {
+        const a = Math.random() * Math.PI * 2, d = 120 + Math.random() * 260;
+        b.style.transform = `translate(${Math.cos(a) * d}px,${Math.sin(a) * d}px) rotate(${Math.random() * 720}deg)`;
         b.style.opacity = "0";
       });
-      setTimeout( => b.remove, 1200);
+      setTimeout(() => b.remove(), 1200);
     }
   }
 
   // Konami-ish easter egg: type "beans"
   let buf = "";
   window.addEventListener("keydown", e => {
-    buf = (buf + e.key).slice(-5).toLowerCase;
-    if (buf === "beans") { beanBurst; toast(" you found the beans"); }
+    buf = (buf + e.key).slice(-5).toLowerCase();
+    if (buf === "beans") { beanBurst(); toast(" you found the beans"); }
   });
 
   // Active nav link on scroll
@@ -546,4 +547,4 @@
     });
   }, { rootMargin: "-45% 0px -50% 0px" });
   sections.forEach(s => obs.observe(s));
-});
+})();
