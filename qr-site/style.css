@@ -151,19 +151,11 @@ h1 span {
   height: 19px;
   flex: 0 0 19px;
   display: block;
-  background: #5f5c56;
-  -webkit-mask-image: var(--icon);
-  mask-image: var(--icon);
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  object-fit: contain;
 }
 
-.contact-icon-stroke {
-  background: #5f5c56;
+.contact-icon-dark {
+  display: none;
 }
 
 .row-label {
@@ -330,8 +322,12 @@ footer {
   color: #f5f4ef;
 }
 
-:root[data-theme="dark"] .contact-icon {
-  background: #ffffff;
+:root[data-theme="dark"] .contact-icon-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .contact-icon-dark {
+  display: block;
 }
 
 :root[data-theme="dark"] .contact-row + .contact-row {
