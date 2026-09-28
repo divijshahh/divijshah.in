@@ -598,3 +598,37 @@ QR v1.1.0.
 
 ### Follow-up
 Test on physical iPhone/iPad devices and after deployment: vCard import, WhatsApp, tel, mailto, dark mode, and QR scanning.
+
+
+## 2026-09-28 — QR contact icon rendering repair
+
+### User request
+Fix the QR contact icons because Call, Email and CV were completely filled with grey instead of preserving their internal whitespace, and LinkedIn still had a blob near the L.
+
+### Inspected
+- Current QR index.html, style.css and contact SVG assets.
+- Previous v1.1.2 CSS-mask implementation.
+- SVG Repo reference for the previously requested LinkedIn icon.
+
+### Cause
+The v1.1.2 CSS mask approach reduced each SVG to a single silhouette, so the intended stroke and negative-space geometry was lost. The LinkedIn geometry also produced the reported blob when flattened.
+
+### Changed
+- Removed CSS masking for QR contact icons.
+- Switched contact rows to actual SVG image assets.
+- Added separate light/dark assets for WhatsApp, Call, Email, LinkedIn and CV.
+- Reworked Call, Email and CV as outlined SVGs with preserved whitespace.
+- Replaced the malformed LinkedIn geometry with a clean glyph.
+- Bumped QR from v1.1.2 to v1.1.3.
+
+### Not changed
+QR layout, copy, contact order, vCard, lamp, responsive behavior, deployment architecture and main site.
+
+### Result
+The source implementation now preserves actual SVG geometry instead of flattening it through CSS masks. Live browser/device rendering remains unverified.
+
+### Follow-up
+Check the deployed QR page on iPhone/iPad in light and dark mode for final visual confirmation.
+
+### Commit
+Multiple direct main-branch commits were used because the available GitHub connector did not expose the current base tree SHA needed for a single atomic tree commit.
