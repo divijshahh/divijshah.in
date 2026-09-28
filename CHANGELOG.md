@@ -1,3 +1,16 @@
+## [1.1.0] - 2026-09-28
+
+### QR landing page
+
+- Replaced the under-construction QR placeholder with a contact-first digital business-card landing page.
+- Added direct WhatsApp, Call, Email, LinkedIn and CV actions in the specified order.
+- Added a downloadable vCard containing only the requested contact fields.
+- Added a noindex/nofollow directive so the QR landing page is not intended for search indexing.
+- Added a QR-specific Cloudflare Pages header for the vCard MIME type.
+- Reworked the layout mobile-first for iPhone-sized viewports, with deliberate iPad portrait/landscape treatment and a wider desktop presentation.
+- Kept the QR site isolated from the main site's CSS, JavaScript, navigation and theme state.
+- Kept the lamp theme control and optimized its touch area and safe-area positioning for phones.
+
 # Changelog
 
 ## [1.2.7] - 2026-09-28

@@ -56,7 +56,7 @@ For server/configuration work:
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | IMPLEMENTED | v1.0.2 |
 | QR placeholder | IMPLEMENTED | local under-construction SVG |
-| Final QR business-card experience | PLANNED | design specified; implementation pending explicit `approved` |
+| Final QR business-card experience | IMPLEMENTED | v1.1.0; mobile-first contact card |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
@@ -354,7 +354,7 @@ Do not replace it with a generic provider error page.
 
 Source directory: `qr-site/`
 Intended hostname: `qr.divijshah.in`
-Current version: **v1.0.2**
+Current version: **v1.1.0**
 
 ### Architecture
 
@@ -381,17 +381,16 @@ A previous attempt to consolidate QR styling into the main stylesheet was identi
 
 ### Current QR content
 
-The current placeholder contains:
+The implemented QR page contains:
 
-- Divij Shah;
-- Personal landing page;
-- QR LANDING PAGE;
-- Business card landing page;
-- local under-construction graphic;
-- Bombay, India;
-- © 2026 Divij Shah;
-- v1.0.2;
-- lamp theme switch.
+- DIVIJ SHAH;
+- CIVIL LITIGATION · BOMBAY;
+- CURRENTLY / Tushar Goradia Advocates;
+- Save contact action backed by `divij-shah.vcf`;
+- WhatsApp, Call, Email, LinkedIn and CV rows in the specified order;
+- Bombay, India · © 2026 Divij Shah;
+- v1.1.0;
+- visible lamp theme switch.
 
 The page is deliberately compact and intended to fit one viewport. Its current layout uses `100svh` and hides overflow.
 
@@ -409,9 +408,9 @@ Do not put QR behind Cloudflare Access.
 
 ### QR future work
 
-The placeholder will be replaced by the specified contact-first business-card landing experience after explicit implementation approval.
+The final contact-first business-card landing experience is implemented as QR v1.1.0.
 
-Locked implementation requirements:
+Implemented constraints:
 - name: DIVIJ SHAH;
 - descriptor: CIVIL LITIGATION · BOMBAY;
 - CURRENTLY: Tushar Goradia Advocates;
@@ -420,10 +419,10 @@ Locked implementation requirements:
 - no `law student`/`student` wording, bio, interests list, or invented contact data;
 - no main-site changes;
 - mobile-first, with deliberate iPhone and iPad responsive treatment;
-- lamp remains visible and is optimized for phone touch/positioning;
-- desktop is a wider presentation of the mobile composition.
-
-Do not implement the final version until the user gives the explicit `approved` confirmation.
+- lamp remains visible and is optimized for phone touch/positioning and safe-area behavior;
+- desktop is a wider presentation of the mobile composition;
+- QR vCard is served with `text/vcard; charset=utf-8` through the QR deployment `_headers` file;
+- QR page uses `noindex, nofollow` and remains absent from the main sitemap.
 
 ## 11. Infrastructure context
 
@@ -582,7 +581,9 @@ README/CHANGELOG QR version wording was corrected during the 2026-09-28 QA pass;
 - qr-site/index.html: QR page.
 - qr-site/style.css: QR-specific CSS.
 - qr-site/assets/theme.js: QR-specific theme/favicon behavior.
-- qr-site/assets/underconstruction.svg: current QR placeholder.
+- qr-site/assets/underconstruction.svg: historical placeholder asset, no longer used by the live QR page.
+- qr-site/divij-shah.vcf: downloadable vCard.
+- qr-site/_headers: QR-specific vCard response header.
 - README.md: general documentation, not authoritative state.
 - CHANGELOG.md: historical release notes, not authoritative state.
 - Project Context/MASTER_CONTEXT.md: authoritative agent handoff.
@@ -608,9 +609,10 @@ When exact historical reasoning matters, inspect Git history rather than guessin
 
 ## 19. Current open work as of 2026-09-28
 
-1. Final QR/business-card landing experience (awaiting explicit `approved` confirmation; mobile/iPhone/iPad requirements locked).
-2. Custom home.divijshah.in frontend.
-3. Optional browser QA after future visual changes.
+1. Custom `home.divijshah.in` frontend.
+2. Optional browser QA after future visual changes.
+1. Custom `home.divijshah.in` frontend.
+2. Optional browser QA after future visual changes.
 
 The read.divijshah.in item and domain-mail/outbound-mail/transactional-mail items were removed from the active roadmap on 2026-09-28 at the user's direction. They are not current project work.
 
