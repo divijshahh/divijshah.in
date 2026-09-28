@@ -707,3 +707,33 @@ Font, size, weight, line-height, positioning and unrelated typography.
 
 ### Result
 The title now has more separation between the vertical-heavy `I-V-I` sequence while retaining tight overall tracking.
+
+
+## 2026-09-28 — DIVIJ SHAH title tracking set to zero
+### User request
+Set the title letter spacing to 0 across all sites after the previous negative tracking still made the title appear too compressed.
+
+### Inspected
+- Main `style.css`.
+- QR `qr-site/style.css`.
+- Main homepage, CV and 404 version references.
+- QR version and favicon cache-busting references.
+
+### Changed
+- Main `style.css`: title `letter-spacing` changed from `-0.045em` to `0`.
+- QR `style.css`: title `letter-spacing` changed from `-0.045em` to `0`.
+- Bumped main site, CV and 404 from v1.2.8 to v1.2.9.
+- Bumped QR from v1.1.5 to v1.1.6.
+- Updated QR favicon cache-busting query strings from 1.1.3 to 1.1.6.
+
+### Not changed
+Font, size, weight, line-height, positioning, layout, contact icons, service cards or theme behavior.
+
+### Result
+The DIVIJ SHAH titles now use normal browser letter spacing rather than negative tracking on both site implementations.
+
+### Verification
+Repository files were re-read before and after the change. Live browser/device rendering remains unavailable, so deployed visual QA is not claimed.
+
+### Version
+Main v1.2.9; QR v1.1.6.
