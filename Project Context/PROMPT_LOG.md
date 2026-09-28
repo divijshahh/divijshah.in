@@ -457,3 +457,14 @@ When the agent notices discrepancies between `MASTER_CONTEXT.md` and the actual 
 ### Result
 These rules apply to all future work on the divijshah.in project.
 
+
+## 2026-09-28 — To-do list narrowed
+
+### User request
+Removed the previously listed work for `read.divijshah.in`, domain-email setup/aliases, outbound `@divijshah.in` mail, and homelab transactional mail.
+
+### Current remaining roadmap
+- Final QR/business-card landing experience.
+- Custom `home.divijshah.in` frontend.
+- Optional browser QA after future visual changes.
+
