@@ -1,0 +1,444 @@
+# Prompt Log
+
+> Persistent record of meaningful project prompts/sessions.
+> `MASTER_CONTEXT.md` is current-state authority; this file is the history of decisions and work.
+> Last updated: 2026-09-28.
+
+## Logging rules
+
+For every meaningful future project prompt/session, append an entry.
+
+A meaningful entry includes requests that:
+- change code/design/infrastructure;
+- approve or reject an approach;
+- establish a new permanent constraint;
+- correct an agent assumption;
+- change deployment;
+- change the roadmap;
+- materially clarify current state.
+
+For simple questions with no project-state effect, a short entry is enough.
+
+Do not fabricate verbatim historical wording. Older entries below are reconstructed summaries from available conversation/project history and Git history.
+
+Use this format:
+
+## YYYY-MM-DD — Topic
+### User request
+...
+### Inspected
+...
+### Changed
+...
+### Not changed
+...
+### Decision/constraint
+...
+### Version
+...
+### Result
+...
+### Follow-up
+...
+### Commit
+...
+
+---
+
+# Historical entries
+
+## 2026-09-20 — Infrastructure and domain architecture
+
+### User request
+Establish and maintain the public-domain/self-hosting architecture around divijshah.in and the home server.
+
+### Inspected
+Oracle public ingress, Caddy, Tailscale, TrueNAS, Authelia, Cloudflare DNS/Pages, public service routing.
+
+### Established
+- Oracle Cloud VM is the public ingress.
+- Caddy is the public reverse proxy.
+- Oracle connects to TrueNAS over Tailscale.
+- TrueNAS does not use Nginx/Nginx Proxy Manager.
+- Cloudflare handles DNS and Pages.
+- Authelia provides authentication where required.
+
+### Public service routing
+- photos.divijshah.in -> Immich through Authelia.
+- auth.divijshah.in -> Authelia.
+- media.divijshah.in -> Jellyfin.
+- request.divijshah.in -> Seerr.
+- docs.divijshah.in -> Nextcloud.
+- status.divijshah.in -> Uptime Kuma.
+
+### Permanent constraints learned
+- Infrastructure actions need prerequisite/warning context.
+- Config edits should include sudo nano <file>.
+- Config changes need validation commands.
+- Never expose credentials/private keys in project docs.
+- Do not invent a proxy layer that does not exist.
+
+### Version
+None.
+
+---
+
+## 2026-09-20/21 — Homepage identity and service cards
+
+### User request
+Refine the homepage so the personal identity is the focus and the service section looks cohesive.
+
+### Changes/decisions
+- Larger identity/logo treatment.
+- Uniform card background treatment.
+- Removed "Homelab Hobbyist".
+- Added status dots to all service cards using the Uptime Kuma visual language.
+- Refined service icon sizing and theme handling.
+- DS favicon became the site identity.
+
+### Rejected
+Different background treatments for every service card were considered shabby and were not retained.
+
+### Result
+Service section is a restrained personal-services panel rather than a generic homelab dashboard.
+
+---
+
+## 2026-09-21 — About page iterations and deletion
+
+### User request/history
+The About page was iterated through multiple concepts, including homelab history, Elsewhere content, cards and flow diagrams.
+
+### Result
+The user ultimately decided to delete /about entirely.
+
+### Permanent decision
+Do not recreate /about or add About navigation.
+
+### Historical note
+Old commits/changelog entries may mention About-page implementations. Those are historical only.
+
+---
+
+## 2026-09-21/22 — Navigation and lamp theme control
+
+### User request
+Keep navigation simple and use the hanging lamp as the theme control instead of a generic dark-mode button.
+
+### Problems corrected during iterations
+- Home/CV toolbar became too large.
+- Toolbar ended up at the bottom/incorrect position in one iteration.
+- Lamp was positioned incorrectly.
+- Lamp did not work in one iteration.
+
+### Final decisions
+- Fixed Home/CV dock.
+- Lamp is the theme control.
+- Theme control must work consistently on relevant pages.
+- No generic dark-mode button.
+
+### Agent lesson
+Shared CSS must be inspected before edits. Do not make broad responsive/layout changes based on stale code.
+
+---
+
+## 2026-09-22/23 — Main-site v1.2 work
+
+### User/project goal
+Finish the main website while preserving its minimal design.
+
+### Implemented
+- local service icons;
+- separate light/dark Seerr icons;
+- Uptime Kuma variants;
+- shared main-site JS;
+- WebSite JSON-LD;
+- focus-visible styling;
+- reduced-motion support;
+- custom 404;
+- mobile service-grid arrangement;
+- simplified service labels;
+- stylesheet cleanup;
+- consolidated main versioning.
+
+### Permanent decisions
+- keep PDF.js CV rendering;
+- keep About deleted;
+- keep QR architecture separate;
+- use local service assets;
+- retain accessibility behavior.
+
+---
+
+## 2026-09-23 — QR site isolation
+
+### User request
+Create/continue a separate QR/business-card landing experience.
+
+### Implemented architecture
+`qr-site/` contains its own:
+- index.html
+- style.css
+- assets/theme.js
+- light/dark favicons
+- QR-specific assets.
+
+### Important correction
+A previous approach consolidated QR CSS into the main stylesheet. That was identified as an architectural mistake and reversed.
+
+### Permanent decision
+QR remains independently styled and independently themed.
+
+### Relevant commits
+- 7d3c0b1
+- 0372b60
+- e5d4a64
+
+---
+
+## 2026-09-23 — QR v1.0.2 placeholder development
+
+### User request/history
+Develop a compact QR/business-card landing placeholder.
+
+### Iterations
+- placeholder QR mark;
+- removal of a redundant placeholder;
+- yellow identity mark;
+- external under-construction asset attempt;
+- local under-construction asset;
+- larger local SVG.
+
+### Important correction
+External FreeSVG asset did not work reliably. The user added a local SVG to the repo.
+
+### Current asset
+`qr-site/assets/underconstruction.svg`
+
+### Current result
+The SVG displays correctly and the QR page is intentionally under construction.
+
+### Current version
+v1.0.2.
+
+### Relevant commits
+- f54874c
+- 59965a1
+- 8de1acf
+- ee1f43c
+- d6c3b60
+- 861ad73
+- f49728a
+- a6f5c3c
+- 9bd91b6
+
+---
+
+## 2026-09-23 — QR Cloudflare Pages deployment
+
+### Clarification
+The QR site is deployed as its own Cloudflare Pages project/root using `qr-site`.
+
+### Result
+Deployment works.
+
+### Permanent decision
+Do not keep treating Pages output-directory configuration as an unresolved problem.
+
+### Security
+Do not put QR behind Cloudflare Access.
+
+---
+
+## 2026-09-23/24 — Main site v1.2.5 finalization
+
+### User/project goal
+Finish and stabilize the 1.2.x main site.
+
+### Result
+Main site, CV and 404 reached v1.2.5.
+
+### Relevant commits
+- f57426f
+- 8252ebb
+- 2467bce
+- ebef4a8
+- b1957af
+
+### Documentation note
+README/CHANGELOG have some stale QR v1.0.1 wording. Actual QR version is v1.0.2.
+
+---
+
+## 2026-09-24 — Seerr/Uptime Kuma icon refinements
+
+### Decisions
+- Seerr light icon uses white inner section.
+- Seerr dark icon uses original black-center logo.
+- Uptime Kuma light icon is softened to about 0.20 opacity.
+- Do not flatten service icons into generic monochrome shapes.
+
+### Relevant commits
+- 60e3f4e
+- 5a25c8e
+
+---
+
+## 2026-09-24/25 — Domain email and Cloudflare Email Routing
+
+### User request/activity
+Configure inbound email routing for the domain and consider a future domain-mail setup.
+
+### Known configuration discussed
+- route1.mx.cloudflare.net priority 81
+- route2.mx.cloudflare.net priority 87
+- route3.mx.cloudflare.net priority 5
+- DKIM TXT at cf2024-1._domainkey.divijshah.in
+- SPF: v=spf1 include:_spf.mx.cloudflare.net ~all
+
+### Aliases discussed
+- divij@
+- hello@
+- contact@
+- work@
+- legal@
+- security@
+
+### Decisions
+- catch-all OFF;
+- subaddressing OFF;
+- do not enable either without explicit request;
+- inbound routing through Cloudflare;
+- outbound domain mail remains future work;
+- full self-hosted mail server is not currently pursued.
+
+### Important
+Discussed aliases must not be documented as active without verification.
+
+---
+
+## 2026-09-24/25 — Gmail workflow context
+
+### Topic
+Gmail optimization around domain/personal workflow.
+
+### Known account
+work.divijshah@gmail.com
+
+### Signature direction
+Divij Shah
+divijshah.in
+
+The domain should be clickable without visibly showing https://.
+
+### Additional result
+Google Tasks integration was considered and abandoned as too cumbersome.
+
+### Repository impact
+None directly.
+
+---
+
+## 2026-09-25 — Unrelated conversations
+
+Travel, public Wi-Fi/VPN, packing and shopping topics occurred during this project period.
+
+They do not change repository state unless a future prompt explicitly connects them to the website/infrastructure.
+
+---
+
+## 2026-09-28 — Repository recheck
+
+### User request
+Recheck the entire repo because a previous checklist contained items that were already completed.
+
+### Inspected
+Current Git tree, main HTML/CSS/JS, CV, QR files, README, CHANGELOG, recent commit history.
+
+### Corrected current-state understanding
+- Main site is essentially complete.
+- Main site is v1.2.5.
+- QR site is structurally complete for its current under-construction state.
+- QR site is v1.0.2.
+- Final QR business-card experience remains future work.
+- home.divijshah.in remains planned.
+- read.divijshah.in remains planned.
+- README/CHANGELOG can be slightly out of sync and are not strict authoritative state.
+
+### Result
+The project should no longer be managed from a generic checklist. A persistent agent-context system is needed.
+
+---
+
+## 2026-09-28 — Persistent Project Context requested
+
+### User request
+Create an entire folder named "Project Context" containing:
+1. one file for prompt/session logs;
+2. one larger file containing all context an agent needs to get up to speed and avoid breaking established work;
+3. a section/system that keeps updating on every prompt/session.
+
+### Implementation
+Created:
+
+```
+Project Context/
+├── MASTER_CONTEXT.md
+└── PROMPT_LOG.md
+```
+
+### Design of MASTER_CONTEXT.md
+It records:
+- project purpose;
+- agent rules;
+- current status;
+- repo map;
+- main-site state;
+- QR architecture;
+- service links/icons;
+- theme/navigation rules;
+- accessibility;
+- SEO;
+- infrastructure;
+- Cloudflare;
+- email;
+- future projects;
+- deleted/rejected approaches;
+- versioning;
+- file map;
+- change workflow;
+- open work;
+- historical implementation lessons.
+
+### Design of PROMPT_LOG.md
+It records:
+- how future entries should be written;
+- reconstructed historical project sessions;
+- user requests;
+- inspected state;
+- actual changes;
+- non-changes;
+- decisions;
+- version impacts;
+- results;
+- follow-up;
+- commits where known.
+
+### Permanent maintenance rule
+Every meaningful future project prompt/session must append a new entry to PROMPT_LOG.md and update MASTER_CONTEXT.md when current state changes.
+
+### Version
+None. Documentation-only change.
+
+---
+
+# Future entries start here
+
+## 2026-09-28 onward — Session log
+
+Append every future meaningful project prompt below this line.
+
+Do not overwrite earlier history.
+Do not rewrite history to make it look cleaner.
+If a decision is reversed, preserve the old entry and add a new entry explaining the reversal.
+
