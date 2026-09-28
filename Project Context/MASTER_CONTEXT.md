@@ -54,9 +54,9 @@ For server/configuration work:
 | CV page | IMPLEMENTED/STABLE | v1.2.7 |
 | Custom 404 | IMPLEMENTED/STABLE | v1.2.7, main visual system |
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
-| QR shell | IMPLEMENTED | v1.0.2 |
-| QR placeholder | IMPLEMENTED | local under-construction SVG |
-| Final QR business-card experience | IMPLEMENTED | v1.1.0; mobile-first contact card |
+| QR shell | HISTORICAL | v1.0.2 placeholder lineage |
+| QR placeholder | HISTORICAL | replaced by contact-first QR page |
+| Final QR business-card experience | IMPLEMENTED | v1.1.3; mobile-first contact card |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
@@ -99,7 +99,13 @@ divijshah.in/
 │       ├── favicon-dark.svg
 │       ├── favicon-light.svg
 │       ├── theme.js
-│       └── underconstruction.svg
+│       ├── underconstruction.svg
+│       └── icons/
+│           ├── call.svg / call-dark.svg
+│           ├── cv.svg / cv-dark.svg
+│           ├── email.svg / email-dark.svg
+│           ├── linkedin.svg / linkedin-dark.svg
+│           └── whatsapp.svg / whatsapp-dark.svg
 ├── robots.txt
 ├── sitemap.xml
 ├── style.css
@@ -227,7 +233,7 @@ Do not re-add About or a main-site Reading link.
 - renders `cv.pdf` using PDF.js;
 - keeps direct PDF download;
 - uses the same footer/navigation;
-- is v1.2.6.
+- is v1.2.7.
 
 The PDF.js renderer was deliberately retained. Do not replace it with a native PDF iframe/viewer without explicit instruction.
 
@@ -354,7 +360,7 @@ Do not replace it with a generic provider error page.
 
 Source directory: `qr-site/`
 Intended hostname: `qr.divijshah.in`
-Current version: **v1.1.0**
+Current version: **v1.1.3**
 
 ### Architecture
 
@@ -384,12 +390,12 @@ A previous attempt to consolidate QR styling into the main stylesheet was identi
 The implemented QR page contains:
 
 - DIVIJ SHAH;
-- CIVIL LITIGATION · BOMBAY;
+- LITIGATION · BOMBAY;
 - CURRENTLY / Tushar Goradia Advocates;
 - Save contact action backed by `divij-shah.vcf`;
 - WhatsApp, Call, Email, LinkedIn and CV rows in the specified order;
 - Bombay, India · © 2026 Divij Shah;
-- v1.1.0;
+- v1.1.3;
 - visible lamp theme switch.
 
 The page is deliberately compact and intended to fit one viewport. Its current layout uses `100svh` and hides overflow.
@@ -408,11 +414,11 @@ Do not put QR behind Cloudflare Access.
 
 ### QR future work
 
-The final contact-first business-card landing experience is implemented as QR v1.1.0.
+The final contact-first business-card landing experience is implemented as QR v1.1.3.
 
 Implemented constraints:
 - name: DIVIJ SHAH;
-- descriptor: CIVIL LITIGATION · BOMBAY;
+- descriptor: LITIGATION · BOMBAY;
 - CURRENTLY: Tushar Goradia Advocates;
 - primary action: Save contact via downloadable vCard;
 - contact rows: WhatsApp, Call, Email, LinkedIn, CV in that exact order;
@@ -529,10 +535,6 @@ Do not enable either without explicit request.
 
 ## 14. Future projects
 
-### Final QR/business-card page
-Status: PLANNED.
-Replace the under-construction placeholder after the user decides the actual destination/content.
-
 ### home.divijshah.in
 Status: PLANNED.
 Custom static frontend intended to replace the public-facing Homarr concept. Do not simply expose/restyle Homarr unless explicitly asked.
@@ -555,7 +557,7 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 Current versions:
 
 - main site: v1.2.7
-- QR site: v1.0.2
+- QR site: v1.1.3
 
 Versions are independent.
 
@@ -563,7 +565,7 @@ User prefers semver-ish increments and patch-style increments for smaller change
 
 When a substantive site change is made, update the affected site's visible version. Do not bump both sites for a change affecting only one.
 
-README/CHANGELOG QR version wording was corrected during the 2026-09-28 QA pass; the implementation is v1.0.2.
+The QR implementation is v1.1.3. Earlier v1.0.2/v1.1.0 references in historical documentation describe prior states only.
 
 ## 17. File map
 
@@ -582,6 +584,7 @@ README/CHANGELOG QR version wording was corrected during the 2026-09-28 QA pass;
 - qr-site/style.css: QR-specific CSS.
 - qr-site/assets/theme.js: QR-specific theme/favicon behavior.
 - qr-site/assets/underconstruction.svg: historical placeholder asset, no longer used by the live QR page.
+- qr-site/assets/icons/*: local light/dark contact icon assets for the QR page.
 - qr-site/divij-shah.vcf: downloadable vCard.
 - qr-site/_headers: QR-specific vCard response header.
 - README.md: general documentation, not authoritative state.
@@ -659,3 +662,45 @@ A thorough repository/source QA pass was performed on 2026-09-28.
 
 ### Live-browser limitation
 The available environment could not reach `divijshah.in` or `qr.divijshah.in` over the network, so live HTTP/browser rendering, console/network inspection, screenshots, actual click behavior, viewport rendering and Cloudflare deployment verification could not be honestly marked PASS. These remain pending live-browser checks rather than being guessed.
+
+
+## 2026-09-28 — QR contact icon rendering repair
+
+### User request
+Fix the QR contact icons because Call, Email and CV were rendering as completely filled grey shapes instead of preserving their internal whitespace, and LinkedIn still had an unwanted blob near the L.
+
+### Inspected
+- Current QR index.html and style.css.
+- Current contact SVG assets.
+- The preceding v1.1.2 icon-theme implementation.
+- SVG Repo source reference for the LinkedIn asset previously requested by the user.
+
+### Cause
+The v1.1.2 implementation converted the SVGs into CSS masks. Masking flattened the SVG artwork into a silhouette and discarded the intended stroke/negative-space geometry. The LinkedIn source also contained geometry that produced the reported blob when flattened.
+
+### Changed
+- Removed CSS mask rendering from QR contact icons.
+- Contact rows now use real SVG image assets so internal whitespace/stroke geometry is preserved.
+- Added separate light and dark SVG assets for WhatsApp, Call, Email, LinkedIn and CV.
+- Reworked Call, Email and CV as actual outlined/stroked SVG artwork rather than filled silhouettes.
+- Replaced the malformed LinkedIn geometry with a clean monocolor LinkedIn glyph without the extra blob.
+- Bumped QR visible version from v1.1.2 to v1.1.3.
+
+### Not changed
+- QR layout, copy, contact order, URLs, vCard, lamp, responsive breakpoints or deployment architecture.
+- Main website.
+
+### Verification
+- Confirmed the QR HTML references separate light/dark icon assets.
+- Confirmed the stylesheet no longer uses mask-image for contact icons.
+- Confirmed all ten theme-specific contact assets plus the WhatsApp dark asset exist in the repository.
+- Live browser/device rendering was not available, so visual rendering is not claimed as live-QA verified.
+
+### Version
+QR v1.1.3.
+
+### Follow-up
+Check the deployed QR page on an iPhone and iPad in both light and dark mode to confirm the icon geometry and sizing visually.
+
+### Commit
+Multiple direct main-branch commits were used because the available GitHub connector did not expose the current base tree SHA needed to construct a single atomic tree commit.
