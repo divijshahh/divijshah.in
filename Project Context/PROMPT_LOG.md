@@ -510,3 +510,28 @@ Live browser/HTTP QA remains the only unperformed part of the outlined checklist
 
 ### Commit
 To be recorded after the QA corrections are committed.
+
+
+## 2026-09-28 — Personal-link status indicators
+
+### User request
+Remove the Uptime Kuma-style status indicators from the LinkedIn and Email cards on the main website.
+
+### Inspected
+- Current homepage personal-link markup in index.html.
+- Main style.css status-indicator selector.
+- Current main-site versioning across homepage, CV and 404.
+
+### Changed
+- Removed the shared status-dot pseudo-element from .social-card.
+- Kept the established status indicators on the self-hosted service cards.
+- Bumped the main site, CV and 404 visible version from v1.2.6 to v1.2.7.
+- Added a 1.2.7 changelog entry.
+
+### Not changed
+- LinkedIn and Email card layout, icons, links and hover behavior.
+- Service-card status indicators.
+- QR site version or implementation.
+
+### Result
+Personal social/contact links no longer visually imply service uptime, while the service grid retains its Uptime Kuma-style status indicators.
