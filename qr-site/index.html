@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f3f2ee">
   <meta name="color-scheme" content="light dark">
-  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=1.1.6" data-light-src="assets/favicon-light.svg?v=1.1.6" data-dark-src="assets/favicon-dark.svg?v=1.1.6" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/favicon-light.svg?v=1.1.7" data-light-src="assets/favicon-light.svg?v=1.1.7" data-dark-src="assets/favicon-dark.svg?v=1.1.7" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <title>Divij Shah</title>
 </head>
@@ -37,36 +37,72 @@
 
       <a class="save-contact" href="divij-shah.vcf" download="divij-shah.vcf">
         <span>Save contact</span>
-        <span aria-hidden="true">↓</span>
+        <span aria-hidden="true">↗</span>
       </a>
 
-      <nav class="contact-list" aria-label="Contact links">
-        <a class="contact-row" href="https://wa.me/919619550056?text=Hello%20Divij%2C%20I%20got%20your%20card.">
-          <img class="contact-icon contact-icon-light" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/whatsapp-dark.svg" alt="" aria-hidden="true"><span class="row-label">WhatsApp <span class="external" aria-hidden="true">↗</span></span>
+      <nav class="contact-grid" aria-label="Contact links">
+        <a class="contact-box" href="https://wa.me/919619550056?text=Hello%20Divij%2C%20I%20got%20your%20card.">
+          <img class="contact-icon contact-icon-light" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/whatsapp-dark.svg" alt="" aria-hidden="true">
+          <span class="box-content"><span class="box-label">WhatsApp</span></span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-row" href="tel:+919619550056">
-          <img class="contact-icon contact-icon-light" src="assets/icons/call.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/call-dark.svg" alt="" aria-hidden="true"><span class="row-label">Call</span>
-          <span class="row-detail">+91 9619550056</span>
+
+        <a class="contact-box copy-action" href="tel:+919619550056" data-copy="+91 9619550056" aria-label="Call +91 9619550056. Long press to copy.">
+          <img class="contact-icon contact-icon-light" src="assets/icons/call.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/call-dark.svg" alt="" aria-hidden="true">
+          <span class="box-content">
+            <span class="box-label">Call</span>
+            <span class="box-detail">+91 9619550056</span>
+          </span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-row" href="mailto:work.divijshah@gmail.com">
-          <img class="contact-icon contact-icon-light" src="assets/icons/email.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/email-dark.svg" alt="" aria-hidden="true"><span class="row-label">Email</span>
-          <span class="row-detail">work.divijshah@gmail.com</span>
+
+        <a class="contact-box copy-action" href="mailto:work.divijshah@gmail.com" data-copy="work.divijshah@gmail.com" aria-label="Email work.divijshah@gmail.com. Long press to copy.">
+          <img class="contact-icon contact-icon-light" src="assets/icons/email.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/email-dark.svg" alt="" aria-hidden="true">
+          <span class="box-content">
+            <span class="box-label">Email</span>
+            <span class="box-detail">work.divijshah@gmail.com</span>
+          </span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-row" href="https://www.linkedin.com/in/divijshahh/" target="_blank" rel="noopener noreferrer">
-          <img class="contact-icon contact-icon-light" src="assets/icons/linkedin.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/linkedin-dark.svg" alt="" aria-hidden="true"><span class="row-label">LinkedIn <span class="external" aria-hidden="true">↗</span></span>
+
+        <a class="contact-box" href="https://www.linkedin.com/in/divijshahh/" target="_blank" rel="noopener noreferrer">
+          <img class="contact-icon contact-icon-light" src="assets/icons/linkedin.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/linkedin-dark.svg" alt="" aria-hidden="true">
+          <span class="box-content"><span class="box-label">LinkedIn</span></span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-row" href="https://divijshah.in/cv" target="_blank" rel="noopener noreferrer">
-          <img class="contact-icon contact-icon-light" src="assets/icons/cv.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/cv-dark.svg" alt="" aria-hidden="true"><span class="row-label">CV <span class="external" aria-hidden="true">↗</span></span>
+
+        <a class="contact-box" href="https://divijshah.in/cv" target="_blank" rel="noopener noreferrer">
+          <img class="contact-icon contact-icon-light" src="assets/icons/cv.svg" alt="" aria-hidden="true"><img class="contact-icon contact-icon-dark" src="assets/icons/cv-dark.svg" alt="" aria-hidden="true">
+          <span class="box-content"><span class="box-label">CV</span></span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="contact-box" href="https://divijshah.in" target="_blank" rel="noopener noreferrer">
+          <span class="site-mark" aria-hidden="true">DS</span>
+          <span class="box-content"><span class="box-label">Personal site</span></span>
+          <span class="box-arrow" aria-hidden="true">↗</span>
         </a>
       </nav>
+
+      <button class="share-card" type="button" data-share-card>
+        <span>Share card</span>
+        <span aria-hidden="true">↗</span>
+      </button>
     </div>
 
     <footer>
-      <span>Bombay, India · © 2026 Divij Shah</span>
-      <span class="version">v1.1.6</span>
+      <span>Bombay, India</span>
+      <span>© 2026 Divij Shah</span>
+      <span class="footer-meta">
+        <span>Updated Sep 2026</span>
+        <span class="version">v1.1.7</span>
+      </span>
     </footer>
   </main>
 
+  <div class="toast" role="status" aria-live="polite"></div>
+
   <script src="assets/theme.js"></script>
+  <script src="assets/interactions.js"></script>
 </body>
 </html>
