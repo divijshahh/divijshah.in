@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.6] - 2026-09-28
+
+### QA / Fixes
+
+- Performed a thorough repository/source QA pass across the main site, CV, 404 page and isolated QR site.
+- Restored consistent green status indicators to all service cards where the established project design required them.
+- Corrected stale QR v1.0.1 documentation to v1.0.2.
+- Verified local asset references, HTML accessibility basics, robots.txt, sitemap.xml and CV PDF structure.
+- Live deployed-site/browser verification remains pending because the available QA environment could not reach the public domains.
+
+
 ## [1.0.2] - 2026-09-24
 
 ### QR landing page
