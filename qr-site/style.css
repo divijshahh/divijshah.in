@@ -101,13 +101,13 @@ h1 span {
 }
 
 .save-contact {
-  min-height: 58px;
+  position: relative;
+  min-height: 62px;
   margin-top: 20px;
-  padding: 0 19px;
+  padding: 0 56px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+  justify-content: center;
   border: 1px solid #1b1b1a;
   border-radius: 14px;
   background: #1b1b1a;
@@ -115,9 +115,24 @@ h1 span {
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
+  text-align: center;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+}
+
+.save-contact span:first-child {
+  display: block;
+}
+
+.save-contact span:last-child {
+  position: absolute;
+  right: 19px;
+  top: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  transform: translateY(-50%);
 }
 
 .contact-grid {
