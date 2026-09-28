@@ -17,7 +17,15 @@ html {
 body {
   min-height: 100svh;
   margin: 0;
-  background: #f3f2ee;
+  background-color: #f3f2ee;
+  background-image:
+    radial-gradient(circle at 50% 4%, rgba(255, 255, 255, 0.95), transparent 32%),
+    linear-gradient(rgba(66, 64, 58, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 64, 58, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(66, 64, 58, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 64, 58, 0.018) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 56px 56px, 192px 192px, 224px 224px;
+  background-position: center top;
   color: #1b1b1a;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -287,7 +295,18 @@ footer {
 
 :root[data-theme="dark"] html,
 :root[data-theme="dark"] body {
-  background: #151513;
+  background-color: #151513;
+}
+
+:root[data-theme="dark"] body {
+  background-image:
+    radial-gradient(circle at 50% 4%, rgba(53, 52, 48, 0.34), transparent 32%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 56px 56px, 192px 192px, 224px 224px;
+  background-position: center top;
 }
 
 :root[data-theme="dark"] body {
