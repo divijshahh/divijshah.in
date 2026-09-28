@@ -24,3 +24,13 @@ h1,h2,h3{font-family:"Libre Baskerville",Georgia,serif;line-height:1.18;margin-t
 @media(max-width:900px){.site-nav{gap:0}.site-nav a{padding:8px 7px;font-size:.82rem}.choice-grid,.evidence-grid,.knowledge-grid,.upgrade-grid{grid-template-columns:1fr 1fr}.community-grid{grid-template-columns:1fr 1fr}.community-card.primary{grid-row:auto}.diagnostic-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.site-header{padding:0 16px}.menu-button{display:block}.site-nav{display:none;position:absolute;top:68px;left:0;right:0;padding:10px 16px 16px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.site-nav.open{display:flex}.site-nav a{padding:12px}.route{padding:30px 16px 60px}.hero{padding-top:28px}.hero h1{font-size:2.45rem}.choice-grid,.evidence-grid,.two-col,.diagnostic-grid,.knowledge-grid,.upgrade-grid,.maintenance-grid,.community-grid,.resource-list{grid-template-columns:1fr}.choice-card{min-height:0}.choice-card h2{margin-top:18px}.section-title{display:block}.section-title small{display:block;margin-top:5px}.step{grid-template-columns:44px 1fr;padding:17px}.step>span{width:36px;height:36px;font-size:.8rem}.site-footer{display:block}.site-footer div{display:block}.site-footer span{display:block;margin-top:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Starter Guide 2.2.0 */
+.muted-copy{color:var(--muted);max-width:820px}
+.directory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.directory-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.directory-card h3{font-size:1.05rem;margin:14px 0 8px}
+.directory-card p{color:var(--text);margin:0 0 10px}
+.directory-card small{display:block;color:var(--muted);line-height:1.55}
+.label.machine{color:#d5b4a0}
+@media(max-width:900px){.directory-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.directory-grid{grid-template-columns:1fr}}
