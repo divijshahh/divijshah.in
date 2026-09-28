@@ -58,13 +58,10 @@ For server/configuration work:
 | QR placeholder | IMPLEMENTED | local under-construction SVG |
 | Final QR business-card experience | PLANNED | not implemented |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
-| read.divijshah.in | PLANNED | Karakeep frontend |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
 | Cloudflare Pages/DNS | IMPLEMENTED | current deployment |
-| Cloudflare Email Routing | IN PROGRESS/SETUP | inbound domain mail |
 | Self-hosted mail server | NOT PURSUED | discussed, not chosen |
-| Outbound @divijshah.in | PLANNED/DISCUSSED | likely provider/SMTP approach |
 | Catch-all mail | DISABLED BY CHOICE | do not enable without request |
 | Email subaddressing | DISABLED BY CHOICE | do not enable without request |
 
@@ -130,7 +127,7 @@ Footer:
 
 - Bombay, India
 - © 2026 Divij Shah
-- v1.2.5
+- v1.2.6
 
 Important personal-state constraint: the user is **not a lawyer yet**. Do not write "lawyer" into the site/bio/signature unless the user explicitly changes this.
 
@@ -230,7 +227,7 @@ Do not re-add About or a main-site Reading link.
 - renders `cv.pdf` using PDF.js;
 - keeps direct PDF download;
 - uses the same footer/navigation;
-- is v1.2.5.
+- is v1.2.6.
 
 The PDF.js renderer was deliberately retained. Do not replace it with a native PDF iframe/viewer without explicit instruction.
 
@@ -544,7 +541,7 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 - Main-site/QR stylesheet consolidation: rejected; QR is isolated.
 - External QR FreeSVG placeholder: failed; local SVG is current.
 - Cloudflare Web Analytics beacon: removed intentionally.
-- Main-site /read page: rejected as the wrong architecture; use read.divijshah.in.
+- Main-site /read page: rejected as the wrong architecture; the separate reading-frontend work was also removed from the active roadmap on 2026-09-28.
 - Public changelog page: not wanted.
 - Animations/easter eggs: not wanted.
 
@@ -552,7 +549,7 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 
 Current versions:
 
-- main site: v1.2.5
+- main site: v1.2.6
 - QR site: v1.0.2
 
 Versions are independent.
