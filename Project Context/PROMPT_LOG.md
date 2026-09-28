@@ -690,3 +690,20 @@ The LinkedIn SVG's right-side path extended almost to the viewBox edge and gave 
 
 ### Version
 QR v1.1.4.
+
+
+## 2026-09-28 — DIVIJ SHAH title tracking refinement
+### User request
+Change the title spacing across all sites because the `IVI` sequence in `DIVIJ` was merging visually and sometimes looked like a large M.
+
+### Changed
+- Main `style.css`: `DIVIJ SHAH` letter-spacing changed from `-0.075em` to `-0.045em`.
+- QR `style.css`: same change.
+- Main site bumped to v1.2.8.
+- QR site bumped to v1.1.5.
+
+### Not changed
+Font, size, weight, line-height, positioning and unrelated typography.
+
+### Result
+The title now has more separation between the vertical-heavy `I-V-I` sequence while retaining tight overall tracking.
