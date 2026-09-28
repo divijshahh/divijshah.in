@@ -1,456 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dedica Decoded ☕ — The EC890 Espresso Starter Guide (India)</title>
-<meta name="description" content="The unofficial, slightly unhinged starter guide for DeLonghi Dedica EC890 / EC685 espresso in India. Grinders, beans, bottomless portafilters, dial-in, milk steaming, troubleshooting, coupon codes — distilled from a WhatsApp group of obsessed home baristas." />
-<meta name="theme-color" content="#1a120b" />
-<meta property="og:title" content="Dedica Decoded ☕ — EC890 Espresso Starter Guide (India)" />
-<meta property="og:description" content="Everything a beginner needs to start espresso on a DeLonghi Dedica in India. Built from the collective wisdom (and chaos) of a home-barista WhatsApp group." />
-<meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9 Bar Social | Coffee Starter Kit</title>
+<meta name="description" content="The 9 Bar Social starter kit: a practical path from buying an espresso setup to making, fixing and understanding coffee, with Indian home-coffee community knowledge kept separate from coffee fundamentals.">
+<meta name="theme-color" content="#17130f">
+<meta property="og:title" content="9 Bar Social | Coffee Starter Kit">
+<meta property="og:description" content="Start making coffee, fix what tastes wrong, learn the fundamentals, build your setup, and use 9 Bar Social community knowledge.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2317130f'/%3E%3Cpath d='M24 27h42v25c0 14-10 23-21 23S24 66 24 52V27Zm42 8h7c8 0 13 5 13 13s-5 13-13 13h-8v-8h7c3 0 5-2 5-5s-2-5-5-5h-6V35Z' fill='%23f1dfc3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- floating beans -->
-<div class="beans-bg" aria-hidden="true"></div>
-
-<!-- progress bar + rabbit-hole runner (always-on, top of page) -->
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-<div class="rabbit-runner" id="rabbitRunner" aria-hidden="true">
-  <span class="rr-bun">🐇</span>
-  <b class="rr-pct" id="rabbitRunnerPct">0% down the hole</b>
-</div>
-
-<!-- NAV -->
-<header class="nav" id="nav">
-  <a href="#top" class="brand">
-    <span class="brand-cup">☕</span>
-    <span class="brand-text">Dedica<span class="brand-dot">.</span>Decoded</span>
-  </a>
-  <nav class="nav-links" id="navLinks">
-    <a href="#start">Start Here</a>
-    <a href="#trinity">Must-Buy</a>
-    <a href="#grinders">Grinders</a>
-    <a href="#beans">Beans</a>
-    <a href="#gear">Gear</a>
-    <a href="#dialin">Dial-In</a>
-    <a href="#fix">Fix My Shot</a>
-    <a href="#faq">FAQ</a>
-    <a href="#coupons">Coupons</a>
-    <a href="#learn">Learn</a>
-    <a href="#buy">Where to Buy</a>
-  </nav>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+<header class="site-header">
+<a class="wordmark" href="#start" data-route="start" aria-label="9 Bar Social home"><span class="mark">9</span><span>BAR SOCIAL</span></a>
+<button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="site-nav" id="siteNav" aria-label="Primary">
+<a href="#start" data-route="start">Start here</a><a href="#brew" data-route="brew">Brew</a><a href="#fix" data-route="fix">Fix</a><a href="#learn" data-route="learn">Learn</a><a href="#equipment" data-route="equipment">Equipment</a><a href="#milk" data-route="milk">Milk</a><a href="#maintain" data-route="maintain">Maintain</a><a href="#community" data-route="community">Community</a>
+</nav>
 </header>
-
-<main id="top">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <p class="kicker">☕ unofficial &amp; mildly unhinged · made in India</p>
-      <h1>So you bought a <span class="hl">DeLonghi Dedica.</span><br />Welcome to the rabbit hole. 🕳️🐇</h1>
-      <p class="lede">
-        You spent ₹12,000+ on a tiny espresso machine. You are about to spend
-        <em>far</em> more on grinders, baskets and beans you'll swear you needed.
-        This is the survival guide — built from a WhatsApp group of obsessed
-        Indian home baristas who learned everything the hard (and hilarious) way.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#start">Get me started →</a>
-        <a class="btn btn-ghost" href="#fix">My shot tastes weird 😖</a>
-        <a class="btn btn-whatsapp" href="https://chat.whatsapp.com/I7SDXw62i5T6X3SQ9h3WZY" target="_blank" rel="noopener">💬 Join the WhatsApp group</a>
-      </div>
-      <div class="hero-stats">
-        <div><b data-count="3">3</b><span>things you actually need</span></div>
-        <div><b data-count="70">70+</b><span>baristas who suffered first</span></div>
-        <div><b data-count="51">51mm</b><span>the magic number</span></div>
-      </div>
-    </div>
-    <div class="hero-art">
-      <figure class="hero-photo tilt">
-        <img src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/hero-portafilter.jpg" alt="A bottomless THW portafilter with wooden handle and a precision basket on a granite counter" loading="eager" />
-        <figcaption>Exhibit A: the bottomless portafilter you'll buy in week two.</figcaption>
-      </figure>
-      <div class="rabbit-meter">
-        <label>🐇 Rabbit-hole meter</label>
-        <div class="meter-track"><div class="meter-fill" id="rabbitMeter"></div></div>
-        <small id="rabbitLabel">just a curious beginner…</small>
-      </div>
-    </div>
-  </div>
-  <a href="#start" class="scroll-hint" aria-label="Scroll down">⌄</a>
+<main>
+<section class="route active" id="start">
+<div class="hero"><p class="eyebrow">9 BAR SOCIAL / STARTER KIT / v2.0.0</p>
+<h1>Coffee gets easier when you know what to change.</h1>
+<p class="hero-copy">A practical starting point for home espresso. Start with the machine you have, make a coffee, taste it, and learn one variable at a time.</p>
+<div class="choice-grid">
+<a class="choice-card featured" href="#brew" data-route="brew"><span class="choice-number">01</span><h2>I just bought an espresso machine</h2><p>Set it up, make your first shot, and understand the few numbers that matter.</p><span class="arrow">Open guide</span></a>
+<a class="choice-card" href="#fix" data-route="fix"><span class="choice-number">02</span><h2>My coffee tastes wrong</h2><p>Use taste, flow and your recipe to decide what to change next.</p><span class="arrow">Diagnose a shot</span></a>
+<a class="choice-card" href="#equipment" data-route="equipment"><span class="choice-number">03</span><h2>I want to improve my setup</h2><p>Understand what each upgrade does before spending money on it.</p><span class="arrow">Build a setup</span></a>
+</div></div>
+<div class="content-block"><div class="section-title"><span>How 9BS is organised</span><small>Know what kind of information you are reading.</small></div>
+<div class="evidence-grid">
+<article><span class="label fact">Fundamentals</span><h3>Established coffee principles</h3><p>Brewing concepts are explained using established coffee education and research. Starting recipes are presented as starting points, not universal rules.</p></article>
+<article><span class="label practice">Starting points</span><h3>Useful defaults</h3><p>Numbers and workflows that make sense for a beginner. Change them when your machine, coffee or taste calls for it.</p></article>
+<article><span class="label community">9BS community</span><h3>What home baristas report</h3><p>Indian availability, member experiences, equipment reports and community recommendations are kept distinct from technical facts.</p></article>
+<article><span class="label current">Current data</span><h3>Things that change</h3><p>Prices, stock, retailers, discounts and availability are time-sensitive. Verify them before buying.</p></article>
+</div></div>
+<div class="content-block compact"><div class="section-title"><span>Before you buy anything</span><small>You can make coffee with less gear than the internet suggests.</small></div>
+<div class="simple-list"><div><b>Need:</b> an espresso machine, coffee and suitable water.</div><div><b>Strongly useful:</b> a grinder capable of the grind your brewing method requires and a scale.</div><div><b>Optional:</b> distribution tools, dosing funnels, precision baskets, puck screens and bottomless portafilters.</div><div><b>Later:</b> advanced accessories and modifications. Learn what problem they solve first.</div></div></div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack"></div>
+<section class="route" id="brew"><div class="page-head"><p class="eyebrow">01 / BREW</p><h1>Make your first espresso.</h1><p>There is no machine-specific trick required to learn the basic workflow. Follow your manufacturer's setup instructions first, then use this as the coffee workflow.</p></div>
+<div class="step-list">
+<article class="step"><span>01</span><div><h2>Set up the machine</h2><p>Wash removable parts, fill the water reservoir, perform the machine's initial rinse or priming procedure, and learn its controls. Use the manual for anything specific to your model.</p></div></article>
+<article class="step"><span>02</span><div><h2>Choose a baseline recipe</h2><p>A useful espresso starting point is around a 1:2 brew ratio. For example, 18 g of coffee in and about 36 g of espresso out. The SCA reports an average practice around 18–20 g in, 36.5 g out and 25–30 seconds, but these are observations of practice, not a definition of good espresso.</p><p class="source-note">Source: <a href="https://sca.coffee/sca-news/25-magazine/issue-3/defining-ever-changing-espresso-25-magazine-issue-3-zyx36" target="_blank" rel="noopener">Specialty Coffee Association</a>.</p></div></article>
+<article class="step"><span>03</span><div><h2>Prepare the coffee</h2><p>Weigh your dose, grind it appropriately for espresso, distribute it evenly, and tamp the bed level. A consistent routine matters more than adding every accessory at once.</p></div></article>
+<article class="step"><span>04</span><div><h2>Brew by weight</h2><p>Put the cup and scale under the outlet, start the shot, and stop at your target output. Record dose, output and time. These numbers make your next adjustment understandable.</p></div></article>
+<article class="step"><span>05</span><div><h2>Taste before changing anything</h2><p>The goal is a cup you enjoy. Time is useful information, but a number on a timer is not proof that a shot is good.</p></div></article>
+<article class="step"><span>06</span><div><h2>Change one variable</h2><p>Start with grind size for ordinary dialling-in. Keep dose and target output stable while you learn what the grind change does. Once the shot is broadly in range, taste and adjust your recipe deliberately.</p></div></article>
 </div>
+<div class="callout"><strong>Beginner rule:</strong> do not change the grinder, dose, yield, temperature, basket and tamping technique simultaneously. You will not know what fixed the problem.</div>
+<div class="two-col"><article class="card"><span class="label fact">What the numbers mean</span><h2>Dose</h2><p>The mass of dry coffee you put into the basket.</p><h2>Yield</h2><p>The mass of espresso you collect in the cup.</p><h2>Ratio</h2><p>Yield divided by dose. 18 g in and 36 g out is 1:2.</p><h2>Time</h2><p>How long the shot takes. Useful for diagnosing flow, but not a quality score.</p></article>
+<article class="card"><span class="label practice">Simple baseline</span><h2>18 g → 36 g</h2><p>Use this as an example, not a commandment. Your basket, coffee, grinder and taste may call for something different.</p><a class="text-link" href="#fix" data-route="fix">Something tastes wrong? Diagnose it.</a></article></div></section>
 
-<!-- START / CHECKLIST -->
-<section id="start" class="section">
-  <div class="section-head">
-    <h2><span class="num">01</span> The 5-minute starter kit</h2>
-    <p class="sub">Tick things off as you buy them. Your progress is saved on this device. No login, no nonsense, no newsletter. 🙅</p>
-  </div>
-  <div class="checklist-wrap">
-    <div class="checklist" id="checklist"></div>
-    <aside class="checklist-side">
-      <div class="progress-ring-card">
-        <div class="big-pct" id="kitPct">0%</div>
-        <p id="kitMsg">Press a checkbox to begin your descent. 😈</p>
-        <button class="btn btn-tiny" id="resetKit">reset</button>
-      </div>
-    </aside>
-  </div>
-</section>
+<section class="route" id="fix"><div class="page-head"><p class="eyebrow">02 / FIX</p><h1>Fix the coffee, not the whole setup.</h1><p>Start with what you taste and what the shot did. These are heuristics, not a one-to-one diagnosis.</p></div>
+<div class="diagnostic-grid">
+<button class="diagnostic active" data-diagnosis="sour"><b>Too sour or sharp</b><span>Often points toward insufficient extraction.</span></button>
+<button class="diagnostic" data-diagnosis="bitter"><b>Bitter or dry</b><span>May indicate excessive extraction or uneven extraction.</span></button>
+<button class="diagnostic" data-diagnosis="fast"><b>Runs very fast</b><span>Look at grind size and puck preparation.</span></button>
+<button class="diagnostic" data-diagnosis="slow"><b>Barely flows</b><span>Look for excessive resistance, a grind that is too fine, or preparation issues.</span></button>
+<button class="diagnostic" data-diagnosis="spray"><b>Sprays or channels</b><span>Uneven density can create preferential flow paths.</span></button>
+<button class="diagnostic" data-diagnosis="good"><b>Tastes good but the time is odd</b><span>Taste does not need to be sacrificed to hit an arbitrary timer.</span></button>
+</div><div class="diagnosis-panel" id="diagnosisPanel"></div>
+<div class="source-strip">Technical basis: <a href="https://www.baristahustle.com/the-espresso-compass/" target="_blank" rel="noopener">Barista Hustle Espresso Compass</a> and <a href="https://www.baristahustle.com/lesson/b1-3-02-channelling/" target="_blank" rel="noopener">Barista Hustle on channeling</a>.</div></section>
 
-<!-- TRINITY / MUST BUY -->
-<section id="trinity" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">02</span> The Holy Trinity (what actually matters)</h2>
-    <p class="sub">Spend here. Everything else is jewellery. The golden rule of the group: <b>spend as much on the grinder as the machine.</b></p>
-  </div>
-  <div class="trinity">
-    <article class="trinity-card">
-      <div class="trinity-rank">#1</div>
-      <h3>🫘 Fresh beans</h3>
-      <p>The single biggest lever. Stale supermarket beans = sad espresso no matter what. Buy <b>freshly roasted</b>, rest 7–10 days off roast date, use within a month.</p>
-      <a href="#beans" class="card-link">See bean picks →</a>
-    </article>
-    <article class="trinity-card hot">
-      <div class="trinity-rank">#2</div>
-      <h3>⚙️ A real grinder</h3>
-      <p>More important than the machine itself. A good grinder turns the Dedica into a serious little espresso maker. A bad one will break your soul (and your wrist).</p>
-      <a href="#grinders" class="card-link">Find your grinder →</a>
-    </article>
-    <article class="trinity-card">
-      <div class="trinity-rank">#3</div>
-      <h3>🧺 A non-pressurised basket</h3>
-      <p>The real upgrade is ditching the <b>pressurised</b> stock basket for a <b>non-pressurised</b> one — a precision <b>IMS</b> basket if budget allows, ideally in a <b>bottomless portafilter</b> so you can <i>see</i> your mistakes. Real legends just <b>cut their stock portafilter</b> into a bottomless one. 🔪</p>
-      <a href="#gear" class="card-link">Baskets &amp; portafilters →</a>
-    </article>
-  </div>
-  <p class="aside-note">💡 Keep the stock <b>pressurised</b> portafilter though — it's forgiving for pre-ground coffee, guests, and the Duo's cold-brew mode.</p>
-</section>
+<section class="route" id="learn"><div class="page-head"><p class="eyebrow">03 / LEARN</p><h1>Understand what you are changing.</h1><p>The deeper material belongs here, after you can make a repeatable drink.</p></div>
+<div class="knowledge-grid">
+<article class="knowledge-card"><span>01</span><h2>Extraction</h2><p>Brewing dissolves soluble material from coffee. More extraction is not automatically better. Evenness matters because uneven extraction can produce conflicting flavours in the same cup.</p><a href="https://www.baristahustle.com/the-espresso-compass/" target="_blank" rel="noopener">Read the Espresso Compass</a></article>
+<article class="knowledge-card"><span>02</span><h2>Grind size</h2><p>Changing grind size changes flow and extraction. Finer can increase extraction up to a point; grinding finer indefinitely can worsen unevenness and channeling.</p><a href="https://www.baristahustle.com/lesson/acm-4-07-ineffective-voids/" target="_blank" rel="noopener">Read about the limit</a></article>
+<article class="knowledge-card"><span>03</span><h2>Freshness</h2><p>Roasted coffee releases carbon dioxide rapidly after roasting, and grinding accelerates gas loss. Freshness is real, but there is no universal 7-day or 30-day rule that applies to every coffee.</p><a href="https://sca.coffee/sca-news/coffee-decoded-9-fresh-coffee" target="_blank" rel="noopener">SCA: Coffee Freshness</a></article>
+<article class="knowledge-card"><span>04</span><h2>Channeling</h2><p>Water follows paths of lower resistance. Uneven distribution or tamping can create preferential paths through the coffee bed, producing uneven extraction.</p><a href="https://www.baristahustle.com/lesson/b1-3-02-channelling/" target="_blank" rel="noopener">Barista Hustle: Channeling</a></article>
+<article class="knowledge-card"><span>05</span><h2>Pressurised vs non-pressurised</h2><p>Pressurised baskets create resistance through the basket outlet and can make brewing more forgiving. Non-pressurised baskets expose more of the brewing process to grind size, dose and puck preparation. Neither is automatically the right choice for every beginner.</p></article>
+<article class="knowledge-card"><span>06</span><h2>Water</h2><p>Water is not just a carrier. Its composition affects extraction and taste. Start with water your machine manufacturer permits and use a suitable treatment strategy if your local water or machine instructions call for one.</p></article>
+</div><div class="callout"><strong>Important:</strong> Coffee advice often gets reduced to single-variable rules. Use them as hypotheses, then check the cup. If a coffee tastes good outside a conventional time or ratio, taste is the evidence that matters most for your drink.</div></section>
 
-<!-- GRINDERS -->
-<section id="grinders" class="section">
-  <div class="section-head">
-    <h2><span class="num">03</span> Grinders — the real boss fight</h2>
-    <p class="sub">The Dedica needs a <b>fine, consistent, espresso-capable</b> grind. Filter grinders and "esp-capable" liars will give you sour, gushing shots. Filter by budget &amp; type.</p>
-  </div>
-  <div class="aside-note" style="margin-bottom:24px">⚡ <b>Get an electric grinder if you possibly can.</b> A HiBrew G5 or Rift 64 will save your mornings — almost everyone who started with a hand grinder upgraded within months. As the group put it: <i>"go electric… unless you're stubborn and prefer arm workouts."</i> 💪 Manual grinders (K6 / C3 ESP) make great espresso too — they're just a daily wrist day.</div>
-  <div class="filters" id="grinderFilters">
-    <button class="chip active" data-filter="all">All</button>
-    <button class="chip" data-filter="manual">✋ Manual</button>
-    <button class="chip" data-filter="electric">🔌 Electric</button>
-    <button class="chip" data-filter="budget">💸 Budget</button>
-    <button class="chip" data-filter="endgame">🏆 End-game</button>
-    <button class="chip" data-filter="avoid">🚫 Avoid</button>
-  </div>
-  <div class="card-grid" id="grinderGrid"></div>
-</section>
+<section class="route" id="equipment"><div class="page-head"><p class="eyebrow">04 / EQUIPMENT</p><h1>Upgrade because you have a problem to solve.</h1><p>9BS equipment information should distinguish technical facts, community experience and current market information. Product lists from the old site have not been carried forward as verified facts.</p></div>
+<div class="upgrade-grid">
+<article><span class="stage">01</span><h2>Grinder</h2><p>For traditional espresso, a grinder that can produce and adjust an appropriate fine grind is one of the most consequential pieces of equipment.</p><span class="status essential">Core equipment</span></article>
+<article><span class="stage">02</span><h2>Scale</h2><p>Lets you measure dose and output instead of guessing. It is one of the simplest ways to make your brewing repeatable.</p><span class="status useful">Highly useful</span></article>
+<article><span class="stage">03</span><h2>Distribution tools</h2><p>WDT and similar tools can help with distribution and clumps. They are not prerequisites for learning espresso.</p><span class="status optional">Optional</span></article>
+<article><span class="stage">04</span><h2>Basket</h2><p>A different basket can change how the coffee bed behaves and how much control the brewer has. Match basket size and compatibility to the machine.</p><span class="status conditional">Depends on setup</span></article>
+<article><span class="stage">05</span><h2>Bottomless portafilter</h2><p>Useful for observing flow and channeling. It is a diagnostic accessory, not a requirement for making good espresso.</p><span class="status optional">Optional</span></article>
+<article><span class="stage">06</span><h2>Puck screen and other accessories</h2><p>Evaluate these individually. The question is what problem the accessory solves on your machine, not whether it is popular online.</p><span class="status optional">Advanced</span></article>
+</div>
+<div class="content-block"><div class="section-title"><span>How equipment listings will work</span><small>Applied to future 9BS community buying guides.</small></div><div class="evidence-grid">
+<article><span class="label fact">Verified</span><h3>Manufacturer specification</h3><p>Dimensions, compatibility, stated features and warranty information should come from the manufacturer or a reliable current listing.</p></article>
+<article><span class="label community">Reported</span><h3>Community experience</h3><p>Member experience is useful, but remains a report. It is not presented as a universal performance claim.</p></article>
+<article><span class="label current">Dated</span><h3>Price and availability</h3><p>Listings should carry a date or review note because Indian prices, stock and sellers change.</p></article>
+</div></div></section>
 
-<!-- BEANS -->
-<section id="beans" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">04</span> Beans worth your money (India)</h2>
-    <p class="sub"><b>Medium / medium-dark</b> roasts are the most forgiving place to start. Want to run lighter roasts? Use the <a href="#dialin"><b>high-temp flush trick</b></a> below to pull a hotter, sweeter shot. Filter by vibe:</p>
-  </div>
-  <div class="filters" id="beanFilters">
-    <button class="chip active" data-filter="all">All</button>
-    <button class="chip" data-filter="budget">💸 Budget daily</button>
-    <button class="chip" data-filter="milk">🥛 Milk drinks</button>
-    <button class="chip" data-filter="specialty">✨ Specialty</button>
-  </div>
-  <div class="card-grid bean-grid" id="beanGrid"></div>
-  <p class="aside-note">📑 Want the <b>master list</b>? The community maintains a <a href="https://docs.google.com/spreadsheets/u/0/d/1qj5oSo6gBcBq2cdFhcIouNtfLc3VQJgsDX-U31OSnnc" target="_blank" rel="noopener"><b>crowd-sourced spreadsheet of Indian coffee beans</b> ↗</a> — roasters, prices and ₹/gram for dozens of beans. The fastest way to hunt down the cheapest fresh coffee.</p>
-  <figure class="wide-photo tilt">
-    <img src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/beans-spread.jpg" alt="A spread of Indian coffee bean bags — Araku, Blue Tokai, Ozkafe barrel-aged, estate coffees" loading="lazy" />
-    <figcaption>A very normal, not-at-all-excessive amount of beans for one household.</figcaption>
-  </figure>
-</section>
+<section class="route" id="milk"><div class="page-head"><p class="eyebrow">05 / MILK</p><h1>Steam milk by texture, not by a machine-specific trick.</h1><p>Different machines have different steam power. The underlying sequence is similar.</p></div>
+<div class="step-list">
+<article class="step"><span>01</span><div><h2>Start cold</h2><p>Use cold milk and a suitable pitcher. Begin with enough milk to cover the steam tip while leaving room for expansion.</p></div></article>
+<article class="step"><span>02</span><div><h2>Purge and position</h2><p>Purge the wand according to the machine's instructions. Position the steam tip near the milk surface when you need to introduce air.</p></div></article>
+<article class="step"><span>03</span><div><h2>Stretch briefly</h2><p>Introduce the amount of air needed for the drink. A latte generally needs less incorporated air than a cappuccino-style drink.</p></div></article>
+<article class="step"><span>04</span><div><h2>Create a whirlpool</h2><p>Once enough air is incorporated, position the wand to create a rolling movement that distributes the bubbles through the milk.</p></div></article>
+<article class="step"><span>05</span><div><h2>Stop before overheating</h2><p>Around 60–65°C is a practical working range for many milk drinks, but use your taste, texture and machine's guidance rather than treating a single temperature as a law.</p></div></article>
+<article class="step"><span>06</span><div><h2>Clean immediately</h2><p>Purge and wipe the wand immediately after steaming, following the machine manufacturer's cleaning instructions.</p></div></article>
+</div><div class="source-strip">For a practical milk-steaming reference, see <a href="https://www.kitchenaid.com/countertop-appliances/pinch-of-help/how-to-steam-milk-for-a-latte" target="_blank" rel="noopener">KitchenAid's milk-steaming guide</a>. Machine-specific instructions take precedence.</div></section>
 
-<!-- GEAR: portafilters, baskets, accessories -->
-<section id="gear" class="section">
-  <div class="section-head">
-    <h2><span class="num">05</span> Portafilters, baskets &amp; shiny gear</h2>
-    <p class="sub">Magic number for the Dedica: <b>51mm</b>. If a listing doesn't say "DeLonghi / Dedica / EC685 / EC890", it won't fit. Don't @ us.</p>
-  </div>
+<section class="route" id="maintain"><div class="page-head"><p class="eyebrow">06 / MAINTAIN</p><h1>Cleaning is part of the workflow.</h1><p>Maintenance instructions vary by machine. The manufacturer manual always takes precedence over a generic coffee guide.</p></div>
+<div class="maintenance-grid">
+<article><span>After brewing</span><h2>Keep the brew path clean</h2><p>Knock out the puck, rinse the basket and portafilter as appropriate, and flush the group according to your machine's instructions.</p></article>
+<article><span>After steaming</span><h2>Clean the steam wand</h2><p>Purge and wipe the wand immediately so milk residue does not dry inside or on the steam tip.</p></article>
+<article><span>Regularly</span><h2>Follow the manual</h2><p>Clean removable components and internal parts at the frequency specified by your machine. Do not invent a descaling schedule that conflicts with the manufacturer.</p></article>
+<article><span>When prompted</span><h2>Descale correctly</h2><p>Descaling frequency depends on machine design, water conditions and usage. Use the manufacturer's stated procedure and product guidance.</p></article>
+</div><div class="callout"><strong>Safety and warranty:</strong> Modifications and cleaning chemicals are not generic coffee advice. Use the machine manual and manufacturer's instructions before experimenting.</div></section>
 
-  <h3 class="subhead">🕳️ Bottomless portafilters</h3>
-  <div class="card-grid" id="pfGrid"></div>
-
-  <div class="split">
-    <figure class="split-photo tilt">
-      <img src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/basket-ims-vs-generic.jpg" alt="Two espresso baskets side by side — a generic basket on the left and a precision IMS basket on the right" loading="lazy" />
-      <figcaption>Left: generic basket. Right: precision (IMS) basket — laser-cut holes, more even flow.</figcaption>
-    </figure>
-    <div class="split-text">
-      <h3 class="subhead">🧺 Baskets</h3>
-      <p>The basket matters more than the portafilter body. A precision basket (IMS-grade) gives more even extraction. But honestly: a decent grinder + fresh beans + a good-enough basket beats a fancy basket with bad grind.</p>
-      <ul class="tick-list" id="basketList"></ul>
-      <p class="aside-note">🚫 Never put a <b>pressurised</b> basket in a <b>bottomless</b> portafilter — you get foam, not crema, spraying everywhere.</p>
-    </div>
-  </div>
-
-  <h3 class="subhead">🧰 The accessory rabbit hole</h3>
-  <p class="sub">Honest ratings included. Some of this is essential. Some of it just "makes the bar look nice." 💅</p>
-  <div class="card-grid acc-grid" id="accGrid"></div>
-  <figure class="wide-photo tilt">
-    <img src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/accessories.jpg" alt="An RDT spray bottle, funnel and WDT tool alongside espresso glasses" loading="lazy" />
-    <figcaption>WDT tool + RDT spray + cute glasses. Total cost: less than one bag of fancy beans.</figcaption>
-  </figure>
-</section>
-
-<!-- DIAL IN -->
-<section id="dialin" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">06</span> Dial-in: the actual recipe</h2>
-    <p class="sub">Stop trusting the buttons (the "2x" button pulls a lungo). Get a scale, weigh everything, change <b>one variable at a time</b>.</p>
-  </div>
-  <a class="video-feature" href="https://www.youtube.com/watch?v=nEGYSFD1Hm4" target="_blank" rel="noopener">
-    <span class="vf-play">▶</span>
-    <span class="vf-text">
-      <b>🏆 The best dialing-in tutorial, period.</b>
-      <span>If you watch one video before touching your machine, make it this one. The group's most-recommended guide to actually dialing in your espresso. — youtube.com ↗</span>
-    </span>
-  </a>
-  <div class="recipe">
-    <div class="recipe-card">
-      <h3>🎯 The starting point</h3>
-      <table class="recipe-table">
-        <tr><th></th><th>Dose in</th><th>Shot out</th><th>Time</th><th>Ratio</th></tr>
-        <tr><td><b>Double</b></td><td>18 g</td><td>36 g</td><td>25–32 s</td><td>1:2</td></tr>
-        <tr><td><b>Single</b></td><td>9 g</td><td>~22 g</td><td>25–30 s</td><td>1:2.5</td></tr>
-        <tr><td><b>Light roast</b></td><td>18 g</td><td>45–54 g</td><td>longer</td><td>1:2.5–1:3</td></tr>
-      </table>
-      <p class="micro">Timer starts the moment you press the button (coffee-water contact), not at first drip.</p>
-    </div>
-    <ol class="recipe-steps">
-      <li><b>Weigh</b> your dose. ~17–18g fills a stock double basket nicely (with a puck screen).</li>
-      <li><b>RDT:</b> one spritz of water on the beans to kill static.</li>
-      <li><b>Grind</b> straight into the basket.</li>
-      <li><b>WDT:</b> stir with a thin needle to break clumps &amp; distribute.</li>
-      <li><b>Level &amp; tamp</b> until it stops moving. (You basically can't tamp "too hard" — you'd need a hydraulic press.)</li>
-      <li><b>Puck screen</b> on top, lock in, and pull onto a scale.</li>
-      <li><b>Taste &amp; adjust</b> → see "Fix My Shot" below. 👇</li>
-    </ol>
-  </div>
-  <div class="aside-note">🌡️ <b>Run a hotter shot — the high-temp trick from Tom's Coffee Corner.</b> The Dedica's little thermoblock cools down between heating and brewing, so by default your shot brews cooler than ideal. The fix the group swears by: right before you pull, run a short blank flush of hot water through the empty group head to pre-heat it, then lock in your portafilter and brew <i>immediately</i>. Even better — do back-to-back flushes so the boiler stays hot, and pull the moment it's ready. Your shot runs noticeably hotter and extracts sweeter, which unlocks <b>lighter roasts</b> the Dedica otherwise struggles with. <a href="https://www.youtube.com/watch?v=TPS6Z6NCaU8" target="_blank" rel="noopener"><b>Watch the trick ↗</b></a> (and <a href="https://www.youtube.com/watch?v=LzRN8Se7uQw" target="_blank" rel="noopener">a second take ↗</a>).</div>
-  <div class="aside-note">🍖 <b>Pull a "salami shot" to train your palate.</b> Put 3–4 small cups under a (bottomless) shot and swap them every few seconds as it pours. Taste each in order: the <b>first</b> pours sharp &amp; <b>sour</b> (the acids come out first), the <b>middle</b> is sweet &amp; balanced, and the <b>last</b> turns thin &amp; <b>bitter</b>. Doing this once teaches you what "sour vs bitter" actually tastes like — so the "Fix My Shot" advice below finally clicks. ☕</div>
-  <figure class="shot-figure tilt">
-    <video src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/video/bhoumik-shot.mp4" poster="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/shot-poster.jpg" controls muted loop playsinline preload="none"></video>
-    <figcaption>🎬 The goal, live: a group member's bottomless shot — 18g in → 35g out in ~24s. "Itna crema kaise?!" 🤎</figcaption>
-  </figure>
-</section>
-
-<!-- FIX MY SHOT -->
-<section id="fix" class="section">
-  <div class="section-head">
-    <h2><span class="num">07</span> 🔧 Fix My Shot</h2>
-    <p class="sub">Tap what's wrong. Get the community-approved fix. Repeat until espresso. ✨</p>
-  </div>
-  <div class="diagnoser">
-    <div class="symptom-chips" id="symptomChips"></div>
-    <div class="diagnosis" id="diagnosis">
-      <p class="diag-placeholder">👆 Pick a symptom to summon wisdom.</p>
-    </div>
-  </div>
-</section>
-
-<!-- MILK -->
-<section id="milk" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">08</span> 🥛 Steaming milk on a weak little wand</h2>
-    <p class="sub">The Dedica's wand is… polite. Technique &gt; power. Here's the group consensus.</p>
-  </div>
-  <a class="video-feature" href="https://www.youtube.com/watch?v=aWIaqS6JDY8" target="_blank" rel="noopener">
-    <span class="vf-play">▶</span>
-    <span class="vf-text">
-      <b>📺 Milk steaming, demoed for this machine</b>
-      <span>The tutorial the group passes around for steaming on the Dedica — watch the wand angle, the air-injection timing, and the whirlpool, then copy it. — youtube.com ↗</span>
-    </span>
-  </a>
-  <div class="milk-grid">
-    <ol class="milk-steps">
-      <li><b>Purge first.</b> Run the wand 20–30s until you get real steam pressure. 5 seconds is not enough — "an un-purged wand is useless."</li>
-      <li><b>Cold milk, right jug.</b> Chill the milk (and the pitcher in the freezer). Lower-fat tetra milk foams easier for beginners — <b>Amul Blue</b> or <b>Akshayakalpa</b> are group favourites.</li>
-      <li><b>Stretch:</b> tip just at the surface → listen for a soft "tsss… tsss" as you inject air for ~3–5s.</li>
-      <li><b>Texture:</b> submerge slightly to create a whirlpool and heat through, no more hissing.</li>
-      <li><b>Stop at ~60–65°C.</b> Above 65°C milk proteins break and it'll never be silky again (and it scalds).</li>
-    </ol>
-    <div class="milk-tips">
-      <div class="tip-pill">☕ <b>Cappuccino</b> = more foam · <b>Latte / flat white</b> = less, silkier.</div>
-      <div class="tip-pill">⚖️ ~140g milk ≈ just below the Dedica mug spout. Use ~100g for a hotter, less-milky drink.</div>
-      <div class="tip-pill">🧼 Purge &amp; wipe the wand <b>immediately</b> after every steam or it clogs.</div>
-      <div class="tip-pill">🫧 <b>Practise for free with dish soap.</b> Fill the pitcher with water + a drop of dishwashing liquid and steam <i>that</i> — it stretches and textures just like milk, so you can drill your wand technique and latte-art pours without wasting milk or coffee. Rinse well after.</div>
-      <figure class="milk-photo tilt">
-        <img src="https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/latte-tulip.jpg" alt="A latte with a tulip latte-art pattern" loading="lazy" />
-        <figcaption>Your goal. Eventually. Maybe. (It's mostly milk texture.)</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- TROUBLESHOOTING -->
-<section id="trouble" class="section">
-  <div class="section-head">
-    <h2><span class="num">09</span> 🚑 Machine troubleshooting</h2>
-    <p class="sub">The classics. Don't panic — nobody's Dedica has actually exploded. Yet.</p>
-  </div>
-  <div class="accordion" id="troubleAccordion"></div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">10</span> ❓ Frequently asked (loudly, daily)</h2>
-    <p class="sub">Everything newcomers ask in their first week, answered by people on their fiftieth bag of beans.</p>
-  </div>
-  <div class="accordion" id="faqAccordion"></div>
-</section>
-
-<!-- COUPONS -->
-<section id="coupons" class="section">
-  <div class="section-head">
-    <h2><span class="num">11</span> 🎟️ Coupon codes &amp; money hacks</h2>
-    <p class="sub">Tap a code to copy. Codes expire and change — if one's dead, you didn't hear it from us. 🫥</p>
-  </div>
-  <div class="coupon-grid" id="couponGrid"></div>
-  <div class="money-hacks">
-    <h3 class="subhead">💰 Group-certified money hacks</h3>
-    <ul class="tick-list">
-      <li><b>Amazon gift-card trick:</b> buy a gift card at ~11% off, pay with it + a cashback credit card (e.g. HDFC Millennia / Amazon Pay) to stack discounts on machines &amp; beans.</li>
-      <li><b>Watch the big sales:</b> a new EC890 is ~₹20k on Amazon — Prime Day &amp; Big Billion Days trim that with bank offers, but open-box stays the cheapest at ~₹12k (10k+ on a good day).</li>
-      <li><b>Open-box is the smart-money buy.</b> ~₹12k (10k+ on a good day) vs ~₹20k new on Amazon, usually only with minor cosmetic marks. But it's a gamble: a cracked tank (whose replacement was also damaged) and a pump failure have happened, and warranty support is unproven on a real fault. <b>Film one unboxing video</b> and go in eyes-open. (Full story in the FAQ &amp; below. 👇)</li>
-      <li><b>Buy beans by roast date, not brand hype.</b> Store pickup (Blue Tokai) = freshest.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- LEARN -->
-<section id="learn" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">12</span> 📺 Learn from the legends</h2>
-    <p class="sub">A handful of channels will teach you 90% of what you need. The rest is reps (and impulse purchases).</p>
-  </div>
-  <a class="video-feature" href="https://www.youtube.com/watch?v=vdNxMkWvp9Q" target="_blank" rel="noopener">
-    <span class="vf-play">▶</span>
-    <span class="vf-text">
-      <b>💸 Watch this BEFORE you read the rest of this page (it's a scam).</b>
-      <span>Morgan Eckroth on why we cheerfully spend a fortune on coffee gear — the most honest video about this hobby, and the funniest. Yes, we know. We bought the grinder anyway. — youtube.com ↗</span>
-    </span>
-  </a>
-  <div class="card-grid yt-grid" id="ytGrid"></div>
-</section>
-
-<!-- WHERE TO BUY -->
-<section id="buy" class="section">
-  <div class="section-head">
-    <h2><span class="num">13</span> 🛒 Where to buy (trusted by the group)</h2>
-    <p class="sub">India-specific. Prices wander — treat these as starting points, not gospel.</p>
-  </div>
-  <div class="card-grid seller-grid" id="sellerGrid"></div>
-
-  <div class="openbox-verdict">
-    <div class="ov-head"><span class="ov-emoji">🌶️</span><h3>Brand-new vs open-box: the group's spiciest debate</h3></div>
-    <p>This is the most <b>controversial</b> topic in the chat. One warning gets repeated until it sounds like fact — so here's the claim vs what the actual vote &amp; track record showed:</p>
-    <div class="myth-reality">
-      <div class="mr-card myth">
-        <span class="mr-tag">😱 What some people claim</span>
-        <p>"<b>Don't buy open box. 3/4 people who got open box in this group had issues with the machine.</b>" — the warning that scares newcomers into paying ~₹8k extra.</p>
-      </div>
-      <div class="mr-card reality">
-        <span class="mr-tag">✅ What actually happened</span>
-        <p>Dig into those "issues" and <b>most were just minor cosmetic defects</b> — a small dent or scratch on an otherwise perfect machine. When the group ran an actual poll, only <b>one person</b> voted that they regretted the purchase.</p>
-      </div>
-    </div>
-    <p class="ov-sub">The real vote, not the rumour (most bought open-box from Latteholic and saved ~₹8k — ≈₹12k vs ~₹20k new):</p>
-    <div class="poll">
-      <div class="poll-row">
-        <span class="poll-label">👍 Happy / fine with their machine</span>
-        <div class="poll-bar"><div class="poll-fill" style="width:88%">the big majority</div></div>
-      </div>
-      <div class="poll-row">
-        <span class="poll-label">😩 Actually regret the purchase</span>
-        <div class="poll-bar"><div class="poll-fill alt" style="width:14%">1 vote</div></div>
-      </div>
-    </div>
-    <ul class="tick-list ov-list">
-      <li><b>🩹 Most got only minor cosmetic defects</b> — a small dent or scratch; the machine itself works perfectly.</li>
-      <li><b>🚰 One member's water tank arrived broken</b> — and the replacement Latteholic sent was <b>also damaged</b> (functional, but still not great).</li>
-      <li><b>🔧 One machine had a pump failure</b> after a couple of months of use (one member). It's been sent to Latteholic for warranty repair — <b>whether they actually honour the warranty cleanly is still to be seen.</b></li>
-      <li><b>📹 So: film one continuous unboxing video and go in eyes-open.</b> The risk is real — but the ~₹8k saving is why most of the group still buys open-box.</li>
-    </ul>
-  </div>
-
-  <p class="aside-note">🤔 Budget closer to ₹25k? The group's hot take: consider the <b>HiBrew H10A</b> instead — temp control, pressure gauge, stronger steam, 3 baskets in the box. "Don't buy a Dedica if you can spend 25k." But the Dedica is the better-supported, more-moddable, more-fun gateway drug.</p>
-</section>
-
-<!-- MODS / NERD -->
-<section id="mods" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">14</span> 🛠️ For the incurable nerds</h2>
-    <p class="sub">When "good espresso" stops being enough and you start eyeing a soldering iron.</p>
-  </div>
-  <div class="card-grid mod-grid" id="modGrid"></div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section">
-  <div class="section-head">
-    <h2><span class="num">15</span> 📸 The wall of (varying) glory</h2>
-    <p class="sub">Real cups &amp; setups from the group. Latte art is a journey, not a destination.</p>
-  </div>
-  <div class="gallery" id="gallery"></div>
-</section>
-
-<!-- QUOTES -->
-<section id="quotes" class="section alt">
-  <div class="section-head">
-    <h2><span class="num">16</span> 💬 Wall of quotes</h2>
-    <p class="sub">Verbatim wisdom &amp; chaos from the group chat (names withheld to protect the caffeinated).</p>
-  </div>
-  <div class="quote-wall" id="quoteWall"></div>
-</section>
-
+<section class="route" id="community"><div class="page-head"><p class="eyebrow">07 / 9 BAR SOCIAL</p><h1>The community layer.</h1><p>9 Bar Social is where practical Indian home-coffee experience can sit beside, but not masquerade as, coffee science.</p></div>
+<div class="community-grid">
+<article class="community-card primary"><span class="label community">Join</span><h2>9 Bar Social community</h2><p>Ask questions, share shots, compare equipment and contribute experiences. The starter kit is meant to get you to the point where those conversations become useful.</p><a href="https://chat.whatsapp.com/I7SDXw62i5T6X3SQ9h3WZY" target="_blank" rel="noopener">Open the community</a></article>
+<article class="community-card"><span class="label community">India</span><h2>Beans and local buying</h2><p>Indian roasters, retailers, prices and availability belong in a maintained community directory. Listings should be dated and rechecked rather than treated as permanent facts.</p></article>
+<article class="community-card"><span class="label community">Reports</span><h2>Member experiences</h2><p>Equipment reports, workflow experiments and compatibility experiences can be valuable. They should identify the source and context whenever possible.</p></article>
+<article class="community-card"><span class="label resource">Resources</span><h2>External learning</h2><p>Use established coffee education for fundamentals, then use 9BS for the local context and lived experience.</p></article>
+</div>
+<div class="content-block"><div class="section-title"><span>Reference library</span><small>Sources used to rebuild the fundamentals.</small></div><div class="resource-list">
+<a href="https://sca.coffee/sca-news/25-magazine/issue-3/defining-ever-changing-espresso-25-magazine-issue-3-zyx36" target="_blank" rel="noopener"><b>Specialty Coffee Association</b><span>Defining the Ever-Changing Espresso</span></a>
+<a href="https://sca.coffee/sca-news/coffee-decoded-9-fresh-coffee" target="_blank" rel="noopener"><b>Specialty Coffee Association</b><span>Coffee Freshness</span></a>
+<a href="https://www.baristahustle.com/the-espresso-compass/" target="_blank" rel="noopener"><b>Barista Hustle</b><span>The Espresso Compass</span></a>
+<a href="https://www.baristahustle.com/lesson/b1-3-02-channelling/" target="_blank" rel="noopener"><b>Barista Hustle</b><span>Channeling and uneven flow</span></a>
+<a href="https://www.baristahustle.com/lesson/acm-4-07-ineffective-voids/" target="_blank" rel="noopener"><b>Barista Hustle</b><span>Why grinding finer has limits</span></a>
+</div></div>
+<div class="content-block compact"><div class="section-title"><span>Audit status</span><small>9BS starter-kit rebuild.</small></div><p class="audit-copy">The previous DeLonghi-specific product catalogue, coupon list and machine-specific claims have not been presented here as verified facts. They need individual source checks before returning to a future equipment or India buying directory.</p></div></section>
 </main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <span class="brand-cup">☕</span>
-      <span class="brand-text">Dedica<span class="brand-dot">.</span>Decoded</span>
-    </div>
-    <p class="footer-origin">
-      Born from a DeLonghi Dedica WhatsApp group of ~70 obsessed Indian home baristas
-      who, somewhere around message #7000, said: <i>"someone should just build a site for this."</i>
-      So here it is. 🫡
-    </p>
-    <a class="btn btn-whatsapp" href="https://chat.whatsapp.com/I7SDXw62i5T6X3SQ9h3WZY" target="_blank" rel="noopener">💬 Join the WhatsApp group →</a>
-    <p class="footer-disclaimer">
-      Not affiliated with DeLonghi, any roaster, retailer, or your bank. No affiliate links, no tracking,
-      no newsletter. Prices, stock &amp; coupon codes change constantly — verify before you buy.
-      Made with caffeine &amp; questionable financial decisions.
-    </p>
-    <button class="btn btn-ghost btn-tiny" id="toTop">↑ back to the top of the rabbit hole</button>
-  </div>
-</footer>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+<footer class="site-footer"><div><b>9 BAR SOCIAL</b><span>Practical coffee knowledge for home baristas.</span></div><span>Starter Kit v2.0.0 · Reviewed 28 September 2026</span></footer>
 <script src="js/main.js"></script>
-</body>
-</html>
+</body></html>
