@@ -502,10 +502,9 @@ Verify current Cloudflare setup before changing deployment architecture.
 
 ## 13. Email/domain context
 
-Inbound domain email is being configured with Cloudflare Email Routing.
+Inbound domain email has been discussed/configured as a separate infrastructure concern. The current website QA does not depend on mail configuration.
 
-Known DNS records discussed:
-
+Known configuration discussed:
 - route1.mx.cloudflare.net priority 81
 - route2.mx.cloudflare.net priority 87
 - route3.mx.cloudflare.net priority 5
@@ -513,7 +512,6 @@ Known DNS records discussed:
 - SPF: v=spf1 include:_spf.mx.cloudflare.net ~all
 
 Potential aliases discussed:
-
 - divij@
 - hello@
 - contact@
@@ -524,15 +522,10 @@ Potential aliases discussed:
 Do not assume every alias is active without checking.
 
 User deliberately chose:
-
 - catch-all: OFF
 - subaddressing: OFF
 
 Do not enable either without explicit request.
-
-Outbound domain email is a future concern. A provider/SMTP service is the preferred direction to investigate before operating a full self-hosted mail server.
-
-A self-hosted mail server was discussed but is not currently being pursued.
 
 ## 14. Future projects
 
@@ -616,10 +609,9 @@ When exact historical reasoning matters, inspect Git history rather than guessin
 
 1. Final QR/business-card landing experience.
 2. Custom home.divijshah.in frontend.
-3. read.divijshah.in Karakeep frontend.
-4. Optional browser QA after future visual changes.
+3. Optional browser QA after future visual changes.
 
-Nothing in this list should be treated as implemented.
+The read.divijshah.in item and domain-mail/outbound-mail/transactional-mail items were removed from the active roadmap on 2026-09-28 at the user's direction. They are not current project work.
 
 ## 20. Historical implementation lessons
 
@@ -636,3 +628,31 @@ The most important lessons from this project:
 - inspect before changing.
 
 > **Core rule:** Read the context, inspect the real repo, distinguish implemented from planned, preserve established decisions, and only then make the requested change.
+
+
+## 21. QA status as of 2026-09-28
+
+A thorough repository/source QA pass was performed on 2026-09-28.
+
+### Verified statically
+- Main homepage, CV, 404 and QR HTML were inspected.
+- Main and QR CSS/JS were inspected.
+- All referenced local CSS, JS, favicon and service SVG assets were verified to exist in the repository.
+- cv.pdf was fetched as base64 and structurally checked: PDF 1.4 header, xref/startxref and EOF present, one page object/count detected.
+- PDF.js 4.10.38 is still published by cdnjs with both `pdf.min.mjs` and `pdf.worker.min.mjs` available.
+- Duplicate HTML IDs: none detected.
+- Images without alt attributes: none detected.
+- Unlabelled buttons: none detected.
+- Obsolete `/about`, `/read`, "Homelab Hobbyist", analytics beacon, old main version 1.2.4 and HTTP references were absent from active site files.
+- robots.txt and sitemap.xml were inspected. Sitemap contains only the homepage and CV.
+- Main service destinations are explicitly linked to the expected public hosts.
+- Main theme JS, QR theme JS and their separate localStorage keys remain isolated.
+- No repository-search hits for credential terms were found.
+
+### Findings corrected
+- Service status dots documented as an established requirement were absent from the current service-card implementation. Restored them as consistent, non-interactive green status indicators on every service card.
+- README and the historical 1.2.5 changelog note still called the QR site v1.0.1 even though the implementation is v1.0.2. Documentation corrected.
+- Main site bumped from v1.2.5 to v1.2.6 for the service-card QA correction.
+
+### Live-browser limitation
+The available environment could not reach `divijshah.in` or `qr.divijshah.in` over the network, so live HTTP/browser rendering, console/network inspection, screenshots, actual click behavior, viewport rendering and Cloudflare deployment verification could not be honestly marked PASS. These remain pending live-browser checks rather than being guessed.
