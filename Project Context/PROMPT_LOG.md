@@ -632,3 +632,28 @@ Check the deployed QR page on iPhone/iPad in light and dark mode for final visua
 
 ### Commit
 Multiple direct main-branch commits were used because the available GitHub connector did not expose the current base tree SHA needed for a single atomic tree commit.
+
+
+## 2026-09-28 — QR grid background
+
+### User request
+Use the same grid background on the QR page that is used on divijshah.in.
+
+### Inspected
+- Main site `style.css` background treatment.
+- QR site `qr-site/style.css` and its existing light/dark theme rules.
+
+### Changed
+- Added the main site's multi-scale grid background to the QR page.
+- Preserved the main site's light-mode radial glow and four grid layers.
+- Added the corresponding main-site dark-mode glow and four subtle light grid layers.
+- Kept QR-specific layout, cards, typography and theme architecture unchanged.
+
+### Version
+QR remains v1.1.3 because this is a visual refinement within the current release rather than a functional/versioned content change.
+
+### Result
+The QR page now visually shares the main site's grid background treatment in both themes.
+
+### Follow-up
+Check the deployed QR page on iPhone and iPad in both themes for final visual balance.
