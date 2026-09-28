@@ -559,3 +559,42 @@ No website implementation yet. These are implementation constraints only.
 
 ### Follow-up
 Implementation remains blocked until the user gives the previously requested `approved` confirmation.
+
+
+## 2026-09-28 — QR v1.1.0 implementation approved and built
+
+### User request
+Approved implementation of the final QR business-card landing page, including the previously locked mobile-first, iPhone, iPad and phone-optimized lamp requirements.
+
+### Inspected
+- Current QR HTML/CSS/theme JS.
+- README, CHANGELOG, robots.txt, sitemap.xml and root headers.
+- Existing project context and prompt log.
+
+### Changed
+- Replaced the QR placeholder with the specified contact-first business-card page.
+- Added `qr-site/divij-shah.vcf` using vCard 3.0 with only N/FN, cell, email and the two requested URLs.
+- Added `qr-site/_headers` with `text/vcard; charset=utf-8` for `*.vcf`.
+- Added `noindex, nofollow` to QR metadata.
+- Implemented mobile-first responsive CSS with explicit iPhone-width handling and iPad portrait/landscape breakpoints.
+- Kept and optimized the lamp for phone touch sizing and safe-area positioning.
+- Updated QR documentation and version to v1.1.0.
+
+### Not changed
+- No main-site HTML, CSS, JS, CV or infrastructure files were modified.
+- Main sitemap remains unchanged and contains only the main homepage and CV.
+- QR remains independently themed with the `qr-theme` localStorage key.
+
+### Verification
+- Source was re-read from the implementation branch after changes.
+- Verified exact contact URLs, phone number, email, vCard fields, metadata, version and responsive breakpoints in source.
+- Verified no `law student` or `student` wording was added to QR page/vCard/metadata.
+- Verified QR page contains no third-party scripts, font requests or trackers.
+- Contrast values for the light muted text and dark muted text were checked statically; both meet the 4.5:1 target against their respective backgrounds.
+- Live browser/Cloudflare verification was not available and is not claimed.
+
+### Version
+QR v1.1.0.
+
+### Follow-up
+Test on physical iPhone/iPad devices and after deployment: vCard import, WhatsApp, tel, mailto, dark mode, and QR scanning.
