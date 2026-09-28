@@ -442,3 +442,18 @@ Do not overwrite earlier history.
 Do not rewrite history to make it look cleaner.
 If a decision is reversed, preserve the old entry and add a new entry explaining the reversal.
 
+
+## 2026-09-28 — Persistent memory rule reaffirmed
+
+### User request
+Remember permanently that every prompt asking the agent to do something or to remember something must update the project prompt log.
+
+### Permanent rule
+For every such prompt/session, append an entry to `Project Context/PROMPT_LOG.md`.
+
+### Additional permanent rule
+When the agent notices discrepancies between `MASTER_CONTEXT.md` and the actual repository/project state, update `Project Context/MASTER_CONTEXT.md` so it remains authoritative and current.
+
+### Result
+These rules apply to all future work on the divijshah.in project.
+
