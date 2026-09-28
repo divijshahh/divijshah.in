@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.7] - 2026-09-28
+
+### Changed
+
+- Removed the Uptime Kuma-style status indicators from the LinkedIn and Email personal-link cards; those indicators remain on the self-hosted service cards.
+- Bumped the main website, CV and 404 page to v1.2.7.
+
+
 ## [1.2.6] - 2026-09-28
 
 ### QA / Fixes
