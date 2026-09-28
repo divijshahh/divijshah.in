@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/fonts/CormorantGaramond-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color: #1b1b1a;
   background: #f3f2ee;
@@ -43,7 +51,7 @@ main {
 h1 {
   margin: 0;
   color: #1b1b1a;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: clamp(54px, 16vw, 68px);
   font-weight: 600;
   line-height: .88;
