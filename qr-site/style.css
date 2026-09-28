@@ -5,7 +5,7 @@
 :root {
   color: #1b1b1a;
   background: #f3f2ee;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   color-scheme: light;
 }
 
@@ -46,8 +46,8 @@ h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(54px, 16vw, 68px);
   font-weight: 600;
-  line-height: .88;
-  letter-spacing: .075em;
+  line-height: .94;
+  letter-spacing: -0.075em;
 }
 
 h1 span {
@@ -93,8 +93,8 @@ h1 span {
 }
 
 .save-contact {
-  min-height: 60px;
-  margin-top: 24px;
+  min-height: 58px;
+  margin-top: 20px;
   padding: 0 19px;
   display: flex;
   align-items: center;
@@ -122,7 +122,7 @@ h1 span {
 }
 
 .contact-list {
-  margin-top: 14px;
+  margin-top: 12px;
   overflow: hidden;
   border: 1px solid #dcdad2;
   border-radius: 14px;
@@ -130,8 +130,8 @@ h1 span {
 }
 
 .contact-row {
-  min-height: 58px;
-  padding: 0 17px;
+  min-height: 54px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,8 +146,25 @@ h1 span {
   border-top: 1px solid #e6e4dd;
 }
 
+.contact-icon {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  fill: currentColor;
+  color: #5f5c56;
+}
+
+.contact-icon-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .row-label {
   min-width: 0;
+  flex: 1;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.3;
@@ -309,6 +326,10 @@ footer {
   color: #f5f4ef;
 }
 
+:root[data-theme="dark"] .contact-icon {
+  color: #c4c1b9;
+}
+
 :root[data-theme="dark"] .contact-row + .contact-row {
   border-color: #3b3a35;
 }
@@ -368,7 +389,7 @@ button:focus:not(:focus-visible) {
   }
 
   .contact-row {
-    min-height: 56px;
+    min-height: 52px;
   }
 
   footer {
@@ -418,8 +439,8 @@ button:focus:not(:focus-visible) {
   }
 
   .contact-row {
-    min-height: 60px;
-    padding-inline: 19px;
+    min-height: 56px;
+    padding-inline: 17px;
   }
 
   footer {
