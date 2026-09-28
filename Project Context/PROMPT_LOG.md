@@ -657,3 +657,36 @@ The QR page now visually shares the main site's grid background treatment in bot
 
 ### Follow-up
 Check the deployed QR page on iPhone and iPad in both themes for final visual balance.
+
+
+## 2026-09-28 — QR LinkedIn icon alignment repair
+### User request
+Fix the LinkedIn contact icon specifically because it was the only QR contact icon whose alignment/geometry looked off.
+
+### Inspected
+- Current QR stylesheet icon sizing.
+- QR contact-row markup.
+- Light and dark LinkedIn SVG assets.
+- LinkedIn artwork bounds relative to the shared 24x24 viewBox and other contact icons.
+
+### Cause
+The LinkedIn SVG's right-side path extended almost to the viewBox edge and gave the icon a wider/heavier optical footprint than the other contact icons. The shared CSS container was not the primary problem.
+
+### Changed
+- Rebuilt qr-site/assets/icons/linkedin.svg with tighter, optically centered geometry.
+- Rebuilt qr-site/assets/icons/linkedin-dark.svg with identical geometry and only the fill color changed.
+- Kept the existing 24x24 viewBox, filled style and contact-row CSS.
+- Bumped the QR visible version from v1.1.3 to v1.1.4.
+
+### Not changed
+- Call, Email, CV or WhatsApp icons.
+- QR layout, spacing, copy, URLs, vCard, lamp, responsive breakpoints or theme architecture.
+- Main website.
+
+### Verification
+- Confirmed both LinkedIn SVGs now share the same normalized geometry.
+- Confirmed index.html references the light/dark LinkedIn assets and now displays v1.1.4.
+- Live browser/device rendering remains unavailable, so deployed visual QA is not claimed.
+
+### Version
+QR v1.1.4.
