@@ -13,7 +13,7 @@
   /* ---------- DATA ---------- */
 
   const STARTER_KIT = [
-    { t: "A espresso machine espresso machine", d: "the machine (Duo, has cold brew) or the machine. They're near-identical for espresso. Current pricing varies by seller and availability." },
+    { t: "An espresso machine", d: "Choose a machine that suits your budget, available service support and intended drinks. Compare current pricing, warranty terms and specifications before buying." },
     { t: "An espresso-capable grinder", d: "The make-or-break purchase. Manual K6 / Timemore C3 ESP, or electric HiBrew G5 / Rift 64." },
     { t: "Fresh, medium-roast beans", d: "Rest 7–10 days off roast date. Medium roasts are the easiest start; lighter roasts shine once you learn the high-temp flush trick." },
     { t: "A non-pressurised basket (51mm)", d: "The real upgrade from the stock pressurised setup. Get a precision (IMS) basket if budget allows, or a bottomless portafilter that comes with one (THW / Neouza / Brewalsa). Real legends just chop their stock portafilter into a bottomless one. " },
@@ -26,8 +26,8 @@
 
   const GRINDERS = [
     { name: "Kingrinder K6", price: "~₹10,800", tags: ["manual"], badge: ["pick", "Manual pick"],
-      desc: "The community's favourite hand grinder. 48mm burrs, external adjustment, great clarity & capacity. Espresso ≈ 24–30 clicks from true zero.",
-      pros: ["Big burrs, fast for a manual", "External dial = easy dial-in"], cons: ["Still an arm workout daily — pair with a low-RPM drill"],
+      desc: "A capable hand grinder with 48mm burrs and external adjustment. It offers a useful range for espresso and suits users who prefer manual grinding.",
+      pros: ["Big burrs, fast for a manual", "External dial = easy dial-in"], cons: ["Manual grinding is slower for daily use"],
       link: "https://coffeeplus.in/", linkLabel: "Coffee Plus (pre-order)" },
     { name: "Timemore C3 ESP / ESP Pro", price: "~₹7–8k", tags: ["manual", "budget"], badge: ["value", "Budget pick"],
       desc: "Entry espresso-capable hand grinder. Use the ESP version (or a C3S + ₹1000 mod-plate). Espresso ≈ 0.6–0.8 / ~20–22 clicks.",
@@ -38,19 +38,19 @@
       pros: ["Cheap", "Espresso-capable"], cons: ["Slower, less consistent than K6"],
       link: "https://www.amazon.in/s?k=kingrinder+k2", linkLabel: "Search Amazon" },
     { name: "HiBrew G5", price: "~₹13–15k", tags: ["electric", "budget"], badge: ["pick", "Best cheap electric"],
-      desc: "The 'sexiest looking in the budget' electric grinder. Single-dose, conical burr. People upgrading from a hand grinder say 'life has changed.'",
-      pros: ["No more arm day", "Looks great, compact"], cons: ["Conical (smaller) burr vs the Rift's 64mm flat"],
+      desc: "A compact single-dose electric grinder with conical burrs. A practical upgrade for users moving from a manual grinder.",
+      pros: ["Faster workflow than a manual grinder", "Compact footprint"], cons: ["Conical (smaller) burr vs the Rift's 64mm flat"],
       link: "https://fixcoffee.shop/", linkLabel: "Fix Coffee" },
     { name: "Cipher Rift 64 / Espressa Orbit 64", price: "~₹19–21k", tags: ["electric"], badge: ["pick", "Popular option"],
       desc: "64mm flat-burr single-dose grinder (Rift/Orbit/Shardor are the same platform). The sweet-spot upgrade. Get the single-dose hopper; metal body if you can.",
       pros: ["64mm flat burrs = clarity", "Easy clean, low retention", "Burr-swappable later"], cons: ["Plastic body version can crack — pay ~5k more for metal"],
       link: "https://coffeeplus.in/products/espressa-orbit-64-home-grinder", linkLabel: "Coffee Plus" },
     { name: "Turin DF54", price: "~₹27k", tags: ["electric", "endgame"], badge: ["pick", "End-game-ish"],
-      desc: "Best-looking grinder in the budget tier, with a full all-metal build. 54mm flat burrs, with a titanium-coated burr option. 'Sounds like music.'",
-      pros: ["Gorgeous, sturdy all-metal build", "Titanium burr option", "Excellent clarity"], cons: ["Pricey"],
+      desc: "All-metal grinder with 54mm flat burrs and a titanium-coated burr option. Consider it if build quality and flat-burr performance are priorities.",
+      pros: ["All-metal construction", "Titanium burr option", "Excellent clarity"], cons: ["Pricey"],
       link: "https://coffeeplus.in/", linkLabel: "Coffee Plus" },
     { name: "Espressa Orbit 64 Pro", price: "~₹25k", tags: ["electric", "endgame"], badge: ["pick", "All-metal flat burr"],
-      desc: "The Pro version of the Orbit 64 — same 64mm flat burrs, but with a premium all-metal (die-cast aluminium) body for durability and peace of mind. The sturdy end of the group's favourite platform.",
+      desc: "The Pro version of the Orbit 64 — same 64mm flat burrs, but with a premium all-metal (die-cast aluminium) body for durability and peace of mind. The all-metal version of the same platform.",
       pros: ["64mm flat burrs", "All-metal die-cast body", "Single-dose, low retention"], cons: ["Pricier than the plastic Orbit"],
       link: "https://coffeeplus.in/products/espressa-orbit-64-home-grinder", linkLabel: "Coffee Plus" },
     { name: "Baratza Encore ESP", price: "~₹14k", tags: ["electric"], badge: ["neutral", "Reliable"],
@@ -58,22 +58,22 @@
       pros: ["Proven reliability", "Easy to live with"], cons: ["Plastic body", "Not single-dose-first"],
       link: "https://www.amazon.in/s?k=baratza+encore+esp", linkLabel: "Search Amazon" },
     { name: "Plain Timemore C3 / C3S", price: "—", tags: ["avoid"], badge: ["avoid", "Not for espresso"],
-      desc: "Great for filter/pour-over, but the standard C3/C3S can't grind fine & consistent enough for espresso. You need the ESP burr or mod-plate.",
+      desc: "Designed primarily for filter coffee. The standard C3/C3S is not the appropriate configuration for espresso; use the ESP version or a compatible burr modification.",
       pros: [], cons: ["Sour, gushing espresso", "Endless frustration"], link: "", linkLabel: "" },
     { name: "1Zpresso Q Air", price: "—", tags: ["avoid"], badge: ["avoid", "Filter grinder"],
       desc: "A filter grinder (~25µm/click) — hard to dial in for espresso. Lovely for pour-over, wrong tool here.",
       pros: [], cons: ["Not espresso-suited"], link: "", linkLabel: "" },
     { name: "Agaro / generic cheap grinders", price: "—", tags: ["avoid", "budget"], badge: ["avoid", "Avoid"],
-      desc: "Inconsistent grind (fines + boulders) = channeling & sour shots. '5 minutes for 14g and biceps like Arnold.' Save up instead.",
+      desc: "Inconsistent particle size can make espresso difficult to dial in and may increase channeling. A more capable espresso grinder is preferable.",
       pros: [], cons: ["Inconsistent", "Painfully slow"], link: "", linkLabel: "" },
   ];
 
   const BEANS = [
     { name: "Araku (Selection / Signature)", price: "~₹400–450 / 250g", tags: ["budget", "milk"], badge: ["value", "Cheapest fresh"],
-      desc: "Cheap, fresh, widely available on CRED. Great milk-drink starter. Some find Signature/Selection a touch weak for straight espresso — fine for lattes.",
+      desc: "Widely available and suitable for milk-based drinks. Some drinkers find the Signature and Selection profiles mild for straight espresso.",
       link: "https://www.araku.com/", linkLabel: "araku.com / CRED" },
     { name: "Hunkal Estate — Aranya Gold", price: "~₹630 / 500g", tags: ["budget", "milk"], badge: ["value", "Best ₹/gram"],
-      desc: "~₹1.56/g — a genuine value daily driver. Balanced, not watery. A common choice for 'seasoning' a new setup.",
+      desc: "Approximately ₹1.56/g. A balanced option for regular use and for learning to dial in a new setup.",
       link: "https://www.hunkalestatecoffee.com/collections/all/products/aranya-gold-coffee-beans", linkLabel: "hunkalestatecoffee.com" },
     { name: "Fraction9 — Everyday Gold", price: "~₹470 / 250g", tags: ["budget", "milk", "specialty"], badge: ["pick", "Crowd favourite"],
       desc: "Medium-dark, consistent roasting, cacao + nutty. Bold, daily-driveable. Free delivery over ₹2k.",
@@ -82,35 +82,35 @@
       desc: "Roast date + process printed on every pack. Store pickup = freshest. Vienna (dark) & Dhak blend shine for milk.",
       link: "https://bluetokaicoffee.com/", linkLabel: "bluetokaicoffee.com" },
     { name: "Naivo — Attikan White Mist", price: "~₹450 / 250g", tags: ["specialty"], badge: ["pick", "Group loved"],
-      desc: "'Kya pyaari coffee.' Nutty notes that survive into milk. Roasts next-day after order (fresh!) but delivery can be slow.",
+      desc: "Nutty notes that work well in milk-based drinks. Roasts after ordering, although delivery times may vary.",
       link: "https://naivo.in/", linkLabel: "naivo.in" },
     { name: "Mokka Farms", price: "~₹600 / 500g", tags: ["budget"], badge: ["neutral", "Divisive"],
-      desc: "Cheap practice beans (try 50:50 or 80:20). Roasting can be inconsistent — some love it for the price, one member said 'never again.' You decide.",
+      desc: "An inexpensive option for practice shots. Roast consistency may vary, so it is better suited to experimentation than as a primary recommendation.",
       link: "https://www.mokkafarms.com/", linkLabel: "mokkafarms.com" },
     { name: "Lavazza Crema e Gusto", price: "supermarket", tags: ["budget", "milk"], badge: ["neutral", "Seasoning beans"],
-      desc: "Easy to find, great for practising / seasoning a new grinder & for iced milk drinks. Watch the roast date — often old. Not specialty, and that's OK.",
+      desc: "Widely available and suitable for milk-based drinks and grinder seasoning. Check the roast date because supermarket stock may be older.",
       link: "https://www.amazon.in/s?k=lavazza+crema+e+gusto+beans", linkLabel: "Search Amazon" },
     { name: "Roastery Coffee House — Baarbara", price: "~₹500 / 250g", tags: ["specialty"], badge: ["neutral", "Cafés everywhere"],
       desc: "Solid specialty with cafés in most cities (order via Zomato/Swiggy for same-day-fresh). Baarbara Estate is a popular pick.",
       link: "https://roasterycoffee.co.in/", linkLabel: "roasterycoffee.co.in" },
     { name: "Season Sync / Odd / Broot / Bloom", price: "varies", tags: ["specialty"], badge: ["neutral", "Worth exploring"],
-      desc: "Group mentions: Season Sync 'Monsoon Craft', Odd Coffee 'Ol Smoky' (very dark), Broot espresso blend, Bloom 'Kid Dynamite'. Branch out once you can dial in.",
+      desc: "Other community-mentioned options include Season Sync Monsoon Craft, Odd Coffee Ol Smoky, Broot espresso blends and Bloom Kid Dynamite.",
       link: "https://www.instagram.com/explore/search/keyword/?q=indian%20specialty%20coffee", linkLabel: "Explore roasters" },
   ];
 
   const PORTAFILTERS = [
     { name: "THW 51mm Bottomless", price: "~₹2.5–2.7k", tags: [], badge: ["avoid", "Substandard"],
       desc: "A lower-priority option with repeated complaints concerning fit, finish and durability. Consider a better-reviewed compatible portafilter instead.",
-      link: "https://www.amazon.in/s?k=THW+bottomless+portafilter+espresso machine+51mm", linkLabel: "Search Amazon" },
+      link: "https://www.amazon.in/s?k=THW+bottomless+portafilter+delonghi+51mm", linkLabel: "Search Amazon" },
     { name: "Neouza 51mm Bottomless", price: "~₹2–2.4k", tags: [], badge: ["value", "Great quality"],
       desc: "Ships from China (10–25 days, ~₹600 shipping). Comes with dose rings + cleaning tools. Card payments can be fussy — One Card / Forex / Scapia tend to work.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
     { name: "Brewalsa 51mm (Made for espresso machine)", price: "~₹2.1k + ship", tags: [], badge: ["neutral", "Purpose-built"],
-      desc: "Wooden-handle SS portafilter explicitly made for espresso machine compatible 51mm machines. ",
+      desc: "Wooden-handle stainless-steel portafilter designed for compatible 51mm espresso machines.",
       link: "https://brewalsa.com/", linkLabel: "brewalsa.com" },
-    { name: "DIY: 'circumcise' your stock PF", price: "~₹50–100", tags: [], badge: ["neutral", "Jugaad route"],
-      desc: "Take the stock portafilter to a welder/fabricator and chop the spout off the bottom. Cheap & works — just don't cut all the way to the top (it can snap when you knock). Smooth the edge after.",
-      link: "https://www.youtube.com/results?search_query=espresso machine+espresso machine+bottomless+portafilter+mod", linkLabel: "How-to videos" },
+    { name: "DIY: Modify the stock portafilter", price: "~₹50–100", tags: [], badge: ["neutral", "DIY option"],
+      desc: "A fabricator can remove the spout to create a bottomless portafilter. This is inexpensive, but the cut must be made carefully and the edge should be smoothed before use.",
+      link: "https://www.youtube.com/results?search_query=delonghi+dedica+bottomless+portafilter+mod", linkLabel: "How-to videos" },
   ];
 
   const BASKETS = [
@@ -118,17 +118,17 @@
     "<b>THW basket:</b> a bundled option with reported inconsistencies in quality and fit. A reputable precision basket is preferable.",
     "<b>Supvox 8–12g single-shot basket:</b> good budget single basket if you drink small.",
     "<b>Capfei / generic precision baskets:</b> fine performers at lower cost — fit 16–17g easily.",
-    "<b>Always check fitment:</b> 51mm, and the listing must mention espresso machine / espresso machine / the machine / the machine.",
+    "<b>Always check fitment:</b> confirm the 51mm size and verify the manufacturer compatibility information before ordering.",
   ];
 
   const ACCESSORIES = [
-    { name: "WDT tool", price: "~₹200", rating: ["pick", "Essential"], desc: "Thin needles to stir & distribute grounds. Kills clumps & channeling. The best ₹200 you'll spend.",
+    { name: "WDT tool", price: "~₹200", rating: ["pick", "Essential"], desc: "Thin needles for distributing grounds and breaking up clumps. An inexpensive way to improve puck preparation.",
       link: "https://www.amazon.in/s?k=WDT+tool+espresso+distribution+51mm", linkLabel: "Search Amazon" },
-    { name: "RDT spray bottle", price: "~₹120", rating: ["pick", "Essential"], desc: "One spritz of water on the beans before grinding = no static, no mess. The Neutrino bottle is 'too good for ₹120.'",
+    { name: "RDT spray bottle", price: "~₹120", rating: ["pick", "Essential"], desc: "A small amount of water on the beans before grinding can reduce static and mess. Avoid over-wetting the beans.",
       link: "https://www.amazon.in/dp/B0GRR9DQXZ", linkLabel: "Neutrino RDT bottle" },
     { name: "Puck screen (0.8mm, magnetic)", price: "~₹300–500", rating: ["pick", "Get it"], desc: "Even water distribution, keeps the shower screen clean, lets you load 17–18g. Get 0.8mm, not 1.7mm.",
       link: "https://www.amazon.in/s?k=51mm+puck+screen+0.8mm+magnetic", linkLabel: "Search Amazon" },
-    { name: "Scale w/ timer", price: "~₹1–2k", rating: ["pick", "Important"], desc: "Weigh dose + shot, time the pour. This one fits the espresso machine's drip tray nicely; Hoffen (~₹1k) & Kaapi A-Series (~₹2086) also work.",
+    { name: "Scale w/ timer", price: "~₹1–2k", rating: ["pick", "Important"], desc: "Weigh the dose and yield and time the extraction. Choose a scale that fits your machine’s drip tray.",
       link: "https://www.amazon.in/dp/B0DPL28C9Q", linkLabel: "Coffee scale (fits the machine)" },
     { name: "Tamper", price: "~₹1–1.2k", rating: ["neutral", "Nice"], desc: "Flat-base preferred. Supvox / Fix Coffee spring-loaded are OK but loosely calibrated; Normcore if budget allows.",
       link: "https://www.amazon.in/Supvox%C2%AE-Espresso-Calibrated-Stainless-Anti-Corrosion/dp/B0D5XL38HX/", linkLabel: "Supvox calibrated tamper" },
@@ -140,65 +140,65 @@
       link: "https://www.amazon.in/dp/B0GCWGBBM4", linkLabel: "50ml vials" },
     { name: "Tamping station", price: "~₹500+ / 3D-print", rating: ["neutral", "If bottomless"], desc: "Bottomless portafilters wobble — a station holds it steady while you tamp. 3D-print it for ~₹50 in filament.",
       link: "https://www.amazon.in/s?k=51mm+tamping+station+holder", linkLabel: "Search Amazon" },
-    { name: "Descaler", price: "~₹600 / 6 uses", rating: ["neutral", "Upkeep"], desc: "Aftermarket descaler is far cheaper than espresso machine's (~₹750/use). Food-safe citric acid works too. Run the cycle ~monthly.",
+    { name: "Descaler", price: "~₹600 / 6 uses", rating: ["neutral", "Upkeep"], desc: "Use a compatible descaler and follow the machine manufacturer’s instructions for the product and descaling interval.",
       link: "https://www.amazon.in/dp/B00CWANDT6", linkLabel: "Aftermarket descaler" },
   ];
 
   const SYMPTOMS = [
-    { label: " Sour / sharp / hollow", cause: "Under-extracted (or too light a roast for the espresso machine)",
+    { label: " Sour / sharp / hollow", cause: "Under-extracted; the grind, dose, yield or temperature may need adjustment",
       fixes: ["<b>Grind finer</b> — the #1 fix.", "Pull a longer ratio (1:2.5–1:3) and let it run a few more seconds.", "Use fresher beans; rest 7–10 days off roast.", "Brewing too cool? Use the <b>high-temp flush trick</b> — a quick blank hot-water flush right before you pull, then brew immediately. Runs hotter and sweeter."] },
     { label: " Bitter / harsh / dry", cause: "Over-extracted",
       fixes: ["<b>Grind coarser.</b>", "Stop the shot earlier (shorter ratio, e.g. 1:2).", "Clean the basket & portafilter — old oils taste rancid/metallic.", "Don't go below ~9 clicks on a hand grinder (and don't over-extract dark roasts)."] },
     { label: " Watery / gushes / done in <15s", cause: "Too coarse, or channeling",
       fixes: ["<b>Grind finer</b> (1–2 clicks at a time).", "WDT + level before tamping.", "Check beans aren't stale (pre-ground in a naked basket = no resistance).", "Make sure you're not using a filter-only grinder."] },
     { label: " Chokes / barely drips", cause: "Too fine",
-      fixes: ["<b>Grind coarser.</b>", "Use a touch less coffee.", "If the machine auto-switches to the steam light when choked — let steam out, then retry."] },
+      fixes: ["<b>Grind coarser.</b>", "Use a touch less coffee.", "If the machine enters steam mode after a blocked shot, release the steam and allow the machine to return to brewing temperature before retrying."] },
     { label: " Sprays sideways (bottomless)", cause: "Channeling — uneven puck",
       fixes: ["<b>WDT thoroughly</b> and distribute evenly.", "Tap the portafilter to settle grounds, then level & tamp flat.", "Add a puck screen on top.", "A spritzy bottomless shot is normal for the first few seconds — judge the steady state."] },
     { label: " Espresso vanishes in milk", cause: "Shot too weak / wrong ratio for milk",
       fixes: ["Pull a stronger shot (more dose, tighter ratio like 1:1.5–1:2).", "Use a medium-dark or robusta-blend bean for milk drinks.", "Don't over-dilute — start with less milk (~100–140g)."] },
     { label: " Machine stuck on the steam light", cause: "Water/airlock or a choked shot",
-      fixes: ["<b>Check the water tank</b> — refill & reseat it firmly.", "Open the steam knob and release steam for a few seconds.", "Power-cycle. If it choked, it auto-switches to steam — let it out and retry.", "It happens to everyone. Nobody's machine has exploded. Probably."] },
+      fixes: ["<b>Check the water tank</b> — refill & reseat it firmly.", "Open the steam knob and release steam for a few seconds.", "Power-cycle. If it choked, it auto-switches to steam — let it out and retry.", "If the problem persists after these checks, consult the machine manual or service documentation."] },
   ];
 
   const TROUBLE = [
-    { q: " Machine froze on the steam light and won't pull a shot", a: "Almost always water or a choked puck. Refill and firmly reseat the tank; open the steam knob to release steam for a few seconds; power-cycle. If you'd ground too fine and choked it, the machine flips to steam mode on purpose — let the steam out and try again. Empty tank is the usual culprit." },
-    { q: " The basket gets stuck in the group head (need a knife to remove)", a: "Super common with the stock portafilter. Fixes: use a bit less coffee (keep it below the basket 'ears'); if it's stuck, run a shot and the pressure pops it off; use a puck screen; pull the portafilter slightly <b>upward</b> as you remove it; or just switch to a bottomless portafilter and the problem disappears." },
-    { q: " Descaling light came on — what do I do?", a: "It's based on shot count + your water-hardness setting, roughly monthly / ~100 shots. Use espresso machine descaler (~₹750) or aftermarket (~₹600 for six), or food-safe citric acid. The espresso machine has <b>no 3-way valve and no blind basket</b>, so you can't back-flush — just run the descale cycle. Don't touch the liquid bare-handed." },
-    { q: " Set water hardness?", a: "Long-press the steam button ~10s to enter settings (levels 1–3, higher = harder water). If you run RO/soft water, a low setting is fine. A TDS meter does <i>not</i> measure hardness — use a test strip if you have one (most boxes don't include it; buy on Amazon)." },
-    { q: " What should I check before buying a machine?", a: "<b>It's the group's most debated question.</b>  saves ~₹8k (≈₹12k vs ~₹20k new on Amazon — sometimes 10k+), and most units arrive basically new with only minor cosmetic marks. But it's a genuine gamble: one member's tank arrived broken and the replacement was <i>also</i> damaged; one machine's pump failed after a couple of months and is back with Latteholic for repair — whether the warranty gets honoured cleanly is still to be seen. So <b>film one continuous unboxing video</b>, go in eyes-open, and decide if the saving is worth the risk. Want zero chance of a flaw? Buy sealed/new." },
-    { q: " The water tank cracked / I need a spare part", a: "Tanks are fragile and crack in transit. A replacement tank runs ~₹1–1.5k (don't believe inflated ₹5k Amazon listings; ask the seller). Spare parts for EC680/685 are at pgservice.cc. Do NOT patch a tank with super-glue — it's not food-safe." },
-    { q: " Steam wand has milk buildup / weak steam", a: "Purge & wipe the wand immediately after every steam. For buildup, soak the tip and clear the holes with a pin. The the machine's tiny wand is weak by design — some people upgrade to a Rancilio-style wand (a mod), but technique fixes most of it." },
-    { q: " My THW portafilter chipped/broke", a: "Usually from grinding super fine + over-pressure, sometimes when reseating the rubber gasket. The current stock is reportedly more robust; most users report theirs is solid. Don't force a too-fine grind into a naked basket." },
+    { q: " Machine froze on the steam light and won't pull a shot", a: "Check the water tank and reseat it firmly. If a previous shot was choked, release steam and allow the machine to return to normal brewing temperature. Power-cycle if necessary. If the issue persists, follow the manufacturer’s troubleshooting procedure." },
+    { q: " The basket gets stuck in the group head (need a knife to remove)", a: "Try a slightly smaller dose and keep the grounds below the basket rim. If the basket remains stuck, do not force it with a knife. Release pressure safely, remove the portafilter carefully and inspect the basket, gasket and fitment." },
+    { q: " Descaling light came on — what do I do?", a: "Follow the machine’s descaling procedure and use a compatible descaler. Do not substitute chemicals or back-flush unless the manufacturer explicitly supports the procedure. Avoid direct skin contact with descaling solution." },
+    { q: " Set water hardness?", a: "Use the water-hardness setting specified by your machine. A TDS meter does not directly measure hardness; use a water-hardness test strip if you need to determine the appropriate setting." },
+    { q: " What should I check before buying a machine?", a: "Check the seller, warranty, return policy, service support, included accessories and current price. On delivery, record the unboxing and inspect the water tank, group head, portafilter, steam wand and controls before use." },
+    { q: " The water tank cracked / I need a spare part", a: "Do not use a cracked water tank. Contact the seller or manufacturer for the correct replacement part and check the machine’s service documentation. Do not repair a water tank with adhesive." },
+    { q: " Steam wand has milk buildup / weak steam", a: "Purge and wipe the wand immediately after every use. For buildup, follow the cleaning procedure in the machine manual and clear the steam holes carefully. If steam remains weak after cleaning, check the water level and service requirements." },
+    { q: " My THW portafilter chipped/broke", a: "Stop using a damaged portafilter and inspect the basket, gasket and fitment. The THW portafilter has received repeated complaints about fit, finish and durability, so replacement with a better-reviewed compatible model may be preferable." },
   ];
 
   const FAQ = [
-    { q: "the machine or the machine — which espresso machine?", a: "The group overwhelmingly votes <b>the machine</b> (the 'Duo' — adds cold brew + a better steam wand). The 685 is near-identical for espresso but has a weaker, smaller steam wand. If you can, get the 890." },
-    { q: "Do I really need to ditch the stock portafilter?", a: "For your best espresso, yes — a bottomless (naked) portafilter + non-pressurised basket lets you see channeling and actually improve. But <b>keep the pressurised stock one</b> for pre-ground coffee, lazy days, guests, and the Duo's cold-brew mode." },
-    { q: "How much should I spend on a grinder vs the machine?", a: "At least as much as the machine — ideally more. The grinder is the single biggest factor in cup quality after the beans. A great machine with a bad grinder makes bad espresso." },
-    { q: "Is a manual grinder fine, or do I need electric?", a: "Manual (Kingrinder K6 / Timemore C3 ESP) makes excellent espresso — it's just slow and a daily arm workout. Most people upgrade to electric (HiBrew G5 / Rift 64) within months. If budget allows, buy electric now and skip the regret." },
-    { q: "What ratio & dose should I start with?", a: "Double: <b>18g in → 36g out in ~25–32s</b> (1:2). Single: 9g → ~22g (1:2.5). Weigh everything; the machine's '2x' button actually pulls a lungo, so don't rely on it." },
-    { q: "Why is my espresso always sour?", a: "Usually under-extraction: (1) grind too coarse → grind finer; (2) shot brewing too cool — the espresso machine's thermoblock cools between heating and brewing. Use the <b>high-temp flush trick</b> (a quick blank hot-water flush right before you pull, then brew immediately) to run a hotter, sweeter shot. Medium / medium-dark roasts are the most forgiving start, but the flush trick lets you run lighter roasts too." },
+    { q: "the machine or the machine — which espresso machine?", a: "For a starter setup, prioritise temperature consistency, adequate steam performance, compatible accessories, service support and warranty coverage. Compare those factors alongside price." },
+    { q: "Do I really need to ditch the stock portafilter?", a: "A bottomless portafilter and non-pressurised basket are useful for learning because they make channeling visible. Keep a pressurised basket if you regularly use pre-ground coffee or want a more forgiving workflow." },
+    { q: "How much should I spend on a grinder vs the machine?", a: "The grinder deserves a substantial share of the budget because grind consistency has a major effect on extraction. A capable machine cannot compensate for an inconsistent grinder." },
+    { q: "Is a manual grinder fine, or do I need electric?", a: "A manual grinder can produce excellent espresso, but it takes longer per dose. Electric grinders are more convenient for frequent use. Choose based on budget, workflow and how often you make espresso." },
+    { q: "What ratio & dose should I start with?", a: "A useful starting point is <b>18g in → 36g out in about 25–32 seconds</b> (1:2). For a smaller basket, start around 9g and adjust the yield to taste. Weigh both dose and output rather than relying on preset buttons." },
+    { q: "Why is my espresso always sour?", a: "Sourness often indicates under-extraction. Try grinding finer, increasing the yield slightly, or checking that the machine is fully heated before brewing. Medium and medium-dark roasts are generally easier starting points." },
     { q: "Can I use pre-ground coffee?", a: "Yes, but only in the <b>pressurised</b> stock basket. In a bottomless/non-pressurised basket, stale pre-ground has no CO₂ left to build resistance, so it just gushes. Freshly ground is night-and-day better." },
-    { q: "Which milk steams best for a beginner?", a: "Lower-fat tetra-pack milk is more forgiving — <b>Amul Blue</b> or <b>Akshayakalpa</b> are frequently useds. Use it cold, purge the wand first, and keep it under 65°C." },
+    { q: "Which milk steams best for a beginner?", a: "Cold milk with moderate fat content is generally easier for beginners to texture. Start cold, purge the wand first and stop heating around 60–65°C." },
     { q: "How long do I rest beans after roasting?", a: "7–10 days off the roast date is the sweet spot (some go 2–3 weeks for darker roasts). Then use within ~a month. To store longer, degas ~10 days then freeze in single-dose portions." },
-    { q: "Do I need an expensive IMS basket?", a: "No. A good grinder + fresh beans + a decent precision basket beats a fancy basket with a bad grind. The THW portafilter already ships with an IMS-grade basket. Buy the IMS only when everything else is dialled in." },
-    { q: "What about the HiBrew H10A instead of the espresso machine?", a: "If your budget is ~₹25k, the H10A is a genuinely better machine (temp control, pressure gauge, stronger steam, 3 baskets in the box). The group's honest take: 'don't buy a espresso machine if you can spend 25k.' But the espresso machine is cheaper, more moddable, better supported in India, and a delightful gateway." },
-    { q: "Coffee after which time ruins sleep?", a: "Caffeine's half-life is ~5 hours (3–7h range), so a fair chunk is still in you 7 hours later. If you're sensitive, avoid coffee after ~6 PM. Or embrace 'darr ke aage caffeine hai' and accept the consequences. " },
+    { q: "Do I need an expensive IMS basket?", a: "No. Grinder quality, fresh beans and puck preparation usually matter more than upgrading from one good precision basket to another. If your current basket is consistent and fits correctly, there is no need to replace it immediately." },
+    { q: "What about the HiBrew H10A instead of the espresso machine?", a: "If your budget is around ₹25k, the H10A is another option to consider, particularly if temperature control, a pressure gauge and stronger steam performance are priorities. Compare specifications, current pricing and warranty terms before buying." },
+    { q: "Coffee after which time ruins sleep?", a: "Caffeine has a typical half-life of several hours, although it varies between individuals. If caffeine affects your sleep, consider avoiding coffee later in the day." },
   ];
 
   const YOUTUBERS = [
-    { name: "James Hoffmann", by: "the espresso bible", desc: "World Barista Champion. His espresso & dial-in videos are the canonical starting point. Watch 'The Best Espresso… ' and his milk videos.",
+    { name: "James Hoffmann", by: "espresso fundamentals", desc: "A useful source for espresso fundamentals, dialing in and milk preparation.",
       link: "https://www.youtube.com/@jameshoffmann", linkLabel: "youtube.com/@jameshoffmann" },
-    { name: "Lance Hedrick", by: "practical dial-in & milk", desc: "Genuinely the most useful practical channel for beginners — dialing in, puck prep, and milk steaming explained clearly.",
+    { name: "Lance Hedrick", by: "dialing in & milk", desc: "Practical videos on dialing in, puck preparation and milk steaming.",
       link: "https://www.youtube.com/@LanceHedrick", linkLabel: "youtube.com/@LanceHedrick" },
-    { name: "Tom's Coffee Corner", by: "THE espresso machine channel", desc: "The GOAT for this exact machine. espresso machine-specific mods, the bottomless conversion, and the machine milk steaming. Watch this for machine-specific tips.",
+    { name: "Tom's Coffee Corner", by: "espresso technique", desc: "Useful demonstrations of espresso preparation, equipment and milk steaming.",
       link: "https://www.youtube.com/@TomsCoffeeCorner", linkLabel: "youtube.com/@TomsCoffeeCorner" },
-    { name: "Daddy Got Coffee", by: "India-focused home barista", desc: "Great India-specific content — gear that's actually available here, beans you can actually buy, and beginner-friendly walkthroughs. Very relatable for the espresso machine crowd.",
+    { name: "Daddy Got Coffee", by: "India-focused home barista", desc: "India-focused content covering equipment availability, coffee beans and beginner-friendly preparation.",
       link: "https://www.youtube.com/@DaddyGotCoffee", linkLabel: "youtube.com/@DaddyGotCoffee" },
-    { name: "Morgan Drinks Coffee", by: "barista comedy + sanity checks", desc: "World-class barista, world-class roaster of your spending habits. Watch when you need to laugh at yourself before buying yet another grinder. The self-aware antidote to gear obsession.",
+    { name: "Morgan Drinks Coffee", by: "coffee education", desc: "Coffee and equipment content with an accessible approach to home brewing.",
       link: "https://www.youtube.com/@morgandrinkscoffee", linkLabel: "youtube.com/@morgandrinkscoffee" },
-    { name: "Alternative Brewing", by: "honest gear reviews", desc: "Australian channel doing clear, no-nonsense brewer/grinder/machine comparisons. The earnest expert to balance out all the jokes — go here before you spend real money.",
+    { name: "Alternative Brewing", by: "equipment reviews", desc: "Clear comparisons and reviews of brewing equipment, grinders and espresso machines.",
       link: "https://www.youtube.com/@AlternativeBrewing", linkLabel: "youtube.com/@AlternativeBrewing" },
   ];
 
@@ -206,40 +206,40 @@
     { name: "Latteholic", type: "Machines", desc: "India-focused machine distributor. Compare current pricing, stock and warranty terms before ordering.",
       link: "https://latteholic.com/", linkLabel: "latteholic.com" },
     { name: "espresso machine India (official)", type: "Machines", desc: "Official site for the espresso machine Duo the machine. Ships via Latteholic. Compare its price with sales before buying.",
-      link: "https://espresso machine.co.in/", linkLabel: "espresso machine.co.in" },
+      link: "https://www.delonghi.co.in/", linkLabel: "espresso machine.co.in" },
     { name: "Coffee Plus", type: "Grinders & gear", desc: "Reliable for grinders — Espressa Orbit 64, Kingrinder K6 (pre-order), Timemore. Good support, ~5% payment cashback.",
       link: "https://coffeeplus.in/", linkLabel: "coffeeplus.in" },
     { name: "Fix Coffee", type: "Grinders & accessories", desc: "HiBrew G5/H10A, DF54, tampers, dosing rings.",
       link: "https://fixcoffee.shop/", linkLabel: "fixcoffee.shop" },
     { name: "Cipher Brewing", type: "Grinders", desc: "Makers of the Rift 64 — excellent grinder, strong warranty support (they've replaced units). Support replies can be slow.",
       link: "https://cipherbrewing.com/", linkLabel: "cipherbrewing.com" },
-    { name: "Neouza", type: "Portafilters & baskets", desc: "Good bottomless portafilters with dose rings + tools. Ships from China (10–25 days). There's a espresso machineted 9 Bar Social buy group.",
+    { name: "Neouza", type: "Portafilters & baskets", desc: "Bottomless portafilters and related accessories. Shipping times and import costs vary by destination.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
-    { name: "Brewalsa", type: "Portafilters & baskets", desc: "Purpose-built 51mm bottomless portafilters & baskets for espresso machine.",
+    { name: "Brewalsa", type: "Portafilters & baskets", desc: "51mm bottomless portafilters and baskets for compatible espresso machines.",
       link: "https://brewalsa.com/", linkLabel: "brewalsa.com" },
-    { name: "Amazon India", type: "Everything", desc: "WDT/RDT tools, scales, puck screens, descaler. Use the gift-card + cashback-card trick to save. Watch big sales.",
+    { name: "Amazon India", type: "Everything", desc: "WDT/RDT tools, scales, puck screens and descaler. Compare current listings and prices before ordering.",
       link: "https://www.amazon.in/", linkLabel: "amazon.in" },
   ];
 
   const MODS = [
     { name: " Dimmer / flow-control mod", desc: "Add a dimmer to control pump pressure & flow — the gateway mod. Several clean write-ups exist on Reddit.",
-      link: "https://www.reddit.com/r/espresso/comments/1n77iil/modded_espresso machine_espresso machine/", linkLabel: "Modded espresso machine (r/espresso)" },
-    { name: " The espresso machine mod bible (GitHub)", desc: "CaiJonas' full hardware modification repo for the the machine/EC885 — pressure profiling, wiring, the works.",
-      link: "https://github.com/CaiJonas/espresso machine-espresso machine-EC885-the machine-modification", linkLabel: "github.com/CaiJonas" },
-    { name: " espresso machine Coach Buddy", desc: "A community-made web app to help log shots & dial in. Rough around the edges but a fun starting point.",
-      link: "https://espresso machine-coach-buddy.lovable.app/", linkLabel: "espresso machine-coach-buddy.lovable.app" },
-    { name: " r/IndiaCoffee", desc: "Where half this group came from. Buy/sell preloved gear, ask questions, find roaster reviews & free bean samples.",
+      link: "https://www.reddit.com/r/espresso/comments/1n77iil/modded_delonghi_dedica/", linkLabel: "Modded espresso machine (r/espresso)" },
+    { name: " The espresso machine mod bible (GitHub)", desc: "A detailed hardware modification repository covering pressure profiling, wiring and related technical work.",
+      link: "https://github.com/CaiJonas/DeLonghi-Dedica-EC885-EC685-modification", linkLabel: "github.com/CaiJonas" },
+    { name: " Espresso Coach Buddy", desc: "A community-made web app for logging shots and dialing in espresso.",
+      link: "https://dedica-coach-buddy.lovable.app/", linkLabel: "espresso machine-coach-buddy.lovable.app" },
+    { name: " r/IndiaCoffee", desc: "A community for buying and selling used equipment, asking questions and discussing Indian coffee.",
       link: "https://www.reddit.com/r/IndiaCoffee/", linkLabel: "reddit.com/r/IndiaCoffee" },
-    { name: " Community bean price sheet", desc: "A crowd-maintained spreadsheet comparing Indian coffee bean prices by ₹/gram. Find the cheapest fresh beans.",
+    { name: " Community bean price sheet", desc: "A community-maintained spreadsheet comparing Indian coffee bean prices by approximate ₹/gram.",
       link: "https://docs.google.com/spreadsheets/u/0/d/1qj5oSo6gBcBq2cdFhcIouNtfLc3VQJgsDX-U31OSnnc/htmlview", linkLabel: "Open the price sheet" },
-    { name: " DIY smart scale (ESP32)", desc: "For the truly gone: build a Bluetooth shot scale with an ESP32 + load cell. The deep end of the espresso setup.",
+    { name: " DIY smart scale (ESP32)", desc: "A project for users interested in building a Bluetooth shot scale with an ESP32 and load cell.",
       link: "https://www.reddit.com/r/espresso/", linkLabel: "Get inspired (r/espresso)" },
   ];
 
   /* ---------- RENDER ---------- */
 
   // Ticker
-  const tickerItems = [" spend on the grinder"," go bottomless"," fresh beans win"," sour? grind finer"," descale monthly"," film your unboxing"," purge the wand"," weigh everything"," flush hot, brew fast"," change one variable"," watch the sales"," down the espresso setup"," it's a scam (we bought it anyway)"];
+  const tickerItems = [" prioritise the grinder"," consider a bottomless portafilter"," use fresh beans"," sour? grind finer"," descale regularly"," record your unboxing"," purge the wand"," weigh dose and yield"," preheat before brewing"," change one variable at a time"," compare current prices"," improve your workflow"];
   const tk = $("#tickerTrack");
   if (tk) {
     const span = el("span", null, tickerItems.join(" &nbsp;•&nbsp; ") + " &nbsp;•&nbsp; ");
@@ -250,8 +250,8 @@
   // Rabbit meter (tracks max of scroll depth & kit progress) — declared early so it's safe to call from the checklist
   const rabbitFill = $("#rabbitMeter"), rabbitLabel = $("#rabbitLabel");
   const rabbitStages = [
-    [0, "just a curious beginner…"], [20, "ooh, a bottomless portafilter "], [40, "you bought a scale, didn't you"],
-    [60, "explaining 'channeling' at parties"], [80, "eyeing a ₹20k grinder "], [95, "soldering a dimmer mod at 2am "],
+    [0, "Getting started"], [20, "Basic equipment"], [40, "Dialing in"],
+    [60, "Improving consistency"], [80, "Considering advanced equipment"], [95, "Advanced modifications"],
   ];
   let rabbitVal = 8;
   function setRabbit(v) {
@@ -264,17 +264,12 @@
 
   // Checklist
   const checklistEl = $("#checklist");
-  const KIT_KEY = "espresso machine_kit_v1";
+  const KIT_KEY = "9bar_social_espresso_kit_v1";
   let kitState = JSON.parse(localStorage.getItem(KIT_KEY) || "{}");
   const kitMsgs = [
-    "Press a checkbox to begin your descent. ",
-    "Baby steps. The beans await. ",
-    "You're committing. No going back now.",
-    "Halfway down the hole. ",
-    "Your wallet is nervous. Keep going.",
-    "Almost a real home barista now…",
-    "Look at you. A whole setup.",
-    "Certified espresso machine menace. ",
+    "Select an item to begin.", "A basic setup is taking shape.", "You have the core equipment.",
+    "More than half of the checklist is complete.", "The setup is becoming more complete.", "Only a few items remain.",
+    "The main equipment is covered.", "Checklist complete.",
   ];
   function renderChecklist() {
     checklistEl.innerHTML = "";
@@ -466,7 +461,7 @@
     if (runner) {
       runner.style.left = Math.min(94, Math.max(4, pct)) + "%";
       runner.classList.toggle("flip", pct > 55);
-      runnerPct.textContent = pct >= 99 ? "you're all the way down " : pct + "% down the hole";
+      runnerPct.textContent = pct >= 99 ? "Complete" : pct + "% complete";
     }
     setRabbit(Math.round(scrolled * 92));
   }
@@ -498,9 +493,9 @@
   // Floating beans
   const beansBg = $(".beans-bg");
   if (beansBg && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const emojis = ["", "", ""];
+    const symbols = ["", "", ""];
     for (let i = 0; i < 14; i++) {
-      const b = el("span", "bean", emojis[i % emojis.length]);
+      const b = el("span", "bean", symbols[i % symbols.length]);
       b.style.left = Math.random() * 100 + "vw";
       b.style.animationDuration = (16 + Math.random() * 20) + "s";
       b.style.animationDelay = (-Math.random() * 30) + "s";
@@ -511,7 +506,7 @@
 
   // Bean burst on 100% kit
   function beanBurst() {
-    toast(" Full kit unlocked. You menace.");
+    toast("Checklist complete.");
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     for (let i = 0; i < 26; i++) {
       const b = el("div", null, Math.random() > .5 ? "" : "");
@@ -525,13 +520,6 @@
       setTimeout(() => b.remove(), 1200);
     }
   }
-
-  // Konami-ish easter egg: type "beans"
-  let buf = "";
-  window.addEventListener("keydown", e => {
-    buf = (buf + e.key).slice(-5).toLowerCase();
-    if (buf === "beans") { beanBurst(); toast(" you found the beans"); }
-  });
 
   // Active nav link on scroll
   const sections = $$("main section[id]");
