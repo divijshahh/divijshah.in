@@ -56,7 +56,7 @@ For server/configuration work:
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | HISTORICAL | v1.0.2 placeholder lineage |
 | QR placeholder | HISTORICAL | replaced by contact-first QR page |
-| Final QR business-card experience | IMPLEMENTED | v1.1.3; mobile-first contact card |
+| Final QR business-card experience | IMPLEMENTED | v1.1.4; mobile-first contact card |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
@@ -360,7 +360,7 @@ Do not replace it with a generic provider error page.
 
 Source directory: `qr-site/`
 Intended hostname: `qr.divijshah.in`
-Current version: **v1.1.3**
+Current version: **v1.1.4**
 
 ### Architecture
 
@@ -395,7 +395,7 @@ The implemented QR page contains:
 - Save contact action backed by `divij-shah.vcf`;
 - WhatsApp, Call, Email, LinkedIn and CV rows in the specified order;
 - Bombay, India · © 2026 Divij Shah;
-- v1.1.3;
+- v1.1.4;
 - visible lamp theme switch.
 
 The page is deliberately compact and intended to fit one viewport. Its current layout uses `100svh` and hides overflow.
@@ -414,7 +414,7 @@ Do not put QR behind Cloudflare Access.
 
 ### QR future work
 
-The final contact-first business-card landing experience is implemented as QR v1.1.3.
+The final contact-first business-card landing experience is implemented as QR v1.1.4.
 
 Implemented constraints:
 - name: DIVIJ SHAH;
@@ -557,7 +557,7 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 Current versions:
 
 - main site: v1.2.7
-- QR site: v1.1.3
+- QR site: v1.1.4
 
 Versions are independent.
 
@@ -565,7 +565,7 @@ User prefers semver-ish increments and patch-style increments for smaller change
 
 When a substantive site change is made, update the affected site's visible version. Do not bump both sites for a change affecting only one.
 
-The QR implementation is v1.1.3. Earlier v1.0.2/v1.1.0 references in historical documentation describe prior states only.
+The QR implementation is v1.1.4. Earlier v1.0.2/v1.1.0 references in historical documentation describe prior states only.
 
 ## 17. File map
 
@@ -704,3 +704,37 @@ Check the deployed QR page on an iPhone and iPad in both light and dark mode to 
 
 ### Commit
 Multiple direct main-branch commits were used because the available GitHub connector did not expose the current base tree SHA needed to construct a single atomic tree commit.
+
+
+## 2026-09-28 — QR LinkedIn icon alignment repair
+
+### User request
+Fix the LinkedIn contact icon specifically because it was the only QR contact icon whose alignment/geometry looked off.
+
+### Inspected
+- Current `qr-site/style.css` icon sizing rules.
+- `qr-site/index.html` contact-row markup.
+- Current light and dark LinkedIn SVG assets.
+- Compared the LinkedIn artwork bounds against the other QR contact icons.
+
+### Cause
+The LinkedIn SVG's right-side path extended almost to the 24px viewBox boundary and had a wider/heavier visual footprint than the other 19px contact icons. The issue was in the SVG geometry, not the shared flex/CSS alignment.
+
+### Changed
+- Rebuilt `linkedin.svg` with tighter, optically centered geometry.
+- Applied the exact same geometry to `linkedin-dark.svg`, changing only the fill color.
+- Kept the existing 24x24 viewBox and filled LinkedIn visual style.
+- Bumped the QR visible version from v1.1.3 to v1.1.4.
+
+### Not changed
+- Call, Email, CV or WhatsApp assets.
+- Contact-row CSS, layout, spacing, copy, URLs, vCard, lamp, responsive breakpoints or theme architecture.
+- Main website.
+
+### Verification
+- Confirmed both LinkedIn assets now use matching normalized geometry.
+- Confirmed the QR page references the existing light/dark LinkedIn assets.
+- Live browser/device rendering remains unavailable, so deployed visual QA is not claimed.
+
+### Version
+QR v1.1.4.
