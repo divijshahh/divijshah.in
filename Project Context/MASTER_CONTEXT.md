@@ -47,12 +47,12 @@ For server/configuration work:
 
 | Area | Status | Current state |
 |---|---|---|
-| Main homepage | IMPLEMENTED/STABLE | v1.2.6 |
+| Main homepage | IMPLEMENTED/STABLE | v1.2.7 |
 | Main theme/lamp | IMPLEMENTED/STABLE | light/dark |
 | Main service grid | IMPLEMENTED/STABLE | Files, Media, Photos, Requests, Status |
 | Main navigation | IMPLEMENTED/STABLE | Home + CV |
-| CV page | IMPLEMENTED/STABLE | v1.2.6 |
-| Custom 404 | IMPLEMENTED/STABLE | main visual system |
+| CV page | IMPLEMENTED/STABLE | v1.2.7 |
+| Custom 404 | IMPLEMENTED/STABLE | v1.2.7, main visual system |
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | IMPLEMENTED | v1.0.2 |
 | QR placeholder | IMPLEMENTED | local under-construction SVG |
@@ -143,7 +143,7 @@ Established design rules:
 - service cards use a uniform background treatment;
 - varied backgrounds for individual cards were explicitly rejected as looking shabby;
 - service icons should be visually substantial rather than tiny;
-- status dots are present on service cards and use the Uptime Kuma visual language;
+- status dots are present on self-hosted service cards and use the Uptime Kuma visual language;
 - DS favicon/mark is the identity mark;
 - no unnecessary decorative elements;
 - no animations unless explicitly requested;
@@ -549,7 +549,7 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 
 Current versions:
 
-- main site: v1.2.6
+- main site: v1.2.7
 - QR site: v1.0.2
 
 Versions are independent.
