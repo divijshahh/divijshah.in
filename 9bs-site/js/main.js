@@ -247,11 +247,11 @@
   ];
 
   const GALLERY = [
-    { src: "assets/img/latte-tulip.jpg", cap: "A clean tulip. Goals." },
-    { src: "assets/img/latte-swan.jpg", cap: "Phoenix? Swan? Mozilla fox? Group couldn't agree." },
-    { src: "assets/img/setup-corner.jpg", cap: "A tidy little Dedica + grinder corner." },
-    { src: "assets/img/latte-attempt.jpg", cap: "Latte art is a journey. This is the journey." },
-    { src: "assets/img/basket-ims-vs-generic.jpg", cap: "Generic vs IMS basket — spot the precision." },
+    { src: "https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/latte-tulip.jpg", cap: "A clean tulip. Goals." },
+    { src: "https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/latte-swan.jpg", cap: "Phoenix? Swan? Mozilla fox? Group couldn't agree." },
+    { src: "https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/setup-corner.jpg", cap: "A tidy little Dedica + grinder corner." },
+    { src: "https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/latte-attempt.jpg", cap: "Latte art is a journey. This is the journey." },
+    { src: "https://cdn.jsdelivr.net/gh/t0r0id/dedica-decoded@main/assets/img/basket-ims-vs-generic.jpg", cap: "Generic vs IMS basket — spot the precision." },
   ];
 
   const QUOTES = [
