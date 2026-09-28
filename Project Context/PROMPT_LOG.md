@@ -535,3 +535,27 @@ Remove the Uptime Kuma-style status indicators from the LinkedIn and Email cards
 
 ### Result
 Personal social/contact links no longer visually imply service uptime, while the service grid retains its Uptime Kuma-style status indicators.
+
+
+## 2026-09-28 — QR mobile/device requirements clarified
+
+### User request
+Clarified the QR business-card implementation before approval:
+- keep the lamp theme control;
+- optimize the lamp specifically for phones;
+- treat mobile as the primary design target;
+- pay special attention to iPhone viewport dimensions;
+- explicitly optimize responsive behavior for iPad as a separate device class because tablet use is expected.
+
+### Changed
+No website implementation yet. These are implementation constraints only.
+
+### Decision/constraint
+- QR remains mobile-first.
+- Phone targets must be checked against common iPhone CSS viewport sizes, including narrow 375px layouts and modern 390px/393px/430px widths.
+- iPad must receive deliberate tablet responsive treatment rather than simply inheriting the phone layout. Target portrait and landscape classes around 768px, 820px, 834px and 1024px CSS widths.
+- The lamp remains visible and functional, with touch-safe sizing/positioning and safe-area awareness on phones.
+- Desktop remains a wider presentation of the same layout, not the design source.
+
+### Follow-up
+Implementation remains blocked until the user gives the previously requested `approved` confirmation.
