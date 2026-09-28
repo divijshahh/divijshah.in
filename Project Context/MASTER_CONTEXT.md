@@ -47,16 +47,16 @@ For server/configuration work:
 
 | Area | Status | Current state |
 |---|---|---|
-| Main homepage | IMPLEMENTED/STABLE | v1.2.7 |
+| Main homepage | IMPLEMENTED/STABLE | v1.2.9 |
 | Main theme/lamp | IMPLEMENTED/STABLE | light/dark |
 | Main service grid | IMPLEMENTED/STABLE | Files, Media, Photos, Requests, Status |
 | Main navigation | IMPLEMENTED/STABLE | Home + CV |
-| CV page | IMPLEMENTED/STABLE | v1.2.7 |
-| Custom 404 | IMPLEMENTED/STABLE | v1.2.7, main visual system |
+| CV page | IMPLEMENTED/STABLE | v1.2.9 |
+| Custom 404 | IMPLEMENTED/STABLE | v1.2.9, main visual system |
 | SEO/metadata | IMPLEMENTED/STABLE | canonical, OG/Twitter, JSON-LD, sitemap, robots |
 | QR shell | HISTORICAL | v1.0.2 placeholder lineage |
 | QR placeholder | HISTORICAL | replaced by contact-first QR page |
-| Final QR business-card experience | IMPLEMENTED | v1.1.4; mobile-first contact card |
+| Final QR business-card experience | IMPLEMENTED | v1.1.6; mobile-first contact card |
 | home.divijshah.in | PLANNED | custom static frontend replacing Homarr-facing experience |
 | Public homelab ingress | IMPLEMENTED | Oracle + Caddy + Tailscale |
 | Authelia | IMPLEMENTED | authentication/OIDC |
@@ -133,7 +133,7 @@ Footer:
 
 - Bombay, India
 - © 2026 Divij Shah
-- v1.2.7
+- v1.2.9
 
 Important personal-state constraint: the user is **not a lawyer yet**. Do not write "lawyer" into the site/bio/signature unless the user explicitly changes this.
 
@@ -168,7 +168,7 @@ h1 {
   color: #161614;
   font-size: clamp(54px, 9.75vw, 105px);
   line-height: .84;
-  letter-spacing: -.075em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
@@ -233,7 +233,7 @@ Do not re-add About or a main-site Reading link.
 - renders `cv.pdf` using PDF.js;
 - keeps direct PDF download;
 - uses the same footer/navigation;
-- is v1.2.7.
+- is v1.2.9.
 
 The PDF.js renderer was deliberately retained. Do not replace it with a native PDF iframe/viewer without explicit instruction.
 
@@ -360,7 +360,7 @@ Do not replace it with a generic provider error page.
 
 Source directory: `qr-site/`
 Intended hostname: `qr.divijshah.in`
-Current version: **v1.1.4**
+Current version: **v1.1.6**
 
 ### Architecture
 
@@ -395,7 +395,7 @@ The implemented QR page contains:
 - Save contact action backed by `divij-shah.vcf`;
 - WhatsApp, Call, Email, LinkedIn and CV rows in the specified order;
 - Bombay, India · © 2026 Divij Shah;
-- v1.1.4;
+- v1.1.6;
 - visible lamp theme switch.
 
 The page is deliberately compact and intended to fit one viewport. Its current layout uses `100svh` and hides overflow.
@@ -414,7 +414,7 @@ Do not put QR behind Cloudflare Access.
 
 ### QR future work
 
-The final contact-first business-card landing experience is implemented as QR v1.1.4.
+The final contact-first business-card landing experience is implemented as QR v1.1.6.
 
 Implemented constraints:
 - name: DIVIJ SHAH;
@@ -565,7 +565,7 @@ User prefers semver-ish increments and patch-style increments for smaller change
 
 When a substantive site change is made, update the affected site's visible version. Do not bump both sites for a change affecting only one.
 
-The QR implementation is v1.1.4. Earlier v1.0.2/v1.1.0 references in historical documentation describe prior states only.
+The QR implementation is v1.1.6. Earlier v1.0.2/v1.1.0 references in historical documentation describe prior states only.
 
 ## 17. File map
 
@@ -724,7 +724,7 @@ The LinkedIn SVG's right-side path extended almost to the 24px viewBox boundary 
 - Rebuilt `linkedin.svg` with tighter, optically centered geometry.
 - Applied the exact same geometry to `linkedin-dark.svg`, changing only the fill color.
 - Kept the existing 24x24 viewBox and filled LinkedIn visual style.
-- Bumped the QR visible version from v1.1.3 to v1.1.4.
+- Bumped the QR visible version from v1.1.3 to v1.1.6.
 
 ### Not changed
 - Call, Email, CV or WhatsApp assets.
@@ -737,7 +737,7 @@ The LinkedIn SVG's right-side path extended almost to the 24px viewBox boundary 
 - Live browser/device rendering remains unavailable, so deployed visual QA is not claimed.
 
 ### Version
-QR v1.1.4.
+QR v1.1.6.
 
 
 ## 2026-09-28 — DIVIJ SHAH title tracking refinement
@@ -748,8 +748,8 @@ Reduce the letter-spacing across all sites because the `IVI` sequence in `DIVIJ`
 ### Changed
 - Main site title tracking: `-0.075em` -> `-0.045em`.
 - QR site title tracking: `-0.075em` -> `-0.045em`.
-- Bumped main site v1.2.7 -> v1.2.8.
-- Bumped QR site v1.1.4 -> v1.1.5.
+- Bumped main site v1.2.9 -> v1.2.8.
+- Bumped QR site v1.1.6 -> v1.1.5.
 
 ### Not changed
 Font family, font size, weight, line height, title positioning, layout or other typography.
