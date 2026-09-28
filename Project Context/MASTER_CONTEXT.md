@@ -544,18 +544,6 @@ Replace the under-construction placeholder after the user decides the actual des
 Status: PLANNED.
 Custom static frontend intended to replace the public-facing Homarr concept. Do not simply expose/restyle Homarr unless explicitly asked.
 
-### read.divijshah.in
-Status: PLANNED.
-Karakeep frontend, separate from the main site.
-
-### Domain email
-Status: IN PROGRESS/PLANNED.
-Inbound routing through Cloudflare; outbound sending remains future work.
-
-### Homelab transactional mail
-Status: DISCUSSION/PLANNED.
-Do not select/deploy a mail provider without checking requirements/current setup.
-
 ## 15. Explicitly deleted/rejected approaches
 
 - About page: deleted, do not restore.
@@ -629,9 +617,7 @@ When exact historical reasoning matters, inspect Git history rather than guessin
 1. Final QR/business-card landing experience.
 2. Custom home.divijshah.in frontend.
 3. read.divijshah.in Karakeep frontend.
-4. Finalize inbound domain-email setup/aliases as needed.
-5. Decide and implement outbound @divijshah.in mail later.
-6. Optional browser QA after future visual changes.
+4. Optional browser QA after future visual changes.
 
 Nothing in this list should be treated as implemented.
 
