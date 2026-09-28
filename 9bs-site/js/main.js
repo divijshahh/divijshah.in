@@ -13,7 +13,7 @@
   /* ---------- DATA ---------- */
 
   const STARTER_KIT = [
-    { t: "A espresso machine espresso machine", d: "the machine (Duo, has cold brew) or the machine. They're near-identical for espresso. ~₹12k open-box, ~₹20k new on Amazon." },
+    { t: "A espresso machine espresso machine", d: "the machine (Duo, has cold brew) or the machine. They're near-identical for espresso. Current pricing varies by seller and availability." },
     { t: "An espresso-capable grinder", d: "The make-or-break purchase. Manual K6 / Timemore C3 ESP, or electric HiBrew G5 / Rift 64." },
     { t: "Fresh, medium-roast beans", d: "Rest 7–10 days off roast date. Medium roasts are the easiest start; lighter roasts shine once you learn the high-temp flush trick." },
     { t: "A non-pressurised basket (51mm)", d: "The real upgrade from the stock pressurised setup. Get a precision (IMS) basket if budget allows, or a bottomless portafilter that comes with one (THW / Neouza / Brewalsa). Real legends just chop their stock portafilter into a bottomless one. " },
@@ -44,7 +44,7 @@
     { name: "Cipher Rift 64 / Espressa Orbit 64", price: "~₹19–21k", tags: ["electric"], badge: ["pick", "Popular option"],
       desc: "64mm flat-burr single-dose grinder (Rift/Orbit/Shardor are the same platform). The sweet-spot upgrade. Get the single-dose hopper; metal body if you can.",
       pros: ["64mm flat burrs = clarity", "Easy clean, low retention", "Burr-swappable later"], cons: ["Plastic body version can crack — pay ~5k more for metal"],
-      link: "https://coffeeplus.in/products/espressa-orbit-64-home-grinder", linkLabel: "Coffee Plus (code PRE5)" },
+      link: "https://coffeeplus.in/products/espressa-orbit-64-home-grinder", linkLabel: "Coffee Plus ()" },
     { name: "Turin DF54", price: "~₹27k", tags: ["electric", "endgame"], badge: ["pick", "End-game-ish"],
       desc: "Best-looking grinder in the budget tier, with a full all-metal build. 54mm flat burrs, with a titanium-coated burr option. 'Sounds like music.'",
       pros: ["Gorgeous, sturdy all-metal build", "Titanium burr option", "Excellent clarity"], cons: ["Pricey"],
@@ -76,14 +76,14 @@
       desc: "~₹1.56/g — a genuine value daily driver. Balanced, not watery. A common choice for 'seasoning' a new setup.",
       link: "https://www.hunkalestatecoffee.com/collections/all/products/aranya-gold-coffee-beans", linkLabel: "hunkalestatecoffee.com" },
     { name: "Fraction9 — Everyday Gold", price: "~₹470 / 250g", tags: ["budget", "milk", "specialty"], badge: ["pick", "Crowd favourite"],
-      desc: "Medium-dark, consistent roasting, cacao + nutty. Bold, daily-driveable. Free delivery over ₹2k. Use code FARM15.",
-      link: "https://fraction9coffee.com/", linkLabel: "fraction9coffee.com (FARM15)" },
+      desc: "Medium-dark, consistent roasting, cacao + nutty. Bold, daily-driveable. Free delivery over ₹2k. Use.",
+      link: "https://fraction9coffee.com/", linkLabel: "fraction9coffee.com ()" },
     { name: "Blue Tokai — Attikan / Vienna / Dhak", price: "~₹500+ / 250g", tags: ["specialty", "milk"], badge: ["pick", "Reliable specialty"],
-      desc: "Roast date + process printed on every pack. Store pickup = freshest. Vienna (dark) & Dhak blend shine for milk. Code HELLOSUMMER.",
-      link: "https://bluetokaicoffee.com/", linkLabel: "bluetokaicoffee.com (HELLOSUMMER)" },
+      desc: "Roast date + process printed on every pack. Store pickup = freshest. Vienna (dark) & Dhak blend shine for milk..",
+      link: "https://bluetokaicoffee.com/", linkLabel: "bluetokaicoffee.com ()" },
     { name: "Naivo — Attikan White Mist", price: "~₹450 / 250g", tags: ["specialty"], badge: ["pick", "Group loved"],
-      desc: "'Kya pyaari coffee.' Nutty notes that survive into milk. Roasts next-day after order (fresh!) but delivery can be slow. Code HELLONAIVO.",
-      link: "https://naivo.in/", linkLabel: "naivo.in (HELLONAIVO)" },
+      desc: "'Kya pyaari coffee.' Nutty notes that survive into milk. Roasts next-day after order (fresh!) but delivery can be slow..",
+      link: "https://naivo.in/", linkLabel: "naivo.in ()" },
     { name: "Mokka Farms", price: "~₹600 / 500g", tags: ["budget"], badge: ["neutral", "Divisive"],
       desc: "Cheap practice beans (try 50:50 or 80:20). Roasting can be inconsistent — some love it for the price, one member said 'never again.' You decide.",
       link: "https://www.mokkafarms.com/", linkLabel: "mokkafarms.com" },
@@ -106,8 +106,8 @@
       desc: "Ships from China (10–25 days, ~₹600 shipping). Comes with dose rings + cleaning tools. Card payments can be fussy — One Card / Forex / Scapia tend to work.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
     { name: "Brewalsa 51mm (Made for espresso machine)", price: "~₹2.1k + ship", tags: [], badge: ["neutral", "Purpose-built"],
-      desc: "Wooden-handle SS portafilter explicitly made for espresso machine compatible 51mm machines. Use code BREWALSA_2026.",
-      link: "https://brewalsa.com/", linkLabel: "brewalsa.com (BREWALSA_2026)" },
+      desc: "Wooden-handle SS portafilter explicitly made for espresso machine compatible 51mm machines. Use.",
+      link: "https://brewalsa.com/", linkLabel: "brewalsa.com ()" },
     { name: "DIY: 'circumcise' your stock PF", price: "~₹50–100", tags: [], badge: ["neutral", "Jugaad route"],
       desc: "Take the stock portafilter to a welder/fabricator and chop the spout off the bottom. Cheap & works — just don't cut all the way to the top (it can snap when you knock). Smooth the edge after.",
       link: "https://www.youtube.com/results?search_query=espresso machine+espresso machine+bottomless+portafilter+mod", linkLabel: "How-to videos" },
@@ -166,7 +166,7 @@
     { q: " The basket gets stuck in the group head (need a knife to remove)", a: "Super common with the stock portafilter. Fixes: use a bit less coffee (keep it below the basket 'ears'); if it's stuck, run a shot and the pressure pops it off; use a puck screen; pull the portafilter slightly <b>upward</b> as you remove it; or just switch to a bottomless portafilter and the problem disappears." },
     { q: " Descaling light came on — what do I do?", a: "It's based on shot count + your water-hardness setting, roughly monthly / ~100 shots. Use espresso machine descaler (~₹750) or aftermarket (~₹600 for six), or food-safe citric acid. The espresso machine has <b>no 3-way valve and no blind basket</b>, so you can't back-flush — just run the descale cycle. Don't touch the liquid bare-handed." },
     { q: " Set water hardness?", a: "Long-press the steam button ~10s to enter settings (levels 1–3, higher = harder water). If you run RO/soft water, a low setting is fine. A TDS meter does <i>not</i> measure hardness — use a test strip if you have one (most boxes don't include it; buy on Amazon)." },
-    { q: " Should I buy open-box (e.g. Latteholic)?", a: "<b>It's the group's most debated question.</b> Open-box saves ~₹8k (≈₹12k vs ~₹20k new on Amazon — sometimes 10k+), and most units arrive basically new with only minor cosmetic marks. But it's a genuine gamble: one member's tank arrived broken and the replacement was <i>also</i> damaged; one machine's pump failed after a couple of months and is back with Latteholic for repair — whether the warranty gets honoured cleanly is still to be seen. So <b>film one continuous unboxing video</b>, go in eyes-open, and decide if the saving is worth the risk. Want zero chance of a flaw? Buy sealed/new." },
+    { q: " What should I check before buying a machine?", a: "<b>It's the group's most debated question.</b>  saves ~₹8k (≈₹12k vs ~₹20k new on Amazon — sometimes 10k+), and most units arrive basically new with only minor cosmetic marks. But it's a genuine gamble: one member's tank arrived broken and the replacement was <i>also</i> damaged; one machine's pump failed after a couple of months and is back with Latteholic for repair — whether the warranty gets honoured cleanly is still to be seen. So <b>film one continuous unboxing video</b>, go in eyes-open, and decide if the saving is worth the risk. Want zero chance of a flaw? Buy sealed/new." },
     { q: " The water tank cracked / I need a spare part", a: "Tanks are fragile and crack in transit. A replacement tank runs ~₹1–1.5k (don't believe inflated ₹5k Amazon listings; ask the seller). Spare parts for EC680/685 are at pgservice.cc. Do NOT patch a tank with super-glue — it's not food-safe." },
     { q: " Steam wand has milk buildup / weak steam", a: "Purge & wipe the wand immediately after every steam. For buildup, soak the tip and clear the holes with a pin. The the machine's tiny wand is weak by design — some people upgrade to a Rancilio-style wand (a mod), but technique fixes most of it." },
     { q: " My THW portafilter chipped/broke", a: "Usually from grinding super fine + over-pressure, sometimes when reseating the rubber gasket. The current stock is reportedly more robust; most users report theirs is solid. Don't force a too-fine grind into a naked basket." },
@@ -187,16 +187,6 @@
     { q: "Coffee after which time ruins sleep?", a: "Caffeine's half-life is ~5 hours (3–7h range), so a fair chunk is still in you 7 hours later. If you're sensitive, avoid coffee after ~6 PM. Or embrace 'darr ke aage caffeine hai' and accept the consequences. " },
   ];
 
-  const COUPONS = [
-    { vendor: "Fraction9", code: "FARM15", discount: "15% off coffee" },
-    { vendor: "Fraction9", code: "FARM2CUP12", discount: "12% off coffee" },
-    { vendor: "Naivo", code: "HELLONAIVO", discount: "10% off" },
-    { vendor: "Blue Tokai", code: "HELLOSUMMER", discount: "on coffee" },
-    { vendor: "Fix Coffee", code: "SCL12", discount: "12% off gear" },
-    { vendor: "Coffee Plus", code: "PRE5", discount: "select grinders" },
-    { vendor: "Brewalsa", code: "BREWALSA_2026", discount: "portafilter" },
-  ];
-
   const YOUTUBERS = [
     { name: "James Hoffmann", by: "the espresso bible", desc: "World Barista Champion. His espresso & dial-in videos are the canonical starting point. Watch 'The Best Espresso… ' and his milk videos.",
       link: "https://www.youtube.com/@jameshoffmann", linkLabel: "youtube.com/@jameshoffmann" },
@@ -213,19 +203,19 @@
   ];
 
   const SELLERS = [
-    { name: "Latteholic", type: "Machines (new + open-box)", desc: "The trusted India distributor (also fulfils espresso machine.co.in). the machine ~₹20k new (Amazon), ~₹12k open-box (10k+ on a good day). Open-box is sold with the 1-year warranty — though whether they honour it smoothly on a real fault is still being tested. The group's go-to regardless; just film your unboxing.",
+    { name: "Latteholic", type: "Machines", desc: "The trusted India distributor (also fulfils espresso machine.co.in). the machine current machine pricing The group's go-to regardless; just film your unboxing.",
       link: "https://latteholic.com/", linkLabel: "latteholic.com" },
     { name: "espresso machine India (official)", type: "Machines", desc: "Official site for the espresso machine Duo the machine. Ships via Latteholic. Compare its price with sales before buying.",
       link: "https://espresso machine.co.in/", linkLabel: "espresso machine.co.in" },
-    { name: "Coffee Plus", type: "Grinders & gear", desc: "Reliable for grinders — Espressa Orbit 64, Kingrinder K6 (pre-order), Timemore. Good support, ~5% payment cashback. Code PRE5.",
+    { name: "Coffee Plus", type: "Grinders & gear", desc: "Reliable for grinders — Espressa Orbit 64, Kingrinder K6 (pre-order), Timemore. Good support, ~5% payment cashback..",
       link: "https://coffeeplus.in/", linkLabel: "coffeeplus.in" },
-    { name: "Fix Coffee", type: "Grinders & accessories", desc: "HiBrew G5/H10A, DF54, tampers, dosing rings. Code SCL12.",
+    { name: "Fix Coffee", type: "Grinders & accessories", desc: "HiBrew G5/H10A, DF54, tampers, dosing rings..",
       link: "https://fixcoffee.shop/", linkLabel: "fixcoffee.shop" },
     { name: "Cipher Brewing", type: "Grinders", desc: "Makers of the Rift 64 — excellent grinder, strong warranty support (they've replaced units). Support replies can be slow.",
       link: "https://cipherbrewing.com/", linkLabel: "cipherbrewing.com" },
     { name: "Neouza", type: "Portafilters & baskets", desc: "Good bottomless portafilters with dose rings + tools. Ships from China (10–25 days). There's a espresso machineted 9 Bar Social buy group.",
       link: "https://neouza.com/", linkLabel: "neouza.com" },
-    { name: "Brewalsa", type: "Portafilters & baskets", desc: "Purpose-built 51mm bottomless portafilters & baskets for espresso machine. Code BREWALSA_2026.",
+    { name: "Brewalsa", type: "Portafilters & baskets", desc: "Purpose-built 51mm bottomless portafilters & baskets for espresso machine..",
       link: "https://brewalsa.com/", linkLabel: "brewalsa.com" },
     { name: "Amazon India", type: "Everything", desc: "WDT/RDT tools, scales, puck screens, descaler. Use the gift-card + cashback-card trick to save. Watch big sales.",
       link: "https://www.amazon.in/", linkLabel: "amazon.in" },
@@ -244,30 +234,6 @@
       link: "https://docs.google.com/spreadsheets/u/0/d/1qj5oSo6gBcBq2cdFhcIouNtfLc3VQJgsDX-U31OSnnc/htmlview", linkLabel: "Open the price sheet" },
     { name: " DIY smart scale (ESP32)", desc: "For the truly gone: build a Bluetooth shot scale with an ESP32 + load cell. The deep end of the espresso setup.",
       link: "https://www.reddit.com/r/espresso/", linkLabel: "Get inspired (r/espresso)" },
-  ];
-
-  const GALLERY = [
-    { src: "assets/img/latte-tulip.jpg", cap: "A clean tulip. Goals." },
-    { src: "assets/img/latte-swan.jpg", cap: "Phoenix? Swan? Mozilla fox? Group couldn't agree." },
-    { src: "assets/img/setup-corner.jpg", cap: "A tidy little espresso machine + grinder corner." },
-    { src: "assets/img/latte-attempt.jpg", cap: "Latte art is a journey. This is the journey." },
-    { src: "assets/img/basket-ims-vs-generic.jpg", cap: "Generic vs IMS basket — spot the precision." },
-  ];
-
-  const QUOTES = [
-    { t: "Welcome to the espresso setup and hope you have fun lol", w: "— a kindly senior member, to every newbie" },
-    { t: "1. trash the portafilter. 2. buy a bottomless portafilter (sorry, it's true ).", w: "— the entire group's onboarding advice" },
-    { t: "Crazy, gotta perform circumcision on my portafilter now.", w: "— on the DIY bottomless mod" },
-    { t: "Bhai galat group me aagya mai  Never ending loop. Hole h.", w: "— a member realising the cost of this hobby" },
-    { t: "My right arm looking jacked already, people will assume the wrong things.", w: "— a hand-grinder owner" },
-    { t: "Istg never give expensive coffee for guests.", w: "— hard-won wisdom" },
-    { t: "If someone asks for milk coffee, I serve them Davidoff.", w: "— protecting the good beans" },
-    { t: "Purani coffee ka taste accha hota hai, apko nhi pta ", w: "— a heretic, after pulling a shot of moka pre-ground" },
-    { t: "Darr ke aage caffeine hai!", w: "— the group motto, basically" },
-    { t: "apes together strong", w: "— after two members verified an accessory with ChatGPT" },
-    { t: "You have 72 people in this group praying for your tank bhai, stop worrying.", w: "— solidarity over a cracked water tank" },
-    { t: "Hobbies are expensive  saari mehengi hobbies leke baith gaya hun.", w: "— a man and his receipts" },
-    { t: "someone should just build a site for this… Claude devta ki jai ho!", w: "— the message that created this website " },
   ];
 
   /* ---------- RENDER ---------- */
@@ -423,21 +389,6 @@
       grid.appendChild(card);
     });
   }
-  function renderGallery() {
-    const g = $("#gallery"); g.innerHTML = "";
-    GALLERY.forEach(item => {
-      const fig = el("figure");
-      fig.innerHTML = `<img src="${item.src}" alt="${item.cap}" loading="lazy"><figcaption>${item.cap}</figcaption>`;
-      g.appendChild(fig);
-    });
-  }
-  function renderQuotes() {
-    const w = $("#quoteWall"); w.innerHTML = "";
-    QUOTES.forEach(q => {
-      const node = el("div", "quote", `“${q.t}”<span class="who">${q.w}</span>`);
-      w.appendChild(node);
-    });
-  }
 
   // Accordions
   function renderAccordion(target, data) {
@@ -472,27 +423,10 @@
     });
   }
 
-  // Coupons
-  function renderCoupons() {
-    const grid = $("#couponGrid"); grid.innerHTML = "";
-    COUPONS.forEach(c => {
-      const card = el("div", "coupon");
-      card.innerHTML = `<span class="copyhint">tap to copy</span>
-        <div class="vendor">${c.vendor}</div><div class="code">${c.code}</div><div class="discount">${c.discount}</div>`;
-      card.addEventListener("click", () => {
-        navigator.clipboard?.writeText(c.code).then(
-          () => toast(`Copied “${c.code}” `),
-          () => toast(`Code: ${c.code}`)
-        );
-      });
-      grid.appendChild(card);
-    });
-  }
-
   renderGrinders("all"); renderBeans("all"); renderPF(); renderBaskets(); renderAcc();
-  renderYT(); renderSellers(); renderMods(); renderGallery(); renderQuotes();
+  renderYT(); renderSellers(); renderMods();
   renderAccordion("#troubleAccordion", TROUBLE); renderAccordion("#faqAccordion", FAQ);
-  renderDiagnoser(); renderCoupons();
+  renderDiagnoser();
 
   // Filter chips
   function wireFilters(wrap, renderFn) {
