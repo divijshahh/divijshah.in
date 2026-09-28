@@ -1,62 +1,56 @@
-# ☕ Dedica Decoded
+# 9 Bar Social Starter Kit
 
-> The unofficial, slightly unhinged starter guide for **DeLonghi Dedica EC890 / EC685** espresso in **India**.
+The `9bs-site/` directory is the starter-kit site for **9 Bar Social**. It is a static HTML/CSS/vanilla-JS site intended to be deployed as its own Cloudflare Pages project from the `9bs-site` root directory.
 
-A single-page, zero-dependency static site that helps a complete beginner go from
-"I just bought a tiny espresso machine" to "I pull decent shots and understand the rabbit hole I've fallen into."
+## v2.0.0
 
-It covers:
+The original site was a DeLonghi Dedica-focused single-page guide with product data, community claims, emojis, gamification and personality-driven copy.
 
-- ✅ A **starter-kit checklist** (saved to your device)
-- ⚙️ **Grinders** — manual & electric, with a budget/type filter and honest "avoid" list
-- 🫘 **Beans worth buying in India**, filterable by budget / milk / specialty
-- 🕳️ **Bottomless portafilters & baskets** (incl. the DIY "circumcise your portafilter" route)
-- 🧰 **Accessories** with honest ratings
-- 🎯 **Dial-in recipe** + an interactive **"Fix My Shot"** diagnoser
-- 🥛 **Milk steaming** technique for the Dedica's polite little wand
-- 🚑 **Troubleshooting** + a big **FAQ**
-- 🎟️ **Coupon codes** (tap to copy) & money hacks
-- 📺 **YouTubers** to learn from, 🛒 **trusted India sellers**, 🛠️ **mods**
-- 📸 a community **gallery** and a **wall of quotes**
+The site is now organised around the 9 Bar Social use case:
 
-## Origin
+- manufacturer-agnostic starter path
+- task-based navigation instead of a long single-page scroller
+- beginner flow: setup -> first espresso -> taste -> one change
+- separate Fix, Learn, Equipment, Milk and Maintain areas
+- 9BS community information explicitly separated from coffee fundamentals
+- starting recipes presented as starting points, not universal rules
+- technical claims checked against current SCA and Barista Hustle material used for the rebuild
+- old unverified product, coupon, retailer and machine-specific claims are not presented as facts
+- all emoji, rabbit-hole gimmicks, gamification, fake consensus language and forced personality removed
+- no animated counters, floating elements, easter eggs or ticker
+- mobile-first layout
 
-Distilled from a WhatsApp group of ~70 obsessed Indian home baristas. Somewhere around
-message #7000 someone said *"someone should just build a site for this."* So here it is. 🫡
+## Information model
 
-## Tech
+1. **Fundamentals**: coffee principles supported by established references.
+2. **Starting points**: practical defaults that are useful for beginners but are not universal rules.
+3. **9BS community**: member reports, local Indian availability, experiences and recommendations.
+4. **Current data**: prices, stock, retailers, discounts and other information that must be dated and rechecked.
 
-Pure HTML + CSS + vanilla JS. No build step, no framework, no tracking, no newsletter.
-All content is data-driven from `js/main.js`, so it's easy to extend.
+## Sources used
 
-```
-index.html        # markup + section shells
-css/style.css     # all styles (warm coffee theme, responsive, reduced-motion aware)
-js/main.js        # data + rendering + interactions
-assets/img/*.jpg  # optimized community photos (coffee/gear only — no people, no PII)
-```
+- Specialty Coffee Association, "Defining the Ever-Changing Espresso"
+- Specialty Coffee Association, "Coffee Freshness"
+- Barista Hustle, "The Espresso Compass"
+- Barista Hustle, "Channeling"
+- Barista Hustle, "Ineffective Voids"
+- KitchenAid, "How to Steam Milk for a Latte"
+
+Manufacturer manuals remain the authority for machine-specific setup, cleaning, water and safety instructions.
+
+## Deliberately not carried forward
+
+The previous DeLonghi-specific product catalogue, compatibility claims, prices, coupons, retailer rankings, "best" claims, machine-specific hacks and community consensus statements have not been silently treated as verified. Those items need individual source checks before being added to a future 9BS buying directory.
+
+## Version
+
+Starter Kit: **2.0.0**
+Last reviewed: **28 September 2026**
 
 ## Run locally
 
-It's static — just open `index.html`, or:
-
 ```bash
-npx serve .
-# or
 python3 -m http.server 8000
 ```
 
-## Deploy
-
-Hosted on **Vercel** as a static site (no framework). The included `vercel.json` sets
-sensible caching headers. To deploy your own copy:
-
-```bash
-vercel
-```
-
-## Disclaimer
-
-Not affiliated with DeLonghi, any roaster, retailer, or your bank. No affiliate links.
-Prices, stock and coupon codes change constantly — **verify before you buy**.
-Made with caffeine and questionable financial decisions.
+No build step is required.
