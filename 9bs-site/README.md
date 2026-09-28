@@ -4,7 +4,7 @@ The `9bs-site/` directory is the starter-kit site for **9 Bar Social**. It is a 
 
 ## v2.0.0
 
-The original site was a DeLonghi Dedica-focused single-page guide with product data, community claims, emojis, gamification and personality-driven copy.
+The previous site was a DeLonghi Dedica-focused single-page guide with a large amount of product data, community claims, gamified UI and personality-led copy.
 
 The site is now organised around the 9 Bar Social use case:
 
@@ -16,8 +16,8 @@ The site is now organised around the 9 Bar Social use case:
 - starting recipes presented as starting points, not universal rules
 - technical claims checked against current SCA and Barista Hustle material used for the rebuild
 - old unverified product, coupon, retailer and machine-specific claims are not presented as facts
-- all emoji, rabbit-hole gimmicks, gamification, fake consensus language and forced personality removed
-- no animated counters, floating elements, easter eggs or ticker
+- no emoji-based UI
+- no gamification, counters, floating elements, easter eggs or ticker
 - mobile-first layout
 
 ## Information model
@@ -40,7 +40,7 @@ Manufacturer manuals remain the authority for machine-specific setup, cleaning, 
 
 ## Deliberately not carried forward
 
-The previous DeLonghi-specific product catalogue, compatibility claims, prices, coupons, retailer rankings, "best" claims, machine-specific hacks and community consensus statements have not been silently treated as verified. Those items need individual source checks before being added to a future 9BS buying directory.
+The previous DeLonghi-specific product catalogue, compatibility claims, prices, coupons, retailer rankings, "best" claims, machine-specific hacks and unsupported community consensus statements have not been silently treated as verified. Those items need individual source checks before being added to a future 9BS buying directory.
 
 ## Version
 
