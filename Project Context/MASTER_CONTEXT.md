@@ -556,8 +556,8 @@ Custom static frontend intended to replace the public-facing Homarr concept. Do 
 
 Current versions:
 
-- main site: v1.2.7
-- QR site: v1.1.4
+- main site: v1.2.8
+- QR site: v1.1.5
 
 Versions are independent.
 
@@ -738,3 +738,24 @@ The LinkedIn SVG's right-side path extended almost to the 24px viewBox boundary 
 
 ### Version
 QR v1.1.4.
+
+
+## 2026-09-28 — DIVIJ SHAH title tracking refinement
+
+### User request
+Reduce the letter-spacing across all sites because the `IVI` sequence in `DIVIJ` was visually merging and could resemble a large M.
+
+### Changed
+- Main site title tracking: `-0.075em` -> `-0.045em`.
+- QR site title tracking: `-0.075em` -> `-0.045em`.
+- Bumped main site v1.2.7 -> v1.2.8.
+- Bumped QR site v1.1.4 -> v1.1.5.
+
+### Not changed
+Font family, font size, weight, line height, title positioning, layout or other typography.
+
+### Verification
+Confirmed the shared title tracking rule was updated in both `style.css` and `qr-site/style.css`, and the affected page version strings were updated.
+
+### Live QA
+Live browser/device rendering remains unavailable, so visual rendering is not claimed as deployed QA.
