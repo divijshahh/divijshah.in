@@ -1,135 +1,369 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ishita's page ♥</title>
+<meta name="theme-color" content="#f8eddf">
 <meta name="robots" content="noindex, nofollow">
+<title>ishita's page ♥</title>
 <style>
-  :root { color-scheme: light dark; --bg:#ffffcc; --fg:#000080; --link:#0000ee; --vlink:#551a8b; --box:#fff; --line:#000; --hl:#ff0; --note:#fffbe0; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#101030; --fg:#ccccff; --link:#8ab4ff; --vlink:#c9a0ff; --box:#1a1a40; --line:#ccccff; --hl:#665500; --note:#222250; } }
-  :root[data-theme="dark"] { --bg:#101030; --fg:#ccccff; --link:#8ab4ff; --vlink:#c9a0ff; --box:#1a1a40; --line:#ccccff; --hl:#665500; --note:#222250; }
-  :root { box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
-  body { background:var(--bg); color:var(--fg); font-family:"Times New Roman",Times,serif; font-size:18px; line-height:1.45; max-width:680px; margin:0 auto; padding:12px 16px 40px; }
-  a { color:var(--link); } a:visited { color:var(--vlink); }
-  h1 { font-size:2.2em; text-align:center; margin:.3em 0 0; font-family:"Comic Sans MS","Comic Sans",cursive; }
-  .heart { color:#d72854; font-size:.8em; vertical-align:.04em; }
-  h2 { font-family:"Comic Sans MS","Comic Sans",cursive; border-bottom:2px dashed var(--line); padding-bottom:2px; margin-top:1.6em; }
-  .center { text-align:center; }
-  .box { background:var(--box); border:2px ridge var(--line); padding:8px 14px; margin:12px 0; }
-  .note { background:var(--note); border:1px solid var(--line); padding:6px 12px; transform:rotate(-0.6deg); display:inline-block; }
-  mark { background:var(--hl); color:inherit; }
-  marquee { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:3px 0; font-family:"Courier New",monospace; }
-  .counter { font-family:"Courier New",monospace; border:2px inset var(--line); display:inline-block; padding:0 8px; background:#000; color:#0f0; letter-spacing:3px; }
-  table { border-collapse:collapse; width:100%; background:var(--box); }
-  td,th { border:1px solid var(--line); padding:4px 8px; text-align:left; vertical-align:top; }
-  button { font-family:inherit; font-size:1em; padding:3px 10px; border:2px outset #999; background:#ddd; color:#000; cursor:pointer; }
-  button:active { border-style:inset; }
-  #msg { min-height:3em; margin-top:10px; }
-  small { opacity:.8; }
-  ul.ticks { list-style:square; }
-  .scroll { overflow-x:auto; }
-  .photo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:14px 0; }
-  .photo-card { margin:0; background:var(--note); border:2px ridge var(--line); padding:8px; text-align:center; }
-  .photo-card img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border:1px solid var(--line); background:linear-gradient(135deg,#f6d7c3,#e6e0bd 50%,#bfd5d2); }
-  .photo-card figcaption { padding-top:7px; font-size:.9em; }
+  :root {
+    color-scheme: light;
+    --paper:#f8eddf; --wall:#fffaf2; --ink:#392d3c; --muted:#796b75;
+    --rose:#c94f68; --rose-soft:#f4d6d7; --plum:#65516d; --wood:#b77d58;
+    --wood-dark:#80553f; --green:#627b62; --line:#d9c6b5; --shadow:0 14px 35px #523d301c;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 Georgia,"Times New Roman",serif; }
+  a { color:inherit; }
+  button { color:inherit; font:inherit; }
+  .page { width:min(1080px,100%); padding:20px clamp(15px,4vw,42px) 52px; margin:auto; }
+  .topline { text-align:center; color:var(--muted); font:12px/1.6 "Courier New",monospace; letter-spacing:.08em; border-block:1px dashed var(--line); padding:7px; }
+  header { text-align:center; padding:25px 0 16px; }
+  h1 { margin:0; font-size:clamp(2rem,6vw,3.25rem); letter-spacing:-.045em; font-weight:500; }
+  .heart { color:var(--rose); font-size:.76em; vertical-align:.08em; }
+  .subtitle { margin:5px 0 0; color:var(--muted); }
+  nav { display:flex; justify-content:center; flex-wrap:wrap; gap:7px 20px; padding:12px 0 18px; border-bottom:1px solid var(--line); font-size:.93rem; }
+  nav a { text-decoration-thickness:1px; text-underline-offset:4px; }
+  .intro { max-width:680px; text-align:center; margin:24px auto 26px; }
+  .intro p { margin:.45em 0; }
+  .eyebrow { color:var(--rose); font:700 11px/1.4 "Courier New",monospace; letter-spacing:.13em; text-transform:uppercase; }
+  h2 { margin:0; font-weight:500; letter-spacing:-.025em; font-size:clamp(1.45rem,3vw,2rem); }
+  h3 { font-weight:500; }
+  .room-shell { overflow:hidden; border:1px solid #cfb7a3; border-radius:18px; background:var(--wall); box-shadow:var(--shadow); }
+  .room-title { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 18px; background:#fffaf2; border-bottom:1px solid #e8d8c9; }
+  .room-title strong { font-weight:500; }
+  .room-title span { color:var(--muted); font-size:.82rem; }
+  .wall-scene {
+    min-height:330px; padding:22px clamp(12px,2.6vw,28px) 16px;
+    display:grid; grid-template-columns:minmax(125px,.8fr) minmax(330px,2fr) minmax(125px,.8fr);
+    align-items:center; gap:clamp(10px,2.2vw,24px);
+    background:
+      radial-gradient(ellipse at 50% 15%,#fffefa 0%,#f8f0e6 72%),
+      repeating-linear-gradient(90deg,transparent 0 74px,#eadfD21c 75px 76px);
+    position:relative;
+  }
+  .wall-scene:after { content:""; height:9px; position:absolute; bottom:0; left:0; right:0; background:#d7b99f; box-shadow:0 3px 0 #c69e7e; }
+  .window-card { align-self:center; min-width:0; padding:7px; background:#e7d3c2; border:5px solid #c69b7e; border-radius:5px; box-shadow:0 4px 8px #67452b20; }
+  .window-sky { aspect-ratio:1.18; min-height:105px; border:3px solid #fff1e4; position:relative; overflow:hidden; background:linear-gradient(#555477 0%,#9a7180 55%,#e6a77e 100%); }
+  .window-sky:before { content:""; position:absolute; width:42px; height:42px; border-radius:50%; background:#ffe7b1; top:14px; right:18px; box-shadow:0 0 23px #ffebbd91; }
+  .window-sky:after { content:""; position:absolute; height:27%; left:-5%; right:-5%; bottom:0; background:#646071; border-radius:50% 50% 0 0; }
+  .window-caption { text-align:center; color:#574338; font:10px "Courier New",monospace; padding-top:6px; }
+  .photo-wall { min-width:0; align-self:center; }
+  .wall-label { text-align:center; margin:0 0 8px; color:#78685e; font:10px "Courier New",monospace; text-transform:uppercase; letter-spacing:.1em; }
+  .photo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+  .photo-frame { width:100%; min-width:0; padding:6px 6px 4px; border:1px solid #b99070; border-radius:3px; background:#fffdf8; box-shadow:0 3px 7px #55351e26; transform:rotate(var(--tilt,0deg)); cursor:zoom-in; transition:transform .18s,box-shadow .18s; }
+  .photo-frame:hover,.photo-frame:focus-visible { transform:rotate(0) translateY(-3px) scale(1.035); box-shadow:0 8px 14px #55351e35; z-index:2; }
+  .photo-frame img { display:block; width:100%; height:clamp(65px,8vw,100px); object-fit:cover; background:#eee2d7; }
+  .photo-frame span { display:block; padding-top:3px; color:#817065; font:9px/1.2 "Courier New",monospace; }
+  .photo-frame:nth-child(2),.photo-frame:nth-child(5) { --tilt:1deg; }
+  .photo-frame:nth-child(3),.photo-frame:nth-child(4) { --tilt:-1deg; }
+  .bookcase { min-width:0; justify-self:end; width:min(100%,145px); border:4px solid #9d6e50; border-bottom-width:7px; background:#bd8b68; padding:7px 6px 4px; box-shadow:0 4px 7px #4b33251c; }
+  .bookcase .shelf { height:45px; border-bottom:5px solid #875b41; display:flex; align-items:end; justify-content:center; gap:3px; padding:0 3px 3px; }
+  .bookcase .shelf i { display:block; width:12px; height:28px; background:#d17a70; border-radius:2px 2px 0 0; }
+  .bookcase .shelf i:nth-child(2n) { height:34px; background:#7c8b70; }
+  .bookcase .shelf i:nth-child(3n) { height:24px; background:#e5bd76; }
+  .book-label { display:block; text-align:center; color:white; font:9px "Courier New",monospace; padding-top:5px; }
+  .floor-scene {
+    min-height:215px; display:grid; grid-template-columns:1.3fr 1fr .8fr; align-items:center; gap:14px;
+    padding:12px clamp(12px,3vw,32px) 24px; position:relative;
+    background:repeating-linear-gradient(0deg,#d9bda3 0 33px,#d1b295 34px 36px);
+  }
+  .floor-scene:before { content:""; position:absolute; top:0; left:0; right:0; height:8px; background:#c59877; }
+  .object-button { position:relative; isolation:isolate; border:0; padding:0; background:none; cursor:pointer; text-align:center; transition:transform .16s; }
+  .object-button:hover,.object-button:focus-visible { transform:translateY(-4px); outline:2px solid #bd6676; outline-offset:4px; border-radius:8px; }
+  .object-label { display:block; margin-top:5px; color:#4e3a32; font:11px "Courier New",monospace; }
+  .sofa { max-width:310px; justify-self:center; width:100%; }
+  .sofa-back { height:52px; margin:0 12px; border-radius:19px 19px 5px 5px; background:#7e687d; box-shadow:inset 0 -6px #69566a; }
+  .sofa-seat { display:flex; gap:5px; height:41px; padding:4px 8px; background:#927b8e; border-radius:10px 10px 7px 7px; }
+  .sofa-seat i { flex:1; border-radius:6px; background:#a28b9d; border-right:1px solid #796779; }
+  .sofa-arm { height:27px; background:#725e72; border-radius:9px 9px 3px 3px; }
+  .coffee { justify-self:center; width:min(100%,190px); }
+  .coffee-top { height:17px; border-radius:8px; background:#a96f4e; box-shadow:0 4px #80553f; }
+  .coffee-leg { width:6px; height:30px; margin:auto; background:#80553f; }
+  .note-button { position:absolute; top:-43px; left:50%; transform:translateX(-50%) rotate(-3deg); width:125px; padding:8px 7px; border:1px solid #ddc28e; background:#fff1c9; box-shadow:0 3px 7px #47321d22; color:#594732; font:10px/1.4 "Courier New",monospace; }
+  .note-button:hover,.note-button:focus-visible { transform:translateX(-50%) rotate(0) translateY(-2px); }
+  .door { justify-self:center; width:96px; height:145px; padding:8px; border:5px solid #865d46; border-bottom-width:8px; border-radius:45px 45px 2px 2px; background:linear-gradient(90deg,#b98768,#c99a79 50%,#b98768); box-shadow:inset 0 0 0 2px #d6b39b; }
+  .door .knob { position:absolute; right:10px; top:76px; width:8px; height:8px; border-radius:50%; background:#edcf83; }
+  .keys { position:absolute; right:-22px; bottom:-13px; font-size:25px; transform:rotate(20deg); }
+  .door-label { color:#503b31; font:10px "Courier New",monospace; text-align:center; margin-top:8px; }
+  .scene-caption { padding:9px 15px 12px; text-align:center; background:#fffaf2; color:var(--muted); font-size:.85rem; }
+  .interaction { display:grid; grid-template-columns:minmax(190px,.65fr) 1.35fr; gap:14px; margin:16px 0 5px; }
+  .note-controls { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:7px; padding:16px; border:1px dashed #cba999; background:#fff8ef; border-radius:12px; text-align:center; }
+  .note-controls p { margin:0; color:var(--muted); font-size:.88rem; }
+  .read-note { border:0; border-radius:999px; padding:10px 18px; background:var(--rose); color:white; cursor:pointer; box-shadow:0 3px 0 #92394c; transition:transform .15s,background .15s; }
+  .read-note:hover,.read-note:focus-visible { background:#ad4058; transform:translateY(-2px); }
+  .note-counter { font:11px "Courier New",monospace; color:var(--muted); }
+  .note-display { display:flex; align-items:center; min-height:106px; padding:20px clamp(16px,3vw,30px); border-radius:12px; background:#fffdf8; border:1px solid #e5d7c8; box-shadow:0 4px 15px #61472c0d; font-size:clamp(1.1rem,2vw,1.35rem); }
+  .note-display p { margin:0; }
+  .note-display .hint { color:#8c7e76; font-style:italic; font-size:1rem; }
+  .place-note { margin:10px 2px 0; min-height:1.7em; text-align:center; color:#735d6a; font-size:.94rem; }
+  .final-note { text-align:center; margin:15px auto 0; max-width:600px; padding:14px; border-radius:12px; background:#f5e1e1; border:1px solid #e8c5c8; }
+  .final-note[hidden] { display:none; }
+  .below { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px; }
+  .below section { padding:18px 20px; border-top:2px solid #d9b7a6; background:#fff8ef99; }
+  .below h2 { font-size:1.35rem; }
+  .below p { margin:.55em 0; }
+  .story { font-size:.97rem; }
+  .story strong { color:#9b445c; font-weight:500; }
+  footer { text-align:center; color:var(--muted); padding-top:24px; font:12px "Courier New",monospace; }
+  dialog { max-width:min(900px,94vw); max-height:92vh; padding:10px; border:1px solid #d6c0ac; border-radius:12px; background:#fffaf2; box-shadow:0 20px 80px #20141f88; }
+  dialog::backdrop { background:#251c26bb; }
+  dialog img { display:block; max-width:calc(94vw - 22px); max-height:78vh; object-fit:contain; }
+  .dialog-close { display:block; margin:2px 0 8px auto; border:1px solid #cdb9a7; border-radius:20px; background:#fff; padding:5px 12px; cursor:pointer; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  @media(max-width:760px) {
+    .wall-scene { grid-template-columns:minmax(110px,.8fr) minmax(0,1.5fr); padding-inline:14px; gap:14px; }
+    .photo-wall { grid-column:1/-1; grid-row:2; width:min(100%,520px); justify-self:center; }
+    .window-card { grid-column:1; grid-row:1; width:min(100%,170px); justify-self:center; }
+    .bookcase { grid-column:2; grid-row:1; width:min(100%,150px); justify-self:center; }
+    .photo-frame img { height:clamp(80px,17vw,130px); }
+    .floor-scene { grid-template-columns:1.1fr .9fr; }
+    .door-object { grid-column:1/-1; justify-self:center; }
+  }
+  @media(max-width:520px) {
+    body { font-size:16px; }
+    .page { padding-inline:12px; }
+    .room-title { align-items:flex-start; flex-direction:column; gap:0; }
+    .wall-scene { min-height:unset; grid-template-columns:1fr 1fr; padding:18px 10px 16px; }
+    .window-card { width:130px; }
+    .bookcase { width:116px; }
+    .photo-grid { gap:6px; }
+    .photo-frame { padding:4px 4px 3px; }
+    .photo-frame img { height:clamp(72px,24vw,110px); }
+    .photo-frame span { font-size:8px; }
+    .floor-scene { min-height:320px; grid-template-columns:1fr 1fr; gap:9px; padding:19px 9px 25px; }
+    .sofa { grid-column:1/-1; width:min(100%,270px); }
+    .coffee { grid-column:1; }
+    .door-object { grid-column:2; }
+    .interaction { grid-template-columns:1fr; }
+    .note-controls { padding:12px; }
+    .below { grid-template-columns:1fr; gap:10px; }
+    nav { gap:7px 13px; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
+  }
 </style>
 </head>
 <body>
+<div class="page">
+  <div class="topline">a little corner of the internet, for one very specific person</div>
+  <header>
+    <h1>ishita's page <span class="heart" aria-label="heart">♥</span></h1>
+    <p class="subtitle">a small place for us to come home to</p>
+  </header>
+  <nav aria-label="Page navigation">
+    <a href="#home">our place</a>
+    <a href="#story">how this started</a>
+    <a href="#notes">little notes</a>
+  </nav>
 
-<marquee scrollamount="4">~*~ welcome to the internet's smallest and most biased fan page ~*~ best viewed with a big smile ~*~</marquee>
+  <main>
+    <section class="intro" id="home">
+      <p class="eyebrow">keys are by the door</p>
+      <h2>Come in. It’s a little chaotic.</h2>
+      <p>I made us a room from the things I keep thinking about: karaoke, your reels, your brain, and the ordinary days I want with you.</p>
+      <p>Tap around. The objects have things to say.</p>
+    </section>
 
-<h1>ishita's page <span class="heart" aria-label="heart">♥</span></h1>
-<hr>
+    <section class="room-shell" aria-label="An imagined apartment for us">
+      <div class="room-title"><strong>our future apartment</strong><span>estimated move-in: whenever we get the keys</span></div>
+      <div class="wall-scene">
+        <button class="object-button window-card room-object" type="button" data-note="I’d pretend to be asleep just to write you something nice. This is me doing that again.">
+          <span class="window-sky" aria-hidden="true"></span>
+          <span class="window-caption">late night, still thinking of you</span>
+          <span class="sr-only">Window: read a late-night note</span>
+        </button>
 
-<p class="center">
-  <b>menu:</b>
-  <a href="#why">why this exists</a> |
-  <a href="#things">things i love</a> |
-  <a href="#story">how we met</a> |
-  <a href="#photos">photos</a> |
-  <a href="#button">a button</a>
-</p>
+        <div class="photo-wall" aria-label="Six favourite photos">
+          <p class="wall-label">the wall of us · tap a photo</p>
+          <div class="photo-grid">
+            <button class="photo-frame" type="button" data-photo="1" aria-label="Open photo 1"><img src="photos/photo-1.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>01 · us</span></button>
+            <button class="photo-frame" type="button" data-photo="2" aria-label="Open photo 2"><img src="photos/photo-2.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>02 · us</span></button>
+            <button class="photo-frame" type="button" data-photo="3" aria-label="Open photo 3"><img src="photos/photo-3.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>03 · us</span></button>
+            <button class="photo-frame" type="button" data-photo="4" aria-label="Open photo 4"><img src="photos/photo-4.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>04 · us</span></button>
+            <button class="photo-frame" type="button" data-photo="5" aria-label="Open photo 5"><img src="photos/photo-5.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>05 · us</span></button>
+            <button class="photo-frame" type="button" data-photo="6" aria-label="Open photo 6"><img src="photos/photo-6.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>06 · us</span></button>
+          </div>
+        </div>
 
-<h2 id="why">why this exists</h2>
-<p>hi ishita.</p>
-<p>i wanted to make you something that wasn't an instagram story or a paragraph in a text. so i made a <mark>webpage</mark>, like it's 1999 and i have a geocities account and nothing but time.</p>
-<p>it's not fancy. i just wanted a corner of the internet that says, plainly, that i think you're great.</p>
+        <button class="object-button bookcase room-object" type="button" data-note="Your hyperfixations are my favourite documentaries. I could listen to you explain anything for hours.">
+          <span class="shelf"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="shelf"><i></i><i></i><i></i><i></i></span>
+          <span class="book-label">your current deep dive</span>
+          <span class="sr-only">Bookshelf: read a note about your hyperfixations</span>
+        </button>
+      </div>
 
-<h2 id="things">things i love about you</h2>
-<ul class="ticks">
-  <li><b>your passion.</b> when you care about something you really care, and it's the best thing to watch.</li>
-  <li><b>your general knowledge.</b> you know so much random stuff. i keep learning things just by standing near you.</li>
-  <li><b>the way you talk.</b> it's cute. i can't explain it better than that. it's just cute.</li>
-  <li><b>your hyperfixations.</b> when you find a new thing and go all in, i get to hear about it, and that's the good part of my day.</li>
-  <li><b>how you make me feel.</b> fun. nice. fuzzy. a little cute, which is not a word i use about myself.</li>
-</ul>
+      <div class="floor-scene">
+        <button class="object-button sofa room-object" type="button" data-note="I’m going to keep sending you reels. You’re going to keep ignoring them. I love it.">
+          <span class="sofa-back" aria-hidden="true"></span>
+          <span class="sofa-seat" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="sofa-arm" aria-hidden="true"></span>
+          <span class="object-label">the reel-ignoring sofa</span>
+        </button>
+        <div class="coffee">
+          <button class="object-button note-button" id="note-button" type="button">open if you need a reminder</button>
+          <div class="coffee-top" aria-hidden="true"></div><div class="coffee-leg" aria-hidden="true"></div>
+          <button class="object-button room-object" type="button" data-note="You were never a mistake. You’re the plan now."><span class="object-label">coffee table note</span><span class="sr-only">Read the note on the coffee table</span></button>
+        </div>
+        <button class="object-button door-object room-object" type="button" data-note="I’m still so glad I got you home that night. I had no idea you’d become home to me.">
+          <span class="door" aria-hidden="true"><i class="knob"></i><span class="keys">⌁</span></span>
+          <span class="door-label">keys to our place</span>
+          <span class="sr-only">Front door: remember the karaoke night</span>
+        </button>
+      </div>
+      <div class="scene-caption">The apartment is imaginary for now. The plans are not.</div>
+    </section>
 
-<h2 id="story">how we met</h2>
-<div class="box">
-  <p>i messaged you on instagram out of nowhere. a few weeks later we were at karaoke. you were having the time of your life, then suddenly very much not, and i ended up figuring out how to get you back to your pg. not the smoothest first date. i don't think either of us would've called it romantic.</p>
-  <p>the next morning could've made the whole thing a "mistake." i thought that was what i'd decided. somewhere in there, i already knew i was in trouble.</p>
-  <p>and now it's been a year and a half. i've never felt this understood, or this comfortable being myself. i love our specific kind of weird, even when it gets complicated. i want the ordinary future stuff with you: an apartment, coming home to you, and a lifetime of sending each other reels you'll probably ignore.</p>
-  <p>i love you so much, babe. i'm still learning how to show you that in the ways you want, and i want to keep getting better. i want you for life. tung tung.</p>
+    <section class="interaction" id="notes" aria-label="Little notes for you">
+      <div class="note-controls">
+        <p>there are 50 notes in here</p>
+        <button class="read-note" id="read-note" type="button">give me a note</button>
+        <span class="note-counter" id="note-counter" aria-live="polite">pick one whenever</span>
+      </div>
+      <div class="note-display" id="note-display" aria-live="polite" aria-atomic="true"><p class="hint">Or tap around the room. I left a few things there too.</p></div>
+    </section>
+    <p class="place-note" id="place-note" aria-live="polite"></p>
+    <div class="final-note" id="final-note" hidden>Out of everyone in the world, I’d pick you again. And again. And again.</div>
+
+    <div class="below">
+      <section id="story">
+        <p class="eyebrow">how this started</p>
+        <h2>the karaoke night</h2>
+        <div class="story">
+          <p>I messaged you on Instagram out of nowhere. A few weeks later we were at karaoke: you were having the time of your life, then very much not, and then I was figuring out how to get this random woman back to her PG. Not exactly the romantic first date.</p>
+          <p>The morning after could’ve been a “mistake.” I thought that was what I’d decided. Somewhere in there, I already knew I was in trouble.</p>
+          <p>It’s been a year and a half, and I’ve never felt this understood. I want the ordinary future stuff with you: an apartment, coming home to you, and a lifetime of sending reels you’ll probably ignore.</p>
+          <p><strong>I love you so much, babe. Tung tung.</strong></p>
+        </div>
+      </section>
+      <section>
+        <p class="eyebrow">a note from the desk</p>
+        <h2>You’ve got this.</h2>
+        <p>Your MBA is already yours. You just have to show up. Candida albicans never stood a chance against you, and neither will your doubts.</p>
+        <p>I’m proud of everything you’re becoming. I’ll keep learning how to love you in the ways you want, even when it feels weird for me. I mean every word.</p>
+      </section>
+    </div>
+  </main>
+  <footer>you and me, for life. tung tung ♥</footer>
 </div>
 
-<h2 id="photos">my favourite moments</h2>
-<p>a few moments with you i want to keep coming back to.</p>
-<div class="photo-grid">
-  <figure class="photo-card">
-    <img src="photos/photo-1.jpg" alt="A favourite photo together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-  <figure class="photo-card">
-    <img src="photos/photo-2.jpg" alt="Another favourite photo together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-  <figure class="photo-card">
-    <img src="photos/photo-3.jpg" alt="One more favourite photo together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-  <figure class="photo-card">
-    <img src="photos/photo-4.jpg" alt="Another favourite moment together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-  <figure class="photo-card">
-    <img src="photos/photo-5.jpg" alt="Another favourite photo together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-  <figure class="photo-card">
-    <img src="photos/photo-6.jpg" alt="One more favourite moment together" loading="lazy" decoding="async" onerror="this.hidden=true">
-  </figure>
-</div>
-
-<h2 id="button">a few things i want you to know</h2>
-<p>click if you need to hear one again.</p>
-<p class="center"><button id="btn" type="button">tell me again</button></p>
-<div id="msg" class="box center"><i>(waiting...)</i></div>
-
-<hr>
-<p class="center">
-  you are visitor number<br>
-  <span class="counter">000001</span><br>
-  <small>(it's just you. it's always just you. that's the point.)</small>
-</p>
-<p class="center"><small>last updated: whenever i miss you<br>
-<a href="#top" onclick="window.scrollTo(0,0);return false;">back to top</a></small></p>
+<dialog id="photo-dialog" aria-label="Photo">
+  <button class="dialog-close" id="close-photo" type="button">close ×</button>
+  <img id="large-photo" src="" alt="A favourite photo of us">
+</dialog>
 
 <script>
-  var lines = [
-    "i love you, babe. obviously.",
-    "i want to come home to you, even if you ignore me for reels.",
-    "you are my favourite person to be weird with.",
-    "tell me about the thing you're into right now. all of it.",
-    "we can have hard conversations and still be on the same team.",
-    "i'm learning how to show you love in the ways you want. i'll keep trying.",
-    "i want the apartment and all the ordinary days after it with you.",
-    "i picked you. i'm still picking you.",
-    "tung tung. (you know what it means.)",
-    "in case you forgot: you're my favourite."
+  var notes = [
+    "You’re the best thing that came out of a karaoke night.",
+    "I’m still so glad I got you home that night.",
+    "You were never a mistake. You’re the plan now.",
+    "You are weirder than me, and it’s my favorite thing about you.",
+    "You understand me better than anyone ever has.",
+    "Candida albicans never stood a chance against you.",
+    "ICMR was lucky to have you.",
+    "Your MBA is already yours. You just have to show up.",
+    "You’ll crush the MBA.",
+    "Your hyperfixations are my favorite documentaries.",
+    "I could listen to you explain anything for hours.",
+    "Your general knowledge is unreal, and I love it.",
+    "The way you talk is the cutest thing in my day.",
+    "You make me feel fun, nice, and fuzzy.",
+    "I’m going to keep sending you reels. You’re going to keep ignoring them. I love it.",
+    "I’ll love you the way you want to be loved, or I’ll die trying.",
+    "You make me want to be softer, and I’m learning.",
+    "Even when it feels weird for me, I mean every word.",
+    "You’re my favorite argument and my favorite apology.",
+    "Our fights make us better. Our love makes us unbreakable.",
+    "I’ve never been this open with anyone but you.",
+    "You are my once-in-a-lifetime.",
+    "You’re not a phase, a mistake, or a maybe. You’re my person.",
+    "I’m not letting you go. Ever.",
+    "I see myself with no one else, only you.",
+    "We’re getting married. I’ve already decided.",
+    "Our apartment is going to be chaos, and I can’t wait.",
+    "I’m coming home to you, even if you ignore me for reels.",
+    "I fell for you faster than I ever planned.",
+    "You are the best accident I’ve ever made.",
+    "You make my weird feel normal.",
+    "You are easy to love, even on your most chaotic day.",
+    "I’m proud of everything you’re becoming.",
+    "You deserve every good thing, and I’ll help you get there.",
+    "You are smarter than your doubts.",
+    "You’re allowed to rest. I’ll hold the world for a bit.",
+    "You are my safe place and my favorite person.",
+    "Out of everyone in the world, I’d pick you again.",
+    "You’re the reason I became a better version of me.",
+    "You’re the one I’d text out of the blue, every time.",
+    "Plot twist: you’re stuck with me.",
+    "Every version of you is my favorite version.",
+    "You’re the best part of my day, even the late nights.",
+    "I’d pretend to be asleep just to write you something nice.",
+    "Your passion makes everything around you brighter.",
+    "You’ve got this, and you’ve got me.",
+    "You are loved more than you know.",
+    "I’m still falling for you.",
+    "I love you soooo so much, babe.",
+    "You and me, for life."
   ];
-  var i = -1;
-  document.getElementById("btn").addEventListener("click", function () {
-    var n;
-    do { n = Math.floor(Math.random() * lines.length); } while (n === i);
-    i = n;
-    document.getElementById("msg").textContent = lines[n];
+  var shuffledNotes = [];
+  var noteIndex = 0;
+  function shuffleNotes() {
+    shuffledNotes = notes.slice();
+    for (var n = shuffledNotes.length - 1; n > 0; n--) {
+      var j = Math.floor(Math.random() * (n + 1));
+      var temp = shuffledNotes[n]; shuffledNotes[n] = shuffledNotes[j]; shuffledNotes[j] = temp;
+    }
+    noteIndex = 0;
+  }
+  document.getElementById("read-note").addEventListener("click", function () {
+    if (noteIndex >= shuffledNotes.length) shuffleNotes();
+    document.querySelector("#note-display p").textContent = shuffledNotes[noteIndex];
+    document.querySelector("#note-display p").className = "";
+    noteIndex++;
+    document.getElementById("note-counter").textContent = noteIndex + " of 50";
   });
+  document.querySelectorAll(".room-object").forEach(function (object) {
+    object.addEventListener("click", function () {
+      var target = document.querySelector("#note-display p");
+      target.textContent = object.getAttribute("data-note");
+      target.className = "";
+      document.getElementById("note-counter").textContent = "a note from around the apartment";
+      var key = object === document.querySelector(".window-card") ? "window" :
+        object === document.querySelector(".bookcase") ? "books" :
+        object.classList.contains("sofa") ? "sofa" :
+        object.classList.contains("door-object") ? "door" : "table";
+      explored[key] = true;
+      if (Object.keys(explored).length >= 5) document.getElementById("final-note").hidden = false;
+      var label = object.querySelector(".object-label,.window-caption,.book-label,.door-label");
+      document.getElementById("place-note").textContent = label ? "you found a note by " + label.textContent + "." : "";
+    });
+  });
+  var explored = {};
+
+  var photoDialog = document.getElementById("photo-dialog");
+  var largePhoto = document.getElementById("large-photo");
+  document.querySelectorAll(".photo-frame").forEach(function (frame) {
+    frame.addEventListener("click", function () {
+      var number = frame.getAttribute("data-photo");
+      largePhoto.src = "photos/photo-" + number + ".jpg";
+      largePhoto.alt = "Photo " + number + " of us";
+      if (typeof photoDialog.showModal === "function") photoDialog.showModal();
+      else window.open(largePhoto.src, "_blank");
+    });
+  });
+  document.getElementById("close-photo").addEventListener("click", function () { photoDialog.close(); });
+  photoDialog.addEventListener("click", function (event) {
+    if (event.target === photoDialog) photoDialog.close();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && photoDialog.open) photoDialog.close();
+  });
+
+  shuffleNotes();
 </script>
 </body>
 </html>
