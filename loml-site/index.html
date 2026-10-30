@@ -3,343 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f3eee6">
+<meta name="theme-color" content="#2a2150">
 <meta name="robots" content="noindex, nofollow">
 <title>For Ishita</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Shantell+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    color-scheme: light;
-    --paper:#f3eee6;
-    --ink:#1e1a1b;
-    --muted:#6f6760;
-    --line:#d8cfc2;
-    --accent:#9b3a2c;
-    --serif:"Newsreader", Georgia, "Times New Roman", serif;
-    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    --pad:clamp(20px, 5vw, 64px);
-  }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; scroll-padding-top:64px; }
-  body { margin:0; background:var(--paper); color:var(--ink); font:400 clamp(18px,1.4vw + 12px,21px)/1.6 var(--serif); -webkit-font-smoothing:antialiased; }
-  a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
-  a:hover { color:var(--accent); }
-  button { font:inherit; color:inherit; }
-  :focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-  .label { font:500 12px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-  .wrap { max-width:1120px; margin:0 auto; padding-inline:var(--pad); }
-
-  /* top bar */
-  .bar { position:sticky; top:0; z-index:5; background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-  .bar .wrap { display:flex; justify-content:space-between; align-items:center; height:56px; }
-  .bar strong { font-weight:500; font-size:1.05rem; }
-  .bar nav { display:flex; gap:clamp(14px,3vw,28px); }
-  .bar nav a { font:500 12px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--muted); }
-  .bar nav a:hover { color:var(--ink); }
-
-  /* hero */
-  .hero { padding-block:clamp(72px,14vw,160px) clamp(56px,9vw,110px); }
-  .hero h1 { margin:0; font-weight:400; font-size:clamp(3.6rem,13vw,10rem); line-height:.92; letter-spacing:-.04em; }
-  .hero h1 em { font-style:italic; color:var(--accent); }
-  .hero p { margin:clamp(24px,4vw,44px) 0 0; max-width:30ch; font-size:clamp(1.15rem,2vw,1.5rem); line-height:1.4; color:var(--muted); font-style:italic; }
-
-  /* sections */
-  section.block { border-top:1px solid var(--line); padding-block:clamp(48px,8vw,96px); }
-  .grid { display:grid; grid-template-columns:minmax(120px,1fr) 3fr; gap:clamp(20px,5vw,72px); }
-  .grid > .label { padding-top:.55em; }
-  h2 { margin:0 0 .6em; font-weight:400; font-size:clamp(1.9rem,4.2vw,3rem); line-height:1.08; letter-spacing:-.02em; }
-  .prose { max-width:34em; }
-  .prose p { margin:0 0 1.1em; }
-  .prose p:last-child { margin-bottom:0; }
-  .signoff { font-style:italic; color:var(--accent); }
-
-  /* photographs */
-  .photos { columns:3; column-gap:clamp(10px,1.6vw,20px); margin-top:8px; }
-  .photo { display:block; width:100%; margin:0 0 clamp(10px,1.6vw,20px); padding:0; border:0; background:#e6ddd0; cursor:zoom-in; break-inside:avoid; overflow:hidden; }
-  .photo img { display:block; width:100%; height:auto; transition:transform .5s cubic-bezier(.2,.7,.2,1); }
-  .photo:hover img { transform:scale(1.025); }
-
-  /* apartment */
-  .rooms { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); max-width:40em; }
-  .rooms details { border-bottom:1px solid var(--line); }
-  .rooms summary { list-style:none; display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; cursor:pointer; font-size:1.25em; }
-  .rooms summary::-webkit-details-marker { display:none; }
-  .rooms summary::after { content:"+"; font:400 1.2em/1 var(--mono); color:var(--muted); transition:transform .2s; }
-  .rooms details[open] summary::after { transform:rotate(45deg); color:var(--accent); }
-  .rooms summary:hover { color:var(--accent); }
-  .rooms details p { margin:0 0 20px; max-width:32em; color:var(--muted); }
-
-  /* notes */
-  .note-stage { max-width:40em; }
-  .note-text { min-height:7.2em; margin:0 0 28px; font-size:clamp(1.6rem,3.4vw,2.4rem); line-height:1.22; letter-spacing:-.015em; }
-  .note-text.idle { color:var(--muted); font-style:italic; }
-  .controls { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-  .btn { font:500 13px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:15px 22px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); cursor:pointer; transition:background .15s,color .15s,border-color .15s; }
-  .btn:hover { background:var(--accent); border-color:var(--accent); }
-  .btn.ghost { background:transparent; color:var(--ink); }
-  .btn.ghost:hover { background:transparent; color:var(--accent); border-color:var(--accent); }
-  .btn[disabled] { opacity:.35; pointer-events:none; }
-  .count { font:400 12px/1 var(--mono); letter-spacing:.08em; color:var(--muted); margin-left:4px; }
-
-  footer { border-top:1px solid var(--line); padding-block:36px 56px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-  footer span { font:400 12px/1.5 var(--mono); letter-spacing:.06em; color:var(--muted); }
-
-  /* lightbox */
-  dialog { width:100vw; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; background:#141112f2; color:#f3eee6; }
-  dialog::backdrop { background:#141112; }
-  .lb { height:100%; display:grid; grid-template-rows:auto 1fr; }
-  .lb-top { display:flex; justify-content:space-between; align-items:center; padding:14px var(--pad); font:400 12px/1 var(--mono); letter-spacing:.1em; }
-  .lb-top button, .lb-nav button { background:none; border:0; color:inherit; cursor:pointer; font:500 12px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:10px 0; }
-  .lb-top button:hover, .lb-nav button:hover { color:#e6a090; }
-  .lb-body { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:clamp(6px,2vw,24px); padding:0 clamp(8px,2vw,28px) 28px; min-height:0; }
-  .lb-body img { max-width:100%; max-height:calc(100dvh - 120px); width:auto; height:auto; margin:auto; display:block; object-fit:contain; justify-self:center; }
-  .lb-nav button { font-size:22px; padding:16px 10px; }
-
-  @media (max-width:820px) {
-    .grid { grid-template-columns:1fr; gap:10px; }
-    .photos { columns:2; }
-  }
-  @media (max-width:520px) {
-    .bar nav a:nth-child(3) { display:none; }
-    .lb-body { grid-template-columns:1fr; grid-template-rows:1fr auto; }
-    .lb-nav { display:flex; justify-content:space-between; grid-row:2; }
-  }
-  @media (prefers-reduced-motion:reduce) {
-    html { scroll-behavior:auto; }
-    *, *::before, *::after { transition:none !important; }
-  }
+:root{--ink:#2d2340;--night:#2a2150;--plum:#4b2f6b;--lamp:#ffd36a;--blush:#ffb3c1;--berry:#e2456b;--ui:"Fredoka",system-ui,sans-serif;--hand:"Shantell Sans","Comic Sans MS",cursive}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0;overflow:hidden;background:var(--night);color:var(--ink);font:500 17px/1.4 var(--ui)}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+img{display:block;max-width:100%;-webkit-user-drag:none;user-select:none}
+:focus-visible{outline:3px solid var(--lamp);outline-offset:3px;border-radius:10px}
+.screen{position:fixed;inset:0;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .5s,transform .55s,visibility 0s .55s;overflow:hidden}
+.screen.on{opacity:1;pointer-events:auto;visibility:visible;transition:opacity .5s,transform .55s}
+.room{transform:scale(.35)}.room.on{transform:none}
+.sky{background:linear-gradient(#241a4d,#4b2f6b 48%,#e2708f 80%,#ffb184)}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 3s infinite ease-in-out}
+@keyframes tw{50%{opacity:.2;transform:scale(.6)}}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes drift{to{transform:translateX(120vw)}}
+@keyframes rise{to{transform:translateY(-90px) scale(1.3);opacity:0}}
+@keyframes sway{50%{transform:rotate(4deg)}}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@keyframes hop{50%{transform:translateY(-14px)}}
+/* exterior */
+.cloud{position:absolute;width:90px;opacity:.85;left:-120px;animation:drift 70s linear infinite}
+.moon{position:absolute;right:9%;top:8%;width:clamp(60px,12vmin,110px);animation:bob 6s infinite ease-in-out}
+.hill{position:absolute;left:-10%;right:-10%;bottom:0;height:24%;background:#3f9e83;border-radius:50% 50% 0 0/35% 35% 0 0}
+.hill.b{height:30%;background:#2f7f6d;left:-30%;right:20%}
+.greet{position:absolute;left:0;right:0;top:7%;text-align:center;color:#fff;padding:0 20px;z-index:3}
+.greet h1{margin:0;font-weight:600;font-size:clamp(2.2rem,8vmin,4rem)}
+.greet p{margin:.3em 0 0;font:400 clamp(1rem,2.6vmin,1.3rem)/1.3 var(--hand);color:#ffe9f0}
+.house{position:absolute;left:50%;bottom:13%;width:min(96vw,66vh,600px);aspect-ratio:1.05;transform:translateX(-50%)}
+.h-body{position:absolute;left:5%;right:5%;bottom:0;height:60%;background:#ffc9b3;box-shadow:inset -14px 0 #f6b39a}
+.h-roof{position:absolute;left:-3%;right:-3%;bottom:58%;height:46%;background:#e2456b;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.h-chim{position:absolute;right:20%;bottom:70%;width:9%;height:22%;background:#b9375a}
+.smoke{position:absolute;right:21%;bottom:90%;width:7%;aspect-ratio:1;border-radius:50%;background:#ffffffaa;animation:rise 4s infinite}
+.h-win{position:absolute;width:19%;bottom:26%;filter:drop-shadow(0 0 18px #ffd36a)}
+.h-win:before{content:"";position:absolute;inset:8%;background:#ffd36a;z-index:-1;animation:pulse 3s infinite}
+.h-door{position:absolute;left:50%;bottom:0;width:38%;transform:translateX(-50%);z-index:2;perspective:600px}
+.h-door img:not(.keys){width:100%}.h-door img{transform-origin:left center;transition:transform .9s ease-in}
+.h-door.open img{transform:rotateY(-75deg)}
+.h-door:before{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;background:#fff6c4;transform:translate(-50%,-50%);transition:transform 1.1s ease-in;z-index:-1}
+.h-door.open:before{transform:translate(-50%,-50%) scale(260)}
+.ring{position:absolute;inset:-6% -4%;border:3px dashed #fff;border-radius:50% 50% 8px 8px;opacity:.8;animation:pulse 1.6s infinite}
+.keys{position:absolute;right:-30%;top:34%;width:30%;transform-origin:top center;animation:sway 2.4s infinite}
+.plant{position:absolute;bottom:-2%}
+.fly{position:absolute;width:34px;animation:bob 2.2s infinite}
+/* hub */
+.bar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:max(10px,env(safe-area-inset-top)) 14px 8px;z-index:6;color:#fff}
+.bar h2{margin:0;font-weight:600;font-size:1.15rem;text-align:center;flex:1}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#ffffff26;border-radius:99px;padding:8px 14px;color:#fff;backdrop-filter:blur(6px);min-height:40px}
+.pill:hover{background:#ffffff40}
+.pill img{width:22px}.bar.lt{color:var(--ink)}.bar.lt .pill{color:var(--ink);background:#0000001a}
+.meter{display:flex;gap:3px}
+.meter i{width:9px;height:9px;border-radius:50%;background:#ffffff40}.meter i.f{background:var(--blush)}
+.cut{position:absolute;left:50%;top:60px;bottom:82px;width:min(94vw,860px);transform:translateX(-50%);display:flex;flex-direction:column}
+.roof{height:clamp(64px,13vh,110px);margin:0 -2%;background:#e2456b;clip-path:polygon(50% 0,100% 100%,0 100%);position:relative;flex:none}
+.attic{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);width:clamp(54px,9vh,76px);height:clamp(40px,7vh,58px);background:#ffd36a;border:4px solid #b9375a;border-radius:10px 10px 0 0;display:grid;place-items:center}
+.attic img{width:70%}
+.attic.ready{animation:pulse 1.4s infinite;box-shadow:0 0 28px #ffd36a}
+.floors{flex:1;min-height:0;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr);gap:5px;padding:5px;background:#5b3b6e;border-radius:0 0 14px 14px}
+@media(min-aspect-ratio:1/1){.floors{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr)}}
+.cell{position:relative;border-radius:10px;overflow:hidden;text-align:center;filter:saturate(.55) brightness(.78);transition:filter .5s,transform .2s;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:6px}
+.cell.seen{filter:none}.cell:hover{transform:translateY(-3px)}
+.cell .pv{position:absolute;inset:10% 0 36%;display:flex;justify-content:center;align-items:flex-end;gap:6px}
+.cell .pv img{height:100%;max-height:78px;width:auto;animation:bob 4s infinite ease-in-out}.cell .pv img:nth-child(2){animation-delay:-2s}
+.cell b{position:relative;font-weight:600;font-size:.95rem}
+.cell .meter{position:relative;margin-top:3px}.cell .meter i{background:#0000002e}.cell .meter i.f{background:var(--berry)}
+.sprite{position:absolute;width:46px;z-index:5;pointer-events:none;transition:left .7s ease-in-out,top .7s ease-in-out;transform:translate(-50%,-100%)}
+.sprite img{animation:hop .7s 2}
+.jar{position:fixed;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:8;width:62px;height:62px;border-radius:50%;background:#fff;box-shadow:0 6px 18px #0004;display:grid;place-items:center}
+.jar img{width:40px}.jar:hover{animation:pulse .6s}
+/* rooms */
+.area{position:absolute;inset:0;top:0}
+.stage{position:absolute;top:56px;bottom:0;left:50%;width:min(100%,1100px);transform:translateX(-50%);container-type:size}
+@media(max-aspect-ratio:1/1){.o{--u:1.6cqmin}}
+.o{position:absolute;left:var(--x);top:var(--y);width:calc(var(--s)*var(--u,1cqmin));transform:translate(-50%,-100%);transition:transform .2s}
+button.o:hover{transform:translate(-50%,-100%) scale(1.07) rotate(-2deg)}
+button.o:active{transform:translate(-50%,-100%) scale(.94)}
+.o>img{width:100%;filter:drop-shadow(0 6px 5px #0003)}
+.o.d{pointer-events:none;animation:bob 5s infinite ease-in-out}
+.sp{position:absolute;right:-6%;top:-6%;width:calc(5*var(--u,1cqmin));animation:tw 1.4s infinite}
+.shelf{position:absolute;height:10px;background:#a9714f;border-radius:4px;box-shadow:0 5px #7d4f37;transform:translate(-50%,0)}
+.photo{background:#fff;padding:5% 5% 12%;box-shadow:0 6px 12px #0004;transform:translate(-50%,-100%) rotate(var(--r,-3deg))}
+.photo img{width:100%;aspect-ratio:1;object-fit:cover;filter:none}
+.cork{background:#c89a68;border:6px solid #8d6240;border-radius:6px}
+.note{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translate(-50%,160%);width:min(88vw,460px);z-index:9;background:#fff8d8;border-radius:6px 6px 16px 6px;padding:18px 22px 16px;box-shadow:0 12px 30px #0006;font:500 clamp(1.15rem,3.6vw,1.5rem)/1.35 var(--hand);color:var(--ink);transition:transform .45s cubic-bezier(.3,1.5,.5,1);rotate:-1deg}
+.note.on{transform:translate(-50%,0)}
+.note small{display:block;margin-top:8px;font:400 .8rem var(--ui);opacity:.55}
+.note:before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:22px;background:#ffb3c188;transform:translateX(-50%) rotate(-2deg)}
+.heart{position:fixed;width:26px;z-index:10;pointer-events:none;animation:rise 1.3s forwards}
+.dark{position:absolute;inset:56px 0 0;background:#0a0620;opacity:0;pointer-events:none;transition:opacity .6s}
+.dark.on{opacity:.72}
+.modal{position:fixed;inset:0;z-index:20;background:#140f2ccc;display:none;place-items:center;padding:20px}
+.modal.on{display:grid}
+.polaroid{background:#fff;padding:14px 14px 46px;border-radius:4px;box-shadow:0 20px 50px #0008;transform:rotate(-2deg);max-width:min(92vw,560px)}
+.polaroid img{max-height:70dvh;width:auto;margin:auto}
+.x{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px}
+/* letter */
+.paper{position:absolute;left:50%;top:70px;bottom:20px;width:min(92vw,620px);transform:translateX(-50%);overflow:auto;background:repeating-linear-gradient(#fff8d8 0 33px,#ecd9a8 34px);border-radius:8px;padding:22px clamp(18px,5vw,40px);font:500 clamp(1.1rem,3.4vw,1.4rem)/34px var(--hand);box-shadow:0 20px 50px #0006}
+.paper p{margin:0 0 34px}.paper .sig{color:var(--berry);font-weight:600}
+@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition-duration:.01s!important}}
 </style>
 </head>
 <body>
 
-<header class="bar">
-  <div class="wrap">
-    <strong>Ishita</strong>
-    <nav aria-label="Sections">
-      <a href="#story">Story</a>
-      <a href="#photos">Photos</a>
-      <a href="#apartment">Apartment</a>
-      <a href="#notes">Notes</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <h1>For <em>Ishita</em></h1>
-      <p>Written late, while pretending to be asleep.</p>
-    </div>
-  </section>
-
-  <section class="block" id="story">
-    <div class="wrap grid">
-      <span class="label">How it started</span>
-      <div>
-        <h2>A karaoke bar, a PG, and a bad first date</h2>
-        <div class="prose">
-          <p>I messaged you on Instagram out of nowhere. A few weeks later we were at a karaoke bar. You were having the time of your life, then very much not, and then I was the guy working out how to get a near-stranger back to her PG.</p>
-          <p>The morning after was supposed to be a mistake. I had decided that in advance. Somewhere in the middle of it, I think I already knew I was in trouble.</p>
-          <p>That was a year and a half ago. I have never been this open with anyone, and I have never felt this understood. I want the ordinary future: an apartment, coming home to you, and a lifetime of sending you reels you won’t watch.</p>
-          <p class="signoff">I love you so much, babe. Tung tung.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="photos">
-    <div class="wrap">
-      <div class="grid" style="margin-bottom:20px">
-        <span class="label">Photographs</span>
-        <h2 style="margin:0">Six of my favourites</h2>
-      </div>
-      <div class="photos" id="photo-list">
-        <button class="photo" type="button" data-i="0" aria-label="View photo 1 of 6"><img src="photos/photo-1.jpg" width="738" height="592" alt="The two of us in a red-lit room, close to the camera, pulling faces" loading="lazy" decoding="async"></button>
-        <button class="photo" type="button" data-i="1" aria-label="View photo 2 of 6"><img src="photos/photo-2.jpg" width="1209" height="1458" alt="The two of us in a round mirror in a furniture store, my face against your hair" loading="lazy" decoding="async"></button>
-        <button class="photo" type="button" data-i="2" aria-label="View photo 3 of 6"><img src="photos/photo-3.jpg" width="1066" height="1599" alt="A collage of photos of the two of us" loading="lazy" decoding="async"></button>
-        <button class="photo" type="button" data-i="3" aria-label="View photo 4 of 6"><img src="photos/photo-4.jpg" width="1600" height="1388" alt="The two of us on a night street under a flyover, looking at each other" loading="lazy" decoding="async"></button>
-        <button class="photo" type="button" data-i="4" aria-label="View photo 5 of 6"><img src="photos/photo-5.jpg" width="998" height="1280" alt="You pouting at the camera in the foreground, me smiling behind you" loading="lazy" decoding="async"></button>
-        <button class="photo" type="button" data-i="5" aria-label="View photo 6 of 6"><img src="photos/photo-6.jpg" width="1179" height="1213" alt="The two of us close together in low light, you with your eyes closed, laughing" loading="lazy" decoding="async"></button>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="apartment">
-    <div class="wrap grid">
-      <span class="label">The apartment</span>
-      <div>
-        <h2>Not signed yet. Here is what’s in it.</h2>
-        <ul class="rooms">
-          <li>
-            <details>
-              <summary>The window</summary>
-              <p>Lights off, phone on low brightness, still writing to you.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>The shelf</summary>
-              <p>Reserved for whatever you’re obsessed with this month. I will read the books.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>The sofa</summary>
-              <p>Where I send you reels and you carry on scrolling. I’ve made my peace with it.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>The front door</summary>
-              <p>The first time I got you home, I was just trying to get you somewhere safe. Now I’m planning a place with a door we share.</p>
-            </details>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="notes">
-    <div class="wrap grid">
-      <span class="label">Notes</span>
-      <div class="note-stage">
-        <p class="note-text idle" id="note-text" aria-live="polite" aria-atomic="true">Press the button for a note.</p>
-        <div class="controls">
-          <button class="btn" id="next" type="button">Give me a note</button>
-          <button class="btn ghost" id="prev" type="button" disabled>Previous</button>
-          <span class="count" id="count"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  <span>Made for Ishita, by Divij.</span>
-  <span>Tung tung.</span>
-</footer>
-
-<dialog id="lb" aria-label="Photo viewer">
-  <div class="lb">
-    <div class="lb-top"><span id="lb-count"></span><button type="button" id="lb-close">Close</button></div>
-    <div class="lb-body">
-      <div class="lb-nav"><button type="button" id="lb-prev" aria-label="Previous photo">&larr;</button></div>
-      <img id="lb-img" src="" alt="">
-      <div class="lb-nav"><button type="button" id="lb-next" aria-label="Next photo">&rarr;</button></div>
-    </div>
-  </div>
-</dialog>
+<section class="screen sky on" id="ext" aria-label="Outside the house"></section>
+<section class="screen sky" id="hub" aria-label="Inside the house"></section>
+<section class="screen" id="roomS"></section>
+<section class="screen sky" id="letter" aria-label="The letter"></section>
+<button class="jar" id="jar" type="button" aria-label="Pull a note from the jar"><img src="assets/icons/honey-pot.svg" alt=""></button>
+<div class="note" id="note" role="status" aria-live="polite"></div>
+<div class="modal" id="modal"><button class="pill x" id="mx" type="button">Close</button><div class="polaroid"><img id="mimg" alt=""></div></div>
 
 <script>
-(function () {
-  "use strict";
+(function(){
+"use strict";
+var I=function(n){return"assets/icons/"+n+".svg"};
+var $=function(s,e){return(e||document).querySelector(s)};
+var el=function(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e};
+var show=function(id){document.querySelectorAll(".screen").forEach(function(s){s.classList.toggle("on",s.id===id)});$("#jar").style.display=(id==="ext"||id==="letter")?"none":""};
 
-  /* ---------- notes ---------- */
-  var notes = [
-    "You were having the time of your life, and then very much not. I’d do that night again.",
-    "I’m glad it was me who got you home.",
-    "The morning after was never going to be a mistake. I just hadn’t worked that out yet.",
-    "You understand me at a level I didn’t know was possible.",
-    "You’re weirder than I am. That’s the whole appeal.",
-    "Your hyperfixations are the best documentaries I never have to search for.",
-    "I could listen to you explain anything for hours.",
-    "Your general knowledge still surprises me.",
-    "The way you talk is the cutest part of my day.",
-    "You make me feel fun.",
-    "I’m going to keep sending you reels. You’re going to keep ignoring them. Fine.",
-    "I’ll love you the way you want to be loved, or I’ll die trying.",
-    "Affection doesn’t come naturally to me. I’m learning it for you and I’m not stopping.",
-    "I’ve never been this open with anyone else.",
-    "Our arguments are practice at being better to each other.",
-    "I can’t picture my life with anyone else.",
-    "Candida albicans never stood a chance against you.",
-    "ICMR was lucky to have you.",
-    "The MBA is yours. Show up and take it.",
-    "You’re allowed to rest. I’ll cover for a while.",
-    "You’re smarter than your doubts.",
-    "Whatever the exam, the interview, or the day: I’m in your corner.",
-    "I’m proud of how hard you work.",
-    "I’d pretend to be asleep all night for one good sentence to you.",
-    "Texting you out of nowhere was the best decision I’ve made.",
-    "A year and a half in, you’re still the first person I want to tell.",
-    "You make my weird feel normal.",
-    "I’m more myself around you than anywhere else.",
-    "I changed because I wanted to, and because of you.",
-    "Our apartment will be a mess and I will love it.",
-    "I want to come home to you ignoring me for reels.",
-    "I’ll buy the apartment. You pick the sofa.",
-    "We’re getting married. I’ve decided.",
-    "You were never a mistake. You’re the plan.",
-    "After every argument, I still want to be on your side.",
-    "You make ordinary days the point.",
-    "I love you soooo so much, babe."
-  ];
+/* ---- content ---- */
+var P="the photo";
+var ROOMS=[
+{id:"entry",name:"The entryway",wall:"#ffd7c0",floor:"#d99a78",pv:["door","handbag"],objs:[
+ ["phone","mobile-phone",22,50,12,["I messaged you on Instagram out of nowhere.","A few weeks later we were at a karaoke bar."],"shelf"],
+ ["key","old-key",78,40,10,["The morning after was supposed to be a mistake. I had decided that in advance.","Somewhere in there, I already knew I was in trouble."]],
+ ["shoe","running-shoe",30,90,17,["You were having the time of your life. Then very much not.","Then I was the guy working out how to get you back to your PG."]],
+ ["bag","handbag",64,92,17,["Not exactly a romantic first date.","Best worst first date I could have asked for."]],
+ ["p2","photo",50,48,24,2]],
+ deco:[["potted-plant",90,92,15]]},
+{id:"living",name:"The living room",wall:"#c6ecd9",floor:"#d9b996",pv:["couch-and-lamp","television"],objs:[
+ ["sofa","couch-and-lamp",46,90,40,["I’m going to keep sending you reels. You’re going to keep ignoring them. Fine.","I want to come home to you ignoring me for reels.","I’ll buy the apartment. You pick the sofa."]],
+ ["tv","television",18,64,18,["Your hyperfixations are the best documentaries I never have to search for.","I could listen to you explain anything for hours."]],
+ ["rp","mobile-phone",82,92,10,["Three days of unwatched reels. I’ll send three more.","This one is important. Please watch it. (It is not important.)"]],
+ ["p4","photo",72,46,20,4]],
+ deco:[["potted-plant",10,92,16]]},
+{id:"study",name:"The study",wall:"#dccff8",floor:"#b9a0cf",pv:["microscope","books"],objs:[
+ ["books","books",20,90,20,["I read the spines. You explain the rest.","Your general knowledge still surprises me."]],
+ ["scope","microscope",44,90,18,["Candida albicans never stood a chance against you."]],
+ ["dish","petri-dish",58,90,11,["ICMR was lucky to have you."]],
+ ["case","briefcase",80,92,16,["The MBA is yours. Show up and take it.","Whatever the exam, the interview, or the day: I’m in your corner."]],
+ ["brain","brain",84,44,12,["Your brain is the best thing in this room."]],
+ ["p3","photo",34,50,22,3]],
+ deco:[["microbe",70,72,7]]},
+{id:"bed",name:"The bedroom",wall:"#3a3370",floor:"#2a2150",dark:1,pv:["bed","teddy-bear"],objs:[
+ ["bed","bed",44,90,44,["It’s late and I’m pretending to be asleep while I write this.","I’d pretend to be asleep all night for one good sentence to you."]],
+ ["lamp","light-bulb",82,66,10,["Lights off. Still thinking of you."],"lamp"],
+ ["bear","teddy-bear",86,92,16,["You make me feel fun, nice, and fuzzy.","I’m so glad you’re weirder than I am."]],
+ ["ph","mobile-phone",16,90,10,["I’ve never been this open or this affectionate with anyone. I’m learning, and I’m not stopping."]],
+ ["p6","photo",64,40,20,6]],
+ deco:[["crescent-moon",14,40,14],["star",26,22,5],["star",38,34,4],["sparkles",56,18,7]]},
+{id:"kitchen",name:"The kitchen",wall:"#ffeaa6",floor:"#e3c9a0",pv:["teapot","cupcake"],objs:[
+ ["pot","teapot",24,52,13,["Our arguments are practice at being better to each other.","After every argument, I still want to be on your side."],"shelf"],
+ ["mugs","hot-beverage",48,52,11,["Two mugs. One for each side of the argument. Same table."],"shelf"],
+ ["jar","honey-pot",72,52,12,["Jar of made-up hearts. Tap to fill it."],"jar"],
+ ["cookie","cookie",42,92,14,["I’ll love you the way you want to be loved, or I’ll die trying.","I’m learning to say it out loud, because you deserve to hear it."]],
+ ["p5","photo",84,40,18,5]],
+ deco:[["cupcake",12,92,10],["tulip",92,92,10]]},
+{id:"balcony",name:"The balcony",wall:"linear-gradient(#1c1646,#46247a)",floor:"#4a2f4f",dark:1,pv:["microphone","crescent-moon"],objs:[
+ ["mic","microphone",24,90,16,["The best thing that came out of a karaoke night.","I’d do that night again."]],
+ ["moon","crescent-moon",78,36,16,["I texted you out of nowhere. It’s the best decision I’ve made.","A year and a half in, you’re still the first person I want to tell."]],
+ ["chairs","chair",58,92,16,["Two chairs, pushed together."]],
+ ["p1","photo",44,46,22,1],
+ ["comet","comet",0,22,9,["Wish: more of this. All of it."],"comet"]],
+ deco:[["musical-notes",36,60,9],["star",14,24,4],["star",60,16,5]]}
+];
+var TOTAL=0;ROOMS.forEach(function(r){TOTAL+=r.objs.length});
+var NEED=Math.ceil(TOTAL*.7);
+var POOL=["You make my weird feel normal.","You understand me at a level I didn’t know was possible.","I’ve never been this open with anyone else.","I can’t picture my life with anyone else.","I changed because I wanted to, and because of you.","You’re allowed to rest. I’ll cover for a while.","You’re smarter than your doubts.","I’m proud of how hard you work.","Our apartment will be a mess and I will love it.","We’re getting married. I’ve decided.","You were never a mistake. You’re the plan.","You make ordinary days the point.","I’m more myself around you than anywhere else.","The way you talk is the cutest part of my day.","You’re the first person I want to tell, every time.","I’m so glad I found someone as weird as me.","I’d text you out of nowhere again.","Whatever happens, I’m on your side.","I love you soooo so much, babe.","You’re easy to love.","I want you for life.","I’m going to keep trying. I mean it.","Every argument, I still pick us.","You’re my favourite person to be quiet with."];
+var LETTER=["Ishita,","It’s late and I’m pretending to be asleep while I write this.","I texted you on Instagram out of nowhere. A few weeks later we were at a karaoke bar, and I was the guy working out how to get you home. Not the first date I would have picked.","I had decided the morning after would be a mistake. Somewhere along the way, a lot sooner than I expected, I completely fell for you.","I’ve never been this open or this affectionate with anyone. It doesn’t come naturally to me, and I’m learning it anyway, because I never want you to feel unloved because of my strange ways of showing it.","I’m so glad I found someone who shares my weirdness, and is probably weirder.","I want the ordinary future with you. An apartment. Coming home to you scrolling reels and ignoring the ones I sent three days ago.","I’ll love you the way you want to be loved, or I’ll die trying. I hope we never tire of our arguments, and only ever see them as the way we get better at each other.","I want you for life. We’re getting married.","I love you so much, babe.","Divij"];
 
-  var order = [], pos = -1;
-  var text = document.getElementById("note-text");
-  var next = document.getElementById("next");
-  var prev = document.getElementById("prev");
-  var count = document.getElementById("count");
+/* ---- state ---- */
+var found={},seen={},hearts=0,q=location.search;
+try{found=JSON.parse(localStorage.getItem("f")||"{}");seen=JSON.parse(localStorage.getItem("s")||"{}")}catch(e){}
+if(/reset/.test(q)){found={};seen={}}
+if(/preview/.test(q)){ROOMS.forEach(function(r){seen[r.id]=1;r.objs.forEach(function(o){found[o[0]]=1})})}
+function save(){try{localStorage.setItem("f",JSON.stringify(found));localStorage.setItem("s",JSON.stringify(seen))}catch(e){}}
+var count=function(r){return r?r.objs.filter(function(o){return found[o[0]]}).length:Object.keys(found).length};
+var tapped={},sprite,cells={},curRoom=null;
 
-  function shuffle() {
-    order = notes.map(function (_, i) { return i; });
-    for (var i = order.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var t = order[i]; order[i] = order[j]; order[j] = t;
-    }
-    pos = -1;
-  }
-  function show() {
-    text.classList.remove("idle");
-    text.textContent = notes[order[pos]];
-    count.textContent = (pos + 1) + " / " + notes.length;
-    prev.disabled = pos <= 0;
-    next.textContent = "Another one";
-  }
-  next.addEventListener("click", function () {
-    if (pos >= order.length - 1) {
-      var last = order[order.length - 1];
-      shuffle();
-      if (order[0] === last) { var t = order[0]; order[0] = order[1]; order[1] = t; }
-    }
-    pos++;
-    show();
-  });
-  prev.addEventListener("click", function () {
-    if (pos > 0) { pos--; show(); }
-  });
-  shuffle();
+/* ---- helpers ---- */
+function stars(c,n){for(var i=0;i<n;i++){var s=el("i","star");s.style.cssText="left:"+Math.random()*100+"%;top:"+Math.random()*55+"%;animation-delay:-"+Math.random()*3+"s";c.appendChild(s)}}
+function burst(x,y){for(var i=0;i<6;i++){var h=el("img","heart");h.src=I(i%3?"red-heart":"sparkles");h.alt="";h.style.left=x+(Math.random()*60-30)+"px";h.style.top=y+(Math.random()*30-15)+"px";h.style.animationDelay=i*70+"ms";document.body.appendChild(h);setTimeout(function(n){n.remove()},1700,h)}}
+var nt;function note(t,hint){var n=$("#note");n.innerHTML=t+(hint?"<small>"+hint+"</small>":"");n.classList.add("on");clearTimeout(nt);nt=setTimeout(function(){n.classList.remove("on")},9000)}
+document.addEventListener("click",function(e){if(!e.target.closest(".o,.note,.jar,.cell"))$("#note").classList.remove("on")});
+function meter(n,f){var m=el("div","meter");for(var i=0;i<n;i++)m.appendChild(el("i",i<f?"f":""));return m}
+function photo(n){$("#mimg").src="photos/photo-"+n+".jpg";$("#mimg").alt="Photo "+n;$("#modal").classList.add("on")}
+$("#mx").onclick=$("#modal").onclick=function(e){if(e.target.id==="modal"||e.target.id==="mx")$("#modal").classList.remove("on")};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")$("#modal").classList.remove("on")});
 
-  /* ---------- lightbox ---------- */
-  var dlg = document.getElementById("lb");
-  var img = document.getElementById("lb-img");
-  var lbCount = document.getElementById("lb-count");
-  var thumbs = Array.prototype.slice.call(document.querySelectorAll(".photo"));
-  var cur = 0;
+/* ---- exterior ---- */
+(function(){var s=$("#ext");stars(s,45);
+ s.innerHTML+='<img class="moon" src="'+I("crescent-moon")+'" alt=""><img class="cloud" style="top:16%" src="'+I("cloud")+'" alt=""><img class="cloud" style="top:30%;animation-delay:-35s;width:70px" src="'+I("cloud")+'" alt="">'+
+ '<div class="hill b"></div><div class="hill"></div>'+
+ '<div class="greet"><h1>Hi, Ishita</h1><p>Someone left the porch light on. Tap the door.</p></div>'+
+ '<div class="house"><div class="h-chim"></div><div class="smoke"></div><div class="smoke" style="animation-delay:-2s"></div><div class="h-roof"></div><div class="h-body"></div>'+
+ '<img class="h-win" style="left:14%" src="'+I("window")+'" alt=""><img class="h-win" style="right:14%" src="'+I("window")+'" alt="">'+
+ '<button class="h-door" id="door" type="button" aria-label="Open the front door"><div class="ring"></div><img src="'+I("door")+'" alt=""><img class="keys" style="position:absolute" src="'+I("key")+'" alt=""></button>'+
+ '<img class="plant" style="left:-4%;width:15%" src="'+I("potted-plant")+'" alt=""><img class="plant" style="right:-3%;width:13%" src="'+I("tulip")+'" alt=""><img class="plant" style="left:12%;width:9%" src="'+I("seedling")+'" alt="">'+
+ '<img class="fly" style="right:2%;top:35%" src="'+I("butterfly")+'" alt=""></div>';
+ $("#door").onclick=function(){this.classList.add("open");$(".ring").remove();setTimeout(function(){show("hub");place(cells.entry,true)},1000)}})();
 
-  function open(i) {
-    cur = (i + thumbs.length) % thumbs.length;
-    var src = thumbs[cur].querySelector("img");
-    img.src = src.getAttribute("src");
-    img.alt = src.getAttribute("alt");
-    lbCount.textContent = (cur + 1) + " / " + thumbs.length;
-    if (!dlg.open) {
-      if (typeof dlg.showModal === "function") dlg.showModal();
-      else window.open(img.src, "_blank");
-    }
-  }
-  thumbs.forEach(function (b, i) { b.addEventListener("click", function () { open(i); }); });
-  document.getElementById("lb-close").addEventListener("click", function () { dlg.close(); });
-  document.getElementById("lb-prev").addEventListener("click", function () { open(cur - 1); });
-  document.getElementById("lb-next").addEventListener("click", function () { open(cur + 1); });
-  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
-  document.addEventListener("keydown", function (e) {
-    if (!dlg.open) return;
-    if (e.key === "ArrowLeft") open(cur - 1);
-    if (e.key === "ArrowRight") open(cur + 1);
-  });
+/* ---- hub ---- */
+function buildHub(){var h=$("#hub");h.innerHTML="";stars(h,40);
+ var bar=el("div","bar");var pg=el("div","pill","<img src='"+I("sparkles")+"' alt=''><span id='cnt'></span>");bar.appendChild(pg);bar.appendChild(el("h2","","Our place"));bar.appendChild(el("span","pill","&nbsp;&nbsp;"));h.appendChild(bar);
+ var cut=el("div","cut");var roof=el("div","roof");var at=el("button","attic",'<img src="'+I("locked")+'" alt="">');at.id="attic";roof.appendChild(at);cut.appendChild(roof);
+ var fl=el("div","floors");
+ ROOMS.forEach(function(r){var c=el("button","cell"+(seen[r.id]?" seen":""));c.style.background=r.wall;c.setAttribute("aria-label",r.name);
+  c.innerHTML='<div class="pv">'+r.pv.map(function(p){return'<img src="'+I(p)+'" alt="">'}).join("")+"</div><b style='color:"+(r.dark?"#fff":"inherit")+"'>"+r.name+"</b>";
+  c.appendChild(meter(r.objs.length,count(r)));c.onclick=function(){enter(r,c)};cells[r.id]=c;fl.appendChild(c)});
+ cut.appendChild(fl);sprite=el("div","sprite",'<img src="'+I("people-hugging")+'" alt="">');cut.appendChild(sprite);h.appendChild(cut);
+ at.onclick=function(){if(count()>=NEED||/preview/.test(q))openLetter();else note("The attic is locked. Find "+(NEED-count())+" more little things around the house.")};
+ refreshHub()}
+function refreshHub(){var n=count(),a=$("#attic");$("#cnt").textContent=n+" / "+TOTAL+" found";var ok=n>=NEED||/preview/.test(q);a.classList.toggle("ready",ok);a.firstChild.src=I(ok?"love-letter":"locked");a.setAttribute("aria-label",ok?"Open the attic letter":"Attic, locked");
+ ROOMS.forEach(function(r){var c=cells[r.id];c.classList.toggle("seen",!!seen[r.id]);c.querySelector(".meter").replaceWith(meter(r.objs.length,count(r)))})}
+function place(c,instant){if(!c||!sprite)return;var cut=c.parentNode.parentNode;var x=c.offsetLeft+c.offsetWidth/2,y=c.offsetTop+c.offsetHeight+$(".roof",cut).offsetHeight-8;
+ if(instant){sprite.style.transition="none"}sprite.style.left=x+"px";sprite.style.top=y+"px";if(instant)setTimeout(function(){sprite.style.transition=""},50)}
+
+/* ---- rooms ---- */
+function enter(r,c){var near=sprite.style.left===(c.offsetLeft+c.offsetWidth/2)+"px";place(c);setTimeout(function(){curRoom=r;seen[r.id]=1;save();buildRoom(r);var b=c.getBoundingClientRect();$("#roomS").style.transformOrigin=(b.left+b.width/2)+"px "+(b.top+b.height/2)+"px";show("roomS")},near?60:760)}
+function buildRoom(r){var S=$("#roomS");S.innerHTML="";var port=innerWidth/innerHeight<1;var fy=port?(r.dark?54:57):(r.dark?62:66);
+ var a=el("div","area");a.style.background=r.wall;
+ var fl=el("div","");fl.style.cssText="position:absolute;left:0;right:0;bottom:0;top:calc(56px + (100% - 56px)*"+fy/100+");background:"+r.floor+";border-top:8px solid #0002";a.appendChild(fl);
+ if(r.dark)stars(a,50);
+ var bar=el("div","bar"+(r.dark?"":" lt"));var back=el("button","pill","&larr; House");back.onclick=function(){show("hub");refreshHub();place(cells[r.id],true)};
+ bar.appendChild(back);var t=el("h2","",r.name);bar.appendChild(t);var pg=el("span","pill");pg.appendChild(meter(r.objs.length,count(r)));bar.appendChild(pg);
+ var st=el("div","stage");
+ function put(e,x,y,s){e.style.cssText+=";--x:"+x+"%;--y:"+y+"%;--s:"+s}
+ r.deco.forEach(function(d){if(!d[3])return;var e=el("div","o d");e.innerHTML='<img src="'+I(d[0])+'" alt="">';put(e,d[1],d[2],d[3]);st.appendChild(e)});
+ r.objs.forEach(function(o){var id=o[0],ic=o[1],sh=o[6];var b=el("button","o");b.type="button";b.setAttribute("aria-label",ic.replace(/-/g," "));
+  if(sh==="shelf"){var s=el("div","shelf");s.style.cssText="left:"+o[2]+"%;top:"+o[3]+"%;width:"+(o[4]*1.8)+"cqmin";st.appendChild(s)}
+  if(ic==="photo"){b.classList.add("photo");b.innerHTML='<img src="photos/photo-'+o[5]+'.jpg" alt="Photo '+o[5]+'">';b.style.setProperty("--r",(o[5]%2?-3:3)+"deg")}
+  else b.innerHTML='<img src="'+I(ic)+'" alt="">';
+  if(!found[id])b.insertAdjacentHTML("beforeend",'<img class="sp" src="'+I("sparkles")+'" alt="">');
+  if(id==="comet"){b.style.display="none";setTimeout(function fly(){if(curRoom!==r||found.comet)return;b.style.display="";b.animate([{left:"100%",top:"10%"},{left:"-5%",top:"45%"}],{duration:7000}).onfinish=function(){b.style.display="none";setTimeout(fly,6000)}},3500)}
+  put(b,o[2],o[3],o[4]);
+  b.onclick=function(ev){var x=ev.clientX||innerWidth/2,y=ev.clientY||innerHeight/2;burst(x,y);
+   if(ic==="photo"){photo(o[5]);mark(id,b);return}
+   if(sh==="lamp")a.querySelector(".dark").classList.toggle("on");
+   if(sh==="jar"){hearts=Math.min(hearts+1,9);var j=b.querySelector(".fill")||b.appendChild(el("div","fill"));j.style.cssText="position:absolute;left:25%;right:25%;bottom:12%;display:flex;flex-wrap:wrap;gap:1px;justify-content:center";j.innerHTML=Array(hearts+1).join('<img src="'+I("red-heart")+'" style="width:30%" alt="">');
+    note(hearts>=6?"Full jar. We made up again.":"A heart for every time we made up.",hearts+" in the jar")}
+   else{var lines=o[5];var n=tapped[id]=(tapped[id]||0)+1;note(lines[(n-1)%lines.length],lines.length>1?"tap again for more":"")}
+   mark(id,b)};
+  st.appendChild(b)});
+ var dk=el("div","dark");a.appendChild(dk);a.appendChild(bar);a.appendChild(st);S.appendChild(a)}
+function mark(id,b){if(found[id])return;found[id]=1;save();var s=b.querySelector(".sp");if(s)s.remove();var r=curRoom;$("#roomS .meter").replaceWith(meter(r.objs.length,count(r)));
+ if(count()===NEED)setTimeout(function(){note("Something clicked upstairs. The attic is open.")},1400)}
+
+/* ---- letter ---- */
+function openLetter(){var l=$("#letter");l.innerHTML="";stars(l,40);var b=el("div","bar");var back=el("button","pill","&larr; House");back.onclick=function(){show("hub")};b.appendChild(back);l.appendChild(b);
+ var p=el("div","paper");p.innerHTML=LETTER.map(function(t,i){return"<p"+(i>=LETTER.length-2?" class='sig'":"")+">"+t+"</p>"}).join("")+'<img src="'+I("heart-with-ribbon")+'" style="width:70px;margin:0 auto;animation:pulse 1.6s infinite" alt="">';
+ l.appendChild(p);show("letter");p.scrollTop=0;setTimeout(function(){for(var i=0;i<8;i++)setTimeout(burst,i*220,innerWidth/2+(Math.random()*200-100),innerHeight*.6)},700)}
+
+/* ---- note jar ---- */
+var order=[],oi=0;$("#jar").onclick=function(e){if(oi>=order.length){order=POOL.map(function(_,i){return i}).sort(function(){return Math.random()-.5});oi=0}note(POOL[order[oi++]],"from the jar");burst(e.clientX||innerWidth-40,e.clientY||innerHeight-40)};
+
+buildHub();show("ext");
 })();
 </script>
 </body>
