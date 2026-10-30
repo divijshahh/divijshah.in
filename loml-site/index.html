@@ -3,367 +3,344 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f8eddf">
+<meta name="theme-color" content="#f3eee6">
 <meta name="robots" content="noindex, nofollow">
-<title>ishita's page ♥</title>
+<title>For Ishita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: light;
-    --paper:#f8eddf; --wall:#fffaf2; --ink:#392d3c; --muted:#796b75;
-    --rose:#c94f68; --rose-soft:#f4d6d7; --plum:#65516d; --wood:#b77d58;
-    --wood-dark:#80553f; --green:#627b62; --line:#d9c6b5; --shadow:0 14px 35px #523d301c;
+    --paper:#f3eee6;
+    --ink:#1e1a1b;
+    --muted:#6f6760;
+    --line:#d8cfc2;
+    --accent:#9b3a2c;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    --pad:clamp(20px, 5vw, 64px);
   }
   * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 Georgia,"Times New Roman",serif; }
-  a { color:inherit; }
-  button { color:inherit; font:inherit; }
-  .page { width:min(1080px,100%); padding:20px clamp(15px,4vw,42px) 52px; margin:auto; }
-  .topline { text-align:center; color:var(--muted); font:12px/1.6 "Courier New",monospace; letter-spacing:.08em; border-block:1px dashed var(--line); padding:7px; }
-  header { text-align:center; padding:25px 0 16px; }
-  h1 { margin:0; font-size:clamp(2rem,6vw,3.25rem); letter-spacing:-.045em; font-weight:500; }
-  .heart { color:var(--rose); font-size:.76em; vertical-align:.08em; }
-  .subtitle { margin:5px 0 0; color:var(--muted); }
-  nav { display:flex; justify-content:center; flex-wrap:wrap; gap:7px 20px; padding:12px 0 18px; border-bottom:1px solid var(--line); font-size:.93rem; }
-  nav a { text-decoration-thickness:1px; text-underline-offset:4px; }
-  .intro { max-width:680px; text-align:center; margin:24px auto 26px; }
-  .intro p { margin:.45em 0; }
-  .eyebrow { color:var(--rose); font:700 11px/1.4 "Courier New",monospace; letter-spacing:.13em; text-transform:uppercase; }
-  h2 { margin:0; font-weight:500; letter-spacing:-.025em; font-size:clamp(1.45rem,3vw,2rem); }
-  h3 { font-weight:500; }
-  .room-shell { overflow:hidden; border:1px solid #cfb7a3; border-radius:18px; background:var(--wall); box-shadow:var(--shadow); }
-  .room-title { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 18px; background:#fffaf2; border-bottom:1px solid #e8d8c9; }
-  .room-title strong { font-weight:500; }
-  .room-title span { color:var(--muted); font-size:.82rem; }
-  .wall-scene {
-    min-height:330px; padding:22px clamp(12px,2.6vw,28px) 16px;
-    display:grid; grid-template-columns:minmax(125px,.8fr) minmax(330px,2fr) minmax(125px,.8fr);
-    align-items:center; gap:clamp(10px,2.2vw,24px);
-    background:
-      radial-gradient(ellipse at 50% 15%,#fffefa 0%,#f8f0e6 72%),
-      repeating-linear-gradient(90deg,transparent 0 74px,#eadfD21c 75px 76px);
-    position:relative;
+  html { scroll-behavior:smooth; scroll-padding-top:64px; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:400 clamp(18px,1.4vw + 12px,21px)/1.6 var(--serif); -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+  a:hover { color:var(--accent); }
+  button { font:inherit; color:inherit; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  .label { font:500 12px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .wrap { max-width:1120px; margin:0 auto; padding-inline:var(--pad); }
+
+  /* top bar */
+  .bar { position:sticky; top:0; z-index:5; background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .bar .wrap { display:flex; justify-content:space-between; align-items:center; height:56px; }
+  .bar strong { font-weight:500; font-size:1.05rem; }
+  .bar nav { display:flex; gap:clamp(14px,3vw,28px); }
+  .bar nav a { font:500 12px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--muted); }
+  .bar nav a:hover { color:var(--ink); }
+
+  /* hero */
+  .hero { padding-block:clamp(72px,14vw,160px) clamp(56px,9vw,110px); }
+  .hero h1 { margin:0; font-weight:400; font-size:clamp(3.6rem,13vw,10rem); line-height:.92; letter-spacing:-.04em; }
+  .hero h1 em { font-style:italic; color:var(--accent); }
+  .hero p { margin:clamp(24px,4vw,44px) 0 0; max-width:30ch; font-size:clamp(1.15rem,2vw,1.5rem); line-height:1.4; color:var(--muted); font-style:italic; }
+
+  /* sections */
+  section.block { border-top:1px solid var(--line); padding-block:clamp(48px,8vw,96px); }
+  .grid { display:grid; grid-template-columns:minmax(120px,1fr) 3fr; gap:clamp(20px,5vw,72px); }
+  .grid > .label { padding-top:.55em; }
+  h2 { margin:0 0 .6em; font-weight:400; font-size:clamp(1.9rem,4.2vw,3rem); line-height:1.08; letter-spacing:-.02em; }
+  .prose { max-width:34em; }
+  .prose p { margin:0 0 1.1em; }
+  .prose p:last-child { margin-bottom:0; }
+  .signoff { font-style:italic; color:var(--accent); }
+
+  /* photographs */
+  .photos { columns:3; column-gap:clamp(10px,1.6vw,20px); margin-top:8px; }
+  .photo { display:block; width:100%; margin:0 0 clamp(10px,1.6vw,20px); padding:0; border:0; background:#e6ddd0; cursor:zoom-in; break-inside:avoid; overflow:hidden; }
+  .photo img { display:block; width:100%; height:auto; transition:transform .5s cubic-bezier(.2,.7,.2,1); }
+  .photo:hover img { transform:scale(1.025); }
+
+  /* apartment */
+  .rooms { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); max-width:40em; }
+  .rooms details { border-bottom:1px solid var(--line); }
+  .rooms summary { list-style:none; display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; cursor:pointer; font-size:1.25em; }
+  .rooms summary::-webkit-details-marker { display:none; }
+  .rooms summary::after { content:"+"; font:400 1.2em/1 var(--mono); color:var(--muted); transition:transform .2s; }
+  .rooms details[open] summary::after { transform:rotate(45deg); color:var(--accent); }
+  .rooms summary:hover { color:var(--accent); }
+  .rooms details p { margin:0 0 20px; max-width:32em; color:var(--muted); }
+
+  /* notes */
+  .note-stage { max-width:40em; }
+  .note-text { min-height:7.2em; margin:0 0 28px; font-size:clamp(1.6rem,3.4vw,2.4rem); line-height:1.22; letter-spacing:-.015em; }
+  .note-text.idle { color:var(--muted); font-style:italic; }
+  .controls { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .btn { font:500 13px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:15px 22px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); cursor:pointer; transition:background .15s,color .15s,border-color .15s; }
+  .btn:hover { background:var(--accent); border-color:var(--accent); }
+  .btn.ghost { background:transparent; color:var(--ink); }
+  .btn.ghost:hover { background:transparent; color:var(--accent); border-color:var(--accent); }
+  .btn[disabled] { opacity:.35; pointer-events:none; }
+  .count { font:400 12px/1 var(--mono); letter-spacing:.08em; color:var(--muted); margin-left:4px; }
+
+  footer { border-top:1px solid var(--line); padding-block:36px 56px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  footer span { font:400 12px/1.5 var(--mono); letter-spacing:.06em; color:var(--muted); }
+
+  /* lightbox */
+  dialog { width:100vw; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; background:#141112f2; color:#f3eee6; }
+  dialog::backdrop { background:#141112; }
+  .lb { height:100%; display:grid; grid-template-rows:auto 1fr; }
+  .lb-top { display:flex; justify-content:space-between; align-items:center; padding:14px var(--pad); font:400 12px/1 var(--mono); letter-spacing:.1em; }
+  .lb-top button, .lb-nav button { background:none; border:0; color:inherit; cursor:pointer; font:500 12px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:10px 0; }
+  .lb-top button:hover, .lb-nav button:hover { color:#e6a090; }
+  .lb-body { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:clamp(6px,2vw,24px); padding:0 clamp(8px,2vw,28px) 28px; min-height:0; }
+  .lb-body img { max-width:100%; max-height:calc(100dvh - 120px); width:auto; height:auto; margin:auto; display:block; object-fit:contain; justify-self:center; }
+  .lb-nav button { font-size:22px; padding:16px 10px; }
+
+  @media (max-width:820px) {
+    .grid { grid-template-columns:1fr; gap:10px; }
+    .photos { columns:2; }
   }
-  .wall-scene:after { content:""; height:9px; position:absolute; bottom:0; left:0; right:0; background:#d7b99f; box-shadow:0 3px 0 #c69e7e; }
-  .window-card { align-self:center; min-width:0; padding:7px; background:#e7d3c2; border:5px solid #c69b7e; border-radius:5px; box-shadow:0 4px 8px #67452b20; }
-  .window-sky { aspect-ratio:1.18; min-height:105px; border:3px solid #fff1e4; position:relative; overflow:hidden; background:linear-gradient(#555477 0%,#9a7180 55%,#e6a77e 100%); }
-  .window-sky:before { content:""; position:absolute; width:42px; height:42px; border-radius:50%; background:#ffe7b1; top:14px; right:18px; box-shadow:0 0 23px #ffebbd91; }
-  .window-sky:after { content:""; position:absolute; height:27%; left:-5%; right:-5%; bottom:0; background:#646071; border-radius:50% 50% 0 0; }
-  .window-caption { text-align:center; color:#574338; font:10px "Courier New",monospace; padding-top:6px; }
-  .photo-wall { min-width:0; align-self:center; }
-  .wall-label { text-align:center; margin:0 0 8px; color:#78685e; font:10px "Courier New",monospace; text-transform:uppercase; letter-spacing:.1em; }
-  .photo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-  .photo-frame { width:100%; min-width:0; padding:6px 6px 4px; border:1px solid #b99070; border-radius:3px; background:#fffdf8; box-shadow:0 3px 7px #55351e26; transform:rotate(var(--tilt,0deg)); cursor:zoom-in; transition:transform .18s,box-shadow .18s; }
-  .photo-frame:hover,.photo-frame:focus-visible { transform:rotate(0) translateY(-3px) scale(1.035); box-shadow:0 8px 14px #55351e35; z-index:2; }
-  .photo-frame img { display:block; width:100%; height:clamp(65px,8vw,100px); object-fit:cover; background:#eee2d7; }
-  .photo-frame span { display:block; padding-top:3px; color:#817065; font:9px/1.2 "Courier New",monospace; }
-  .photo-frame:nth-child(2),.photo-frame:nth-child(5) { --tilt:1deg; }
-  .photo-frame:nth-child(3),.photo-frame:nth-child(4) { --tilt:-1deg; }
-  .bookcase { min-width:0; justify-self:end; width:min(100%,145px); border:4px solid #9d6e50; border-bottom-width:7px; background:#bd8b68; padding:7px 6px 4px; box-shadow:0 4px 7px #4b33251c; }
-  .bookcase .shelf { height:45px; border-bottom:5px solid #875b41; display:flex; align-items:end; justify-content:center; gap:3px; padding:0 3px 3px; }
-  .bookcase .shelf i { display:block; width:12px; height:28px; background:#d17a70; border-radius:2px 2px 0 0; }
-  .bookcase .shelf i:nth-child(2n) { height:34px; background:#7c8b70; }
-  .bookcase .shelf i:nth-child(3n) { height:24px; background:#e5bd76; }
-  .book-label { display:block; text-align:center; color:white; font:9px "Courier New",monospace; padding-top:5px; }
-  .floor-scene {
-    min-height:215px; display:grid; grid-template-columns:1.3fr 1fr .8fr; align-items:center; gap:14px;
-    padding:12px clamp(12px,3vw,32px) 24px; position:relative;
-    background:repeating-linear-gradient(0deg,#d9bda3 0 33px,#d1b295 34px 36px);
+  @media (max-width:520px) {
+    .bar nav a:nth-child(3) { display:none; }
+    .lb-body { grid-template-columns:1fr; grid-template-rows:1fr auto; }
+    .lb-nav { display:flex; justify-content:space-between; grid-row:2; }
   }
-  .floor-scene:before { content:""; position:absolute; top:0; left:0; right:0; height:8px; background:#c59877; }
-  .object-button { position:relative; isolation:isolate; border:0; padding:0; background:none; cursor:pointer; text-align:center; transition:transform .16s; }
-  .object-button:hover,.object-button:focus-visible { transform:translateY(-4px); outline:2px solid #bd6676; outline-offset:4px; border-radius:8px; }
-  .object-label { display:block; margin-top:5px; color:#4e3a32; font:11px "Courier New",monospace; }
-  .sofa { max-width:310px; justify-self:center; width:100%; }
-  .sofa-back { height:52px; margin:0 12px; border-radius:19px 19px 5px 5px; background:#7e687d; box-shadow:inset 0 -6px #69566a; }
-  .sofa-seat { display:flex; gap:5px; height:41px; padding:4px 8px; background:#927b8e; border-radius:10px 10px 7px 7px; }
-  .sofa-seat i { flex:1; border-radius:6px; background:#a28b9d; border-right:1px solid #796779; }
-  .sofa-arm { height:27px; background:#725e72; border-radius:9px 9px 3px 3px; }
-  .coffee { position:relative; justify-self:center; width:min(100%,190px); }
-  .coffee-top { height:17px; border-radius:8px; background:#a96f4e; box-shadow:0 4px #80553f; }
-  .coffee-leg { width:6px; height:30px; margin:auto; background:#80553f; }
-  .note-button { position:absolute; top:-43px; left:50%; transform:translateX(-50%) rotate(-3deg); width:125px; padding:8px 7px; border:1px solid #ddc28e; background:#fff1c9; box-shadow:0 3px 7px #47321d22; color:#594732; font:10px/1.4 "Courier New",monospace; }
-  .note-button:hover,.note-button:focus-visible { transform:translateX(-50%) rotate(0) translateY(-2px); }
-  .door { justify-self:center; width:96px; height:145px; padding:8px; border:5px solid #865d46; border-bottom-width:8px; border-radius:45px 45px 2px 2px; background:linear-gradient(90deg,#b98768,#c99a79 50%,#b98768); box-shadow:inset 0 0 0 2px #d6b39b; }
-  .door .knob { position:absolute; right:10px; top:76px; width:8px; height:8px; border-radius:50%; background:#edcf83; }
-  .keys { position:absolute; right:-22px; bottom:-13px; font-size:25px; transform:rotate(20deg); }
-  .door-label { color:#503b31; font:10px "Courier New",monospace; text-align:center; margin-top:8px; }
-  .scene-caption { padding:9px 15px 12px; text-align:center; background:#fffaf2; color:var(--muted); font-size:.85rem; }
-  .interaction { display:grid; grid-template-columns:minmax(190px,.65fr) 1.35fr; gap:14px; margin:16px 0 5px; }
-  .note-controls { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:7px; padding:16px; border:1px dashed #cba999; background:#fff8ef; border-radius:12px; text-align:center; }
-  .note-controls p { margin:0; color:var(--muted); font-size:.88rem; }
-  .read-note { border:0; border-radius:999px; padding:10px 18px; background:var(--rose); color:white; cursor:pointer; box-shadow:0 3px 0 #92394c; transition:transform .15s,background .15s; }
-  .read-note:hover,.read-note:focus-visible { background:#ad4058; transform:translateY(-2px); }
-  .note-counter { font:11px "Courier New",monospace; color:var(--muted); }
-  .note-display { display:flex; align-items:center; min-height:106px; padding:20px clamp(16px,3vw,30px); border-radius:12px; background:#fffdf8; border:1px solid #e5d7c8; box-shadow:0 4px 15px #61472c0d; font-size:clamp(1.1rem,2vw,1.35rem); }
-  .note-display p { margin:0; }
-  .note-display .hint { color:#8c7e76; font-style:italic; font-size:1rem; }
-  .place-note { margin:10px 2px 0; min-height:1.7em; text-align:center; color:#735d6a; font-size:.94rem; }
-  .final-note { text-align:center; margin:15px auto 0; max-width:600px; padding:14px; border-radius:12px; background:#f5e1e1; border:1px solid #e8c5c8; }
-  .final-note[hidden] { display:none; }
-  .below { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px; }
-  .below section { padding:18px 20px; border-top:2px solid #d9b7a6; background:#fff8ef99; }
-  .below h2 { font-size:1.35rem; }
-  .below p { margin:.55em 0; }
-  .story { font-size:.97rem; }
-  .story strong { color:#9b445c; font-weight:500; }
-  footer { text-align:center; color:var(--muted); padding-top:24px; font:12px "Courier New",monospace; }
-  dialog { max-width:min(900px,94vw); max-height:92vh; padding:10px; border:1px solid #d6c0ac; border-radius:12px; background:#fffaf2; box-shadow:0 20px 80px #20141f88; }
-  dialog::backdrop { background:#251c26bb; }
-  dialog img { display:block; max-width:calc(94vw - 22px); max-height:78vh; object-fit:contain; }
-  .dialog-close { display:block; margin:2px 0 8px auto; border:1px solid #cdb9a7; border-radius:20px; background:#fff; padding:5px 12px; cursor:pointer; }
-  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  @media(max-width:760px) {
-    .wall-scene { grid-template-columns:minmax(110px,.8fr) minmax(0,1.5fr); padding-inline:14px; gap:14px; }
-    .photo-wall { grid-column:1/-1; grid-row:2; width:min(100%,520px); justify-self:center; }
-    .window-card { grid-column:1; grid-row:1; width:min(100%,170px); justify-self:center; }
-    .bookcase { grid-column:2; grid-row:1; width:min(100%,150px); justify-self:center; }
-    .photo-frame img { height:clamp(80px,17vw,130px); }
-    .floor-scene { grid-template-columns:1.1fr .9fr; }
-    .door-object { grid-column:1/-1; justify-self:center; }
-  }
-  @media(max-width:520px) {
-    body { font-size:16px; }
-    .page { padding-inline:12px; }
-    .room-title { align-items:flex-start; flex-direction:column; gap:0; }
-    .wall-scene { min-height:unset; grid-template-columns:1fr 1fr; padding:18px 10px 16px; }
-    .window-card { width:130px; }
-    .bookcase { width:116px; }
-    .photo-grid { gap:6px; }
-    .photo-frame { padding:4px 4px 3px; }
-    .photo-frame img { height:clamp(72px,24vw,110px); }
-    .photo-frame span { font-size:8px; }
-    .floor-scene { min-height:320px; grid-template-columns:1fr 1fr; gap:9px; padding:19px 9px 25px; }
-    .sofa { grid-column:1/-1; width:min(100%,270px); }
-    .coffee { grid-column:1; }
-    .door-object { grid-column:2; }
-    .interaction { grid-template-columns:1fr; }
-    .note-controls { padding:12px; }
-    .below { grid-template-columns:1fr; gap:10px; }
-    nav { gap:7px 13px; }
-  }
-  @media(prefers-reduced-motion:reduce) {
-    *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    *, *::before, *::after { transition:none !important; }
   }
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="topline">a little corner of the internet, for one very specific person</div>
-  <header>
-    <h1>ishita's page <span class="heart" aria-label="heart">♥</span></h1>
-    <p class="subtitle">a small place for us to come home to</p>
-  </header>
-  <nav aria-label="Page navigation">
-    <a href="#home">our place</a>
-    <a href="#story">how this started</a>
-    <a href="#notes">little notes</a>
-  </nav>
 
-  <main>
-    <section class="intro" id="home">
-      <p class="eyebrow">keys are by the door</p>
-      <h2>Come in. It’s a little chaotic.</h2>
-      <p>I made us a room from the things I keep thinking about: karaoke, your reels, your brain, and the ordinary days I want with you.</p>
-      <p>Tap around. The objects have things to say.</p>
-    </section>
+<header class="bar">
+  <div class="wrap">
+    <strong>Ishita</strong>
+    <nav aria-label="Sections">
+      <a href="#story">Story</a>
+      <a href="#photos">Photos</a>
+      <a href="#apartment">Apartment</a>
+      <a href="#notes">Notes</a>
+    </nav>
+  </div>
+</header>
 
-    <section class="room-shell" aria-label="An imagined apartment for us">
-      <div class="room-title"><strong>our future apartment</strong><span>estimated move-in: whenever we get the keys</span></div>
-      <div class="wall-scene">
-        <button class="object-button window-card room-object" type="button" data-note="I’d pretend to be asleep just to write you something nice. This is me doing that again.">
-          <span class="window-sky" aria-hidden="true"></span>
-          <span class="window-caption">late night, still thinking of you</span>
-          <span class="sr-only">Window: read a late-night note</span>
-        </button>
-
-        <div class="photo-wall" aria-label="Six favourite photos">
-          <p class="wall-label">my favourite moments · tap a photo</p>
-          <div class="photo-grid">
-            <button class="photo-frame" type="button" data-photo="1" aria-label="Open photo 1"><img src="photos/photo-1.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>01 · us</span></button>
-            <button class="photo-frame" type="button" data-photo="2" aria-label="Open photo 2"><img src="photos/photo-2.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>02 · us</span></button>
-            <button class="photo-frame" type="button" data-photo="3" aria-label="Open photo 3"><img src="photos/photo-3.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>03 · us</span></button>
-            <button class="photo-frame" type="button" data-photo="4" aria-label="Open photo 4"><img src="photos/photo-4.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>04 · us</span></button>
-            <button class="photo-frame" type="button" data-photo="5" aria-label="Open photo 5"><img src="photos/photo-5.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>05 · us</span></button>
-            <button class="photo-frame" type="button" data-photo="6" aria-label="Open photo 6"><img src="photos/photo-6.jpg" alt="A favourite photo of us" loading="lazy" decoding="async"><span>06 · us</span></button>
-          </div>
-        </div>
-
-        <button class="object-button bookcase room-object" type="button" data-note="Your hyperfixations are my favourite documentaries. I could listen to you explain anything for hours.">
-          <span class="shelf"><i></i><i></i><i></i><i></i><i></i></span>
-          <span class="shelf"><i></i><i></i><i></i><i></i></span>
-          <span class="book-label">your current deep dive</span>
-          <span class="sr-only">Bookshelf: read a note about your hyperfixations</span>
-        </button>
-      </div>
-
-      <div class="floor-scene">
-        <button class="object-button sofa room-object" type="button" data-note="I’m going to keep sending you reels. You’re going to keep ignoring them. I love it.">
-          <span class="sofa-back" aria-hidden="true"></span>
-          <span class="sofa-seat" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="sofa-arm" aria-hidden="true"></span>
-          <span class="object-label">the reel-ignoring sofa</span>
-        </button>
-        <div class="coffee">
-          <button class="object-button note-button" id="note-button" type="button">open if you need a reminder</button>
-          <div class="coffee-top" aria-hidden="true"></div><div class="coffee-leg" aria-hidden="true"></div>
-          <button class="object-button room-object" type="button" data-note="You were never a mistake. You’re the plan now."><span class="object-label">coffee table note</span><span class="sr-only">Read the note on the coffee table</span></button>
-        </div>
-        <button class="object-button door-object room-object" type="button" data-note="I’m still so glad I got you home that night. I had no idea you’d become home to me.">
-          <span class="door" aria-hidden="true"><i class="knob"></i><span class="keys">⌁</span></span>
-          <span class="door-label">keys to our place</span>
-          <span class="sr-only">Front door: remember the karaoke night</span>
-        </button>
-      </div>
-      <div class="scene-caption">The apartment is imaginary for now. The plans are not.</div>
-    </section>
-
-    <section class="interaction" id="notes" aria-label="Little notes for you">
-      <div class="note-controls">
-        <p>there are 50 notes in here</p>
-        <button class="read-note" id="read-note" type="button">give me a note</button>
-        <span class="note-counter" id="note-counter" aria-live="polite">pick one whenever</span>
-      </div>
-      <div class="note-display" id="note-display" aria-live="polite" aria-atomic="true"><p class="hint">Or tap around the room. I left a few things there too.</p></div>
-    </section>
-    <p class="place-note" id="place-note" aria-live="polite"></p>
-    <div class="final-note" id="final-note" hidden>Out of everyone in the world, I’d pick you again. And again. And again.</div>
-
-    <div class="below">
-      <section id="story">
-        <p class="eyebrow">how this started</p>
-        <h2>the karaoke night</h2>
-        <div class="story">
-          <p>I messaged you on Instagram out of nowhere. A few weeks later we were at karaoke: you were having the time of your life, then very much not, and then I was figuring out how to get this random woman back to her PG. Not exactly the romantic first date.</p>
-          <p>The morning after could’ve been a “mistake.” I thought that was what I’d decided. Somewhere in there, I already knew I was in trouble.</p>
-          <p>It’s been a year and a half, and I’ve never felt this understood. I want the ordinary future stuff with you: an apartment, coming home to you, and a lifetime of sending reels you’ll probably ignore.</p>
-          <p><strong>I love you so much, babe. Tung tung.</strong></p>
-        </div>
-      </section>
-      <section>
-        <p class="eyebrow">a note from the desk</p>
-        <h2>You’ve got this.</h2>
-        <p>Your MBA is already yours. You just have to show up. Candida albicans never stood a chance against you, and neither will your doubts.</p>
-        <p>I’m proud of everything you’re becoming. I’ll keep learning how to love you in the ways you want, even when it feels weird for me. I mean every word.</p>
-      </section>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>For <em>Ishita</em></h1>
+      <p>Written late, while pretending to be asleep.</p>
     </div>
-  </main>
-  <footer>you and me, for life. tung tung ♥</footer>
-</div>
+  </section>
 
-<dialog id="photo-dialog" aria-label="Photo">
-  <button class="dialog-close" id="close-photo" type="button">close ×</button>
-  <img id="large-photo" src="" alt="A favourite photo of us">
+  <section class="block" id="story">
+    <div class="wrap grid">
+      <span class="label">How it started</span>
+      <div>
+        <h2>A karaoke bar, a PG, and a bad first date</h2>
+        <div class="prose">
+          <p>I messaged you on Instagram out of nowhere. A few weeks later we were at a karaoke bar. You were having the time of your life, then very much not, and then I was the guy working out how to get a near-stranger back to her PG.</p>
+          <p>The morning after was supposed to be a mistake. I had decided that in advance. Somewhere in the middle of it, I think I already knew I was in trouble.</p>
+          <p>That was a year and a half ago. I have never been this open with anyone, and I have never felt this understood. I want the ordinary future: an apartment, coming home to you, and a lifetime of sending you reels you won’t watch.</p>
+          <p class="signoff">I love you so much, babe. Tung tung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="photos">
+    <div class="wrap">
+      <div class="grid" style="margin-bottom:20px">
+        <span class="label">Photographs</span>
+        <h2 style="margin:0">Six of my favourites</h2>
+      </div>
+      <div class="photos" id="photo-list">
+        <button class="photo" type="button" data-i="0" aria-label="View photo 1 of 6"><img src="photos/photo-1.jpg" width="738" height="592" alt="The two of us in a red-lit room, close to the camera, pulling faces" loading="lazy" decoding="async"></button>
+        <button class="photo" type="button" data-i="1" aria-label="View photo 2 of 6"><img src="photos/photo-2.jpg" width="1209" height="1458" alt="The two of us in a round mirror in a furniture store, my face against your hair" loading="lazy" decoding="async"></button>
+        <button class="photo" type="button" data-i="2" aria-label="View photo 3 of 6"><img src="photos/photo-3.jpg" width="1066" height="1599" alt="A collage of photos of the two of us" loading="lazy" decoding="async"></button>
+        <button class="photo" type="button" data-i="3" aria-label="View photo 4 of 6"><img src="photos/photo-4.jpg" width="1600" height="1388" alt="The two of us on a night street under a flyover, looking at each other" loading="lazy" decoding="async"></button>
+        <button class="photo" type="button" data-i="4" aria-label="View photo 5 of 6"><img src="photos/photo-5.jpg" width="998" height="1280" alt="You pouting at the camera in the foreground, me smiling behind you" loading="lazy" decoding="async"></button>
+        <button class="photo" type="button" data-i="5" aria-label="View photo 6 of 6"><img src="photos/photo-6.jpg" width="1179" height="1213" alt="The two of us close together in low light, you with your eyes closed, laughing" loading="lazy" decoding="async"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="apartment">
+    <div class="wrap grid">
+      <span class="label">The apartment</span>
+      <div>
+        <h2>Not signed yet. Here is what’s in it.</h2>
+        <ul class="rooms">
+          <li>
+            <details>
+              <summary>The window</summary>
+              <p>Lights off, phone on low brightness, still writing to you.</p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>The shelf</summary>
+              <p>Reserved for whatever you’re obsessed with this month. I will read the books.</p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>The sofa</summary>
+              <p>Where I send you reels and you carry on scrolling. I’ve made my peace with it.</p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>The front door</summary>
+              <p>The first time I got you home, I was just trying to get you somewhere safe. Now I’m planning a place with a door we share.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="notes">
+    <div class="wrap grid">
+      <span class="label">Notes</span>
+      <div class="note-stage">
+        <p class="note-text idle" id="note-text" aria-live="polite" aria-atomic="true">Press the button for a note.</p>
+        <div class="controls">
+          <button class="btn" id="next" type="button">Give me a note</button>
+          <button class="btn ghost" id="prev" type="button" disabled>Previous</button>
+          <span class="count" id="count"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Made for Ishita, by Divij.</span>
+  <span>Tung tung.</span>
+</footer>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <div class="lb">
+    <div class="lb-top"><span id="lb-count"></span><button type="button" id="lb-close">Close</button></div>
+    <div class="lb-body">
+      <div class="lb-nav"><button type="button" id="lb-prev" aria-label="Previous photo">&larr;</button></div>
+      <img id="lb-img" src="" alt="">
+      <div class="lb-nav"><button type="button" id="lb-next" aria-label="Next photo">&rarr;</button></div>
+    </div>
+  </div>
 </dialog>
 
 <script>
+(function () {
+  "use strict";
+
+  /* ---------- notes ---------- */
   var notes = [
-    "You’re the best thing that came out of a karaoke night.",
-    "I’m still so glad I got you home that night.",
-    "You were never a mistake. You’re the plan now.",
-    "You are weirder than me, and it’s my favorite thing about you.",
-    "You understand me better than anyone ever has.",
+    "You were having the time of your life, and then very much not. I’d do that night again.",
+    "I’m glad it was me who got you home.",
+    "The morning after was never going to be a mistake. I just hadn’t worked that out yet.",
+    "You understand me at a level I didn’t know was possible.",
+    "You’re weirder than I am. That’s the whole appeal.",
+    "Your hyperfixations are the best documentaries I never have to search for.",
+    "I could listen to you explain anything for hours.",
+    "Your general knowledge still surprises me.",
+    "The way you talk is the cutest part of my day.",
+    "You make me feel fun.",
+    "I’m going to keep sending you reels. You’re going to keep ignoring them. Fine.",
+    "I’ll love you the way you want to be loved, or I’ll die trying.",
+    "Affection doesn’t come naturally to me. I’m learning it for you and I’m not stopping.",
+    "I’ve never been this open with anyone else.",
+    "Our arguments are practice at being better to each other.",
+    "I can’t picture my life with anyone else.",
     "Candida albicans never stood a chance against you.",
     "ICMR was lucky to have you.",
-    "Your MBA is already yours. You just have to show up.",
-    "You’ll crush the MBA.",
-    "Your hyperfixations are my favorite documentaries.",
-    "I could listen to you explain anything for hours.",
-    "Your general knowledge is unreal, and I love it.",
-    "The way you talk is the cutest thing in my day.",
-    "You make me feel fun, nice, and fuzzy.",
-    "I’m going to keep sending you reels. You’re going to keep ignoring them. I love it.",
-    "I’ll love you the way you want to be loved, or I’ll die trying.",
-    "You make me want to be softer, and I’m learning.",
-    "Even when it feels weird for me, I mean every word.",
-    "You’re my favorite argument and my favorite apology.",
-    "Our fights make us better. Our love makes us unbreakable.",
-    "I’ve never been this open with anyone but you.",
-    "You are my once-in-a-lifetime.",
-    "You’re not a phase, a mistake, or a maybe. You’re my person.",
-    "I’m not letting you go. Ever.",
-    "I see myself with no one else, only you.",
-    "We’re getting married. I’ve already decided.",
-    "Our apartment is going to be chaos, and I can’t wait.",
-    "I’m coming home to you, even if you ignore me for reels.",
-    "I fell for you faster than I ever planned.",
-    "You are the best accident I’ve ever made.",
+    "The MBA is yours. Show up and take it.",
+    "You’re allowed to rest. I’ll cover for a while.",
+    "You’re smarter than your doubts.",
+    "Whatever the exam, the interview, or the day: I’m in your corner.",
+    "I’m proud of how hard you work.",
+    "I’d pretend to be asleep all night for one good sentence to you.",
+    "Texting you out of nowhere was the best decision I’ve made.",
+    "A year and a half in, you’re still the first person I want to tell.",
     "You make my weird feel normal.",
-    "You are easy to love, even on your most chaotic day.",
-    "I’m proud of everything you’re becoming.",
-    "You deserve every good thing, and I’ll help you get there.",
-    "You are smarter than your doubts.",
-    "You’re allowed to rest. I’ll hold the world for a bit.",
-    "You are my safe place and my favorite person.",
-    "Out of everyone in the world, I’d pick you again.",
-    "You’re the reason I became a better version of me.",
-    "You’re the one I’d text out of the blue, every time.",
-    "Plot twist: you’re stuck with me.",
-    "Every version of you is my favorite version.",
-    "You’re the best part of my day, even the late nights.",
-    "I’d pretend to be asleep just to write you something nice.",
-    "Your passion makes everything around you brighter.",
-    "You’ve got this, and you’ve got me.",
-    "You are loved more than you know.",
-    "I’m still falling for you.",
-    "I love you soooo so much, babe.",
-    "You and me, for life."
+    "I’m more myself around you than anywhere else.",
+    "I changed because I wanted to, and because of you.",
+    "Our apartment will be a mess and I will love it.",
+    "I want to come home to you ignoring me for reels.",
+    "I’ll buy the apartment. You pick the sofa.",
+    "We’re getting married. I’ve decided.",
+    "You were never a mistake. You’re the plan.",
+    "After every argument, I still want to be on your side.",
+    "You make ordinary days the point.",
+    "I love you soooo so much, babe."
   ];
-  var shuffledNotes = [];
-  var noteIndex = 0;
-  function shuffleNotes() {
-    shuffledNotes = notes.slice();
-    for (var n = shuffledNotes.length - 1; n > 0; n--) {
-      var j = Math.floor(Math.random() * (n + 1));
-      var temp = shuffledNotes[n]; shuffledNotes[n] = shuffledNotes[j]; shuffledNotes[j] = temp;
+
+  var order = [], pos = -1;
+  var text = document.getElementById("note-text");
+  var next = document.getElementById("next");
+  var prev = document.getElementById("prev");
+  var count = document.getElementById("count");
+
+  function shuffle() {
+    order = notes.map(function (_, i) { return i; });
+    for (var i = order.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = order[i]; order[i] = order[j]; order[j] = t;
     }
-    noteIndex = 0;
+    pos = -1;
   }
-  document.getElementById("read-note").addEventListener("click", function () {
-    if (noteIndex >= shuffledNotes.length) shuffleNotes();
-    document.querySelector("#note-display p").textContent = shuffledNotes[noteIndex];
-    document.querySelector("#note-display p").className = "";
-    noteIndex++;
-    document.getElementById("note-counter").textContent = noteIndex + " of 50";
+  function show() {
+    text.classList.remove("idle");
+    text.textContent = notes[order[pos]];
+    count.textContent = (pos + 1) + " / " + notes.length;
+    prev.disabled = pos <= 0;
+    next.textContent = "Another one";
+  }
+  next.addEventListener("click", function () {
+    if (pos >= order.length - 1) {
+      var last = order[order.length - 1];
+      shuffle();
+      if (order[0] === last) { var t = order[0]; order[0] = order[1]; order[1] = t; }
+    }
+    pos++;
+    show();
   });
-  document.querySelectorAll(".room-object").forEach(function (object) {
-    object.addEventListener("click", function () {
-      var target = document.querySelector("#note-display p");
-      target.textContent = object.getAttribute("data-note");
-      target.className = "";
-      document.getElementById("note-counter").textContent = "a note from around the apartment";
-      var key = object === document.querySelector(".window-card") ? "window" :
-        object === document.querySelector(".bookcase") ? "books" :
-        object.classList.contains("sofa") ? "sofa" :
-        object.classList.contains("door-object") ? "door" : "table";
-      explored[key] = true;
-      if (Object.keys(explored).length >= 5) document.getElementById("final-note").hidden = false;
-      var label = object.querySelector(".object-label,.window-caption,.book-label,.door-label");
-      document.getElementById("place-note").textContent = label ? "you found a note by " + label.textContent + "." : "";
-    });
+  prev.addEventListener("click", function () {
+    if (pos > 0) { pos--; show(); }
   });
-  var explored = {};
+  shuffle();
 
-  var photoDialog = document.getElementById("photo-dialog");
-  var largePhoto = document.getElementById("large-photo");
-  document.querySelectorAll(".photo-frame").forEach(function (frame) {
-    frame.addEventListener("click", function () {
-      var number = frame.getAttribute("data-photo");
-      largePhoto.src = "photos/photo-" + number + ".jpg";
-      largePhoto.alt = "Photo " + number + " of us";
-      if (typeof photoDialog.showModal === "function") photoDialog.showModal();
-      else window.open(largePhoto.src, "_blank");
-    });
-  });
-  document.getElementById("close-photo").addEventListener("click", function () { photoDialog.close(); });
-  photoDialog.addEventListener("click", function (event) {
-    if (event.target === photoDialog) photoDialog.close();
-  });
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && photoDialog.open) photoDialog.close();
-  });
+  /* ---------- lightbox ---------- */
+  var dlg = document.getElementById("lb");
+  var img = document.getElementById("lb-img");
+  var lbCount = document.getElementById("lb-count");
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll(".photo"));
+  var cur = 0;
 
-  shuffleNotes();
+  function open(i) {
+    cur = (i + thumbs.length) % thumbs.length;
+    var src = thumbs[cur].querySelector("img");
+    img.src = src.getAttribute("src");
+    img.alt = src.getAttribute("alt");
+    lbCount.textContent = (cur + 1) + " / " + thumbs.length;
+    if (!dlg.open) {
+      if (typeof dlg.showModal === "function") dlg.showModal();
+      else window.open(img.src, "_blank");
+    }
+  }
+  thumbs.forEach(function (b, i) { b.addEventListener("click", function () { open(i); }); });
+  document.getElementById("lb-close").addEventListener("click", function () { dlg.close(); });
+  document.getElementById("lb-prev").addEventListener("click", function () { open(cur - 1); });
+  document.getElementById("lb-next").addEventListener("click", function () { open(cur + 1); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!dlg.open) return;
+    if (e.key === "ArrowLeft") open(cur - 1);
+    if (e.key === "ArrowRight") open(cur + 1);
+  });
+})();
 </script>
 </body>
 </html>
