@@ -367,6 +367,10 @@ footer {
   color: #f5f4ef;
 }
 
+:root[data-theme="dark"] h1 {
+  color: #f5f4ef;
+}
+
 :root[data-theme="dark"] footer,
 :root[data-theme="dark"] .box-detail,
 :root[data-theme="dark"] .box-arrow,
