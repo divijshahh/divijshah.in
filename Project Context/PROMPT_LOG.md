@@ -762,3 +762,33 @@ Remove the entire “Currently / Tushar Goradia Advocates” section, remove “
 
 ### Version
 QR v1.2.
+
+
+## 2026-11-15 — QR dark-mode name contrast fix and card domain update
+
+### User request
+Fix the DIVIJ SHAH heading so it switches to white text in dark mode. The user also confirmed that `card.divijshah.in` has been enabled and added to the same Cloudflare Worker.
+
+### Inspected
+- `qr-site/index.html`
+- `qr-site/style.css`
+- `qr-site/assets/theme.js`
+- Existing project prompt log.
+
+### Cause
+The `h1` heading had an explicit light-theme text color (`#1b1b1a`). Dark mode changed the body/root text color but did not override the heading's explicit color.
+
+### Changed
+- Added a dark-theme-specific `h1` color of `#f5f4ef` so “DIVIJ SHAH” is white in dark mode.
+- Kept the existing light-mode heading color and all typography/layout unchanged.
+
+### Not changed
+- No DNS, Worker, routing, or custom-domain configuration was changed. The user has already enabled `card.divijshah.in` and added it to the same Worker.
+- No main-site files or contact-card content changed.
+
+### Version
+Remains QR v1.2; this is a targeted theme bug fix.
+
+### Follow-up
+Verify the deployed page at `card.divijshah.in` in both themes after the Worker deployment completes.
+
