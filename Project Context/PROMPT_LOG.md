@@ -737,3 +737,28 @@ Repository files were re-read before and after the change. Live browser/device r
 
 ### Version
 Main v1.2.9; QR v1.1.6.
+
+
+## 2026-11-15 — QR site v1.2 content simplification
+
+### User request
+Remove the entire “Currently / Tushar Goradia Advocates” section, remove “Litigation · Bombay” entirely, remove “Updated Sep 2026”, and set the QR site version to v1.2.
+
+### Changed
+- Removed the descriptor from the hero and changed the meta description to “Divij Shah”.
+- Removed the entire current-firm section.
+- Removed “Bombay, India” from the footer so Bombay no longer appears anywhere on the QR page.
+- Removed the “Updated Sep 2026” footer label.
+- Updated the visible QR version to v1.2 and updated favicon cache-busting references to v1.2.
+- Simplified the footer layout and removed CSS that only served the deleted content.
+
+### Not changed
+- Main homepage, CV, 404, vCard, contact details, contact links, lamp, theme behavior, grid background, responsive layout and QR deployment configuration.
+
+### Verification
+- Checked the revised HTML source for remaining references to “Litigation”, “Bombay”, “Tushar Goradia” and “Updated Sep 2026”; none remain.
+- Checked the QR stylesheet for obsolete selectors associated with the removed content; none remain.
+- Live browser/device verification has not been performed.
+
+### Version
+QR v1.2.
